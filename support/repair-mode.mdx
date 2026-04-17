@@ -1,0 +1,128 @@
+---
+title: "Modo reparo"
+description: "Entenda os diagnósticos de saúde, o reparo guiado e o log para suporte do G4 OS."
+---
+
+## O que é o Modo reparo
+
+`Modo reparo` é a área de diagnóstico e recuperação assistida do G4 OS.
+
+Ela existe para ajudar quando o app continua abrindo, mas alguma parte do estado local ficou inconsistente depois de uma atualização, reinstalação, troca de versão ou migração entre máquinas.
+
+![Tela de Modo reparo no G4 OS](/images/support/modo-reparo.png)
+
+*Tela de diagnósticos de saúde, reparo guiado e geração de log para suporte.*
+
+## Quando usar
+
+Use essa tela principalmente quando:
+
+- sessões antigas pararam de abrir como antes
+- o workspace atual ficou com caminhos quebrados
+- a conexão gerenciada correta deixou de ser reconhecida
+- você precisa validar a saúde local do app antes de chamar o suporte
+- o time de suporte pediu um log técnico sem segredos
+
+## O que esta tela faz
+
+O `Modo reparo` combina três frentes:
+
+- `diagnósticos somente leitura` para mapear o estado atual do app
+- `reparo guiado` para corrigir metadados de sessão e revalidar o provedor gerenciado
+- `log para suporte` para exportar um JSON técnico seguro de compartilhar
+
+O ponto mais importante: a tela foi desenhada para ser conservadora.
+
+Os diagnósticos e as prévias não alteram dados. Quando existe ação de aplicação, ela fica restrita a metadados de sessão ou à cópia de sessões importadas para o workspace ativo.
+
+## O que o reparo guiado corrige
+
+Na área `Reparo guiado`, a ação principal é `Corrigir sessões e provedor`.
+
+Na prática, ela faz duas coisas:
+
+1. Revalida a conexão gerenciada usada pelo app.
+2. Revisa os `workspaces saudáveis` e normaliza somente metadados de sessão que costumam quebrar após mudanças de ambiente.
+
+Os campos que podem ser ajustados nessa correção incluem:
+
+- conexão gerenciada
+- raiz do workspace
+- diretório de trabalho
+- `sdkCwd`
+- runtime
+- provedor
+- modelo
+- nível de pensamento
+
+O que essa correção preserva:
+
+- mensagens
+- arquivos
+- credenciais
+- conteúdo das sessões
+
+Se você quiser revisar o impacto antes de aplicar, use `Ver detalhes antes`.
+
+## Como ler o resumo de saúde
+
+O bloco `Resumo de saúde` mostra cartões por subsistema. Eles ajudam a identificar rapidamente onde está o problema:
+
+- `Config e backup`: valida se a configuração principal e o backup estão legíveis
+- `Workspaces`: mostra quantos workspaces estão saudáveis e quantos precisam de atenção
+- `Sessões e índices`: verifica diretórios, arquivos de sessão e índices usados pelo app
+- `Saúde do runtime`: indica se o runtime de execução das sessões está saudável
+- `Artefatos de runtime`: checa se os artefatos empacotados exigidos estão presentes
+- `Instalação da plataforma`: mostra diagnósticos específicos de macOS, Windows ou Linux
+- `Credenciais e fontes`: revisa o armazenamento criptografado e diagnósticos salvos das fontes
+- `Base de operações`: mostra se progresso, cancelamento e log técnico estão prontos para uso
+
+Quando o topo da tela mostra `Status geral: Atenção` ou `Falha`, esses cartões ajudam a localizar a origem do problema antes de aplicar qualquer correção.
+
+## Log para suporte
+
+`Log para suporte` gera um arquivo JSON técnico com contexto suficiente para investigação, sem expor segredos.
+
+Esse log inclui principalmente:
+
+- dados do app, versão e distribuição
+- resumo da configuração carregada
+- resumo dos workspaces conhecidos
+- snapshot completo dos diagnósticos
+- últimas entradas do log interno do próprio modo reparo
+
+Por padrão, o arquivo é salvo em `Downloads/G4 OS Support Logs`. Se preferir, você pode usar `Escolher local...` para salvar em outro lugar.
+
+Depois da geração, o caminho do arquivo é copiado automaticamente, o que acelera o envio ao suporte.
+
+## O que o Modo reparo não faz
+
+É importante não esperar desta tela coisas que ela não promete fazer:
+
+- ela não apaga nem reescreve o conteúdo textual das conversas
+- ela não substitui binários empacotados do app
+- ela não serve como reinstalação automática
+- ela não executa verificações de assinatura e notarização como parte dos diagnósticos
+
+Em outras palavras: o foco aqui é `diagnosticar`, `corrigir metadados` e `gerar contexto técnico`, não reinstalar o produto.
+
+## Casos em que costuma ajudar
+
+- depois de atualizar o G4 OS e perceber que sessões antigas ficaram inconsistentes
+- depois de reinstalar o app em cima de uma instalação anterior
+- quando o app abre, mas caminhos locais ou provedor parecem desalinhados
+- quando você quer gerar um pacote técnico limpo antes de abrir um chamado
+
+## Caminho no app
+
+- `Configurações > Modo reparo`
+
+## Deep links úteis
+
+- [Abrir Modo reparo](g4os://settings/repair)
+- [Abrir Workspace](g4os://settings/workspace)
+- [Abrir Cloud Sync](g4os://settings/sync)
+
+## Resumo rápido
+
+`Modo reparo` é a área certa para diagnosticar problemas locais do G4 OS, corrigir metadados de sessão sem mexer no conteúdo das conversas e gerar um log técnico seguro para suporte.

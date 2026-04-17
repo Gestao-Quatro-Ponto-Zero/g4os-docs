@@ -64,6 +64,7 @@
               "support/appearance",
               "support/workspace",
               "support/cloud-sync",
+              "support/repair-mode",
               "support/usage",
               "support/preferences",
               "support/sharing",
