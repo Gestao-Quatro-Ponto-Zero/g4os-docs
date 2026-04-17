@@ -1,0 +1,79 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "G4 OS",
+  "colors": {
+    "primary": "#1D7F5A",
+    "light": "#28A36C",
+    "dark": "#14533B"
+  },
+  "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentação",
+        "groups": [
+          {
+            "group": "Começando",
+            "pages": [
+              "index",
+              "getting-started/quickstart"
+            ]
+          },
+          {
+            "group": "Plataforma",
+            "pages": [
+              "product/workspaces",
+              "product/sessions",
+              "product/agents"
+            ]
+          },
+          {
+            "group": "Operação",
+            "pages": [
+              "product/integrations",
+              "product/automation",
+              "product/security"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Site",
+          "href": "https://g4oscloud.com",
+          "icon": "globe"
+        },
+        {
+          "anchor": "GitHub",
+          "href": "https://github.com/Gestao-Quatro-Ponto-Zero",
+          "icon": "github"
+        }
+      ]
+    }
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/Gestao-Quatro-Ponto-Zero/g4os-docs"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Acessar G4 OS",
+      "href": "https://g4oscloud.com"
+    }
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/Gestao-Quatro-Ponto-Zero"
+    }
+  }
+}
