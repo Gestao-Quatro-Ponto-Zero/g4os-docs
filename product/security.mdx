@@ -16,6 +16,46 @@ O G4 OS foi desenhado para equilibrar velocidade com governança operacional.
 - separação de contexto por workspace e sessão
 - limites claros para fluxos recorrentes e automações
 
+## Network Interceptor: transparência no tráfego com os LLMs
+
+O G4 OS usa um `Network Interceptor` que roda como módulo de preload e intercepta as requisições antes de chegarem ao SDK do LLM. Ele não monitora o conteúdo das mensagens — existe para três funções específicas:
+
+1. **Injetar metadados de UI nas tools** — para mostrar feedback como "Buscando email..." na interface durante execução de tools
+2. **Otimizar o cache de prompts** — ajusta o TTL de `cache_control` para 1 hora, reduzindo custo e latência em sessões longas
+3. **Capturar erros HTTP localmente** — salva erros 4xx/5xx em arquivo local temporário (`~/.g4os/api-error.json`, expira em 5 min) para diagnóstico
+
+```mermaid
+graph LR
+    subgraph INTERCEPTOR["Network Interceptor — roda como preload"]
+        PATCH[globalThis.fetch\npatchado na inicialização]
+        REQ_IN[Requisição saindo]
+        RES_IN[Resposta chegando]
+
+        subgraph REQUEST_MODS["Na Saída"]
+            META_INJ[Injeta _intent e _displayName\nnos schemas de tools]
+            CACHE_PATCH[Atualiza cache_control.ttl\nephemeral → 1h]
+        end
+
+        subgraph RESPONSE_MODS["Na Chegada"]
+            META_STRIP[Remove _intent/_displayName\ndo SSE antes do SDK ver]
+            ERR_CAPTURE[Captura erros 4xx/5xx\n→ ~/.g4os/api-error.json]
+        end
+    end
+
+    PATCH --> REQ_IN
+    REQ_IN --> META_INJ
+    REQ_IN --> CACHE_PATCH
+    META_INJ -->|headers + body| LLM_API[API do LLM]
+    LLM_API --> RES_IN
+    RES_IN --> META_STRIP
+    RES_IN --> ERR_CAPTURE
+    META_STRIP --> SDK[Claude Agent SDK]
+    ERR_CAPTURE --> LOCAL_FILE[api-error.json\nexpira em 5 min]
+
+    META_INJ -.->|salvo em disco| TOOL_META[tool-metadata.json\nlocal]
+    META_STRIP -.->|lê do disco| TOOL_META
+```
+
 ## Como pensar segurança no início
 
 Não trate segurança como uma camada posterior. Defina desde cedo:
@@ -25,15 +65,33 @@ Não trate segurança como uma camada posterior. Defina desde cedo:
 - quais tarefas podem ser automatizadas
 - quando revisão humana continua obrigatória
 
+## Permissões e modos de execução
+
+O G4 OS oferece modos de permissão para controlar o nível de autonomia dos agentes em cada sessão:
+
+| Modo | Comportamento |
+| --- | --- |
+| **Explorar** | Somente leitura. Agente pesquisa, lê e guia, sem executar ações. |
+| **Perguntar antes de editar** | Leituras livres. Agente solicita aprovação antes de qualquer escrita ou ação. |
+| **Executar** | Execução autônoma completa. Indicado para fluxos revisados e rotinas automatizadas. |
+
 ## Escale com confiança
 
 Quanto melhor forem os limites e as regras desde o início, mais fácil fica expandir o uso do G4 OS para novas áreas, times e casos de uso.
 
-<Card
-  title="Entender privacidade e dados"
-  icon="shield"
-  href="/product/privacy-and-data"
-  horizontal
->
-  Veja como a arquitetura do G4 OS funciona na prática, o que fica local e quando a infraestrutura da plataforma participa do fluxo.
-</Card>
+<Columns cols={2}>
+  <Card
+    title="Entender privacidade e dados"
+    icon="shield"
+    href="/product/privacy-and-data"
+  >
+    Veja a arquitetura completa com diagramas: o que fica local, como as credenciais circulam e o que a telemetria envia.
+  </Card>
+  <Card
+    title="Ver permissões detalhadas"
+    icon="sliders"
+    href="/support/permissions"
+  >
+    Entenda como configurar modos de permissão, comandos permitidos e bloqueados dentro do app.
+  </Card>
+</Columns>

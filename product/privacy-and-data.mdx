@@ -13,7 +13,70 @@ Isso não significa que nada nunca saia do seu ambiente. Significa que o fluxo p
 
 ## Como funciona na prática
 
-### Fluxo local padrão
+### Visão geral: o que sai de onde
+
+O diagrama abaixo mostra o fluxo completo — o que roda na máquina do usuário, o que vai para os LLMs externos, o que chega aos servidores da G4 e como as APIs de terceiros são acessadas.
+
+```mermaid
+graph TD
+    subgraph USER_MACHINE["Máquina do Usuário"]
+        UI[Renderer UI\nReact + Jotai]
+        IPC[IPC Bridge\nipc.ts / preload]
+        MAIN[Main Process\nsessions.ts]
+        SM[SessionManager]
+        BACKEND[Agent Backend\nClaudeAgent / PiAgent / CodexAgent]
+        INTERCEPT[Network Interceptor\npreload module]
+        MCP[MCP Server Local\nstdio subprocess]
+        CREDS[credentials.enc\nCriptografado local]
+        LOCAL_DB[session.jsonl\nHistórico local]
+    end
+
+    subgraph EXTERNAL_LLM["LLMs Externos"]
+        ANTHROPIC[api.anthropic.com]
+        OPENAI[OpenAI / Compat]
+        GEMINI[generativelanguage.google]
+        BEDROCK[AWS Bedrock]
+    end
+
+    subgraph G4_SERVERS["Servidores G4 — g4oscloud.com"]
+        TELEMETRY[api/telemetry/ingest\nMetadados hasheados]
+        ENTITLEMENT[api/entitlements/me\nLicença do usuário]
+        BUDGET[api/llm/budget/me\nCota de tokens gerenciados]
+        UPDATE[api/updates/token\nAuto-update]
+    end
+
+    subgraph EXTERNAL_APIS["APIs Externas — ERP, Gmail, Slack..."]
+        ERP[API do ERP]
+        GMAIL[Gmail API]
+        SLACK[Slack API]
+    end
+
+    UI -->|input do usuário| IPC
+    IPC -->|IPC channel| MAIN
+    MAIN --> SM
+    SM --> BACKEND
+    BACKEND -->|fetch global patchado| INTERCEPT
+    INTERCEPT -->|prompt + tools| ANTHROPIC
+    INTERCEPT -->|prompt + tools| GEMINI
+    INTERCEPT -->|prompt + tools| OPENAI
+    INTERCEPT -->|SigV4 signed| BEDROCK
+    ANTHROPIC -->|SSE stream| INTERCEPT
+    INTERCEPT -->|eventos processados| SM
+    SM -->|persiste| LOCAL_DB
+    SM -->|lê credenciais| CREDS
+    BACKEND -->|tool call| MCP
+    MCP -->|Bearer token via env| ERP
+    MCP -->|Bearer token via env| GMAIL
+    MCP -->|Bearer token via env| SLACK
+    MAIN -->|telemetria estruturada hasheada| TELEMETRY
+    MAIN -->|verificar licença| ENTITLEMENT
+    MAIN -->|verificar cota| BUDGET
+    MAIN -->|verificar update| UPDATE
+```
+
+**Ponto central:** chamadas para ERP, Gmail, Slack e similares saem diretamente da máquina do usuário via MCP subprocess — sem passar pelos servidores da G4.
+
+### Fluxo local padrão em texto
 
 ```text
 Interface do G4 OS
@@ -40,6 +103,33 @@ No fluxo local padrão, estes itens permanecem no ambiente do usuário:
 | Configuração de fontes | arquivos locais do workspace |
 | Arquivos e contexto do projeto | diretórios e workspaces locais |
 
+### Como as credenciais circulam em tempo de execução
+
+As credenciais nunca aparecem em logs, nunca ficam em disco durante a execução e nunca são incluídas na telemetria. O fluxo abaixo mostra o ciclo completo desde o armazenamento criptografado até o uso nas requisições.
+
+```mermaid
+graph TD
+    subgraph CRED_FLOW["Fluxo de Credenciais em Tempo de Execução"]
+        STORED[credentials.enc\nAES criptografado em disco]
+        MAIN_PROC[Main Process\ncarrega na memória]
+        ENV_VARS[Env Vars do subprocess\nANTHROPIC_API_KEY etc]
+        SDK_PROC[SDK subprocess\nherda env]
+        HTTP_HDR[Header HTTP\nAuthorization: Bearer token]
+        MCP_ENV[MCP Server subprocess\nenv vars]
+        EXT_API[API Externa\nERP / Gmail / Slack]
+    end
+
+    STORED -->|decrypt na memória| MAIN_PROC
+    MAIN_PROC -->|seta antes de spawn| ENV_VARS
+    ENV_VARS -->|subprocess herda| SDK_PROC
+    SDK_PROC -->|requisição HTTP| HTTP_HDR
+    HTTP_HDR -->|TLS| LLM[API do LLM]
+
+    MAIN_PROC -->|seta antes de spawn MCP| MCP_ENV
+    MCP_ENV -->|subprocess herda| MCP_SRV[MCP Server]
+    MCP_SRV -->|requisição HTTP com Bearer| EXT_API
+```
+
 ## O que pode sair da sua máquina
 
 Alguns dados precisam sair do seu ambiente para que o produto funcione:
@@ -58,6 +148,52 @@ A plataforma pode receber dados técnicos necessários para operar o serviço, c
 - telemetria técnica e estruturada do produto
 
 No caso da telemetria, o produto usa identificadores hasheados para sessão e workspace em vez de IDs brutos, e o objetivo é medir uso técnico do sistema, não o conteúdo do que foi escrito.
+
+### O que a telemetria envia — e o que ela nunca envia
+
+```mermaid
+graph TD
+    subgraph TELEMETRY_SENT["O que vai para g4oscloud.com/api/telemetry"]
+        EV[Evento de Telemetria]
+        EV --> F1[name: session_start / turn_completed / tool_used]
+        EV --> F2[session_hash: SHA256 do sessionId]
+        EV --> F3[workspace_hash: SHA256 do workspaceId]
+        EV --> F4[provider_type: anthropic / openai / google]
+        EV --> F5[model_id: claude-opus-4-6 etc]
+        EV --> F6[app_version / platform / flavor]
+        EV --> F7[turn_outcome: success / error]
+        EV --> F8[error_family: auth / rate_limit / provider]
+    end
+
+    subgraph NOT_SENT["O que nunca é enviado"]
+        NS1[Conteúdo das mensagens]
+        NS2[Nomes de arquivos]
+        NS3[Caminhos locais]
+        NS4[IDs raw de sessão]
+        NS5[Credenciais ou tokens]
+        NS6[Dados do ERP / APIs externas]
+    end
+
+    subgraph SENTRY_DETAIL["Sentry — Relatório de Erros"]
+        SE[Stack trace de erro]
+        SE --> SR1[User ID: hash anônimo de hostname+homedir]
+        SE --> SR2[Headers sensíveis → REDACTED automaticamente]
+        SE --> SR3[Breadcrumbs com token/key/secret → REDACTED]
+        SE --> SR4[Source maps: desabilitados]
+    end
+```
+
+A telemetria é **comportamental e estruturada** — registra que uma sessão aconteceu, com qual modelo e com qual resultado. Nunca o conteúdo.
+
+## Resumo: o que a G4 monitora de fato
+
+| Canal | O que vai | O que não vai |
+| --- | --- | --- |
+| **Telemetria** | Tipo de evento (hasheado), modelo usado, resultado (success/error), versão do app | Conteúdo de mensagens, dados do ERP, credenciais |
+| **Sentry** | Stack trace de erros, versão, plataforma | Headers de auth (redactados), conteúdo de prompt |
+| **Entitlement** | Email de login, licença ativa | Dados de sessão |
+| **Budget** | Contagem de tokens consumidos | Conteúdo dos prompts |
+| **Updates** | Versão instalada | Qualquer dado de sessão |
 
 ## O que a G4 não precisa receber no fluxo local padrão
 
@@ -107,7 +243,7 @@ O G4 OS foi pensado para operar com contexto e execução perto do usuário, nã
     icon="shield-check"
     href="/product/security"
   >
-    Entenda como permissões, limites e governança entram na operação com IA.
+    Entenda como o network interceptor, permissões e governança entram na operação com IA.
   </Card>
   <Card
     title="Ver conexões"
