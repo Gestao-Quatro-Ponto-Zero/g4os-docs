@@ -39,6 +39,26 @@
               "product/automation",
               "product/security"
             ]
+          },
+          {
+            "group": "Suporte no App",
+            "pages": [
+              "support/index",
+              "support/app-settings",
+              "support/ai",
+              "support/agents",
+              "support/sources",
+              "support/skills",
+              "support/automation",
+              "support/permissions",
+              "support/tags",
+              "support/appearance",
+              "support/workspace",
+              "support/cloud-sync",
+              "support/usage",
+              "support/preferences",
+              "support/sharing"
+            ]
           }
         ]
       }
