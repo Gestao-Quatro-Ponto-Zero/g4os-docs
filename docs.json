@@ -66,20 +66,33 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Site",
-          "href": "https://g4oscloud.com",
-          "icon": "globe"
+          "anchor": "Introdução",
+          "href": "/",
+          "icon": "house"
         },
         {
-          "anchor": "GitHub",
-          "href": "https://github.com/Gestao-Quatro-Ponto-Zero",
-          "icon": "github"
+          "anchor": "Quickstart",
+          "href": "/getting-started/quickstart",
+          "icon": "rocket"
+        },
+        {
+          "anchor": "Suporte",
+          "href": "/support",
+          "icon": "circle-help"
         }
       ]
     }
   },
   "navbar": {
     "links": [
+      {
+        "label": "Quickstart",
+        "href": "/getting-started/quickstart"
+      },
+      {
+        "label": "Suporte",
+        "href": "/support"
+      },
       {
         "label": "GitHub",
         "href": "https://github.com/Gestao-Quatro-Ponto-Zero/g4os-docs"
@@ -91,6 +104,36 @@
       "href": "https://g4oscloud.com"
     }
   },
+  "redirects": [
+    {
+      "source": "/quickstart",
+      "destination": "/getting-started/quickstart"
+    },
+    {
+      "source": "/development",
+      "destination": "/getting-started/quickstart"
+    },
+    {
+      "source": "/essentials/settings",
+      "destination": "/support/app-settings"
+    },
+    {
+      "source": "/essentials/navigation",
+      "destination": "/support"
+    },
+    {
+      "source": "/essentials/:slug*",
+      "destination": "/support"
+    },
+    {
+      "source": "/ai-tools/:slug*",
+      "destination": "/support/ai"
+    },
+    {
+      "source": "/api-reference/introduction",
+      "destination": "/support"
+    }
+  ],
   "footer": {
     "socials": {
       "github": "https://github.com/Gestao-Quatro-Ponto-Zero"
