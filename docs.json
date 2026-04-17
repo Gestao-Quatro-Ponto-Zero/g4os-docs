@@ -105,16 +105,12 @@
       {
         "label": "Suporte",
         "href": "/support"
-      },
-      {
-        "label": "GitHub",
-        "href": "https://github.com/Gestao-Quatro-Ponto-Zero/g4os-docs"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Acessar G4 OS",
-      "href": "https://g4oscloud.com"
+      "href": "https://g4oscloud.com/download-public"
     }
   },
   "redirects": [
