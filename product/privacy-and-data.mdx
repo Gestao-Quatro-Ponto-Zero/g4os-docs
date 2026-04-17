@@ -15,7 +15,7 @@ Isso não significa que nada nunca saia do seu ambiente. Significa que o fluxo p
 
 ### Visão geral: o que sai de onde
 
-O diagrama abaixo mostra o fluxo completo — o que roda na máquina do usuário, o que vai para os LLMs externos, o que chega aos servidores da G4 e como as APIs de terceiros são acessadas.
+O diagrama abaixo mostra o fluxo completo — o que roda na máquina do usuário, o que vai para os LLMs externos, o que chega aos servidores da G4 e como as APIs de terceiros são acessadas pelo sistema. 
 
 ```mermaid
 graph TD
@@ -238,18 +238,11 @@ Ainda assim, isso não transforma o G4 OS em um espelho permanente de todo o seu
 O G4 OS foi pensado para operar com contexto e execução perto do usuário, não para depender de copiar todo o contexto da empresa para a nuvem da G4.
 
 <Columns cols={2}>
-  <Card
-    title="Ver segurança e controle"
-    icon="shield-check"
-    href="/product/security"
-  >
+  <Card title="Ver segurança e controle" icon="shield-check" href="/product/security">
     Entenda como o network interceptor, permissões e governança entram na operação com IA.
   </Card>
-  <Card
-    title="Ver conexões"
-    icon="plug"
-    href="/product/connections"
-  >
+
+  <Card title="Ver conexões" icon="plug" href="/product/connections">
     Compare conexões gerenciadas, agentes gerenciados, MCPs e APIs.
   </Card>
 </Columns>
