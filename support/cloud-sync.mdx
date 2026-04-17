@@ -1,30 +1,155 @@
 ---
 title: "Cloud Sync"
-description: "Use Cloud Sync para backup e restauração de dados do workspace."
+description: "Sincronize um workspace entre dispositivos com token, push manual, prévia de pull e recuperação controlada."
 ---
 
 ## O que é Cloud Sync
 
-Cloud Sync é a superfície de backup e restauração do workspace.
+Cloud Sync é o fluxo de continuidade e recuperação de um workspace entre dispositivos.
 
-Ele não substitui colaboração ao vivo. O foco aqui é preservar e recuperar dados do ambiente.
+Ele foi feito para dois cenários principais:
 
-## O que você encontra aqui
+- continuar o mesmo workspace em outra máquina
+- recuperar um workspace a partir de um estado já enviado para a nuvem
 
-- geração e gestão de token
-- conexão e desconexão do sync
-- status atual da sincronização
-- push manual de dados locais
-- preview de pull
-- pull para restauração
-- resultado da última operação
+Ele não substitui colaboração ao vivo. Para colaboração em sessão, o caminho certo continua sendo [Sessão colaborativa](/support/collaborative-session). Para continuar a mesma sessão no navegador ou no celular, use [Controle remoto](/support/remote-control).
+
+## Como o processo funciona
+
+Cloud Sync trabalha em cima de três ideias simples:
+
+- um `token` conecta o mesmo workspace entre dispositivos
+- `push` envia o estado local atual para a nuvem
+- `pull` traz o estado remoto de volta, sempre com uma prévia antes da confirmação
+
+## Fluxo recomendado entre dois dispositivos
+
+### 1. No dispositivo de origem, gere o token e faça o primeiro envio
+
+No dispositivo que já tem o workspace correto, o primeiro passo é abrir `Cloud Sync`, gerar o token e fazer o primeiro `Enviar para Nuvem`.
+
+![Geração do token e primeiro envio para a nuvem](/images/cloud-sync/cloud-sync-token-e-push.gif)
+
+*Geração do token e início do primeiro push do workspace para a nuvem.*
+
+O que importa aqui:
+
+- o token aparece em claro só naquele momento
+- você precisa copiar e guardar esse token imediatamente
+- esse token é o que vai ligar o mesmo workspace ao outro dispositivo
+- o primeiro `push` é o que cria a base remota que depois poderá ser restaurada
+
+> O token não pode ser exibido novamente depois que essa etapa é dispensada.
+
+### 2. No dispositivo de destino, importe o token
+
+Na outra máquina, abra o workspace correspondente, vá até `Cloud Sync` e importe o token recebido.
+
+![Importação do token em outro dispositivo](/images/cloud-sync/cloud-sync-importar-token.gif)
+
+*Importação do token no dispositivo de destino para conectar o mesmo workspace.*
+
+Depois da importação, a tela deixa de mostrar só `Conectar` e passa a exibir:
+
+- `Status`
+- `Ações`
+- último `push`
+- último `pull`
+
+### 3. Antes de restaurar, revise a prévia do pull
+
+No dispositivo de destino, o próximo passo costuma ser `Baixar da Nuvem`.
+
+Antes de aplicar qualquer restauração, o G4 OS mostra uma `Prévia do Pull` com:
+
+- máquina de origem do último push
+- data e hora do push remoto
+- arquivos novos
+- arquivos modificados
+- arquivos que serão excluídos localmente
+
+![Prévia do pull antes da restauração](/images/cloud-sync/cloud-sync-preview-pull.gif)
+
+*Prévia do pull mostrando a origem do snapshot remoto e o impacto antes da confirmação.*
+
+Esse é o momento de validar se você está trazendo o estado certo.
+
+## O que a tela mostra quando já está conectada
+
+![Status e ações do Cloud Sync depois da conexão](/images/cloud-sync/cloud-sync-status.jpg)
+
+*Estado conectado com token mascarado, timestamps e ações manuais.*
+
+Na prática, a tela passa a ter quatro blocos principais:
+
+### Token
+
+O token deixa de aparecer em claro e fica mascarado na área de `Status`.
+
+### Último push
+
+Mostra quando foi a última vez que esse workspace local enviou dados para a nuvem.
+
+### Último pull
+
+Mostra quando foi a última vez que esse workspace local restaurou dados da nuvem.
+
+### Ações
+
+- `Enviar para Nuvem`: envia o estado local atual
+- `Baixar da Nuvem`: abre a prévia do pull antes da restauração
+- `Desconectar`: remove o token desse workspace neste dispositivo
+
+## O que entra no Cloud Sync
+
+Cloud Sync prioriza contexto e configuração do workspace, não arquivos binários pesados.
+
+Ele sincroniza principalmente:
+
+- sessões
+- configurações de fontes
+- skills
+- temas
+- permissões
+- arquivos textuais de configuração e histórico do workspace
+
+## O que não entra no Cloud Sync
+
+Alguns itens ficam explicitamente fora do sync:
+
+- credenciais e tokens de autenticação
+- anexos de sessão
+- downloads
+- respostas longas armazenadas fora do histórico textual
+- chunks de gravação
+- arquivos acima de `10 MB`
+- conjuntos acima de `500 MB` no total
+
+Em outras palavras: o foco é sincronizar estado operacional textual, não espelhar tudo o que existe no disco.
+
+## O que precisa ficar claro antes de usar
+
+- `push` e `pull` são manuais
+- nada é sincronizado automaticamente em background
+- o `pull` pode sobrescrever divergências locais e excluir arquivos locais ausentes no remoto
+- por isso a `Prévia do Pull` existe e deve ser revisada antes da confirmação
 
 ## Casos comuns
 
-- configurar o sync em uma nova máquina
-- enviar estado local para backup
-- restaurar um workspace após recovery
-- revisar se a conta ainda está conectada
+- configurar o mesmo workspace em uma nova máquina
+- fazer backup manual antes de trocar de dispositivo
+- restaurar um workspace depois de recovery
+- validar qual máquina fez o último push
+
+## Quando usar Cloud Sync e quando não usar
+
+Use `Cloud Sync` quando o objetivo for continuidade, backup ou restauração controlada do workspace.
+
+Não use `Cloud Sync` como se fosse:
+
+- colaboração em tempo real
+- compartilhamento de sessão para outra pessoa
+- controle remoto da mesma conversa
 
 ## Caminho no app
 
@@ -35,6 +160,6 @@ Ele não substitui colaboração ao vivo. O foco aqui é preservar e recuperar d
 - [Abrir Cloud Sync](g4os://settings/sync)
 - [Abrir Workspace](g4os://settings/workspace)
 
-## Importante
+## Resumo rápido
 
-Use Cloud Sync para continuidade e recuperação de workspace. Para automação, fontes ou colaboração operacional, procure as áreas específicas do produto.
+Cloud Sync conecta o mesmo workspace entre dispositivos com um token único, exige `push` e `pull` manuais, mostra uma prévia antes de restaurar, e sincroniza principalmente estado textual e configuração, sem incluir credenciais nem anexos pesados.
