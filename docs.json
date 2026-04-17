@@ -21,7 +21,8 @@
             "group": "Começando",
             "pages": [
               "index",
-              "getting-started/quickstart"
+              "getting-started/quickstart",
+              "getting-started/create-workspace"
             ]
           },
           {
