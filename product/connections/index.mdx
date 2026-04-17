@@ -1,0 +1,128 @@
+---
+title: "Conexões"
+description: "Entenda a diferença entre conexões gerenciadas, MCPs, APIs e agentes gerenciados no G4 OS."
+---
+
+## Como pensar nas conexões no G4 OS
+
+Conexões são o que trazem contexto, ferramentas e capacidade de execução para dentro do seu workspace.
+
+Nem toda conexão funciona do mesmo jeito. Algumas são prontas e gerenciadas pelo produto, outras dependem de configuração técnica, e outras já entregam uma capacidade de agente pronta para uso.
+
+<Columns cols={2}>
+  <Card
+    title="Conexões Gerenciadas"
+    icon="plug"
+    href="/product/connections/managed-connections"
+  >
+    Catálogo pronto do G4 OS para conectar apps comuns com autenticação e runtime administrados pelo produto.
+  </Card>
+  <Card
+    title="Agentes Gerenciados"
+    icon="bot"
+    href="/product/connections/managed-agents"
+  >
+    Catálogo de agentes prontos com capacidades específicas, como entendimento multimodal e geração de imagens.
+  </Card>
+  <Card
+    title="MCPs"
+    icon="server"
+    href="#mcps"
+  >
+    Integrações via Model Context Protocol, ideais para ferramentas e fluxos mais customizados.
+  </Card>
+  <Card
+    title="APIs"
+    icon="code"
+    href="#apis"
+  >
+    Conexões diretas com endpoints e credenciais quando você já sabe exatamente o que quer integrar.
+  </Card>
+</Columns>
+
+## Comparação rápida
+
+| Tipo | O que é | Melhor quando | Onde abrir |
+| --- | --- | --- | --- |
+| Conexões Gerenciadas | Integrações prontas do catálogo do G4 OS | Você quer plugar apps conhecidos com menos configuração manual | `g4os://sources/g4-managed` |
+| Agentes Gerenciados | Agentes prontos com capacidades específicas | Você quer execução especializada, multimodalidade ou geração | `g4os://sources/g4-agents` |
+| MCPs | Servidores que expõem ferramentas via MCP | Você precisa de ferramentas mais flexíveis, locais ou remotas | `g4os://sources/mcp` |
+| APIs | Integrações diretas com endpoints e credenciais | Você já tem uma API definida e quer configurar o acesso diretamente | `g4os://sources/api` |
+
+## Conexões Gerenciadas
+
+Conexões gerenciadas são o caminho mais simples para plugar ferramentas populares no G4 OS.
+
+Elas já vêm com a experiência do produto preparada para autenticação, reconexão, diagnóstico e uso em sessão. Na prática, isso reduz bastante a necessidade de configurar MCP, endpoint, escopo ou runtime manualmente.
+
+<Card
+  title="Explorar Conexões Gerenciadas"
+  icon="plug"
+  href="/product/connections/managed-connections"
+  horizontal
+>
+  Veja o catálogo atual com cards por integração e um resumo do que é possível fazer em cada uma.
+</Card>
+
+## Agentes Gerenciados
+
+Agentes gerenciados são diferentes de uma conexão comum. Em vez de só conectar um sistema, eles já trazem uma capacidade operacional pronta, como entendimento multimodal, análise de documentos ou geração de imagens.
+
+> **Beta:** agentes gerenciados são uma função beta e podem não estar disponíveis para todos os usuários, contas, workspaces ou builds do G4 OS.
+
+<Card
+  title="Explorar Agentes Gerenciados"
+  icon="bot"
+  href="/product/connections/managed-agents"
+  horizontal
+>
+  Veja o catálogo atual de agentes, o que cada um faz melhor e onde eles aparecem no produto.
+</Card>
+
+## MCPs
+
+MCPs são conexões baseadas em Model Context Protocol. Em vez de um catálogo pronto do G4 OS, você conecta um servidor que expõe ferramentas e capacidades para o produto consumir.
+
+Esse é o caminho certo quando você precisa de algo mais customizado, quando a integração já existe em MCP ou quando faz sentido manter a lógica fora do G4 OS.
+
+### Quando faz mais sentido
+
+- quando sua integração já existe como servidor MCP
+- quando você precisa expor ferramentas mais específicas do que uma API pronta
+- quando a autenticação, o runtime ou a lógica da integração precisam ficar fora do produto
+
+## APIs
+
+APIs são conexões diretas com endpoints externos. Aqui o foco é configurar acesso a uma API específica, normalmente com URL, credenciais e parâmetros definidos por você.
+
+É uma abordagem mais técnica e mais flexível do que as conexões gerenciadas, mas com menos abstração do produto.
+
+### Quando faz mais sentido
+
+- quando você já tem uma API interna ou externa bem definida
+- quando não existe conector gerenciado para esse sistema
+- quando você quer um controle mais direto sobre endpoint, auth e payload
+
+## Como escolher sem complicar
+
+- Comece por `Conexões Gerenciadas` quando o sistema já estiver no catálogo do G4 OS.
+- Use `Agentes Gerenciados` quando o valor principal estiver na capacidade do agente, e não só no acesso à fonte.
+- Use `MCPs` quando você precisar plugar ferramentas mais customizadas.
+- Use `APIs` quando já existir uma integração técnica clara por endpoint.
+
+<Columns cols={2}>
+  <Card
+    title="Ver privacidade e dados"
+    icon="shield"
+    href="/product/privacy-and-data"
+  >
+    Entenda como a arquitetura do G4 OS funciona na prática e quando o fluxo é local ou gerenciado.
+  </Card>
+  <Card
+    title="Ver suporte de fontes"
+    icon="circle-help"
+    href="/support/sources"
+  >
+    Consulte a documentação da tela de Fontes e os deep links do app.
+  </Card>
+</Columns>

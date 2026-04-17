@@ -33,9 +33,16 @@
             ]
           },
           {
+            "group": "Conexões",
+            "pages": [
+              "product/connections/index",
+              "product/connections/managed-connections",
+              "product/connections/managed-agents"
+            ]
+          },
+          {
             "group": "Operação",
             "pages": [
-              "product/connection-types",
               "product/integrations",
               "product/automation",
               "product/security",
@@ -107,6 +114,10 @@
     }
   },
   "redirects": [
+    {
+      "source": "/product/connection-types",
+      "destination": "/product/connections"
+    },
     {
       "source": "/quickstart",
       "destination": "/getting-started/quickstart"

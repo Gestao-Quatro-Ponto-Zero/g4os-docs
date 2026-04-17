@@ -1,0 +1,62 @@
+---
+title: "Agentes Gerenciados"
+description: "Catálogo atual de agentes gerenciados do G4 OS, com explicação curta do que cada agente faz melhor."
+---
+
+## O que são agentes gerenciados
+
+Agentes gerenciados são agentes prontos do catálogo do G4 OS.
+
+Em vez de só conectar uma fonte, eles já entregam uma capacidade operacional específica, como entendimento multimodal, análise de documentos ou geração de imagens.
+
+> **Beta:** agentes gerenciados são uma função beta e podem não estar disponíveis para todos os usuários, contas, workspaces ou builds do G4 OS.
+
+## Onde aparecem no produto
+
+- `Fontes > Agentes G4`
+- `Configurações > Agentes`
+- [Abrir Agentes G4](g4os://sources/g4-agents)
+- [Abrir Configurações de Agentes](g4os://settings/agents)
+
+## Catálogo atual
+
+<Columns cols={2}>
+  <Card title="Google AI" icon="https://www.gstatic.com/images/branding/product/2x/gemini_48dp.png">
+    Entende texto, URLs, imagens, áudio, vídeo e documentos para análise multimodal e uso geral.
+  </Card>
+  <Card title="AWS Nova" icon="https://m.media-amazon.com/images/I/61-mzaOAb4L.png">
+    Analisa documentos e imagens com foco em tarefas estruturadas e apoio operacional. A disponibilidade pode variar por build e conta.
+  </Card>
+  <Card title="Nano Banana" icon="https://www.gstatic.com/images/branding/product/2x/gemini_48dp.png">
+    Gera imagens e variações criativas para ativos visuais. A disponibilidade pode variar por build e conta.
+  </Card>
+</Columns>
+
+## Quando faz sentido usar
+
+- quando você quer uma capacidade pronta de agente, e não só acesso a dados
+- quando o caso de uso pede multimodalidade, análise especializada ou geração
+- quando faz sentido usar um catálogo central administrado pelo produto
+
+## O que avaliar antes de usar em produção
+
+- se o agente está disponível no seu build e no seu workspace
+- quais arquivos e fontes ele pode acessar
+- se o fluxo precisa de revisão humana antes da execução final
+
+<Columns cols={2}>
+  <Card
+    title="Ver visão geral de conexões"
+    icon="plug"
+    href="/product/connections"
+  >
+    Volte para a visão comparativa entre gerenciadas, MCPs, APIs e agentes.
+  </Card>
+  <Card
+    title="Ver suporte de agentes"
+    icon="circle-help"
+    href="/support/agents"
+  >
+    Consulte a documentação da área de Agentes dentro do app.
+  </Card>
+</Columns>
