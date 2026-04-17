@@ -2,6 +2,11 @@
 
 Documentação institucional e de produto do G4 OS em Mintlify.
 
+Os ativos de marca desta docs seguem os exports atuais do repositório principal do G4 OS:
+
+- `favicon.svg` sincronizado de `apps/viewer/public/favicon.svg`
+- `logo/light.png` e `logo/dark.png` sincronizados de `apps/electron/resources/g4os-logos/`
+
 ## Rodando localmente
 
 ```bash
