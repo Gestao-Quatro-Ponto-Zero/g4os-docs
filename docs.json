@@ -38,7 +38,8 @@
               "product/connection-types",
               "product/integrations",
               "product/automation",
-              "product/security"
+              "product/security",
+              "product/privacy-and-data"
             ]
           },
           {
@@ -79,7 +80,7 @@
         {
           "anchor": "Suporte",
           "href": "/support",
-          "icon": "circle-help"
+          "icon": "headset"
         }
       ]
     }
