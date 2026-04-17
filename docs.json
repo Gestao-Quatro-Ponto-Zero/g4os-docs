@@ -35,6 +35,7 @@
           {
             "group": "Operação",
             "pages": [
+              "product/connection-types",
               "product/integrations",
               "product/automation",
               "product/security"

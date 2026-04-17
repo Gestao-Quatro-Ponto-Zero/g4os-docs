@@ -1,0 +1,170 @@
+---
+title: "Tipos de Conexão"
+description: "Entenda a diferença entre conexões gerenciadas, MCPs, APIs e agentes no G4 OS."
+---
+
+## Como pensar nas conexões no G4 OS
+
+No G4 OS, conexões são o que trazem contexto, ferramentas e capacidade de execução para dentro do seu workspace.
+
+Nem toda conexão funciona do mesmo jeito. Algumas são prontas e gerenciadas pelo produto, outras dependem de configuração técnica, e outras já embutem um comportamento de agente.
+
+<Columns cols={2}>
+  <Card title="Conexões Gerenciadas" icon="plug" href="#conexoes-gerenciadas">
+    Catálogo pronto do G4 OS para conectar apps comuns com autenticação e runtime administrados pelo produto.
+  </Card>
+  <Card title="MCPs" icon="server" href="#mcps">
+    Integrações via Model Context Protocol, locais ou remotas, ideais para ferramentas e fluxos mais customizados.
+  </Card>
+  <Card title="APIs" icon="code" href="#apis">
+    Conexões configuradas diretamente contra uma API, quando você já sabe qual endpoint e autenticação quer usar.
+  </Card>
+  <Card title="Agentes G4" icon="bot" href="#agentes-g4">
+    Fontes especiais que já trazem uma capacidade de agente pronta, em vez de só expor dados ou endpoints.
+  </Card>
+</Columns>
+
+## Comparação rápida
+
+| Tipo | O que é | Melhor quando | Onde abrir |
+| --- | --- | --- | --- |
+| Conexões Gerenciadas | Integrações prontas, mantidas pelo G4 OS | Você quer velocidade, autenticação guiada e menos configuração manual | `g4os://sources/g4-managed` |
+| MCPs | Servidores que expõem ferramentas via MCP | Você precisa de ferramentas mais flexíveis, locais ou remotas | `g4os://sources/mcp` |
+| APIs | Integrações diretas com endpoints e credenciais | Você já tem uma API definida e quer configurar o acesso diretamente | `g4os://sources/api` |
+| Agentes G4 | Fontes com comportamento de agente e capacidades específicas | Você quer execução especializada, multimodalidade ou geração | `g4os://sources/g4-agents` |
+
+## Conexões Gerenciadas
+
+Conexões gerenciadas são o caminho mais simples para plugar ferramentas populares no G4 OS.
+
+Elas já vêm com a experiência do produto preparada para autenticação, reconexão, diagnóstico e uso em sessão. Na prática, isso reduz bastante a necessidade de configurar MCP, endpoint, escopo ou runtime manualmente.
+
+### Quando faz mais sentido
+
+- quando você quer conectar apps comuns do dia a dia com o menor atrito possível
+- quando o time precisa de uma integração confiável, com fluxo de auth guiado pelo produto
+- quando o objetivo é colocar uma operação no ar rápido, sem montar infraestrutura própria
+
+### Onde aparece no app
+
+- `Fontes > Conexões Gerenciadas`
+- [Abrir Conexões Gerenciadas](g4os://sources/g4-managed)
+
+### Conexões gerenciadas disponíveis hoje
+
+#### Google
+
+- <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail" width="18" height="18" /> Gmail
+- <img src="https://calendar.google.com/googlecalendar/images/favicons_2020q4/calendar_31.ico" alt="Google Calendar" width="18" height="18" /> Google Calendar
+- <img src="https://fonts.gstatic.com/s/i/productlogos/tasks/v1/192px.svg" alt="Google Tasks" width="18" height="18" /> Google Tasks
+- <img src="https://drive.google.com/favicon.ico" alt="Google Drive" width="18" height="18" /> Google Drive
+- <img src="https://pipedream.com/s.v0/app_1pbh98/logo/orig" alt="Google Docs" width="18" height="18" /> Google Docs
+- <img src="https://fonts.gstatic.com/s/i/productlogos/chat_2020q4/v2/192px.svg" alt="Google Chat" width="18" height="18" /> Google Chat
+- <img src="https://fonts.gstatic.com/s/i/productlogos/sheets_2020q4/v9/192px.svg" alt="Google Sheets" width="18" height="18" /> Google Sheets
+- <img src="https://fonts.gstatic.com/s/i/productlogos/slides_2020q4/v6/192px.svg" alt="Google Slides" width="18" height="18" /> Google Slides
+- <img src="https://pipedream.com/s.v0/app_mJQh5A/logo/orig" alt="Google Analytics" width="18" height="18" /> Google Analytics
+
+#### Microsoft
+
+- <img src="https://res.cdn.office.net/files/fabric-cdn-prod_20230815.001/assets/brand-icons/product/svg/outlook_32x1.svg" alt="Microsoft Outlook Email" width="18" height="18" /> Microsoft Outlook Email
+- <img src="https://res.cdn.office.net/files/fabric-cdn-prod_20230815.001/assets/brand-icons/product/svg/outlook_32x1.svg" alt="Microsoft Outlook Calendar" width="18" height="18" /> Microsoft Outlook Calendar
+- <img src="https://res.cdn.office.net/files/fabric-cdn-prod_20230815.001/assets/brand-icons/product/svg/teams_32x1.svg" alt="Microsoft Teams" width="18" height="18" /> Microsoft Teams
+- <img src="https://res.cdn.office.net/files/fabric-cdn-prod_20241209.001/assets/brand-icons/product/svg/onedrive_48x1.svg" alt="Microsoft OneDrive" width="18" height="18" /> Microsoft OneDrive
+- <img src="https://res.cdn.office.net/files/fabric-cdn-prod_20241209.001/assets/brand-icons/product/svg/sharepoint_48x1.svg" alt="Microsoft SharePoint" width="18" height="18" /> Microsoft SharePoint
+
+#### Operação e colaboração
+
+- <img src="https://pipedream.com/s.v0/app_OVWhPX/logo/orig" alt="Asana" width="18" height="18" /> Asana
+- <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub" width="18" height="18" /> GitHub
+- <img src="https://linear.app/static/favicon.svg" alt="Linear" width="18" height="18" /> Linear
+- <img src="https://wac-cdn.atlassian.com/assets/img/favicons/atlassian/favicon.png" alt="Jira" width="18" height="18" /> Jira
+- <img src="https://pipedream.com/s.v0/app_X7Lhxr/logo/orig" alt="Notion" width="18" height="18" /> Notion
+- <img src="https://www.pipedrive.com/favicon.ico" alt="Pipedrive" width="18" height="18" /> Pipedrive
+- <img src="https://a.slack-edge.com/80588/marketing/img/meta/slack_hash_128.png" alt="Slack" width="18" height="18" /> Slack
+- <img src="https://pipedream.com/s.v0/app_1dBhP3/logo/orig" alt="Supabase" width="18" height="18" /> Supabase
+- <img src="https://trello.com/favicon.ico" alt="Trello" width="18" height="18" /> Trello
+
+## MCPs
+
+MCPs são conexões baseadas em Model Context Protocol. Em vez de um catálogo pronto do G4 OS, você conecta um servidor que expõe ferramentas e capacidades para o produto consumir.
+
+Esse é o caminho certo quando você precisa de algo mais customizado, quando a integração já existe em MCP ou quando faz sentido manter a lógica fora do G4 OS.
+
+### Quando faz mais sentido
+
+- quando sua integração já existe como servidor MCP
+- quando você precisa expor ferramentas mais específicas do que uma API pronta
+- quando a autenticação, o runtime ou a lógica da integração precisam ficar fora do produto
+
+### Onde aparece no app
+
+- `Fontes > MCPs`
+- [Abrir MCPs](g4os://sources/mcp)
+
+## APIs
+
+APIs são conexões diretas com endpoints externos. Aqui o foco é configurar acesso a uma API específica, normalmente com URL, credenciais e parâmetros definidos por você.
+
+É uma abordagem mais técnica e mais flexível do que as conexões gerenciadas, mas com menos abstração do produto.
+
+### Quando faz mais sentido
+
+- quando você já tem uma API interna ou externa bem definida
+- quando não existe conector gerenciado para esse sistema
+- quando você quer um controle mais direto sobre endpoint, auth e payload
+
+### Onde aparece no app
+
+- `Fontes > APIs`
+- [Abrir APIs](g4os://sources/api)
+
+## Agentes G4
+
+Agentes G4 são diferentes de uma conexão comum. Em vez de só conectar um sistema, eles já trazem uma capacidade operacional pronta, como entendimento multimodal, análise de documentos ou geração de imagens.
+
+Eles aparecem como fontes especiais dentro do produto e também têm área própria de catálogo e sincronização em `Configurações > Agentes`.
+
+> **Beta:** agentes gerenciados são uma função beta e podem não estar disponíveis para todos os usuários, contas, workspaces ou builds do G4 OS.
+
+### Quando faz mais sentido
+
+- quando você quer uma capacidade pronta de agente, e não só acesso a dados
+- quando o caso de uso pede multimodalidade, análise especializada ou geração
+- quando faz sentido usar um catálogo central gerenciado pelo produto
+
+### Onde aparece no app
+
+- `Fontes > Agentes G4`
+- `Configurações > Agentes`
+- [Abrir Agentes G4](g4os://sources/g4-agents)
+- [Abrir Configurações de Agentes](g4os://settings/agents)
+
+### Agentes gerenciados no catálogo atual
+
+- <img src="https://www.gstatic.com/images/branding/product/2x/gemini_48dp.png" alt="Google AI" width="18" height="18" /> **Google AI**: agente multimodal para entendimento de URL, áudio, vídeo, imagem e documentos.
+- <img src="https://m.media-amazon.com/images/I/61-mzaOAb4L.png" alt="AWS Nova" width="18" height="18" /> **AWS Nova**: agente para análise de documentos, imagens e execução estruturada de tarefas. A disponibilidade pode variar por build e conta.
+- <img src="https://www.gstatic.com/images/branding/product/2x/gemini_48dp.png" alt="Nano Banana" width="18" height="18" /> **Nano Banana**: agente focado em geração de imagens. A disponibilidade pode variar por build e conta.
+
+## Como escolher sem complicar
+
+- Comece por `Conexões Gerenciadas` quando o sistema já estiver no catálogo do G4 OS.
+- Use `MCPs` quando você precisar plugar ferramentas mais customizadas.
+- Use `APIs` quando já existir uma integração técnica clara por endpoint.
+- Use `Agentes G4` quando o valor principal estiver na capacidade do agente, e não só no acesso à fonte.
+
+<Columns cols={2}>
+  <Card
+    title="Ver integrações"
+    icon="plug"
+    href="/product/integrations"
+  >
+    Entenda como priorizar o que conectar primeiro no G4 OS.
+  </Card>
+  <Card
+    title="Ver suporte de fontes"
+    icon="circle-help"
+    href="/support/sources"
+  >
+    Consulte a documentação da tela de Fontes e os deep links do app.
+  </Card>
+</Columns>
