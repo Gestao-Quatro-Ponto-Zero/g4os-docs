@@ -1,0 +1,109 @@
+---
+title: "Gerenciar Empresa"
+description: "Acompanhe consumo, gerencie usuários e configure políticas de crédito para toda a empresa no G4 OS."
+---
+
+## O que é Gerenciar Empresa
+
+**Gerenciar Empresa** é o painel administrativo da empresa dentro do G4 OS. Ele oferece uma visão consolidada do consumo de créditos, dos membros ativos e das políticas de uso — tudo em um só lugar.
+
+Apenas administradores da empresa têm acesso a esta área.
+
+## Abas disponíveis
+
+O painel é dividido em quatro abas:
+
+- **Visão geral** — resumo de métricas de consumo, pacing e projeção do mês
+- **Usuários** — listagem de membros com consumo individual e controles de override
+- **Consumo** — gráfico diário de uso por toda a empresa
+- **Políticas** — configuração de limites globais e grupos de política
+
+## Visão geral
+
+<Frame>
+  <img src="/images/empresa/gerenciar-empresa-visao-geral.png" alt="Painel Gerenciar Empresa — aba Visão Geral com métricas de consumo, usuários ativos e gráfico diário" />
+</Frame>
+
+A aba **Visão geral** exibe:
+
+- **Modo de cobrança** — indica se a empresa opera no modelo ilimitado ou com pool de créditos definido
+- **Mês selecionado** — selector de mês para navegar pelo histórico de consumo
+- **Consumo do mês** — total de créditos consumidos no período selecionado
+- **Usuários ativos** — número de membros com atividade no mês
+- **Grupos de política** — quantidade de grupos de política específica configurados
+- **Resumo do mês** — comparativo com o mês anterior e projeção de fechamento
+- **Gráfico de consumo diário** — série temporal com consumo por dia; permite comparar mês atual e mês anterior
+
+### Botão Atualizar
+
+O botão **Atualizar** força um refresh dos dados. O cache tem 30 segundos de freshness e 10 minutos de stale — ou seja, dentro desse intervalo os dados são servidos do cache para evitar requisições duplicadas. Após o prazo, a próxima abertura do painel busca dados novos automaticamente.
+
+## Usuários
+
+A aba **Usuários** lista todos os membros associados explicitamente à empresa — não inclui usuários que apenas compartilham o mesmo domínio sem vínculo formal.
+
+Colunas disponíveis:
+
+| Coluna | Descrição |
+|--------|-----------|
+| Usuário | Email do membro |
+| Créditos | Consumo total no mês selecionado |
+| Turns | Número de interações com o assistente |
+| Sessions | Número de sessões abertas |
+| Limites | Indica se há override de limites aplicado a esse usuário |
+
+A tabela é **ordenável** por qualquer coluna. Clique no cabeçalho para alternar entre crescente e decrescente.
+
+### Badge de auto-join
+
+Membros que entraram automaticamente via domínio — ou seja, criaram um workspace com um e-mail cujo domínio está na lista de domínios permitidos da empresa — exibem o badge **auto-join**. Isso diferencia membros explícitos (convidados diretamente) de membros por matching de domínio.
+
+> **Importante:** o consumo exibido na tabela considera apenas membros bound (vinculados) à empresa. Usuários com o mesmo domínio que **não** possuem vínculo formal não entram no cálculo.
+
+## Políticas
+
+<Frame>
+  <img src="/images/empresa/gerenciar-empresa-politicas.png" alt="Aba Políticas — configuração de limites globais, overflow de pool e domínios de auto-join" />
+</Frame>
+
+A aba **Políticas** controla as regras padrão aplicadas a todos os membros da empresa.
+
+### Política global
+
+A **Política global** define os limites padrão de crédito e as regras de associação automática por domínio. É aplicada a todos os usuários da empresa que não estejam em um grupo de política específico.
+
+Campos disponíveis:
+
+| Campo | Descrição |
+|-------|-----------|
+| Limite diário | Máximo de créditos que um usuário pode consumir por dia |
+| Limite mensal | Máximo de créditos que um usuário pode consumir no mês |
+| Overflow do pool | Permite que usuários continuem usando o assistente após esgotar seu pool pessoal, usando o pool da empresa como fallback |
+| Limite diário de overflow | Limite de créditos diários quando operando em overflow |
+| Limite mensal de overflow | Limite de créditos mensais quando operando em overflow |
+| Domínios permitidos | Lista de domínios de e-mail que ativam a associação automática à empresa |
+| Auto-join por domínio | Quando ativo, usuários com e-mail de um domínio permitido são automaticamente vinculados à empresa ao criar um workspace |
+
+### Grupos de política
+
+Além da política global, é possível criar **grupos de política** para aplicar limites diferentes a subconjuntos de usuários — por exemplo, um time de produto com limite maior ou um grupo de teste com acesso restrito.
+
+Cada grupo tem:
+- Nome e descrição
+- Lista de membros (e-mails)
+- Configuração de limites própria (diário, mensal, overflow)
+
+Membros em um grupo de política específico seguem as regras desse grupo, não as da política global.
+
+## Caminho no app
+
+- `Menu lateral > Gerenciar Empresa`
+
+## Deep links úteis
+
+- [Abrir Gerenciar Empresa](g4os://business-management)
+
+## Veja também
+
+- [Uso](/support/usage) — visão individual de consumo de créditos, incluindo como a política da empresa afeta o que o usuário vê
+- [Workspace](/support/workspace) — configuração de vínculo com Company Context
