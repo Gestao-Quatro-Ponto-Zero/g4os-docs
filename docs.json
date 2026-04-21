@@ -71,7 +71,8 @@
               "support/preferences",
               "support/sharing",
               "support/collaborative-session",
-              "support/remote-control"
+              "support/remote-control",
+              "support/marketplace"
             ]
           }
         ]
