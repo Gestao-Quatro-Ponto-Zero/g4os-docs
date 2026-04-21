@@ -65,6 +65,7 @@
               "support/tags",
               "support/appearance",
               "support/workspace",
+              "support/company-context",
               "support/cloud-sync",
               "support/repair-mode",
               "support/usage",
