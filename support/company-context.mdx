@@ -1,0 +1,93 @@
+---
+title: "Company Context"
+description: "Entenda como vincular seu workspace a uma empresa verificada e o que o badge de verificação representa."
+---
+
+## O que é o Company Context
+
+O **Company Context** é o vínculo entre um workspace e uma empresa cadastrada no G4 OS.
+
+Quando um workspace está conectado a uma empresa, os agentes passam a ter acesso a documentos, contexto organizacional e ferramentas compartilhadas daquela empresa — sem precisar repassar essas informações a cada nova sessão.
+
+## Como vincular um workspace a uma empresa
+
+1. Abra `Configurações > Workspace`
+2. Localize a seção **Company Context**
+3. Clique no seletor de empresa e escolha a empresa desejada
+4. Confirme o vínculo
+
+![Seletor de empresa no workspace com badge de verificação](/images/company-context/verified-company-selector.png)
+
+*Seletor de Company Context no workspace. Empresas verificadas aparecem com o badge azul ao lado do nome.*
+
+Depois de vincular, os agentes nas sessões desse workspace passam a usar o contexto daquela empresa automaticamente. Você pode desvincular a qualquer momento escolhendo **No company context**.
+
+## O que é uma empresa verificada
+
+Empresas verificadas exibem um **badge azul** ao lado do nome em:
+
+- Lista de workspaces no workspace selector
+- Sidebar da empresa
+- Header de admin da empresa
+- Viewer list
+
+Esse badge indica que a empresa foi validada pelo G4 Educação como a organização real correspondente àquele cadastro.
+
+### Por que a verificação existe
+
+A verificação resolve um problema prático: garantir que os colaboradores saibam que estão se conectando à **empresa real**, e não a um cadastro duplicado, desatualizado ou criado por engano.
+
+Sem verificação, qualquer usuário com acesso ao admin poderia criar uma empresa com o mesmo nome. O badge azul é a confirmação de que o G4 Educação validou aquela entidade.
+
+## Critérios para verificação
+
+Para que uma empresa seja elegível à verificação, ela deve atender a **todos** os seguintes critérios:
+
+1. **Assinatura ativa** — a empresa precisa ter um plano pago vigente no G4 OS
+2. **Mínimo de 10 usuários com seats pagantes ativos** — a conta deve ter ao menos 10 membros com licença paga ativa no momento da solicitação
+3. **Solicitação formal ao G4 Educação** — o admin da empresa deve abrir uma solicitação oficial, acompanhada de documentação que comprove tratar-se da empresa real (contrato social, CNPJ, ou documento equivalente)
+
+Após a análise e aprovação pelo G4 Educação, um admin do sistema marca a empresa como verificada no painel de administração.
+
+## Relação com a gestão de usuários
+
+A verificação está diretamente ligada à base de usuários da empresa:
+
+- **Seats pagantes** são contados a partir dos membros com licença ativa em `Configurações da Empresa > Membros`
+- Membros removidos ou inativos não contam para o critério de 10 seats
+- Se a empresa perder usuários abaixo do mínimo ou encerrar a assinatura, a verificação pode ser revisada
+
+Administradores podem acompanhar o status de membros e seats no painel da empresa.
+
+## Quem pode solicitar verificação
+
+Apenas **admins da empresa** no G4 OS podem iniciar o processo de verificação. O pedido deve ser feito diretamente ao suporte do G4 Educação com a documentação necessária.
+
+## O que muda após a verificação
+
+- O badge azul aparece nos pontos descritos acima
+- Colaboradores que veem o badge sabem que aquele cadastro foi validado
+- O vínculo com um workspace verificado sinaliza para toda a equipe que o contexto compartilhado é o contexto oficial da empresa
+
+## Caminho no app
+
+- `Configurações > Workspace > Company Context`
+
+## Veja também
+
+<Columns cols={2}>
+  <Card
+    title="Workspace"
+    icon="sliders"
+    href="/support/workspace"
+  >
+    Veja todos os controles disponíveis nas configurações de workspace, incluindo o vínculo com Company Context.
+  </Card>
+  <Card
+    title="Permissões"
+    icon="shield"
+    href="/support/permissions"
+  >
+    Entenda como permissões e escopos funcionam para membros e admins dentro do Company Context.
+  </Card>
+</Columns>
