@@ -5,20 +5,71 @@ description: "Acompanhe consumo pessoal de créditos gerenciados e entenda seu s
 
 ## O que esta área mostra
 
-A página de `Uso` resume o consumo pessoal de créditos gerenciados dentro do G4 OS.
+A página de `Uso` resume o consumo pessoal de créditos dentro do G4 OS, exibindo limites, projeções e o detalhamento de como os créditos foram gastos no mês.
 
-## O que você encontra aqui
+## Estrutura da página
 
-- uso diário
-- uso mensal
-- sinalização de limite ou pressão de orçamento
-- contexto para diferenciar acompanhamento pessoal e empresarial
+### Badge de escopo
 
-## Casos comuns
+No topo, um badge indica se o consumo exibido é **pessoal** ou vinculado a uma **empresa gerenciada**. Quando vinculado a uma empresa, o nome da organização aparece ao lado do ícone.
 
-- entender se o consumo recente aumentou
-- verificar proximidade de limite mensal
-- confirmar se o bloqueio ou alerta vem de orçamento gerenciado
+### Limites de uso
+
+Dois cartões mostram o consumo atual versus o limite configurado:
+
+| Campo | Descrição |
+|-------|-----------|
+| **Uso diário** | Créditos consumidos no dia corrente. Reseta à meia-noite. |
+| **Uso mensal** | Créditos consumidos no mês corrente. Reseta no início do próximo mês. |
+
+Cada cartão exibe:
+- Créditos usados vs. limite (ex: `13,5 de 100 cr`)
+- Percentual restante
+- Barra de progresso com código de cor:
+  - **Normal** (< 80%): barra escura
+  - **Atenção** (80–99%): barra azul
+  - **Limite atingido** (≥ 100%): barra vermelha
+
+Quando não há limite configurado, o campo mostra apenas o consumo sem indicador de percentual.
+
+### Resumo do mês
+
+Dois cartões de análise são exibidos lado a lado:
+
+**Ritmo vs. mês passado**
+Compara o consumo atual com o mesmo período do mês anterior. Pode mostrar:
+- *Acima do ritmo* — consumo percentualmente maior que o mês anterior
+- *Abaixo do ritmo* — consumo percentualmente menor
+- *No ritmo* — consumo equivalente
+- *Sem histórico suficiente* — quando não há dados do mês anterior para comparar
+
+Inclui métricas de créditos, turnos e sessões do mês atual vs. mesmo dia do mês passado.
+
+**Projeção do mês**
+Estima o total de créditos que será consumido até o fim do mês com base no ritmo atual. Quando há limite configurado, exibe o percentual projetado em relação ao limite e alerta se a projeção ultrapassar o teto.
+
+### Onde seus créditos foram
+
+Exibe os modelos de IA mais utilizados no mês, com:
+- Nome do modelo
+- Créditos consumidos e percentual do total
+- Número de turnos
+
+Esta seção aparece apenas em contas pessoais ou quando há dados de uso por modelo disponíveis.
+
+### Consumo por dia
+
+Gráfico de barras com o consumo diário de créditos. Permite alternar entre o mês atual e o mês anterior para comparação visual. O totalizador de cada período é exibido acima do gráfico.
+
+> **Nota:** O gráfico considera apenas conexões gerenciadas.
+
+### Como isso se aplica
+
+Seção explicativa sobre o modelo de créditos:
+
+- Créditos são a única unidade exibida no app.
+- O uso pessoal continua disponível mesmo fora de um workspace vinculado a uma empresa.
+- Quando o workspace está vinculado a uma empresa e o usuário é gerenciado por ela, a tela **Gerenciar Empresa** passa a ser a fonte de verdade das sessões e limites.
 
 ## Caminho no app
 
@@ -28,6 +79,6 @@ A página de `Uso` resume o consumo pessoal de créditos gerenciados dentro do G
 
 - [Abrir Uso](g4os://settings/usage)
 
-## Observação
+## Atualizar dados
 
-Quando o contexto for empresarial e administrado centralmente, a visão pessoal ajuda no acompanhamento, mas a fonte de verdade de política e orçamento continua sendo a administração correspondente.
+O botão de atualização (ícone de seta circular) no canto superior direito recarrega os dados de consumo sob demanda.
