@@ -69,11 +69,13 @@
               "support/cloud-sync",
               "support/repair-mode",
               "support/usage",
+              "support/billing-subscriptions",
               "support/empresa",
               "support/preferences",
               "support/sharing",
               "support/collaborative-session",
               "support/remote-control",
+              "support/telegram-messaging",
               "support/marketplace"
             ]
           }

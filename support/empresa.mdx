@@ -95,6 +95,41 @@ Cada grupo tem:
 
 Membros em um grupo de política específico seguem as regras desse grupo, não as da política global.
 
+## Ciclo de acesso de usuários
+
+Administradores podem controlar o estado de acesso de membros individuais da empresa. O ciclo de acesso determina se um usuário pode ou não usar o G4 OS dentro do contexto gerenciado.
+
+| Estado | O que significa |
+|--------|----------------|
+| **Ativo** | Acesso normal; o usuário opera normalmente dentro das políticas configuradas |
+| **Suspenso** | Acesso temporariamente bloqueado, por exemplo por inadimplência ou revisão de conta; o usuário não consegue iniciar novas sessões |
+| **Arquivado** | Conta desativada e mantida no histórico; sem acesso operacional |
+| **Desprovisionado** | Remoção permanente do contexto gerenciado; os dados históricos são preservados |
+
+Para alterar o estado de acesso de um usuário, acesse a aba **Usuários**, localize o membro e use o menu de ações. A mudança entra em vigor imediatamente.
+
+> Suspender um usuário não remove seus dados nem o histórico de consumo. O estado pode ser revertido a qualquer momento enquanto a conta estiver suspensa ou arquivada.
+
+## Planos e assinaturas
+
+Administradores com acesso ao painel SaaS podem criar e gerenciar planos e assinaturas vinculadas à empresa. Planos definem as condições de consumo (créditos mensais, limites por usuário) e são atribuídos a usuários por meio de assinaturas.
+
+Quando um plano é alterado, as permissões e limites dos usuários vinculados são sincronizados automaticamente em até 1 minuto. Não há necessidade de ação manual.
+
+> Esta seção está disponível apenas em workspaces com o módulo SaaS habilitado. Se o painel não aparecer, entre em contato com o suporte.
+
+## Limites mensais e enforcement em runtime
+
+Os limites mensais configurados em **Políticas** são aplicados em tempo de execução — ou seja, o bloqueio acontece no momento em que o usuário tenta fazer uma nova chamada ao modelo, não de forma retroativa.
+
+Quando um usuário atinge o limite:
+- Novas chamadas ao modelo são bloqueadas imediatamente
+- O usuário vê uma mensagem informando que o limite foi atingido
+- O histórico de sessões e dados permanecem acessíveis (somente leitura)
+- O contador reseta automaticamente no primeiro dia do mês seguinte
+
+Administradores podem conceder créditos adicionais ou ajustar os limites a qualquer momento para desbloquear o usuário antes do reset mensal.
+
 ## Caminho no app
 
 - `Menu lateral > Gerenciar Empresa`
