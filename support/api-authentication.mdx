@@ -1,0 +1,93 @@
+---
+title: "Autenticação por API Key"
+description: "Use chaves de API para acesso programático às APIs de gerenciamento do G4 OS."
+---
+
+{/* 
+  STUB — página a ser escrita com base no commit 7726df2 (Allow API key for management APIs)
+  e d6718eb (Document management API key auth) do G4OS.
+  Esta página é voltada para administradores técnicos que integram ferramentas externas.
+
+  ---
+  REFERÊNCIAS NO CÓDIGO G4OS
+  ---
+
+  ## Implementação da autenticação por API key
+  - Lógica central: apps/viewer/functions/_auth.ts
+    - Constante: USER_MANAGEMENT_API_KEY_CONFIG_KEY = 'admin/user-management-api-key.json'
+    - Header aceito: 'x-api-key' ou 'Authorization: Bearer <token>'
+    - Respostas: 401 'Invalid API key', 401 'User management API key is not active', 880 'not configured'
+  - API de reversão de crédito por empresa: apps/viewer/functions/admin/api/v2/companies/[companyId]/credits/reversals.ts
+  - API de resgate de cupom: apps/viewer/functions/admin/api/v2/coupon-campaigns/[campaignId]/redemptions.ts
+  - API de reversão de crédito por usuário: apps/viewer/functions/admin/api/v2/credits/users/[email]/reversals.ts
+  - Todos os endpoints acima aceitam x-api-key como header alternativo ao Bearer JWT
+
+  ## Endpoints de usuários (que agora aceitam API key)
+  - apps/viewer/functions/admin/api/v2/users.ts
+  - apps/viewer/functions/admin/api/v2/users-import.ts
+
+  ---
+  O QUE DOCUMENTAR
+  ---
+
+  1. **O que é** — API key permite integração programática sem fluxo OAuth; útil para scripts, 
+     automações e ferramentas externas (Zapier, n8n, scripts internos)
+  2. **Onde configurar** — onde o admin encontra ou gera a API key no painel (verificar no código;
+     a chave fica em 'admin/user-management-api-key.json' no KV do Cloudflare)
+  3. **Como usar** — dois headers aceitos:
+     - `Authorization: Bearer <api-key>`
+     - `x-api-key: <api-key>`
+  4. **Endpoints disponíveis** — listar os endpoints de gestão que aceitam API key:
+     - Gerenciamento de usuários (criar, listar, importar)
+     - Concessões e reversões de crédito (por empresa e por usuário)
+     - Resgates de cupom
+     - Planos e assinaturas SaaS
+  5. **Segurança** — rotacionar a chave, nunca commitar em código, escopos
+  6. **Erros comuns** — 401 chave inválida, 401 chave inativa, 500 não configurada
+
+  ---
+  PÁGINAS QUE DEVEM LINKAR PARA ESTA QUANDO PUBLICADA
+  ---
+  - support/billing-subscriptions.mdx → seção "Veja também" (quando essa página existir)
+  - support/empresa.mdx → seção "Veja também"
+  - docs.json → adicionar "support/api-authentication" no grupo "Suporte no App"
+    (sugestão: após "support/billing-subscriptions")
+
+  ---
+  CAPTURAS DE TELA NECESSÁRIAS
+  ---
+  - Tela onde a API key é configurada/gerada (localizar no painel admin via código)
+*/}
+
+## O que é autenticação por API key
+
+<!-- TODO: descrever o caso de uso — integração programática, scripts, automações -->
+
+## Como configurar
+
+<!-- TODO: onde o admin encontra ou gera a API key -->
+
+## Como usar nos requests
+
+<!-- TODO: headers aceitos — Authorization: Bearer e x-api-key -->
+
+## Endpoints disponíveis
+
+<!-- TODO: listar endpoints que aceitam API key com breve descrição -->
+
+## Segurança
+
+<!-- TODO: rotação, escopos, boas práticas -->
+
+## Erros comuns
+
+<!-- TODO: 401 chave inválida/inativa, 500 não configurada -->
+
+## Caminho no app
+
+<!-- TODO: onde o admin acessa/gera a API key no painel -->
+
+## Veja também
+
+- [Gerenciar Empresa](/support/empresa) — painel administrativo de empresa
+- [Assinaturas e Créditos](/support/billing-subscriptions) — gestão SaaS por API
