@@ -1,0 +1,77 @@
+---
+title: "Mensagens via Telegram"
+description: "Conecte um bot do Telegram ao G4 OS para controlar sessões e continuar conversas pelo celular."
+---
+
+{/* 
+  STUB — página a ser escrita com base no commit 3f038b6 do G4OS.
+
+  Referências no código:
+  - UI de configuração: apps/electron/src/renderer/pages/settings/TelegramMessagingSettingsSection.tsx
+  - Diálogo de pareamento: apps/electron/src/renderer/components/app-shell/TelegramPairingDialog.tsx
+  - Gateway (lógica de negócio): apps/electron/src/main/telegram-gateway.ts
+  - Menu de sessão: apps/electron/src/renderer/components/app-shell/SessionMenu.tsx
+  - Strings de UI (pt-BR): apps/electron/src/renderer/i18n/locales/pt-BR.ts (linhas 242–265 e 923–936)
+  - Tipos de estado: apps/electron/src/shared/types.ts
+
+  Caminho no app: Configurações > Workspace > Mensagens > Telegram
+  Menu de sessão: abre "Gateway Telegram" com opção de gerar código de pareamento
+
+  O que documentar:
+  1. O que é — conectar um bot próprio (criado no BotFather) ao workspace
+  2. Pré-requisito — criar um bot no BotFather e obter o token
+  3. Configurar o bot — Configurações > Workspace > Mensagens > Telegram, colar token, salvar
+  4. Parear uma sessão — menu da sessão > Gateway Telegram > Gerar código > enviar /pair <código> ao bot
+  5. O que muda no Telegram — após parear, o chat vira uma interface de mensagens para aquela sessão
+  6. Chats pareados — aba "Chats pareados" em Configurações mostra todos os chats vinculados a sessões
+  7. Desconectar / remover — Desconectar mantém o token mas para o gateway; Remover apaga o token
+  8. Estados do gateway — Online / Ativado mas desconectado / Desativado
+
+  Páginas que devem linkar para cá quando esta página for publicada:
+  - support/remote-control.mdx → seção "Veja também"
+  - support/app-settings.mdx → seção "Veja também" (após adicionar a seção)
+  - docs.json → adicionar "support/telegram-messaging" dentro do grupo "Suporte no App"
+    (sugestão: logo após "support/remote-control")
+
+  Captura de tela necessária:
+  - Tela de Configurações > Workspace > Telegram (mostrando campo de token e status)
+  - Diálogo de pareamento com o código gerado
+*/}
+
+## O que é Mensagens via Telegram
+
+<!-- TODO: escrever com base nos i18n strings e na lógica de gateway -->
+
+## Pré-requisitos
+
+<!-- TODO: criar bot no BotFather, obter token -->
+
+## Configurar o bot
+
+<!-- TODO: Configurações > Workspace > Mensagens > Telegram -->
+
+## Parear uma sessão
+
+<!-- TODO: menu da sessão > Gateway Telegram > Gerar código > /pair <código> -->
+
+## Chats pareados
+
+<!-- TODO: aba Chats pareados, listar sessões vinculadas -->
+
+## Desconectar ou remover o bot
+
+<!-- TODO: diferença entre Desconectar e Remover -->
+
+## Estados do gateway
+
+<!-- TODO: Online / Ativado mas desconectado / Desativado -->
+
+## Caminho no app
+
+- `Configurações > Workspace > Mensagens > Telegram`
+- `Sessões > menu da sessão > Gateway Telegram`
+
+## Veja também
+
+- [Controle remoto](/support/remote-control) — acesso à sessão em outro dispositivo
+- [Sessão colaborativa](/support/collaborative-session) — compartilhar sessão com outro usuário do G4 OS
