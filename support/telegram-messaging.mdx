@@ -1,0 +1,75 @@
+---
+title: "Mensagens via Telegram"
+description: "Conecte um bot do Telegram ao G4 OS para controlar sessões e continuar conversas pelo celular."
+---
+
+## O que é
+
+A integração com o Telegram permite conectar um bot ao seu workspace do G4 OS. Depois de configurado, você pode **parear chats do Telegram com sessões específicas** — e continuar conversando com o assistente diretamente pelo app do Telegram, sem precisar abrir o G4 OS no desktop.
+
+É útil quando você está no celular, em reunião, ou quer receber e enviar mensagens de uma sessão em andamento de qualquer lugar.
+
+## Pré-requisitos
+
+Você precisa criar um bot no Telegram antes de configurar a integração:
+
+1. Abra o Telegram e procure por **@BotFather**
+2. Envie `/newbot` e siga as instruções para nomear o bot
+3. Ao final, o BotFather entrega o **token do bot** (formato `123456:ABC-DEF...`) — copie e guarde
+
+## Configurar o bot no G4 OS
+
+<Frame>
+  <img src="/images/telegram/telegram-settings.png" alt="Configurações do Workspace — seção Telegram com campo de token do bot e lista de chats pareados" />
+</Frame>
+
+1. Vá em **Configurações > Workspace**
+2. Role até a seção **Telegram**
+3. Cole o token do bot no campo **Token do bot**
+4. Clique em **Salvar token**
+
+O gateway se conecta automaticamente. O status muda para **online** quando está recebendo mensagens.
+
+> O token fica armazenado no cofre criptografado de credenciais do workspace — nunca em texto claro.
+
+## Parear uma sessão com um chat do Telegram
+
+Com o bot configurado e online, você pode vincular qualquer sessão a um chat:
+
+1. Abra a sessão desejada no G4 OS
+2. Clique no menu da sessão (⋯) e selecione **Gateway Telegram**
+3. Clique em **Gerar código**
+4. Um código de pareamento é exibido junto com o comando `/pair <código>`
+5. Abra o Telegram, envie esse comando para o seu bot
+6. O bot confirma o pareamento e o chat passa a estar vinculado à sessão
+
+A partir daí, mensagens enviadas naquele chat do Telegram chegam diretamente na sessão pareada — e as respostas do assistente são entregues de volta no Telegram.
+
+## Chats pareados
+
+A seção **Chats pareados** em **Configurações > Workspace > Telegram** lista todos os chats do Telegram vinculados a sessões deste workspace. Para cada chat, você vê qual sessão está ativa no vínculo.
+
+## Desconectar ou remover o bot
+
+| Ação | O que faz |
+|------|-----------|
+| **Desconectar** | Para o gateway mas mantém o token salvo; reconecta ao clicar em Salvar token novamente |
+| **Remover** | Apaga o token permanentemente e desvincula todos os chats pareados |
+
+## Estados do gateway
+
+| Estado | O que significa |
+|--------|----------------|
+| **Online** | Bot conectado e recebendo mensagens |
+| **Ativado, mas desconectado** | Token salvo, mas sem conexão ativa — verifique o token ou a rede |
+| **Desativado** | Nenhum bot configurado para este workspace |
+
+## Caminho no app
+
+- `Configurações > Workspace` → seção Telegram (configuração do bot)
+- `Menu da sessão (⋯) > Gateway Telegram` (parear uma sessão)
+
+## Veja também
+
+- [Controle remoto](/support/remote-control) — acesse a mesma sessão em outro dispositivo pelo navegador
+- [Sessão colaborativa](/support/collaborative-session) — compartilhe uma sessão com outro usuário do G4 OS
