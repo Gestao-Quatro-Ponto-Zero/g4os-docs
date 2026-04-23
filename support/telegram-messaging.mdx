@@ -3,75 +3,73 @@ title: "Mensagens via Telegram"
 description: "Conecte um bot do Telegram ao G4 OS para controlar sessões e continuar conversas pelo celular."
 ---
 
-{/* 
-  STUB — página a ser escrita com base no commit 3f038b6 do G4OS.
+## O que é
 
-  Referências no código:
-  - UI de configuração: apps/electron/src/renderer/pages/settings/TelegramMessagingSettingsSection.tsx
-  - Diálogo de pareamento: apps/electron/src/renderer/components/app-shell/TelegramPairingDialog.tsx
-  - Gateway (lógica de negócio): apps/electron/src/main/telegram-gateway.ts
-  - Menu de sessão: apps/electron/src/renderer/components/app-shell/SessionMenu.tsx
-  - Strings de UI (pt-BR): apps/electron/src/renderer/i18n/locales/pt-BR.ts (linhas 242–265 e 923–936)
-  - Tipos de estado: apps/electron/src/shared/types.ts
+A integração com o Telegram permite conectar um bot ao seu workspace do G4 OS. Depois de configurado, você pode **parear chats do Telegram com sessões específicas** — e continuar conversando com o assistente diretamente pelo app do Telegram, sem precisar abrir o G4 OS no desktop.
 
-  Caminho no app: Configurações > Workspace > Mensagens > Telegram
-  Menu de sessão: abre "Gateway Telegram" com opção de gerar código de pareamento
-
-  O que documentar:
-  1. O que é — conectar um bot próprio (criado no BotFather) ao workspace
-  2. Pré-requisito — criar um bot no BotFather e obter o token
-  3. Configurar o bot — Configurações > Workspace > Mensagens > Telegram, colar token, salvar
-  4. Parear uma sessão — menu da sessão > Gateway Telegram > Gerar código > enviar /pair <código> ao bot
-  5. O que muda no Telegram — após parear, o chat vira uma interface de mensagens para aquela sessão
-  6. Chats pareados — aba "Chats pareados" em Configurações mostra todos os chats vinculados a sessões
-  7. Desconectar / remover — Desconectar mantém o token mas para o gateway; Remover apaga o token
-  8. Estados do gateway — Online / Ativado mas desconectado / Desativado
-
-  Páginas que devem linkar para cá quando esta página for publicada:
-  - support/remote-control.mdx → seção "Veja também"
-  - support/app-settings.mdx → seção "Veja também" (após adicionar a seção)
-  - docs.json → adicionar "support/telegram-messaging" dentro do grupo "Suporte no App"
-    (sugestão: logo após "support/remote-control")
-
-  Captura de tela necessária:
-  - Tela de Configurações > Workspace > Telegram (mostrando campo de token e status)
-  - Diálogo de pareamento com o código gerado
-*/}
-
-## O que é Mensagens via Telegram
-
-<!-- TODO: escrever com base nos i18n strings e na lógica de gateway -->
+É útil quando você está no celular, em reunião, ou quer receber e enviar mensagens de uma sessão em andamento de qualquer lugar.
 
 ## Pré-requisitos
 
-<!-- TODO: criar bot no BotFather, obter token -->
+Você precisa criar um bot no Telegram antes de configurar a integração:
 
-## Configurar o bot
+1. Abra o Telegram e procure por **@BotFather**
+2. Envie `/newbot` e siga as instruções para nomear o bot
+3. Ao final, o BotFather entrega o **token do bot** (formato `123456:ABC-DEF...`) — copie e guarde
 
-<!-- TODO: Configurações > Workspace > Mensagens > Telegram -->
+## Configurar o bot no G4 OS
 
-## Parear uma sessão
+<Frame>
+  <img src="/images/telegram/telegram-settings.png" alt="Configurações do Workspace — seção Telegram com campo de token do bot e lista de chats pareados" />
+</Frame>
 
-<!-- TODO: menu da sessão > Gateway Telegram > Gerar código > /pair <código> -->
+1. Vá em **Configurações > Workspace**
+2. Role até a seção **Telegram**
+3. Cole o token do bot no campo **Token do bot**
+4. Clique em **Salvar token**
+
+O gateway se conecta automaticamente. O status muda para **online** quando está recebendo mensagens.
+
+> O token fica armazenado no cofre criptografado de credenciais do workspace — nunca em texto claro.
+
+## Parear uma sessão com um chat do Telegram
+
+Com o bot configurado e online, você pode vincular qualquer sessão a um chat:
+
+1. Abra a sessão desejada no G4 OS
+2. Clique no menu da sessão (⋯) e selecione **Gateway Telegram**
+3. Clique em **Gerar código**
+4. Um código de pareamento é exibido junto com o comando `/pair <código>`
+5. Abra o Telegram, envie esse comando para o seu bot
+6. O bot confirma o pareamento e o chat passa a estar vinculado à sessão
+
+A partir daí, mensagens enviadas naquele chat do Telegram chegam diretamente na sessão pareada — e as respostas do assistente são entregues de volta no Telegram.
 
 ## Chats pareados
 
-<!-- TODO: aba Chats pareados, listar sessões vinculadas -->
+A seção **Chats pareados** em **Configurações > Workspace > Telegram** lista todos os chats do Telegram vinculados a sessões deste workspace. Para cada chat, você vê qual sessão está ativa no vínculo.
 
 ## Desconectar ou remover o bot
 
-<!-- TODO: diferença entre Desconectar e Remover -->
+| Ação | O que faz |
+|------|-----------|
+| **Desconectar** | Para o gateway mas mantém o token salvo; reconecta ao clicar em Salvar token novamente |
+| **Remover** | Apaga o token permanentemente e desvincula todos os chats pareados |
 
 ## Estados do gateway
 
-<!-- TODO: Online / Ativado mas desconectado / Desativado -->
+| Estado | O que significa |
+|--------|----------------|
+| **Online** | Bot conectado e recebendo mensagens |
+| **Ativado, mas desconectado** | Token salvo, mas sem conexão ativa — verifique o token ou a rede |
+| **Desativado** | Nenhum bot configurado para este workspace |
 
 ## Caminho no app
 
-- `Configurações > Workspace > Mensagens > Telegram`
-- `Sessões > menu da sessão > Gateway Telegram`
+- `Configurações > Workspace` → seção Telegram (configuração do bot)
+- `Menu da sessão (⋯) > Gateway Telegram` (parear uma sessão)
 
 ## Veja também
 
-- [Controle remoto](/support/remote-control) — acesso à sessão em outro dispositivo
-- [Sessão colaborativa](/support/collaborative-session) — compartilhar sessão com outro usuário do G4 OS
+- [Controle remoto](/support/remote-control) — acesse a mesma sessão em outro dispositivo pelo navegador
+- [Sessão colaborativa](/support/collaborative-session) — compartilhe uma sessão com outro usuário do G4 OS

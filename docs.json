@@ -74,6 +74,7 @@
               "support/sharing",
               "support/collaborative-session",
               "support/remote-control",
+              "support/telegram-messaging",
               "support/marketplace"
             ]
           }
