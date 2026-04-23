@@ -1,0 +1,106 @@
+---
+title: "Assinaturas e Créditos"
+description: "Gerencie assinaturas, planos, carteira SaaS, concessões e cupons de crédito no G4 OS."
+---
+
+{/* 
+  STUB — página a ser escrita com base nos commits 1510a03, 18bf645, 57afe84, 88d0395 e a5bf0f5 do G4OS.
+  Esta página é voltada para administradores de empresas com o módulo SaaS habilitado.
+
+  ---
+  REFERÊNCIAS NO CÓDIGO G4OS
+  ---
+
+  ## Assinaturas e planos (commits 1510a03, 88d0395)
+  - Lógica central: apps/viewer/functions/_saas-management.ts
+  - API de planos: apps/viewer/functions/admin/api/v2/plans.ts
+  - API de plano individual: apps/viewer/functions/admin/api/v2/plans/[planId].ts
+  - Admin UI de rotas: apps/viewer/functions/admin/index.ts
+  - Strings pt-BR de assinatura: apps/electron/src/renderer/i18n/locales/pt-BR.ts
+    (linhas ~1840–1960, buscar "saasWallet", "coupon", "extraCredits")
+
+  ## Concessões e extrato de créditos (commit 18bf645)
+  - API de concessões por empresa: apps/viewer/functions/admin/api/v2/companies/[companyId]/credits.ts
+  - API de concessões por usuário: apps/viewer/functions/admin/api/v2/credits/users/[email].ts
+  - API de campanhas de cupom: apps/viewer/functions/admin/api/v2/coupon-campaigns.ts
+  - API de cupom individual: apps/viewer/functions/admin/api/v2/coupon-campaigns/[campaignId].ts
+  - Resgate de cupom pelo usuário: apps/viewer/functions/api/coupons/redeem.ts
+  - Tipos do ledger: packages/shared/src/saas-management/types.ts
+  - Normalizers: packages/shared/src/saas-management/normalizers.ts
+
+  ## Tela de resgate de cupom pelo usuário (commit 1510a03)
+  - Componente: apps/electron/src/renderer/pages/settings/UsageSettingsPage.tsx
+  - Strings: pt-BR linhas 1840–1844 ('settings.usage.coupon.*')
+
+  ## Carteira SaaS (visão do admin em Gerenciar Empresa)
+  - Strings pt-BR: linhas 1947–1960 ('manageCompany.saasWallet.*')
+
+  ---
+  O QUE DOCUMENTAR
+  ---
+
+  1. **Visão geral** — o que é o módulo SaaS, quando está disponível
+  2. **Planos** — criar, editar, arquivar planos (nome, créditos mensais, limites por usuário)
+  3. **Assinaturas** — associar um plano a uma empresa ou usuário; ciclo de vida (ativa, trial, suspensa, cancelada)
+  4. **Carteira SaaS** — onde ver o saldo, concessões ativas e extrato da empresa (Gerenciar Empresa > Carteira SaaS)
+  5. **Concessões de crédito** — conceder créditos à empresa ou a um usuário individualmente
+  6. **Campanhas de cupom** — criar campanha, definir valor, quantidade, validade; distribuir códigos
+  7. **Resgatar cupom (usuário)** — Configurações > Uso > Resgatar cupom
+  8. **Enforcement em runtime** — o que acontece quando créditos acabam (ver também support/usage.mdx)
+
+  ---
+  PÁGINAS QUE DEVEM LINKAR PARA ESTA QUANDO PUBLICADA
+  ---
+  - support/empresa.mdx → seção "Veja também" (adicionar link para Assinaturas e Créditos)
+  - support/usage.mdx → seção "Veja também" (adicionar link para Assinaturas e Créditos)
+  - docs.json → adicionar "support/billing-subscriptions" no grupo "Suporte no App"
+    (sugestão: após "support/empresa")
+
+  ---
+  CAPTURAS DE TELA NECESSÁRIAS
+  ---
+  - Gerenciar Empresa > Carteira SaaS (mostrando saldo, concessões ativas, extrato)
+  - Configurações > Uso > Resgatar cupom (campo de código + botão Resgatar)
+*/}
+
+## O que é este módulo
+
+<!-- TODO: explicar módulo SaaS, disponibilidade, quem tem acesso -->
+
+## Planos
+
+<!-- TODO: criar/editar/arquivar planos, campos disponíveis -->
+
+## Assinaturas
+
+<!-- TODO: associar plano a empresa/usuário, ciclo de vida (ativa/trial/suspensa/cancelada) -->
+
+## Carteira SaaS
+
+<!-- TODO: Gerenciar Empresa > Carteira SaaS — saldo, concessões ativas, extrato -->
+
+## Concessões de crédito
+
+<!-- TODO: conceder créditos à empresa ou a usuário individual -->
+
+## Campanhas de cupom
+
+<!-- TODO: criar campanha, valor por cupom, quantidade, validade, como distribuir -->
+
+## Resgatar um cupom
+
+<!-- TODO: Configurações > Uso > Resgatar cupom -->
+
+## Quando os créditos acabam
+
+Veja [Uso → Quando os créditos acabam](/support/usage#quando-os-créditos-acabam).
+
+## Caminho no app
+
+- `Menu lateral > Gerenciar Empresa > Carteira SaaS` — visão de saldo e concessões (admin)
+- `Configurações > Uso > Resgatar cupom` — resgate pelo usuário final
+
+## Veja também
+
+- [Gerenciar Empresa](/support/empresa) — políticas de consumo e limites por usuário
+- [Uso](/support/usage) — visão individual de consumo e enforcement de limites
