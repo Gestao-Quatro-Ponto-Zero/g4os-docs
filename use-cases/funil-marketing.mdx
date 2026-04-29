@@ -1,0 +1,78 @@
+---
+title: "Funil de Marketing e Campanhas"
+description: "Analise performance de campanhas, CAC, ROAS e funil semanal por canal com um dataset sintético pronto para uso no G4 OS."
+---
+
+## O que este caso de uso cobre
+
+Este exemplo mostra como o G4 OS pode ser usado para analisar **funil de marketing em granularidade semanal** — do investimento até a conversão, segmentado por canal, campanha e origem orgânica/paga.
+
+O dataset cobre 104 semanas (2 anos) e inclui campanhas com detalhamento de tipo, status e métricas de eficiência como CAC e ROAS.
+
+## Dataset
+
+<Card
+  title="nexus_funil_marketing.xlsx"
+  icon="table"
+  href="https://raw.githubusercontent.com/Gestao-Quatro-Ponto-Zero/g4os-docs/main/use-cases/datasets/nexus_funil_marketing.xlsx"
+>
+  Baixar dataset — funil semanal, campanhas e canais (152 KB, 4 abas)
+</Card>
+
+### O que tem dentro
+
+**4 abas:**
+
+| Aba | Conteúdo | Linhas |
+|-----|----------|--------|
+| `Funil Semanal` | Visão agregada semanal por canal | 104 semanas |
+| `Por Canal` | Breakdown por canal de aquisição | 572 linhas |
+| `Campanhas` | Campanhas individuais com tipo, status e métricas | 1.314 linhas |
+| `Orgânico` | Tráfego orgânico, SEO e referral | série semanal |
+
+**Campos principais:**
+
+| Campo | Descrição |
+|-------|-----------|
+| `semana` | Semana de referência |
+| `canal` | Canal de aquisição (Paid Social, Search, Email, Orgânico, etc.) |
+| `investimento` | Gasto em mídia naquela semana/campanha |
+| `impressoes` | Impressões geradas |
+| `cliques` | Cliques |
+| `leads` | Leads gerados |
+| `deals_criados` | Oportunidades abertas no CRM |
+| `deals_ganhos` | Deals fechados atribuídos ao canal |
+| `cac` | Custo de aquisição por cliente |
+| `roas` | Retorno sobre investimento em mídia |
+
+## Como usar no G4 OS
+
+<Card
+  title="Analisar funil de marketing no G4 OS"
+  icon="sparkles"
+  href="g4os://action/new-session?input=Fiz+o+download+do+dataset+nexus_funil_marketing.xlsx+%28dispon%C3%ADvel+em+https%3A%2F%2Fraw.githubusercontent.com%2FGestao-Quatro-Ponto-Zero%2Fg4os-docs%2Fmain%2Fuse-cases%2Fdatasets%2Fnexus_funil_marketing.xlsx%29.+Por+favor%3A+%281%29+fa%C3%A7a+o+download+do+arquivo%2C+%282%29+compare+performance+por+canal+%28CAC%2C+ROAS%2C+convers%C3%A3o%29%2C+%283%29+identifique+as+campanhas+com+melhor+e+pior+efici%C3%AAncia%2C+%284%29+analise+tend%C3%AAncia+semanal+do+funil%2C+%285%29+recomende+onde+concentrar+investimento+com+base+nos+dados.&send=true&mode=ask&workdir=none"
+>
+  Abrir sessão com análise de funil pré-configurada
+</Card>
+
+### O que o G4 OS vai fazer
+
+1. Baixar e processar as 4 abas do dataset
+2. Comparar CAC e ROAS por canal ao longo do tempo
+3. Ranquear campanhas por eficiência de conversão
+4. Identificar tendências e sazonalidade semanal
+5. Recomendar alocação de investimento com base nos dados
+
+## Análises possíveis a partir deste dataset
+
+- **Atribuição de canais** — qual canal gera mais deals com menor CAC
+- **Eficiência de campanhas** — comparar ROAS e taxa de conversão lead→deal
+- **Tendência semanal** — identificar semanas de alta e baixa performance
+- **Mix orgânico vs pago** — qual proporção do funil vem de canais orgânicos
+- **Benchmark de campanhas** — comparar campanhas do mesmo tipo/canal entre si
+
+## Veja também
+
+- [Cohort de Receita](/use-cases/cohort-receita) — o que acontece depois da conversão
+- [Performance Comercial](/use-cases/performance-comercial) — conversão por vendedor após o lead entrar
+- [Churn e Retenção](/use-cases/churn-retencao) — qualidade dos leads por canal de aquisição

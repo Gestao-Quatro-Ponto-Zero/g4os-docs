@@ -1,0 +1,77 @@
+---
+title: "Casos de Uso"
+description: "Exemplos práticos de como usar o G4 OS para análise de dados de negócio — com datasets sintéticos prontos para download e sessões pré-configuradas."
+---
+
+## Aprenda com dados reais (anonimizados)
+
+Esta seção reúne casos de uso construídos a partir de dados reais de uma empresa de serviços B2B, totalmente anonimizados e transformados em datasets sintéticos para uso educativo.
+
+Cada caso inclui:
+
+- um **dataset `.xlsx` pronto para download**
+- um **deep link que abre uma sessão no G4 OS** já com o contexto e a análise configurados
+- descrição do que está no dataset e que análises são possíveis
+
+## Casos disponíveis
+
+<CardGroup cols={2}>
+  <Card
+    title="Cohort de Receita"
+    icon="chart-line"
+    href="/use-cases/cohort-receita"
+  >
+    Retenção mensal, LTV por produto e evolução de MRR por cohort de entrada. 36 meses.
+  </Card>
+  <Card
+    title="Funil de Marketing"
+    icon="funnel"
+    href="/use-cases/funil-marketing"
+  >
+    Funil semanal por canal, campanhas com CAC e ROAS, e breakdown orgânico vs pago. 104 semanas.
+  </Card>
+  <Card
+    title="Churn e Retenção"
+    icon="arrow-right-from-bracket"
+    href="/use-cases/churn-retencao"
+  >
+    Motivos de cancelamento, receita perdida por produto e taxa de retenção mensal. 36 meses.
+  </Card>
+  <Card
+    title="Performance Comercial"
+    icon="trophy"
+    href="/use-cases/performance-comercial"
+  >
+    38 mil deals individuais com ranking de vendedores, perfil de lead e ciclo de venda. 36 meses.
+  </Card>
+</CardGroup>
+
+## Como funciona o deep link
+
+Cada página de caso de uso tem um botão **"Abrir sessão no G4 OS"**. Ao clicar:
+
+1. O G4 OS abre uma sessão nova
+2. A mensagem inicial já está pré-preenchida com contexto e instruções
+3. O assistente baixa o dataset diretamente do GitHub e inicia a análise
+
+Para isso funcionar, o app desktop do G4 OS precisa estar instalado e em execução.
+
+<Card
+  title="Baixar o G4 OS"
+  icon="download"
+  href="https://g4oscloud.com/download-public"
+  horizontal
+>
+  Instale o app desktop para usar os deep links desta seção.
+</Card>
+
+## Sobre os datasets
+
+Os datasets foram gerados a partir de dados reais com as seguintes transformações:
+
+- identidades substituídas (clientes, vendedores, produtos)
+- valores ajustados por fator de escala para descaracterização
+- estrutura e correlações preservadas para manter coerência analítica
+- empresa fictícia: **Nexus Consultoria** — serviços B2B genéricos
+
+Os arquivos ficam hospedados neste repositório em `use-cases/datasets/` e podem ser baixados diretamente ou usados via deep link.

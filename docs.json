@@ -18,6 +18,16 @@
         "tab": "Documentação",
         "groups": [
           {
+            "group": "Casos de Uso",
+            "pages": [
+              "use-cases/index",
+              "use-cases/cohort-receita",
+              "use-cases/funil-marketing",
+              "use-cases/churn-retencao",
+              "use-cases/performance-comercial"
+            ]
+          },
+          {
             "group": "Começando",
             "pages": [
               "index",

@@ -1,0 +1,81 @@
+---
+title: "Performance Comercial"
+description: "Analise conversão por vendedor, perfil de lead, ciclo de venda e ranking de time comercial com um dataset sintético pronto para uso no G4 OS."
+---
+
+## O que este caso de uso cobre
+
+Este exemplo mostra como o G4 OS pode ser usado para analisar **performance do time comercial** — com granularidade em nível de deal individual, ranking de vendedores, perfil do lead por origem e análise de ramp de novos vendedores.
+
+O dataset contém mais de 38 mil deals individuais ao longo de 36 meses, com atributos de vendedor, canal de origem, perfil do lead e resultado.
+
+## Dataset
+
+<Card
+  title="nexus_performance_comercial.xlsx"
+  icon="table"
+  href="https://raw.githubusercontent.com/Gestao-Quatro-Ponto-Zero/g4os-docs/main/use-cases/datasets/nexus_performance_comercial.xlsx"
+>
+  Baixar dataset — 38.213 deals individuais + ranking de vendedores (3.3 MB, 4 abas)
+</Card>
+
+### O que tem dentro
+
+**4 abas:**
+
+| Aba | Conteúdo | Linhas |
+|-----|----------|--------|
+| `Deals Individuais` | Um registro por deal, com vendedor e resultado | 38.213 |
+| `Ranking Vendedores` | Vendedor × mês com métricas agregadas | 360 |
+| `Perfil de Lead` | Breakdown de perfil por origem de canal | série mensal |
+| `Ramp Vendedores` | Curva de ramp de novos vendedores | por contratação |
+
+**Campos principais:**
+
+| Campo | Descrição |
+|-------|-----------|
+| `deal_id` | ID único do deal |
+| `vendedor` | Nome do vendedor (anonimizado) |
+| `equipe` | Time de vendas (Inside Sales, Selfcheckout, etc.) |
+| `origem_lead` | Canal que gerou o lead |
+| `perfil_lead` | Segmento do lead (Sócios, Clínicas, Profissionais, etc.) |
+| `produto` | Produto negociado |
+| `status` | Ganho / Perdido / Em andamento |
+| `motivo_perda` | Motivo de perda quando aplicável |
+| `ciclo_dias` | Dias do primeiro contato ao fechamento |
+| `ticket` | Valor do deal |
+| `data_criacao` | Data de criação do deal |
+| `data_fechamento` | Data de fechamento |
+
+## Como usar no G4 OS
+
+<Card
+  title="Analisar performance comercial no G4 OS"
+  icon="sparkles"
+  href="g4os://action/new-session?input=Fiz+o+download+do+dataset+nexus_performance_comercial.xlsx+%28dispon%C3%ADvel+em+https%3A%2F%2Fraw.githubusercontent.com%2FGestao-Quatro-Ponto-Zero%2Fg4os-docs%2Fmain%2Fuse-cases%2Fdatasets%2Fnexus_performance_comercial.xlsx%29.+Por+favor%3A+%281%29+fa%C3%A7a+o+download+do+arquivo%2C+%282%29+calcule+taxa+de+convers%C3%A3o+e+ticket+m%C3%A9dio+por+vendedor%2C+%283%29+compare+performance+por+perfil+de+lead+e+canal+de+origem%2C+%284%29+analise+ciclo+de+venda+m%C3%A9dio+por+produto+e+equipe%2C+%285%29+gere+ranking+do+time+com+principais+insights+e+pontos+de+atencao.&send=true&mode=ask&workdir=none"
+>
+  Abrir sessão com análise comercial pré-configurada
+</Card>
+
+### O que o G4 OS vai fazer
+
+1. Baixar e processar as 4 abas do dataset
+2. Calcular taxa de conversão e ticket médio por vendedor
+3. Comparar performance por perfil de lead e origem
+4. Analisar ciclo de venda por produto e equipe
+5. Gerar ranking do time com insights e pontos de atenção
+
+## Análises possíveis a partir deste dataset
+
+- **Ranking de vendedores** — por volume, conversão e ticket médio simultaneamente
+- **Qualidade por origem** — quais canais geram leads com melhor taxa de fechamento
+- **Ciclo de venda** — produtos e perfis com ciclo mais curto e mais longo
+- **Motivos de perda** — o que impede o fechamento e como varia por equipe
+- **Curva de ramp** — quanto tempo leva para um novo vendedor atingir produtividade plena
+- **Sazonalidade comercial** — quais meses concentram mais deals ganhos e perdidos
+
+## Veja também
+
+- [Funil de Marketing](/use-cases/funil-marketing) — de onde vêm os leads que entram no pipeline
+- [Cohort de Receita](/use-cases/cohort-receita) — retenção dos clientes fechados por cada equipe
+- [Churn e Retenção](/use-cases/churn-retencao) — correlação entre vendedor/origem e churn futuro
