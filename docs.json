@@ -15,26 +15,6 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Casos de Uso",
-        "groups": [
-          {
-            "group": "Casos de Uso",
-            "pages": [
-              "use-cases/index"
-            ]
-          },
-          {
-            "group": "Marketing e Vendas",
-            "pages": [
-              "use-cases/marketing-vendas/cohort-receita",
-              "use-cases/marketing-vendas/funil-marketing",
-              "use-cases/marketing-vendas/churn-retencao",
-              "use-cases/marketing-vendas/performance-comercial"
-            ]
-          }
-        ]
-      },
-      {
         "tab": "Documentação",
         "groups": [
           {
@@ -97,6 +77,26 @@
               "support/remote-control",
               "support/telegram-messaging",
               "support/marketplace"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Casos de Uso",
+        "groups": [
+          {
+            "group": "Casos de Uso",
+            "pages": [
+              "use-cases/index"
+            ]
+          },
+          {
+            "group": "Marketing e Vendas",
+            "pages": [
+              "use-cases/marketing-vendas/cohort-receita",
+              "use-cases/marketing-vendas/funil-marketing",
+              "use-cases/marketing-vendas/churn-retencao",
+              "use-cases/marketing-vendas/performance-comercial"
             ]
           }
         ]
