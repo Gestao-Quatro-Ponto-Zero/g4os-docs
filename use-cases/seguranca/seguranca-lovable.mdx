@@ -84,13 +84,18 @@ Se não souber qual escolher: vá de Nível 1. O Nível 2 é recomendado para va
   Schema OpenAPI exposto e anon key pública são comportamento padrão do Supabase — não são findings. O workflow não os reporta como vulnerabilidades.
 </Note>
 
-## Output do workflow
+## Exemplo de output
+
+![Relatório de pentest — Score de Segurança CRÍTICO](/images/use-cases/seguranca-pentest-output.png)
+
+*Exemplo real de relatório gerado pelo workflow: score de segurança, findings classificados (🔴 confirmado, 🟡 atenção, ✅ protegido) com evidências e recomendações de correção.*
 
 O workflow entrega um relatório estruturado com:
 
-- resumo executivo com contagem de findings por severidade
-- tabela de endpoints testados e resultado
-- evidências concretas para cada finding confirmado
+- score de segurança geral por severidade
+- findings confirmados com evidência concreta
+- items que precisam de clarificação com contexto
+- lista do que está protegido e funcionando
 - recomendações de correção priorizadas
 
 ## Veja também
