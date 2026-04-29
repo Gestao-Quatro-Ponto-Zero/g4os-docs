@@ -1,15 +1,13 @@
 ---
 title: "Funil de Marketing e Campanhas"
-description: "Analise performance de campanhas, CAC, ROAS e funil semanal por canal com um dataset sintético pronto para uso no G4 OS."
+description: "Analise performance de campanhas, CAC, ROAS e funil semanal por canal com um dataset de exemplo pronto para uso no G4 OS."
 ---
 
 ## O que este caso de uso cobre
 
-Este exemplo mostra como o G4 OS pode ser usado para analisar **funil de marketing em granularidade semanal** — do investimento até a conversão, segmentado por canal, campanha e origem orgânica/paga.
+Análise de **funil de marketing em granularidade semanal** — do investimento até a conversão, segmentado por canal, campanha e origem orgânica/paga. O G4 OS roda as análises, compara canais e gera gráficos Mermaid de funil e evolução temporal.
 
-O dataset cobre 104 semanas (2 anos) e inclui campanhas com detalhamento de tipo, status e métricas de eficiência como CAC e ROAS.
-
-## Dataset
+## Dataset de exemplo
 
 <Card
   title="nexus_funil_marketing.xlsx"
@@ -37,39 +35,49 @@ O dataset cobre 104 semanas (2 anos) e inclui campanhas com detalhamento de tipo
 | `semana` | Semana de referência |
 | `canal` | Canal de aquisição (Paid Social, Search, Email, Orgânico, etc.) |
 | `investimento` | Gasto em mídia naquela semana/campanha |
-| `impressoes` | Impressões geradas |
-| `cliques` | Cliques |
 | `leads` | Leads gerados |
 | `deals_criados` | Oportunidades abertas no CRM |
 | `deals_ganhos` | Deals fechados atribuídos ao canal |
 | `cac` | Custo de aquisição por cliente |
 | `roas` | Retorno sobre investimento em mídia |
 
-## Como usar no G4 OS
+## Abrir no G4 OS
 
 <Card
   title="Analisar funil de marketing no G4 OS"
   icon="sparkles"
-  href="g4os://action/new-session?input=Fiz+o+download+do+dataset+nexus_funil_marketing.xlsx+%28dispon%C3%ADvel+em+https%3A%2F%2Fraw.githubusercontent.com%2FGestao-Quatro-Ponto-Zero%2Fg4os-docs%2Fmain%2Fuse-cases%2Fdatasets%2Fnexus_funil_marketing.xlsx%29.+Por+favor%3A+%281%29+fa%C3%A7a+o+download+do+arquivo%2C+%282%29+compare+performance+por+canal+%28CAC%2C+ROAS%2C+convers%C3%A3o%29%2C+%283%29+identifique+as+campanhas+com+melhor+e+pior+efici%C3%AAncia%2C+%284%29+analise+tend%C3%AAncia+semanal+do+funil%2C+%285%29+recomende+onde+concentrar+investimento+com+base+nos+dados.&send=true&mode=ask&workdir=none"
+  href="g4os://action/new-session?input=Faca+o+download+do+dataset+nexus_funil_marketing.xlsx+em+https%3A%2F%2Fraw.githubusercontent.com%2FGestao-Quatro-Ponto-Zero%2Fg4os-docs%2Fmain%2Fuse-cases%2Fdatasets%2Fnexus_funil_marketing.xlsx+e+execute%3A+%281%29+carregue+as+4+abas%2C+%282%29+compare+CAC+e+ROAS+por+canal%2C+%283%29+ranqueie+as+top+10+campanhas+por+eficiencia+de+conversao%2C+%284%29+gere+um+grafico+Mermaid+de+funil+mostrando+leads+%3E+deals+criados+%3E+deals+ganhos+pelo+canal+com+melhor+ROAS%2C+%285%29+analise+tendencia+semanal+e+sazonalidade%2C+%286%29+recomende+alocacao+de+investimento+com+base+nos+dados.&send=true&mode=execute&workdir=none"
 >
-  Abrir sessão com análise de funil pré-configurada
+  Abrir sessão — executa automaticamente no modo Execute
 </Card>
 
-### O que o G4 OS vai fazer
+### O que o G4 OS faz ao abrir
 
-1. Baixar e processar as 4 abas do dataset
-2. Comparar CAC e ROAS por canal ao longo do tempo
-3. Ranquear campanhas por eficiência de conversão
-4. Identificar tendências e sazonalidade semanal
-5. Recomendar alocação de investimento com base nos dados
+1. Baixa e processa as 4 abas do dataset
+2. Compara CAC e ROAS por canal ao longo do tempo
+3. Rankeia as top 10 campanhas por eficiência de conversão
+4. Gera gráfico Mermaid de funil pelo canal com melhor ROAS
+5. Identifica tendências e sazonalidade semanal
+6. Recomenda alocação de investimento com base nos dados
 
-## Análises possíveis a partir deste dataset
+## Análises possíveis com este dataset
 
-- **Atribuição de canais** — qual canal gera mais deals com menor CAC
-- **Eficiência de campanhas** — comparar ROAS e taxa de conversão lead→deal
-- **Tendência semanal** — identificar semanas de alta e baixa performance
-- **Mix orgânico vs pago** — qual proporção do funil vem de canais orgânicos
-- **Benchmark de campanhas** — comparar campanhas do mesmo tipo/canal entre si
+- **Comparação de canais** — CAC, ROAS e taxa de conversão lead→deal por canal
+- **Funil visual** — gráfico de funil do canal mais eficiente
+- **Evolução semanal** — linha de tempo de investimento vs leads vs deals
+- **Ranking de campanhas** — as mais e menos eficientes do período
+- **Mix orgânico vs pago** — proporção do funil por origem
+- **Sazonalidade** — quais semanas concentram mais conversões
+
+### Exemplo de gráfico Mermaid que o G4 OS pode gerar
+
+```mermaid
+xychart-beta
+  title "CAC por Canal (R$)"
+  x-axis ["Paid Social", "Search", "Email", "Orgânico", "Referral"]
+  y-axis "CAC médio (R$)" 0 --> 3000
+  bar [2450, 1820, 890, 340, 510]
+```
 
 ## Veja também
 

@@ -1,16 +1,16 @@
 ---
 title: "Casos de Uso"
-description: "Exemplos práticos de como usar o G4 OS para análise de dados de negócio — com datasets sintéticos prontos para download e sessões pré-configuradas."
+description: "Exemplos práticos de como usar o G4 OS — com datasets de exemplo prontos para download e sessões pré-configuradas para abrir direto no app."
 ---
 
-## Aprenda com dados reais (anonimizados)
+## Explore o G4 OS com exemplos prontos
 
-Esta seção reúne casos de uso construídos a partir de dados reais de uma empresa de serviços B2B, totalmente anonimizados e transformados em datasets sintéticos para uso educativo.
+Esta seção reúne casos de uso com datasets de exemplo e sessões pré-configuradas. Cada caso mostra como usar o G4 OS para um tipo específico de análise ou operação — basta clicar no deep link e o app abre já com o contexto configurado.
 
 Cada caso inclui:
 
-- um **dataset `.xlsx` pronto para download**
-- um **deep link que abre uma sessão no G4 OS** já com o contexto e a análise configurados
+- um **dataset de exemplo** pronto para download
+- um **deep link que abre uma sessão no G4 OS** com o contexto e instruções já prontos
 - descrição do que está no dataset e que análises são possíveis
 
 ## Casos disponíveis
@@ -44,15 +44,22 @@ Cada caso inclui:
   >
     38 mil deals individuais com ranking de vendedores, perfil de lead e ciclo de venda. 36 meses.
   </Card>
+  <Card
+    title="Pentest de App Supabase"
+    icon="shield-halved"
+    href="/use-cases/seguranca/seguranca-lovable"
+  >
+    Auditoria automatizada de segurança para apps Supabase — RLS, autenticação, isolamento de tenant.
+  </Card>
 </CardGroup>
 
 ## Como funciona o deep link
 
-Cada página de caso de uso tem um botão **"Abrir sessão no G4 OS"**. Ao clicar:
+Cada página de caso de uso tem um botão **"Abrir no G4 OS"**. Ao clicar:
 
-1. O G4 OS abre uma sessão nova
+1. O G4 OS abre uma sessão nova no modo Execute
 2. A mensagem inicial já está pré-preenchida com contexto e instruções
-3. O assistente baixa o dataset diretamente do GitHub e inicia a análise
+3. O assistente executa a análise automaticamente — baixa arquivos, roda código, gera gráficos
 
 Para isso funcionar, o app desktop do G4 OS precisa estar instalado e em execução.
 
@@ -64,14 +71,3 @@ Para isso funcionar, o app desktop do G4 OS precisa estar instalado e em execuç
 >
   Instale o app desktop para usar os deep links desta seção.
 </Card>
-
-## Sobre os datasets
-
-Os datasets foram gerados a partir de dados reais com as seguintes transformações:
-
-- identidades substituídas (clientes, vendedores, produtos)
-- valores ajustados por fator de escala para descaracterização
-- estrutura e correlações preservadas para manter coerência analítica
-- empresa fictícia: **Nexus Consultoria** — serviços B2B genéricos
-
-Os arquivos ficam hospedados neste repositório em `use-cases/datasets/` e podem ser baixados diretamente ou usados via deep link.

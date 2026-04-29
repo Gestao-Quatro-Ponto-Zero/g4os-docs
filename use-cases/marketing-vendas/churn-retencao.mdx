@@ -1,15 +1,13 @@
 ---
 title: "Churn e Retenção"
-description: "Analise motivos de saída, taxa de churn mensal por produto e estratégias de retenção com um dataset sintético pronto para uso no G4 OS."
+description: "Analise motivos de saída, taxa de churn mensal por produto e estratégias de retenção com um dataset de exemplo pronto para uso no G4 OS."
 ---
 
 ## O que este caso de uso cobre
 
-Este exemplo mostra como o G4 OS pode ser usado para analisar **churn e retenção de clientes** — com foco em motivos de cancelamento, valor perdido por produto, e oportunidades de reativação.
+Análise de **churn e retenção de clientes** — com foco em motivos de cancelamento, valor perdido por produto e oportunidades de reativação. O G4 OS calcula taxas, ranqueia motivos por impacto financeiro e gera gráficos Mermaid de evolução do churn.
 
-O dataset cobre 36 meses e segmenta o churn por produto, motivo declarado e perfil do cliente.
-
-## Dataset
+## Dataset de exemplo
 
 <Card
   title="nexus_churn_retencao.xlsx"
@@ -33,39 +31,47 @@ O dataset cobre 36 meses e segmenta o churn por produto, motivo declarado e perf
 | `taxa_churn_pct` | Taxa de churn mensal do produto |
 | `reativacoes` | Clientes reativados no mesmo mês |
 
-**Motivos de churn incluídos:**
-- Preço / custo-benefício
-- Resultado não percebido
-- Falta de tempo / engajamento
-- Troca por concorrente
-- Situação financeira
-- Conclusão natural do programa
+**Motivos de churn incluídos:** preço/custo-benefício, resultado não percebido, falta de tempo/engajamento, troca por concorrente, situação financeira, conclusão natural do programa.
 
-## Como usar no G4 OS
+## Abrir no G4 OS
 
 <Card
   title="Analisar churn e retenção no G4 OS"
   icon="sparkles"
-  href="g4os://action/new-session?input=Fiz+o+download+do+dataset+nexus_churn_retencao.xlsx+%28dispon%C3%ADvel+em+https%3A%2F%2Fraw.githubusercontent.com%2FGestao-Quatro-Ponto-Zero%2Fg4os-docs%2Fmain%2Fuse-cases%2Fdatasets%2Fnexus_churn_retencao.xlsx%29.+Por+favor%3A+%281%29+fa%C3%A7a+o+download+do+arquivo%2C+%282%29+analise+taxa+de+churn+por+produto+ao+longo+do+tempo%2C+%283%29+identifique+os+principais+motivos+de+cancelamento%2C+%284%29+calcule+receita+perdida+acumulada+por+motivo%2C+%285%29+sugira+a%C3%A7%C3%B5es+de+reten%C3%A7%C3%A3o+baseadas+nos+padr%C3%B5es+encontrados.&send=true&mode=ask&workdir=none"
+  href="g4os://action/new-session?input=Faca+o+download+do+dataset+nexus_churn_retencao.xlsx+em+https%3A%2F%2Fraw.githubusercontent.com%2FGestao-Quatro-Ponto-Zero%2Fg4os-docs%2Fmain%2Fuse-cases%2Fdatasets%2Fnexus_churn_retencao.xlsx+e+execute%3A+%281%29+carregue+e+inspecione+o+arquivo%2C+%282%29+calcule+taxa+de+churn+por+produto+ao+longo+do+tempo%2C+%283%29+ranqueie+os+principais+motivos+por+frequencia+e+receita+perdida%2C+%284%29+gere+um+grafico+Mermaid+de+pie+chart+com+distribuicao+dos+motivos+de+churn%2C+%285%29+gere+um+grafico+de+linha+com+evolucao+da+taxa+de+churn+mensal+por+produto%2C+%286%29+sugira+acoes+de+retencao+baseadas+nos+padroes+encontrados.&send=true&mode=execute&workdir=none"
 >
-  Abrir sessão com análise de churn pré-configurada
+  Abrir sessão — executa automaticamente no modo Execute
 </Card>
 
-### O que o G4 OS vai fazer
+### O que o G4 OS faz ao abrir
 
-1. Baixar e processar o dataset
-2. Calcular taxa de churn mensal por produto
-3. Ranquear motivos por frequência e impacto financeiro
-4. Identificar tendências de aumento/queda no churn
-5. Sugerir ações de retenção baseadas nos padrões encontrados
+1. Baixa e processa o dataset
+2. Calcula taxa de churn mensal por produto
+3. Rankeia motivos por frequência e impacto financeiro
+4. Gera pie chart Mermaid com distribuição dos motivos
+5. Gera gráfico de linha com evolução da taxa mensal
+6. Sugere ações de retenção baseadas nos padrões encontrados
 
-## Análises possíveis a partir deste dataset
+## Análises possíveis com este dataset
 
-- **Heatmap de churn** — quais meses e produtos concentram mais saídas
-- **Custo do churn** — receita perdida acumulada por motivo ao longo de 36 meses
-- **Eficiência de retenção** — taxa de sucesso de retenção vs tentativas
-- **Sazonalidade** — churn tem padrão em determinados meses do ano?
-- **Segmentação de risco** — quais perfis de produto têm maior propensão ao churn
+- **Evolução do churn** — curva mensal por produto nos 36 meses
+- **Custo do churn** — receita perdida acumulada por motivo
+- **Distribuição de motivos** — pie chart de causas de cancelamento
+- **Eficiência de retenção** — taxa de sucesso vs tentativas por mês
+- **Sazonalidade** — churn tem padrão em determinados meses?
+- **Reativações** — quais meses têm mais recuperação de clientes perdidos
+
+### Exemplo de gráfico Mermaid que o G4 OS pode gerar
+
+```mermaid
+pie title Distribuição dos Motivos de Churn
+  "Preço / custo-benefício" : 28
+  "Resultado não percebido" : 22
+  "Falta de tempo/engajamento" : 19
+  "Situação financeira" : 14
+  "Troca por concorrente" : 11
+  "Conclusão natural" : 6
+```
 
 ## Veja também
 

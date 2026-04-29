@@ -1,15 +1,13 @@
 ---
 title: "Performance Comercial"
-description: "Analise conversão por vendedor, perfil de lead, ciclo de venda e ranking de time comercial com um dataset sintético pronto para uso no G4 OS."
+description: "Analise conversão por vendedor, perfil de lead, ciclo de venda e ranking de time comercial com um dataset de exemplo pronto para uso no G4 OS."
 ---
 
 ## O que este caso de uso cobre
 
-Este exemplo mostra como o G4 OS pode ser usado para analisar **performance do time comercial** — com granularidade em nível de deal individual, ranking de vendedores, perfil do lead por origem e análise de ramp de novos vendedores.
+Análise de **performance do time comercial** com granularidade em nível de deal individual — conversão por vendedor, perfil do lead por origem, ciclo de venda e ramp de novos vendedores. O G4 OS processa mais de 38 mil registros, gera rankings e gráficos Mermaid comparativos.
 
-O dataset contém mais de 38 mil deals individuais ao longo de 36 meses, com atributos de vendedor, canal de origem, perfil do lead e resultado.
-
-## Dataset
+## Dataset de exemplo
 
 <Card
   title="nexus_performance_comercial.xlsx"
@@ -25,7 +23,7 @@ O dataset contém mais de 38 mil deals individuais ao longo de 36 meses, com atr
 
 | Aba | Conteúdo | Linhas |
 |-----|----------|--------|
-| `Deals Individuais` | Um registro por deal, com vendedor e resultado | 38.213 |
+| `Deals Individuais` | Um registro por deal com vendedor e resultado | 38.213 |
 | `Ranking Vendedores` | Vendedor × mês com métricas agregadas | 360 |
 | `Perfil de Lead` | Breakdown de perfil por origem de canal | série mensal |
 | `Ramp Vendedores` | Curva de ramp de novos vendedores | por contratação |
@@ -34,38 +32,37 @@ O dataset contém mais de 38 mil deals individuais ao longo de 36 meses, com atr
 
 | Campo | Descrição |
 |-------|-----------|
-| `deal_id` | ID único do deal |
 | `vendedor` | Nome do vendedor (anonimizado) |
 | `equipe` | Time de vendas (Inside Sales, Selfcheckout, etc.) |
 | `origem_lead` | Canal que gerou o lead |
-| `perfil_lead` | Segmento do lead (Sócios, Clínicas, Profissionais, etc.) |
+| `perfil_lead` | Segmento do lead |
 | `produto` | Produto negociado |
 | `status` | Ganho / Perdido / Em andamento |
 | `motivo_perda` | Motivo de perda quando aplicável |
 | `ciclo_dias` | Dias do primeiro contato ao fechamento |
 | `ticket` | Valor do deal |
-| `data_criacao` | Data de criação do deal |
-| `data_fechamento` | Data de fechamento |
 
-## Como usar no G4 OS
+## Abrir no G4 OS
 
 <Card
   title="Analisar performance comercial no G4 OS"
   icon="sparkles"
-  href="g4os://action/new-session?input=Fiz+o+download+do+dataset+nexus_performance_comercial.xlsx+%28dispon%C3%ADvel+em+https%3A%2F%2Fraw.githubusercontent.com%2FGestao-Quatro-Ponto-Zero%2Fg4os-docs%2Fmain%2Fuse-cases%2Fdatasets%2Fnexus_performance_comercial.xlsx%29.+Por+favor%3A+%281%29+fa%C3%A7a+o+download+do+arquivo%2C+%282%29+calcule+taxa+de+convers%C3%A3o+e+ticket+m%C3%A9dio+por+vendedor%2C+%283%29+compare+performance+por+perfil+de+lead+e+canal+de+origem%2C+%284%29+analise+ciclo+de+venda+m%C3%A9dio+por+produto+e+equipe%2C+%285%29+gere+ranking+do+time+com+principais+insights+e+pontos+de+atencao.&send=true&mode=ask&workdir=none"
+  href="g4os://action/new-session?input=Faca+o+download+do+dataset+nexus_performance_comercial.xlsx+em+https%3A%2F%2Fraw.githubusercontent.com%2FGestao-Quatro-Ponto-Zero%2Fg4os-docs%2Fmain%2Fuse-cases%2Fdatasets%2Fnexus_performance_comercial.xlsx+e+execute%3A+%281%29+carregue+as+4+abas%2C+%282%29+calcule+taxa+de+conversao+e+ticket+medio+por+vendedor%2C+%283%29+compare+performance+por+perfil+de+lead+e+origem%2C+%284%29+gere+um+grafico+Mermaid+de+barras+com+ranking+dos+top+10+vendedores+por+receita%2C+%285%29+analise+ciclo+de+venda+por+produto+e+equipe%2C+%286%29+gere+grafico+de+linha+com+curva+de+ramp+media+dos+vendedores%2C+%287%29+entregue+ranking+executivo+com+insights+e+pontos+de+atencao+por+vendedor.&send=true&mode=execute&workdir=none"
 >
-  Abrir sessão com análise comercial pré-configurada
+  Abrir sessão — executa automaticamente no modo Execute
 </Card>
 
-### O que o G4 OS vai fazer
+### O que o G4 OS faz ao abrir
 
-1. Baixar e processar as 4 abas do dataset
-2. Calcular taxa de conversão e ticket médio por vendedor
-3. Comparar performance por perfil de lead e origem
-4. Analisar ciclo de venda por produto e equipe
-5. Gerar ranking do time com insights e pontos de atenção
+1. Baixa e processa as 4 abas do dataset
+2. Calcula taxa de conversão e ticket médio por vendedor
+3. Compara performance por perfil de lead e origem
+4. Gera ranking Mermaid dos top 10 vendedores por receita
+5. Analisa ciclo de venda por produto e equipe
+6. Gera curva de ramp média dos vendedores
+7. Entrega ranking executivo com insights e pontos de atenção
 
-## Análises possíveis a partir deste dataset
+## Análises possíveis com este dataset
 
 - **Ranking de vendedores** — por volume, conversão e ticket médio simultaneamente
 - **Qualidade por origem** — quais canais geram leads com melhor taxa de fechamento
@@ -73,6 +70,16 @@ O dataset contém mais de 38 mil deals individuais ao longo de 36 meses, com atr
 - **Motivos de perda** — o que impede o fechamento e como varia por equipe
 - **Curva de ramp** — quanto tempo leva para um novo vendedor atingir produtividade plena
 - **Sazonalidade comercial** — quais meses concentram mais deals ganhos e perdidos
+
+### Exemplo de gráfico Mermaid que o G4 OS pode gerar
+
+```mermaid
+xychart-beta
+  title "Top 5 Vendedores — Taxa de Conversão (%)"
+  x-axis ["Ana S.", "Carlos M.", "Beatriz L.", "Rafael T.", "Juliana P."]
+  y-axis "Conversão (%)" 0 --> 50
+  bar [42, 38, 35, 31, 28]
+```
 
 ## Veja também
 

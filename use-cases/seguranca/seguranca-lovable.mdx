@@ -1,0 +1,98 @@
+---
+title: "Pentest de App Supabase"
+description: "Auditoria automatizada de segurança para apps criadas no Lovable, Bolt ou qualquer stack Supabase — RLS, autenticação, isolamento de tenant e exposição de dados."
+---
+
+## O que este caso de uso cobre
+
+O G4 OS tem um workflow chamado **Segurança Lovable** que conduz uma auditoria automatizada de segurança em aplicações web com backend Supabase — criadas no Lovable, Bolt, ou qualquer stack que use Supabase diretamente.
+
+O workflow verifica RLS, autenticação, isolamento de tenant, escrita anônima e exposição de dados, e classifica os findings com rigor para evitar falsos positivos.
+
+<Warning>
+  Esta é uma análise automatizada conduzida por IA. Ela cobre os vetores mais comuns mas não substitui um pentest manual profissional. Para aplicações em produção com dados sensíveis, envolva um time de segurança.
+</Warning>
+
+## Antes de começar: instalar o workflow
+
+O workflow **Segurança Lovable** precisa estar instalado no seu workspace antes de usar. Ele está disponível no Marketplace do G4 OS.
+
+<Steps>
+  <Step title="Abrir o Marketplace">
+    No G4 OS, acesse o Marketplace pelo menu lateral ou pelo deep link abaixo.
+
+    [Abrir Marketplace](g4os://marketplace)
+  </Step>
+  <Step title="Buscar e instalar o workflow">
+    Pesquise por **"Segurança Lovable"** e instale no seu workspace. O workflow aparecerá disponível como `/seguranca-lovable`.
+  </Step>
+  <Step title="Confirmar a instalação">
+    Abra uma sessão nova e digite `/seguranca-lovable` — o G4 OS vai reconhecer o workflow e iniciar o fluxo de perguntas.
+  </Step>
+</Steps>
+
+## Abrir no G4 OS
+
+Com o workflow instalado, você pode iniciar uma auditoria direto pelo deep link abaixo. O G4 OS abre uma sessão no modo Execute e aciona o workflow automaticamente.
+
+<Card
+  title="Iniciar auditoria de segurança no G4 OS"
+  icon="shield-halved"
+  href="g4os://action/new-session?input=%2Fseguranca-lovable&send=true&mode=execute&workdir=none"
+>
+  Abrir sessão com o workflow Segurança Lovable — executa no modo Execute
+</Card>
+
+O G4 OS vai perguntar:
+1. **Qual a URL da sua aplicação?**
+2. **Que tipo de análise você quer?** — Rápida (Nível 1) ou Completa (Nível 2)
+
+## Níveis de análise
+
+| Nível | O que faz | Tempo | Créditos |
+|-------|-----------|-------|----------|
+| **Nível 1 — Rápida** | Verifica se dados estão expostos na internet via API pública | Minutos | Baixo |
+| **Nível 2 — Completa** | Tudo do Nível 1 + cria conta real e testa como usuário malicioso | 15–30 min | Médio |
+
+Se não souber qual escolher: vá de Nível 1 primeiro. O Nível 2 é recomendado quando você quer validar isolamento entre usuários.
+
+## O que o workflow verifica
+
+**Nível 1 — API:**
+- Supabase URL e anon key extraídos do JavaScript público
+- `service_role` key exposta no frontend (crítico imediato se encontrada)
+- Enumeração de tabelas via schema OpenAPI
+- Leitura anônima de dados sensíveis por tabela
+- Escrita anônima em tabelas sem autenticação
+- Endpoints de autenticação e mecanismo de login
+
+**Nível 2 — Usuário real (adicional ao Nível 1):**
+- Criação de conta real na aplicação via browser
+- Acesso cruzado entre contas (tenant isolation)
+- Tentativa de leitura e escrita de dados de outros usuários
+- Escalada de privilégios via manipulação de JWT
+
+## Como os findings são classificados
+
+| Ícone | Classificação | Critério |
+|-------|--------------|----------|
+| 🔴 | **Confirmado** | Dados sensíveis reais vazaram ou escrita não autorizada funcionou |
+| 🟡 | **Precisa clarificação** | Pode ser problema ou comportamento esperado — workflow pergunta antes de classificar |
+| ✅ | **Protegido** | Testado e funcionando como esperado |
+
+<Note>
+  Schema OpenAPI exposto e anon key pública são **comportamento padrão do Supabase** — não são findings. O workflow não os reporta como vulnerabilidades.
+</Note>
+
+## Exemplo de output
+
+O workflow entrega um relatório estruturado com:
+
+- resumo executivo com contagem de findings por severidade
+- tabela de endpoints testados e resultado
+- evidências concretas para cada finding confirmado
+- recomendações de correção priorizadas
+
+## Veja também
+
+- [Casos de Uso — índice](/use-cases) — outros exemplos de uso do G4 OS

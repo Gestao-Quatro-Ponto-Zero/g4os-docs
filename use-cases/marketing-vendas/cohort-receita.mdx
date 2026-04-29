@@ -1,22 +1,20 @@
 ---
 title: "Cohort de Receita por Produto"
-description: "Analise retenção de receita, LTV e comportamento de cohorts mensais com um dataset sintético pronto para uso no G4 OS."
+description: "Analise retenção de receita, LTV e comportamento de cohorts mensais com um dataset de exemplo pronto para uso no G4 OS."
 ---
 
 ## O que este caso de uso cobre
 
-Este exemplo mostra como o G4 OS pode ser usado para analisar **cohorts de clientes e receita por produto** — cruzando retenção mensal, ticket médio, LTV e churn por cohort de entrada.
+Análise de **cohorts de clientes e receita por produto** — cruzando retenção mensal, ticket médio, LTV e churn por cohort de entrada. O G4 OS baixa o dataset, roda as análises em Python e gera tabelas, gráficos Mermaid e um resumo executivo.
 
-O dataset é sintético, calibrado a partir de dados reais de uma empresa de serviços B2B, e foi anonimizado para uso educativo.
-
-## Dataset
+## Dataset de exemplo
 
 <Card
   title="nexus_cohort_receita.xlsx"
   icon="table"
   href="https://raw.githubusercontent.com/Gestao-Quatro-Ponto-Zero/g4os-docs/main/use-cases/datasets/nexus_cohort_receita.xlsx"
 >
-  Baixar dataset — cohort mensal de receita por produto (26 KB, 36 meses simulados)
+  Baixar dataset — cohort mensal de receita por produto (26 KB, 36 meses)
 </Card>
 
 ### O que tem dentro
@@ -25,41 +23,65 @@ O dataset é sintético, calibrado a partir de dados reais de uma empresa de ser
 |--------|-----------|
 | `mes_cohort` | Mês de entrada do cohort |
 | `mes_referencia` | Mês da observação |
-| `produto` | Produto contratado (Programa Premium, Formação Online, etc.) |
+| `produto` | Produto contratado |
 | `clientes_ativos` | Clientes ativos naquele mês |
 | `receita_mrr` | Receita recorrente mensal |
 | `ticket_medio` | Ticket médio do cohort |
 | `retencao_pct` | Taxa de retenção em relação ao mês de entrada |
 | `ltv_acumulado` | LTV acumulado até o mês de referência |
 
-## Como usar no G4 OS
-
-Abra uma sessão nova já com o dataset carregado e a análise configurada:
+## Abrir no G4 OS
 
 <Card
   title="Analisar cohort de receita no G4 OS"
   icon="sparkles"
-  href="g4os://action/new-session?input=Fiz+o+download+do+dataset+nexus_cohort_receita.xlsx+%28dispon%C3%ADvel+em+https%3A%2F%2Fraw.githubusercontent.com%2FGestao-Quatro-Ponto-Zero%2Fg4os-docs%2Fmain%2Fuse-cases%2Fdatasets%2Fnexus_cohort_receita.xlsx%29.+Por+favor%3A+%281%29+fa%C3%A7a+o+download+do+arquivo%2C+%282%29+analise+a+reten%C3%A7%C3%A3o+por+cohort+e+produto%2C+%283%29+calcule+LTV+m%C3%A9dio+por+produto%2C+%284%29+identifique+os+cohorts+com+maior+e+menor+reten%C3%A7%C3%A3o%2C+%285%29+gere+um+resumo+executivo+com+os+insights+principais.&send=true&mode=ask&workdir=none"
+  href="g4os://action/new-session?input=Faca+o+download+do+dataset+nexus_cohort_receita.xlsx+em+https%3A%2F%2Fraw.githubusercontent.com%2FGestao-Quatro-Ponto-Zero%2Fg4os-docs%2Fmain%2Fuse-cases%2Fdatasets%2Fnexus_cohort_receita.xlsx+e+execute+a+seguinte+analise%3A+%281%29+carregue+e+inspecione+o+arquivo%2C+%282%29+calcule+retencao+por+produto+e+cohort%2C+%283%29+estime+LTV+medio+por+produto%2C+%284%29+identifique+os+cohorts+com+maior+e+menor+retencao%2C+%285%29+gere+um+grafico+de+barras+em+Mermaid+com+retencao+M3+dos+melhores+e+piores+cohorts%2C+%286%29+gere+um+resumo+executivo+com+tabela+de+LTV+por+produto+e+principais+insights.&send=true&mode=execute&workdir=none"
 >
-  Abrir sessão com análise de cohort pré-configurada
+  Abrir sessão — executa automaticamente no modo Execute
 </Card>
 
-### O que o G4 OS vai fazer
+### O que o G4 OS faz ao abrir
 
-Ao abrir o link acima, o G4 OS vai:
+1. Baixa o dataset direto do GitHub
+2. Calcula retenção por produto e mês de cohort
+3. Estima LTV médio e evolução por cohort
+4. Identifica os cohorts com melhor e pior retenção
+5. Gera gráfico Mermaid de retenção M3
+6. Entrega resumo executivo com tabela de LTV por produto
 
-1. Fazer o download automático do dataset
-2. Calcular retenção por produto e mês de cohort
-3. Estimar LTV médio e evolução por cohort
-4. Identificar os produtos com melhor e pior retenção
-5. Gerar um resumo executivo com os principais insights
+## Exemplos de output
 
-## Análises possíveis a partir deste dataset
+Abaixo dois exemplos reais do que o G4 OS produz com este dataset:
+
+### Resumo executivo com LTV por produto
+
+![Resumo executivo — Nexus Consultoria: Análise de Cohort & LTV](/images/use-cases/cohort-resumo-executivo.png)
+
+*Tabela de LTV/cliente e participação na receita por produto, gerada pelo G4 OS a partir do dataset de cohort.*
+
+### Gráfico de retenção M3 por cohort
+
+![Retenção M3 por Cohort — Melhores e Piores](/images/use-cases/cohort-retencao-m3.png)
+
+*Gráfico Mermaid de barras comparando retenção no terceiro mês entre os melhores e piores cohorts.*
+
+## Análises possíveis com este dataset
 
 - **Heatmap de retenção** — quais cohorts retêm mais ao longo do tempo
-- **Comparação de LTV por produto** — qual linha de produto gera mais valor no longo prazo
-- **Sazonalidade de entrada** — cohorts de determinados meses têm melhor desempenho?
-- **Projeção de receita** — extrapolar o MRR esperado com base em taxas históricas de retenção
+- **Comparação de LTV por produto** — qual linha gera mais valor no longo prazo
+- **Gráfico de evolução de MRR** — curva de receita por cohort de entrada
+- **Sazonalidade** — cohorts de determinados meses têm melhor retenção?
+- **Projeção de receita** — extrapolar MRR esperado com base nas taxas históricas
+
+### Exemplo de gráfico Mermaid que o G4 OS pode gerar
+
+```mermaid
+xychart-beta
+  title "LTV Médio por Produto (M12)"
+  x-axis ["Consultoria Anual", "Prog. Aceleração", "Workshop", "Assinatura Digital"]
+  y-axis "LTV/cliente (R$)" 0 --> 160000
+  bar [147188, 23701, 9858, 3219]
+```
 
 ## Veja também
 

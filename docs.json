@@ -98,6 +98,12 @@
               "use-cases/marketing-vendas/churn-retencao",
               "use-cases/marketing-vendas/performance-comercial"
             ]
+          },
+          {
+            "group": "Segurança",
+            "pages": [
+              "use-cases/seguranca/seguranca-lovable"
+            ]
           }
         ]
       }
