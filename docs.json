@@ -62,7 +62,7 @@
               "support/skills",
               "support/automation",
               "support/permissions",
-              "support/tags",
+              "support/labels",
               "support/appearance",
               "support/workspace",
               "support/company-context",
@@ -76,7 +76,9 @@
               "support/collaborative-session",
               "support/remote-control",
               "support/telegram-messaging",
-              "support/marketplace"
+              "support/marketplace",
+              "support/input",
+              "support/shortcuts"
             ]
           }
         ]
@@ -194,6 +196,10 @@
     {
       "source": "/api-reference/introduction",
       "destination": "/support"
+    },
+    {
+      "source": "/support/tags",
+      "destination": "/support/labels"
     }
   ],
   "footer": {

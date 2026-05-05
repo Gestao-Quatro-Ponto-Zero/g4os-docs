@@ -5,40 +5,50 @@ description: "Use agendamentos e vigias para transformar trabalho recorrente em 
 
 ## Como a automação está organizada
 
-Hoje a automação no produto aparece em dois blocos principais:
+A automação no G4 OS aparece na seção **Automação** do menu lateral, dividida em dois blocos:
 
-- `Agendamentos`, para execuções recorrentes em horários ou intervalos
-- `Vigia`, para monitoramentos que disparam trabalho de acompanhamento
+- **Agendamentos** — execuções recorrentes disparadas por horário, intervalo ou expressão cron
+- **Vigia** — monitoramentos que detectam eventos e disparam trabalho de acompanhamento automaticamente
 
-## O que você encontra em agendamentos
+> **Acesso:** A seção Automação fica no menu lateral do app, fora das Configurações. Não há deep link direto para ela — acesse pela navegação lateral.
+
+## O que você encontra em Agendamentos
 
 - criação e edição de jobs
-- agenda visual por horário, intervalo ou expressão avançada
+- agenda visual por horário, intervalo ou expressão cron avançada
 - histórico de execuções
 - seleção de fontes habilitadas
 - seleção de skills habilitadas
 - diretório de trabalho
-- escolha entre ação de nova sessão ou ação em lote
+- escolha entre ação de **nova sessão** ou **ação em lote**
 
 ## O que você encontra em Vigia
 
-- watchers com alvo definido
+- watchers com alvo definido (Slack, e-mail)
 - estado atual do monitoramento
-- abertura do detalhe do watcher
+- abertura do detalhe de cada watcher
 - revisão do fluxo que dispara acompanhamentos
 
 ## Casos comuns
 
-- criar uma rotina diária ou semanal
+- criar uma rotina diária ou semanal de resumo
 - automatizar um prompt recorrente em nova sessão
-- monitorar um alvo e disparar follow-up
-- revisar histórico quando uma automação falha
+- monitorar uma thread no Slack e disparar follow-up automático
+- revisar histórico quando uma automação não executou como esperado
+
+## Como criar automações pelo assistente
+
+Você pode criar agendamentos e vigias diretamente numa sessão, pedindo ao assistente. Ele tem acesso às ferramentas `scheduler_create` e `vigia_create` e vai guiar a configuração com confirmação antes de salvar.
+
+Exemplo de prompt:
+
+> _"Cria um agendamento para todo dia útil às 8h que abre uma nova sessão com o resumo do dia."_
 
 ## Caminho no app
 
-- `Automação > Agendamentos`
-- `Automação > Vigia`
+- Menu lateral → **Automação** → **Agendamentos**
+- Menu lateral → **Automação** → **Vigia**
 
 ## Observação sobre deep links
 
-No momento, o parser público de deep links documentado do desktop cobre principalmente `settings`, `sources`, `skills` e `sessions`. Para automação, prefira abrir pela navegação lateral do app.
+O parser de deep links do desktop cobre `settings`, `sources`, `skills` e `sessions`. Para automação, acesse pela navegação lateral do app ou peça ao assistente para criar ou listar automações diretamente na sessão.
