@@ -67,6 +67,7 @@
               "support/workspace",
               "support/company-context",
               "support/cloud-sync",
+              "support/shared-brain",
               "support/repair-mode",
               "support/usage",
               "support/billing-subscriptions",

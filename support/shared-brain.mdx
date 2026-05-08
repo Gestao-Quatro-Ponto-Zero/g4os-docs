@@ -1,0 +1,207 @@
+---
+title: "Brain"
+description: "Use o Shared Brain para manter memória e contexto de workspace entre máquinas, com sync criptografado e gestão de nós confiáveis."
+---
+
+<Note>
+  O Brain está em beta. Use para memória e contexto durável; não use para credenciais, tokens, anexos ou logs brutos de sessão.
+</Note>
+
+## O que é o Brain
+
+O Brain é a camada de memória compartilhada do G4 OS.
+
+Ele permite que um workspace mantenha contexto durável para o agente e, quando o sync criptografado está ativo, compartilhe esse contexto com outros workspaces ou computadores confiáveis que entraram no mesmo Shared Brain.
+
+Na prática, ele serve para:
+
+- lembrar decisões, preferências, convenções e correções importantes
+- manter preferências de fontes e contas no escopo certo do workspace
+- pesquisar memórias por lista ou grafo de contexto
+- sincronizar memória entre máquinas sem sincronizar credenciais
+- gerenciar quais computadores e workspaces participam daquele brain
+
+## Quando usar
+
+Use o Brain quando você quer que o agente tenha continuidade entre workspaces ou computadores.
+
+Bons exemplos:
+
+- "neste workspace, use Gmail X para e-mails comerciais"
+- "a decisão atual do projeto é seguir o fluxo Y"
+- "essa análise usa sempre o dashboard Z como referência"
+- "esse erro já aconteceu; a correção correta foi esta"
+- "este workspace compartilha contexto com outro computador meu"
+
+Não use o Brain como substituto para Cloud Sync. Cloud Sync continua sendo o fluxo de backup/restauração do workspace inteiro. O Brain sincroniza memória canônica e sinais de nós; ele não espelha sessões completas, anexos ou tudo que existe em disco.
+
+## Escopo: workspace, global e fontes
+
+O Brain separa melhor o que deve ser memória do workspace e o que pode ser preferência global.
+
+Na dúvida, trate como memória do workspace:
+
+- preferência de fonte ou conta, como Gmail, Slack, MCP, ERP ou banco específico
+- convenção de projeto
+- decisão operacional daquele contexto
+- raiz lógica, dashboard, fonte ou rotina válida só naquele workspace
+
+Use memória global apenas quando a preferência é claramente da pessoa e faz sentido em todos os workspaces.
+
+Exemplo: se em um workspace você usa um Gmail e em outro usa outro MCP ou outra conta Gmail, isso deve ficar ligado ao workspace correto, não como preferência global.
+
+## Como ativar
+
+Abra `Brain` no menu principal ou vá em `Configurações > Workspace` para ativar o recurso no workspace atual.
+
+Ao iniciar, o app mostra duas opções:
+
+### Criar brain daqui
+
+Use quando este workspace é a origem do contexto.
+
+O G4 OS ativa a memória local e abre uma sessão em modo execute para o assistente:
+
+- ler contexto local do workspace
+- revisar arquivos de contexto e memória já existentes
+- criar ou atualizar artefatos necessários
+- salvar memórias duráveis quando fizer sentido
+- deixar orientação para futuras sessões usarem o Brain sem incomodar
+
+### Importar shared brain
+
+Use quando outro computador ou workspace já tem o Shared Brain.
+
+Cole o código de configuração exportado do outro ambiente. Depois que o código é aceito, o G4 OS abre uma sessão em modo execute para o assistente:
+
+- puxar primeiro o estado remoto do Brain
+- pesquisar memórias e vizinhanças do grafo
+- reconciliar memórias importadas com o contexto local
+- propor instruções portáveis para futuras sessões usarem o Brain corretamente
+- atualizar memórias, links e status quando houver confirmação
+- manter o Brain atualizado daqui para frente sem editar arquivos locais em silêncio
+
+O código de configuração contém o token de sync e a chave de criptografia. Use apenas em computador ou workspace confiável.
+
+## Como o sync funciona
+
+Quando o sync criptografado está pronto:
+
+- o G4 OS roda sync em segundo plano periodicamente
+- alterações locais feitas pelo agente disparam sync assíncrono logo depois
+- outro computador pode receber um sinal criptografado para puxar novidades
+- o app mostra último sync, saída pendente, nós confiáveis e eventos de auditoria
+
+O sync não deve congelar a interface. Se um endpoint remoto falhar, a tela mostra o estado bloqueado/falhou e registra o motivo na auditoria.
+
+## Vários computadores e vários workspaces
+
+O modelo não assume que um usuário tem só uma máquina ou só um workspace.
+
+Pense em:
+
+```text
+Pessoa
+  -> Computador A
+     -> Workspace 1
+     -> Workspace 2
+  -> Computador B
+     -> Workspace 3
+```
+
+Cada computador tem uma identidade de nó. Cada workspace pode ou não estar vinculado ao Shared Brain.
+
+Um nó confiável não conecta automaticamente todos os workspaces daquele computador. A tela de sync mostra as participações de workspace para você ver e controlar quais vínculos estão ativos.
+
+## O que é sincronizado
+
+O Brain sincroniza memória canônica e metadados necessários para colaboração segura:
+
+- registros de memória
+- status da memória, como confirmada, rejeitada, supersedida ou expirada
+- links entre memórias e nós do grafo
+- conflitos e provenance quando aplicável
+- estado de sync, nós confiáveis, vínculos de workspace e auditoria local
+
+## Gestão de sync e nós
+
+A aba `Sync e nós` mostra a identidade deste computador, os nós confiáveis, as participações de workspace e os eventos de auditoria.
+
+Use essa aba para:
+
+- exportar um código de configuração para outro workspace confiável
+- importar um código recebido de outro computador ou workspace
+- sincronizar manualmente quando quiser conferir o estado agora
+- ver se o último sync enviou, baixou, aplicou ou ignorou alterações
+- revisar quais nós e workspaces participam deste Brain
+- revogar ou desvincular acessos quando um computador ou workspace não deve mais participar
+
+Revogar um nó bloqueia syncs futuros daquele participante. Isso não apaga dados que já foram descriptografados localmente naquele computador.
+
+Se a auditoria mostrar `falhou`, `bloqueado`, `negado` ou um código remoto, trate como sinal operacional: o sync pode estar incompleto até o endpoint, token, permissão ou presença remota ser corrigido.
+
+## O que nunca deve entrar
+
+Não salve nem sincronize:
+
+- credenciais
+- tokens OAuth
+- chaves de API
+- material de autenticação de fontes
+- anexos
+- logs brutos de sessão
+- respostas longas completas
+- dados temporários de uma tarefa que não precisam ser lembrados
+
+Se uma informação parece segredo, ela deve ficar fora do Brain.
+
+## Memórias e grafo
+
+A aba `Memória` permite ver registros em lista ou grafo.
+
+Use a lista para revisar, filtrar por tipo e arquivar memórias. Use o grafo para entender relações entre:
+
+- preferências
+- decisões
+- observações
+- resumos
+- referências
+- sessões ou contextos relacionados
+
+Ao clicar em um nó, a tela mostra o conteúdo, fontes, status, sensibilidade, links e ações possíveis.
+
+O agente também deve pesquisar de forma progressiva:
+
+1. começar por status e busca ampla
+2. olhar memórias diretas e recentes
+3. expandir nós de contexto promissores
+4. seguir links relacionados
+5. só então criar, atualizar ou conectar uma memória
+
+Isso evita concluir que "não existe memória" depois de uma busca estreita demais.
+
+## Como o agente deve se comportar
+
+Quando o Brain está ativo, o agente deve ser proativo, mas não inconveniente.
+
+O comportamento esperado:
+
+- lembrar memórias relevantes de forma discreta
+- sugerir atualização quando perceber uma decisão, preferência ou correção durável
+- perguntar uma vez antes de salvar, salvo quando você pediu explicitamente para lembrar
+- atualizar status em vez de duplicar memória quando algo foi rejeitado, expirou ou foi supersedido
+- conectar memórias relacionadas quando isso ajuda a busca futura
+- manter preferências de fontes e contas no workspace correto
+- propor alterações em `CLAUDE.md`, `AGENTS.md` ou arquivos de contexto e aguardar confirmação explícita antes de editar
+- nunca gravar caminhos absolutos locais, usuário da máquina ou raiz local do app em memória durável ou instruções compartilhadas
+
+Use caminhos relativos, IDs lógicos de raiz, nomes de workspace, source slugs e metadados de mapeamento de raiz. Caminhos absolutos podem aparecer como diagnóstico local, mas não devem virar regra durável do Brain.
+
+## Onde encontrar
+
+- Menu principal: `Brain`
+- Configuração por workspace: `Configurações > Workspace`
+- Aba de memória: `Brain > Memória`
+- Aba de sync e nós: `Brain > Sync e nós`
+- Deep link geral: [Abrir Brain no G4 OS](g4os://shared-brain)
+- Deep link de configuração: [Abrir Workspace no G4 OS](g4os://settings/workspace)
