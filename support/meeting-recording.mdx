@@ -1,0 +1,88 @@
+---
+title: "Gravação de Reunião"
+description: "Grave áudio do microfone em uma sessão, gere transcrição e resumo, e use o resultado como contexto para o agente."
+---
+
+<Warning>
+  **Beta:** Gravação de reunião pode depender de entitlement, build e disponibilidade do provedor gerenciado.
+</Warning>
+
+## O que é
+
+A gravação de reunião permite capturar áudio do microfone diretamente em uma sessão do G4 OS.
+
+Ao parar a gravação, o app salva os segmentos de áudio, transcreve o conteúdo, gera um resumo e adiciona os artefatos como contexto da sessão. Depois disso, você pode pedir ao agente para extrair decisões, tarefas, riscos, follow-ups ou materiais derivados.
+
+## O que a gravação captura
+
+A implementação atual é **microfone-only**.
+
+Ela não captura áudio do sistema automaticamente. Se você precisa registrar todos os participantes de uma chamada, garanta que o microfone esteja capturando o áudio necessário ou use uma configuração externa adequada.
+
+## Estados da gravação
+
+| Estado | O que significa |
+|--------|-----------------|
+| Gravando | O app está capturando áudio do microfone |
+| Parando | A captura foi encerrada e o app está finalizando os arquivos |
+| Transcrevendo | O áudio salvo está sendo enviado para transcrição gerenciada |
+| Resumindo | A transcrição está sendo condensada em notas de reunião |
+| Gravação falhou | A captura, transcrição ou resumo encontrou erro |
+
+Quando há falha, o app tenta preservar o que já foi salvo. Em alguns casos, é possível tentar transcrever novamente a gravação existente.
+
+## Artefatos gerados
+
+Uma gravação concluída pode gerar:
+
+- segmentos de áudio gravados
+- `transcript.md` com a transcrição
+- `summary.md` com resumo, decisões, itens de ação e perguntas em aberto
+- `manifest.json` com estado da gravação
+- nota da sessão apontando para os arquivos
+
+O agente recebe uma referência interna para usar a transcrição completa quando o assunto da reunião for relevante.
+
+## Gravações existentes na mesma sessão
+
+Se a sessão já tem gravação salva, o G4 OS mostra um diálogo antes de iniciar outra.
+
+Você pode:
+
+- transcrever novamente a gravação existente
+- preservar os arquivos existentes e gravar de novo
+- apagar a gravação existente e substituir por uma nova
+- cancelar
+
+## Requisitos
+
+A gravação depende de:
+
+- permissão de microfone no sistema operacional
+- ambiente com `MediaRecorder` compatível
+- sessão autenticada no provedor gerenciado de transcrição
+- créditos ou política de uso suficiente quando a gravação consome recursos gerenciados
+
+Se o botão estiver bloqueado, confira permissão do microfone, disponibilidade do recurso e limites de uso.
+
+## Cloud Sync
+
+O Cloud Sync preserva a política text-only do workspace.
+
+Transcrição, resumo e manifest podem ser sincronizados como texto. Segmentos brutos de áudio não devem ser usados como mecanismo de sincronização entre dispositivos.
+
+## Caminho no app
+
+- Abra uma sessão
+- Use o botão `Gravar reunião` na área de input
+
+## Veja também
+
+<Columns cols={2}>
+  <Card title="Input por Voz" icon="mic" href="/product/voice-input">
+    Entenda a diferença entre ditado e gravação de reunião.
+  </Card>
+  <Card title="Uso" icon="chart-line" href="/support/usage">
+    Veja como limites e créditos podem afetar recursos gerenciados.
+  </Card>
+</Columns>

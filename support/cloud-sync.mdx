@@ -121,11 +121,13 @@ Alguns itens ficam explicitamente fora do sync:
 - anexos de sessão
 - downloads
 - respostas longas armazenadas fora do histórico textual
-- chunks de gravação
+- chunks brutos de gravação, incluindo áudio de gravações de reunião
 - arquivos acima de `10 MB`
 - conjuntos acima de `500 MB` no total
 
 Em outras palavras: o foco é sincronizar estado operacional textual, não espelhar tudo o que existe no disco.
+
+Gravações de reunião seguem essa regra: transcrições, resumos e manifests textuais podem ser preservados como contexto, mas segmentos brutos de áudio não devem ser tratados como payload de sync entre dispositivos.
 
 ## O que precisa ficar claro antes de usar
 

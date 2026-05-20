@@ -1,6 +1,6 @@
 ---
 title: "Input por Voz"
-description: "Dite mensagens e transcreva reuniões diretamente no G4 OS usando reconhecimento de voz em tempo real."
+description: "Dite mensagens e grave reuniões diretamente no G4 OS para transformar fala em contexto de trabalho."
 ---
 
 <Warning>
@@ -9,9 +9,12 @@ description: "Dite mensagens e transcreva reuniões diretamente no G4 OS usando 
 
 ## Fale em vez de digitar
 
-O G4 OS permite usar a voz como forma de entrada em qualquer momento da conversa. Em vez de digitar uma instrução longa, você pode falar e o texto aparece automaticamente no campo de input.
+O G4 OS permite usar voz como entrada em sessões. Em vez de digitar uma instrução longa, você pode falar e transformar áudio em texto ou contexto de trabalho.
 
-A transcrição acontece em tempo real, via Gemini Live, sem necessidade de pausas ou confirmações manuais.
+Existem dois usos diferentes:
+
+- **input por voz** para ditar uma mensagem no campo da sessão
+- **gravação de reunião** para salvar áudio do microfone, gerar transcrição e produzir um resumo como artefato da sessão
 
 ## Onde o input por voz aparece
 
@@ -35,9 +38,11 @@ O G4 OS também permite iniciar a gravação de uma reunião diretamente pela se
 - criar resumos automáticos após a reunião
 - alimentar o contexto de uma sessão com o que foi discutido
 
+Na implementação atual, a gravação de reunião captura o **microfone**. Ela salva segmentos de áudio, gera `transcript.md`, cria um resumo e disponibiliza esses arquivos para a sessão. Se já existir uma gravação na mesma sessão, o app pergunta se você quer transcrever novamente, preservar arquivos existentes, substituir ou cancelar.
+
 ## Requisitos
 
-O input por voz requer entitlement específico habilitado na sua conta. Se não aparecer a funcionalidade, aguarde atualizações futuras.
+Input por voz e gravação de reunião podem exigir entitlement específico, permissão de microfone e disponibilidade do provedor gerenciado. Se a funcionalidade não aparecer ou estiver bloqueada, confira permissões do sistema, limites de uso e disponibilidade para sua conta.
 
 <Card
   title="Ver sessões"
@@ -46,4 +51,13 @@ O input por voz requer entitlement específico habilitado na sua conta. Se não 
   horizontal
 >
   Entenda como o contexto capturado por voz se integra ao histórico de cada sessão.
+</Card>
+
+<Card
+  title="Ver gravação de reunião"
+  icon="mic"
+  href="/support/meeting-recording"
+  horizontal
+>
+  Veja estados, artefatos, retry e cuidados de Cloud Sync para gravações.
 </Card>

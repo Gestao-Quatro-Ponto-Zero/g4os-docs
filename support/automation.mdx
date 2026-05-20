@@ -19,7 +19,7 @@ A tela reúne:
 - **Agendamento** — execuções programadas por horário, intervalo ou expressão cron
 - **Vigia** — monitoramentos que detectam eventos e disparam acompanhamento automaticamente
 
-> **Acesso:** A seção Automações fica no menu lateral do app, fora das Configurações. Não há deep link direto para ela — acesse pela navegação lateral.
+> **Acesso:** A seção Automações fica no menu lateral do app, fora das Configurações. Ela também possui deep links para abrir agendamentos, vigias e telas de criação.
 
 ## O que você encontra na tela
 
@@ -56,6 +56,21 @@ Exemplo de prompt:
 - Menu lateral > `Automações` > `Minhas Automações`
 - Menu lateral > `Automações` > `Rotinas Recomendadas`
 
-## Observação sobre deep links
+## Deep links úteis
 
-O parser de deep links do desktop cobre `settings`, `sources`, `skills` e `sessions`. Para automação, acesse pela navegação lateral do app ou peça ao assistente para criar ou listar automações diretamente na sessão.
+- [Abrir Automações](g4os://scheduler)
+- [Abrir Agendamentos](g4os://scheduler/scheduled-jobs)
+- [Criar Agendamento](g4os://scheduler/scheduled-jobs/new)
+- [Abrir Vigia](g4os://scheduler/vigia)
+- [Criar Vigia](g4os://scheduler/vigia/new)
+- `g4os://scheduler/scheduled-jobs/job/{jobId}`
+- `g4os://scheduler/vigia/watcher/{watcherId}`
+- `g4os://scheduler/recommended/{templateId}`
+
+## Diferença entre Agendamento e Vigia
+
+Use **Agendamento** quando o gatilho é uma agenda: horário, intervalo ou expressão cron.
+
+Use **Vigia** quando o gatilho é acompanhamento: o G4 OS monitora uma thread ou fluxo de resposta e dispara follow-up quando as condições combinadas forem atendidas.
+
+Para criar um Vigia pelo assistente, confirme alvo, cadência, janela de monitoramento e modo de entrega antes de salvar.
