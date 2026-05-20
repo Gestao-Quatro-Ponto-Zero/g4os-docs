@@ -7,7 +7,7 @@ description: "Acompanhe consumo de créditos e entenda como a política da empre
 
 A página de `Uso` resume o consumo de créditos do workspace ativo dentro do G4 OS, exibindo limites, projeções e o detalhamento de como os créditos foram gastos no mês.
 
-Em workspaces **vinculados a uma empresa**, a visão passa a refletir a política daquela empresa para o usuário logado: os limites exibidos são os definidos pela administração (política global ou grupo de política específico), e o consumo é calculado dentro desse contexto. Em workspaces **pessoais** sem vínculo empresarial, o comportamento permanece o mesmo.
+Em workspaces **vinculados a uma empresa**, a visão passa a refletir a política daquela empresa para o usuário logado: os limites exibidos são os definidos pela administração (política global ou grupo de política específico), e o consumo é calculado dentro desse contexto. Em workspaces **pessoais** sem vínculo empresarial, a página mostra consumo pessoal, plano ativo e opções de upgrade.
 
 <img src="/images/support/uso.png" alt="Página de Uso — resumo do mês, ritmo vs. mês passado, projeção, breakdown por modelo e gráfico diário" />
 
@@ -19,11 +19,11 @@ No topo, um badge indica se o consumo exibido é **pessoal** ou vinculado a uma 
 
 ### Limites de uso
 
-Dois cartões mostram o consumo atual versus o limite configurado:
+Os cartões mostram o consumo atual versus o limite configurado:
 
 | Campo | Descrição |
 |-------|-----------|
-| **Uso diário** | Créditos consumidos no dia corrente. Reseta à meia-noite. |
+| **Uso diário** | Créditos consumidos no dia corrente. Aparece quando há política diária de empresa. |
 | **Uso mensal** | Créditos consumidos no mês corrente. Reseta no início do próximo mês. |
 
 Cada cartão exibe:
@@ -34,7 +34,21 @@ Cada cartão exibe:
   - **Atenção** (80–99%): barra azul
   - **Limite atingido** (≥ 100%): barra vermelha
 
-Quando não há limite configurado, o campo mostra apenas o consumo sem indicador de percentual.
+Quando não há limite configurado, o campo mostra apenas o consumo sem indicador de percentual. Em contas pessoais, o limite diário fica oculto.
+
+### Planos de assinatura
+
+Em contas pessoais, `Configurações > Uso` inclui a seção **Planos de assinatura**.
+
+| Plano | Créditos por mês | Preço |
+|-------|------------------|-------|
+| Gratuito | 10 cr | R$ 0/mês |
+| Pro | 250 cr | R$ 600/mês |
+| Max | 550 cr | R$ 1.200/mês |
+
+O Pro oferece 25 vezes os créditos do plano gratuito. O Max oferece 55 vezes os créditos do gratuito e 2,2 vezes os créditos do Pro.
+
+Ao selecionar um upgrade, o app exibe um checkout com o resumo do plano antes de seguir para pagamento.
 
 ### Resumo do mês
 
@@ -98,7 +112,9 @@ Se você ou sua empresa atingir o limite mensal configurado, o app bloqueia nova
 - Sessões e histórico permanecem acessíveis para leitura
 - O bloqueio é automaticamente removido no primeiro dia do mês seguinte
 
-**Em workspaces gerenciados**, o administrador da empresa pode conceder créditos adicionais ou ajustar o limite sem esperar o reset mensal. Entre em contato com o administrador da sua organização se precisar de acesso imediato.
+**Em workspaces gerenciados**, o administrador da empresa pode conceder créditos adicionais, permitir overflow do pool corporativo ou ajustar o limite sem esperar o reset mensal. Entre em contato com o administrador da sua organização se precisar de acesso imediato.
+
+**Em contas pessoais**, você pode fazer upgrade de plano ou resgatar um cupom quando houver código disponível.
 
 ## Veja também
 

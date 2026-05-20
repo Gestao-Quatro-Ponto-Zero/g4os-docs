@@ -23,6 +23,8 @@ O painel atual é dividido nestas abas:
 - **Políticas** — limites globais, grupos e regras de crédito
 - **Solicitações** — pedidos relacionados ao contexto ou acesso da empresa
 
+Administradores podem ver áreas de assinatura mesmo sem permissões globais do painel SaaS. A interface mostra apenas planos e assinaturas ligados à empresa atual.
+
 ## Visão geral
 
 <Frame>
@@ -95,6 +97,21 @@ A aba **Uso** mostra consumo agregado da empresa, comparação por período, pac
 
 Ela é a fonte principal para administradores entenderem como créditos estão sendo consumidos em um contexto gerenciado.
 
+## Créditos concedidos e pool corporativo
+
+Além dos créditos mensais de plano ou assinatura, a empresa pode operar com créditos concedidos pela administração.
+
+Créditos concedidos servem para desbloquear usuários antes do próximo ciclo, cobrir exceções operacionais ou complementar uma política temporária. Eles aparecem separados do consumo base quando a interface tem dados suficientes para diferenciar a origem.
+
+Empresas também podem usar um **pool corporativo**. Nesse modelo, membros consomem créditos individuais primeiro e, quando permitido pela política, podem recorrer ao pool compartilhado da empresa.
+
+As políticas controlam:
+
+- se overflow para o pool está habilitado
+- quanto cada usuário pode consumir além do limite individual
+- quais grupos de política podem usar créditos compartilhados
+- quando o consumo deve ser bloqueado mesmo com pool disponível
+
 ## Auditoria de uso
 
 A aba **Auditoria de uso** é um ledger privacy-safe para uso de IA conectado à empresa.
@@ -150,6 +167,10 @@ Dependendo do módulo habilitado, ela pode ser usada para acompanhar solicitaç�
 ## Planos e assinaturas
 
 Administradores com acesso ao painel SaaS podem criar e gerenciar planos e assinaturas vinculadas à empresa. Planos definem condições de consumo, limites por usuário e disponibilidade de recursos.
+
+O painel da empresa lista assinaturas ativas e dados associados ao ciclo atual. A atribuição comercial de seats pode acontecer fora do app; dentro do G4 OS, a interface prioriza leitura do estado ativo, consumo, políticas e ações administrativas disponíveis para aquela empresa.
+
+O ciclo SaaS corporativo pode ser ancorado na data de compra ou renovação, em vez de sempre seguir o primeiro dia do mês. Isso afeta reset, pacing e projeção de uso.
 
 Quando um plano é alterado, permissões e limites dos usuários vinculados podem ser sincronizados automaticamente. Se o painel não aparecer, entre em contato com o suporte.
 

@@ -7,7 +7,7 @@ description: "Entenda os planos disponíveis no G4 OS, como os créditos funcion
 
 O G4 OS usa **créditos** como unidade de consumo. Cada interação com o assistente consome uma quantidade de créditos que varia de acordo com o modelo de IA utilizado. Modelos mais avançados consomem mais créditos por turno.
 
-Todo workspace tem um **plano ativo** que define quantos créditos estão disponíveis por mês. Os créditos resetam automaticamente no primeiro dia de cada mês.
+Todo workspace pessoal tem um **plano ativo** que define quantos créditos estão disponíveis por mês. Em empresas, o consumo pode vir de assinaturas, seats e créditos concedidos pela administração.
 
 ## Planos disponíveis
 
@@ -19,15 +19,34 @@ Todo workspace tem um **plano ativo** que define quantos créditos estão dispon
 
 > Os créditos do plano são o seu **saldo base mensal**. Créditos extras (via cupom ou concessão) são somados por cima e consumidos antes do saldo base.
 
+O plano **Pro** equivale a 25 vezes o saldo do plano gratuito. O plano **Max** equivale a 55 vezes o saldo gratuito e 2,2 vezes o saldo do Pro.
+
+## Upgrade de plano pessoal
+
+Em contas pessoais, a seção **Planos de assinatura** aparece em `Configurações > Uso`.
+
+Use essa seção para:
+
+- comparar Gratuito, Pro e Max
+- ver créditos mensais e preço de cada plano
+- iniciar o checkout de upgrade
+- confirmar qual plano está ativo
+
+Ao escolher Pro ou Max, o app abre um modal de checkout com o resumo do plano selecionado antes de continuar para pagamento. Revise créditos, preço e periodicidade antes de confirmar.
+
+O limite diário não é exibido para contas pessoais. Ele aparece apenas quando o workspace está vinculado a uma empresa que aplica política diária.
+
 ### Planos corporativos
 
 Empresas não têm um plano separado — o acesso corporativo é uma agregação de seats individuais. O administrador da empresa escolhe quantos seats de cada plano alocar e distribui entre os membros da equipe. Cada membro opera com o plano atribuído a ele, com seus próprios créditos mensais.
+
+Em contas corporativas, ciclos e reset de créditos podem seguir o ciclo SaaS da assinatura da empresa, normalmente ancorado na data de compra ou renovação.
 
 ## Acompanhando seu consumo
 
 Você encontra seu consumo atual em **Configurações > Uso**. A tela mostra:
 
-- Créditos usados hoje vs. limite diário
+- Créditos usados hoje vs. limite diário, quando aplicável a uma empresa
 - Créditos usados no mês vs. limite mensal
 - Projeção de fechamento do mês
 - Quais modelos consumiram mais créditos
@@ -46,7 +65,9 @@ Se você recebeu um código de cupom, pode resgatá-lo diretamente pelo app:
 2. No campo **Resgatar cupom**, cole o código recebido
 3. Clique em **Resgatar**
 
-Os créditos são adicionados ao seu saldo imediatamente. Créditos extras aparecem com um indicador separado na barra de uso mensal e são consumidos antes do seu saldo de plano.
+Os créditos são adicionados ao seu saldo imediatamente quando o cupom é válido e aplicável à conta atual. Créditos extras aparecem com um indicador separado na barra de uso mensal e são consumidos antes do seu saldo de plano.
+
+Cupons podem ser recusados quando expiraram, já foram usados, não pertencem ao escopo da conta ou não se aplicam ao plano atual.
 
 ## Quando os créditos acabam
 
