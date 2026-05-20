@@ -1,0 +1,41 @@
+---
+title: "WhatsApp no navegador"
+description: "Entenda a compatibilidade de identidade do browser embutido para WhatsApp Web."
+---
+
+## O que muda no WhatsApp Web
+
+O navegador embutido do G4 OS aplica um ajuste de compatibilidade quando abre o WhatsApp Web.
+
+Esse ajuste apresenta uma identidade compatível com Chrome para `web.whatsapp.com` e recursos de rede relacionados a `.whatsapp.net`. Isso ajuda o WhatsApp Web a reconhecer o ambiente como um navegador suportado.
+
+## Escopo do ajuste
+
+O ajuste é limitado ao WhatsApp:
+
+- `web.whatsapp.com`
+- domínios de recurso terminados em `.whatsapp.net`
+
+Outros sites continuam usando a identidade normal do navegador embutido.
+
+## O que é ajustado
+
+Para compatibilidade, o G4 OS pode ajustar headers e propriedades de identidade de navegador, incluindo:
+
+- `User-Agent`
+- `sec-ch-ua`
+- `sec-ch-ua-platform`
+- informações de versão compatíveis com Chrome
+
+Esse comportamento não altera sua conta do WhatsApp, suas conversas ou permissões. Ele apenas evita que o WhatsApp Web bloqueie ou degrade a experiência por detectar um ambiente incompatível.
+
+## Quando usar
+
+Use o WhatsApp Web no navegador embutido quando precisar consultar mensagens, copiar contexto ou operar uma rotina de atendimento dentro do mesmo workspace.
+
+Se o WhatsApp pedir pareamento novamente, siga o fluxo normal de QR Code do WhatsApp Web.
+
+## Veja também
+
+- [Controle remoto](/support/remote-control)
+- [Mensagens via Telegram](/support/telegram-messaging)
