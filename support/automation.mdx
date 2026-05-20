@@ -25,6 +25,7 @@ A tela reúne:
 
 - criação e edição de jobs
 - agenda visual por horário, intervalo ou expressão cron avançada
+- editor dividido em seções de **Status**, **Agendamento** e **Sumário**
 - histórico de execuções
 - seleção de fontes habilitadas
 - seleção de skills habilitadas
@@ -34,6 +35,24 @@ A tela reúne:
 - abertura do detalhe de cada watcher
 - revisão do fluxo que dispara acompanhamentos
 - botão **Criar automação com agente** para configuração assistida
+
+## Editor de agendamento
+
+O redesign do editor organiza a configuração em três áreas principais:
+
+| Seção | O que revisar |
+|-------|---------------|
+| **Status** | Se a automação está ativa, pausada, com erro ou aguardando próxima execução. |
+| **Agendamento** | Frequência, horário, intervalo, timezone e expressão avançada quando aplicável. |
+| **Sumário** | Prompt, destino da execução, workspace, fontes, skills e diretório de trabalho. |
+
+Antes de salvar, confira o sumário para garantir que a automação vai rodar no workspace e com o contexto corretos.
+
+## Filtros e falhas recentes
+
+A lista de automações permite filtrar por tipo e estado. Use o filtro **Falha recente** quando precisar encontrar jobs que executaram com erro nas últimas rodadas.
+
+Ao abrir uma automação com falha, revise o histórico, permissões, fontes habilitadas e credenciais necessárias antes de reativar ou salvar mudanças.
 
 ## Casos comuns
 
