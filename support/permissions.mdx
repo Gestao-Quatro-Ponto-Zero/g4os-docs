@@ -14,6 +14,20 @@ description: "Controle o que o G4 OS pode fazer automaticamente no workspace e n
 - overrides específicos do workspace
 - edições assistidas para ajustar políticas
 
+## Modos de permissão
+
+O G4 OS trabalha com modos que definem quanta confirmação humana é necessária antes de ler, editar ou executar ações:
+
+- **Seguro**: postura mais restritiva, adequada para contexto sensível ou exploração inicial.
+- **Perguntar**: o agente pede confirmação antes de ações com impacto maior.
+- **Permitir tudo**: reduz interrupções e permite execução mais autônoma dentro das políticas configuradas.
+
+Em workspaces novos, sessões podem iniciar com o modo padrão do workspace configurado para execução mais fluida. Revise esse padrão em `Configurações > Workspace` quando o contexto exigir mais controle.
+
+## Indicador visual
+
+O composer mostra o modo de permissão ativo para a sessão. Quando o modo muda, o indicador ajuda a confirmar rapidamente se a conversa está em uma postura mais restritiva ou mais autônoma antes de enviar a próxima instrução.
+
 ## Casos comuns
 
 - liberar uma ação que hoje está sendo bloqueada
