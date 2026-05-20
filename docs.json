@@ -29,6 +29,7 @@
             "group": "Plataforma",
             "pages": [
               "product/workspaces",
+              "product/projects",
               "product/sessions",
               "product/agents",
               "product/voice-input"
@@ -63,7 +64,9 @@
               "support/skills",
               "support/workflows",
               "support/dashboards",
+              "support/projects",
               "support/automation",
+              "support/meeting-recording",
               "support/permissions",
               "support/labels",
               "support/appearance",
