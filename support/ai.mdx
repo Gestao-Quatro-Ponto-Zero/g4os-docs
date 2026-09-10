@@ -1,36 +1,101 @@
 ---
 title: "Escolher a IA"
-description: "Defina conexão, modelo e esforço de raciocínio para suas tarefas."
+description: "Aprenda a trocar conexão, escolher um perfil ou modelo e ajustar o raciocínio da sessão."
 ---
 
-Abra **Configurações > IA** para definir os padrões de novas conversas. Você também pode configurar um padrão diferente para cada workspace.
+O seletor de IA fica junto ao campo em que você escreve a mensagem. Ele mostra o perfil ou modelo atual e, quando aplicável, o nível de raciocínio. Você pode usar um perfil automático ou escolher um modelo específico.
 
-## Conexão, modelo e raciocínio
+## As três escolhas
 
-| Escolha | O que muda |
+| Escolha | Pergunta que ela responde | Exemplo |
+| --- | --- | --- |
+| **Conexão** | Qual conta ou serviço fornece a IA? | G4 Managed AI Gateway ou Codex Subscription. |
+| **Modelo ou perfil** | Qual IA ou preferência vai conduzir o trabalho? | Balanço diário ou um modelo exato. |
+| **Raciocínio** | Quanto esforço de análise deve ser usado? | Médio, Alto ou as opções automáticas compatíveis. |
+
+Uma conexão com Gmail, agenda ou CRM fornece **informações e ações de trabalho**. Ela não substitui a conexão de IA. Para essas ferramentas, veja [Conectar ferramentas](/support/sources).
+
+## Antes de enviar a primeira mensagem
+
+1. Abra **Nova Sessão**.
+2. Clique no nome da IA junto ao campo de mensagem.
+3. Confira o nome da conexão no topo do menu. Clique nele se precisar escolher outra conexão disponível.
+4. Escolha um perfil automático ou procure um modelo.
+5. Confira o raciocínio e feche o menu para escrever seu pedido.
+
+A lista de conexões mostra apenas as opções configuradas no seu aplicativo. Se uma delas pedir autenticação, resolva isso em **Configurações > IA** antes de depender dela.
+
+<Note>Depois da primeira mensagem, a conexão da sessão fica fixa. Para mudar de conexão, abra outra sessão. Modelo e raciocínio podem ser ajustados entre mensagens dentro das opções daquela conexão.</Note>
+
+## Começar com um perfil automático
+
+No **G4 Managed AI Gateway**, a seção **Automático** oferece três prioridades:
+
+<Frame caption="Os perfis expressam uma preferência. A seleção de modelo segue a política do Gateway."><img src="/images/guide/ia-gateway-perfis.png" alt="Menu do G4 AI Gateway mostrando Capacidade, Balanço diário e Rápido" /></Frame>
+
+| Perfil | O que favorece | Exemplo de tarefa para experimentar |
+| --- | --- | --- |
+| **Capacidade** | Modelos voltados a respostas profundas e trabalho complexo. | Comparar cenários e explicar os pontos que sustentam uma decisão. |
+| **Balanço diário** | Equilíbrio entre capacidade, velocidade e créditos. | Preparar uma reunião, revisar um documento ou consolidar pendências. |
+| **Rápido** | Modelos leves e respostas rápidas. | Encurtar um texto, organizar uma lista ou preparar perguntas simples. |
+
+O controle **Raciocínio automático** permite escolher entre os orçamentos disponíveis para o perfil, como **Flexível**, **Mínimo** e **Máximo**. Essas opções podem mudar a rota e o esforço usados. Nem toda combinação aparece para todos os perfis.
+
+Mais capacidade e orçamento máximo podem aumentar bastante o uso de créditos. Para comparar configurações, use o mesmo pedido, confira a qualidade da entrega e consulte [Uso](/support/usage). O app apresenta avisos específicos quando a escolha exige atenção.
+
+## Escolher um modelo exato
+
+Use **Buscar modelos** para procurar pelo nome ou família. A busca também pode considerar descrições; conferir o nome completo do resultado evita selecionar algo só porque apareceu na lista.
+
+<Frame><img src="/images/guide/ia-gateway-busca-modelo.png" alt="Busca por GPT no seletor de modelos do G4 Managed AI Gateway" /></Frame>
+
+Clique no modelo desejado e confira o indicador de seleção. Por exemplo, a captura abaixo mostra **GPT-6 Astra** selecionado na sessão de demonstração:
+
+<Frame><img src="/images/guide/ia-gateway-modelo-exato.png" alt="GPT-6 Astra selecionado no Gateway com controle de nível de raciocínio em Médio" /></Frame>
+
+A escolha exata serve quando você quer repetir uma experiência ou comparar duas IAs com o mesmo material. Confira o [catálogo do G4 AI Gateway](/product/connections/ai-gateway) para ver famílias, opções premium e diferenças de entrada.
+
+## Ajustar o raciocínio
+
+O controle de um modelo exato mostra somente os níveis que ele suporta. Você pode encontrar uma escala de esforço, uma opção de ligar/desligar ou raciocínio adaptativo sem ajuste manual equivalente.
+
+- Para reescrever um parágrafo ou organizar uma lista, comece com um esforço menor disponível.
+- Para comparar documentos, confira primeiro se o pedido tem referências e critérios claros; depois aumente o esforço se a análise precisar melhorar.
+- Para uma decisão complexa, peça alternativas, justificativas e incertezas. Um nível maior não substitui fontes corretas nem a sua revisão.
+
+**Máximo** e **Ultra** não aparecem em todos os modelos. Ao trocar de IA, confira novamente o nível efetivo: uma escolha incompatível pode ser ajustada para uma opção suportada.
+
+## Definir o padrão do workspace
+
+Se quiser usar a configuração escolhida nas próximas sessões daquele ambiente, clique em **Usar como padrão do workspace** e confira a confirmação. Essa ação tem efeito mais amplo do que apenas testar um modelo na conversa atual.
+
+Para revisar os padrões gerais e as conexões, abra **Configurações > IA**. Um workspace pode usar um padrão próprio. Alterar o padrão não troca retroativamente a IA de todas as conversas existentes.
+
+## Quando você usa Codex Subscription
+
+Essa conexão tem um catálogo próprio e segue o acesso da assinatura conectada. Não presuma que os modelos e as regras de créditos são iguais aos do Gateway.
+
+<Frame><img src="/images/guide/ia-codex-modelos.png" alt="Catálogo da conexão Codex Subscription com modelos OpenAI e nível de raciocínio" /></Frame>
+
+O exemplo mostra Astra, Sol, Terra, Luna e GPT-5.5 disponíveis nessa conexão. A classificação premium do Gateway não deve ser aplicada automaticamente à assinatura Codex.
+
+## Contexto longo, Pro e opções experimentais
+
+**Contexto estendido** fica disponível para novas sessões e escolhas explícitas compatíveis no Gateway. Ele aumenta a quantidade de contexto que pode ser usada, mas pode elevar o consumo. Não ativa acesso a fontes desconectadas nem recupera automaticamente arquivos ausentes.
+
+**Uso otimizado de tokens** fica em [Configurações do App](/support/app-settings), depende da compatibilidade da sessão e não modifica todas as conversas antigas. **OS Mode** é uma opção experimental de contexto e arquivos; os modos Explorar, Perguntar e Executar continuam sendo os controles de [permissão](/support/permissions).
+
+Perfis **Pro** e modelos premium dependem do acesso da conta. Se uma opção estiver indisponível, confira o aviso e o saldo antes de tentar novamente.
+
+## Resolver problemas comuns
+
+| Situação | O que conferir |
 | --- | --- |
-| **Conexão** | A conta ou serviço que fornece a IA, com suas condições de acesso e consumo. |
-| **Modelo** | A IA que conduz a conversa. O catálogo depende da conexão e da conta. |
-| **Raciocínio** | Quanto esforço o modelo dedica antes de responder, entre as opções que ele suporta. |
+| Um modelo não aparece | Conexão selecionada, busca ativa, versão do app e acesso da conta. |
+| Quero trocar a conexão de uma conversa já iniciada | Abra outra sessão e indique quais referências quer reaproveitar. |
+| O nível de raciocínio mudou ao trocar o modelo | Confira as opções suportadas pelo novo modelo. |
+| O consumo ficou maior | Modelo, orçamento, tamanho do contexto e quantidade de trabalho solicitado. |
+| A IA não consegue ler uma imagem | Confira a capacidade da opção escolhida e use uma rota compatível. |
+| Autenticação falhou | Reconfigure a conexão em Configurações > IA; conectar Gmail não corrige login do provedor de IA. |
 
-Na conexão gerenciada, a seleção **automática** usa um perfil para escolher o modelo. Escolher um modelo específico mantém uma escolha explícita. Para começar, use o padrão disponível; aumente o raciocínio quando a tarefa exigir comparar alternativas ou resolver uma análise complexa.
-
-## Durante uma sessão
-
-Antes da primeira mensagem, confira a conexão. **Depois de iniciar a conversa, a conexão fica fixa**; abra outra sessão para usar outra conexão. O modelo e o raciocínio podem ser ajustados entre mensagens nas opções disponíveis no seletor.
-
-Alterar o padrão em Configurações não troca retroativamente a IA de todas as sessões existentes.
-
-## Contexto longo e opções avançadas
-
-A opção de **contexto estendido** aparece quando disponível para a conexão gerenciada. Vale para novas sessões e escolhas explícitas de modelos compatíveis; pode elevar o consumo. Não é necessário ativá-la para uma primeira tarefa.
-
-O **uso otimizado de tokens** fica em [Configurações do App](/support/app-settings) e também depende da compatibilidade da sessão. **OS Mode**, quando oferecido na sessão, é uma opção experimental de trabalho com contexto e arquivos; não substitui [permissões](/support/permissions).
-
-Perfis premium, Pro e níveis mais altos de raciocínio dependem de acesso e podem consumir mais. Confira o que a interface oferece e o [uso da conta](/support/usage), em vez de assumir que o nome do modelo determina seu plano.
-
-## Quando algo falhar
-
-Se a conexão exigir login ou credencial, reconfigure-a nesta tela. Se um modelo não aparecer, confira a conexão selecionada e o acesso da conta. Uma conexão com Gmail ou CRM fica em Ferramentas e não resolve o login do provedor de IA.
-
-[Abrir IA](g4os://settings/ai) · [Conexões de trabalho](/support/sources)
+[Abrir IA](g4os://settings/ai) · [Catálogo do Gateway](/product/connections/ai-gateway) · [Uso e créditos](/support/usage)

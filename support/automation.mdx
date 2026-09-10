@@ -27,6 +27,40 @@ Abra **Ferramentas > Automações**. Em **Minhas Automações** você encontra o
 
 Um agendamento pode abrir uma sessão ou executar uma ação em lote, conforme a configuração. Revise o destino: gerar um relatório e enviar uma mensagem a alguém são ações diferentes.
 
+## Preencher a agenda passo a passo
+
+Em **Nova Automação**, dê um nome que descreva o resultado, como **Resumo diário — exemplo**. O formulário oferece quatro maneiras de definir o horário:
+
+| Opção | Quando usar | O que conferir |
+| --- | --- | --- |
+| **Uma vez** | Uma tarefa em uma data específica | Data e horário antes de criar. |
+| **Agenda** | Dias e horário recorrentes | Dias selecionados e resumo da agenda. |
+| **Intervalo** | Repetir a cada período | Frequência compatível com o tempo da tarefa. |
+| **Avançado** | Uma recorrência que não cabe nas opções anteriores | Peça ajuda ao agente e valide a descrição resultante. |
+
+No exemplo, **Agenda > Dias úteis > 08:00** produz o resumo “Dias úteis às 08:00”. Em **Ação**, selecione **Nova sessão** e preencha o pedido. O campo de skill é opcional: não copie um nome de exemplo se aquela skill não existe no seu workspace.
+
+<Frame><img src="/images/guide/automacao-nova-agenda.png" alt="Rascunho de automação para dias úteis às 08:00, com pedido de resumo do dashboard" /></Frame>
+
+> Abra o dashboard Visão da semana — exemplo e prepare um resumo de entregas, pendências e decisões necessárias. Identifique os dados como fictícios. Não envie mensagens nem altere tarefas.
+
+Esse pedido pressupõe que você já salvou o [dashboard do exemplo](/support/dashboards). Para uma rotina real, indique o painel correto, peça a atualização dos dados antes do resumo e defina como tratar falhas ou dados antigos.
+
+## Revisar o restante do formulário
+
+Role para conferir modelo de IA, fontes, diretório de trabalho, skills e opções. Habilite as conexões de que a tarefa realmente precisa. O diretório pode ficar vazio para usar o padrão do workspace; se a rotina depende de arquivos locais, confira onde eles estão disponíveis.
+
+<Frame><img src="/images/guide/automacao-opcoes.png" alt="Opções de permissão, Modo OS, execução ao reabrir e notificação, antes de criar" /></Frame>
+
+| Controle | Efeito na rotina |
+| --- | --- |
+| **Modo de permissão** | Define como as sessões criadas tratam ações que precisam de aprovação. Confira o modo antes de salvar. |
+| **Modo OS** | Ativa esse modo nas sessões criadas pela automação. |
+| **Executar ao abrir se perdeu o horário** | Quando habilitado, permite recuperar na próxima abertura um horário perdido nas últimas duas horas, conforme a tela. |
+| **Notificar ao concluir** | Mostra uma notificação ao término; depende também das permissões de notificações do sistema. |
+
+As imagens mostram um **rascunho didático**. Ele foi cancelado após a captura e não criou uma rotina ativa. No seu uso, clique em **Criar**, localize o item salvo e confira a próxima execução. Para experimentar apenas uma vez, use **Uma vez** e depois revise o resultado antes de transformar em recorrência.
+
 ## Criar um vigia
 
 Informe a fonte, o alvo exato, o intervalo entre verificações e por quanto tempo acompanhar. Escolha se o acompanhamento continua na mesma sessão, abre outra ou não gera uma entrega para determinada condição, conforme as opções do editor.
