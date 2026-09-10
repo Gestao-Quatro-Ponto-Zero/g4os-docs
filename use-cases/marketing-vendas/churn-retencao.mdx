@@ -5,6 +5,26 @@ description: "Organize motivos de saída e identifique quais perguntas ainda pre
 
 Use o exercício para separar quantidade de cancelamentos, valor associado e possíveis causas. O agente deve deixar claro quando o arquivo não sustenta uma conclusão.
 
+<Frame caption="Valores fictícios ilustrativos; não são resultados calculados da planilha anexável."><img src="/images/use-cases/marketing-vendas-churn-retencao.svg" alt="Motivos para investigar, sem inventar causas. Exemplo numérico independente da planilha para download." /></Frame>
+
+<Tabs>
+<Tab title="Materiais">
+Planilha com cancelamentos, motivos e indicadores de saúde. Separe os registros de detalhe dos totais.
+</Tab>
+<Tab title="Pedido">
+```text wrap
+Analise os cancelamentos na planilha anexada. Confira o período nas células e as definições de cada aba. Agrupe quantidade e valor por produto e motivo, sem somar novamente os registros de detalhe aos totais mensais. Não calcule taxa mensal de churn sem a base de clientes correspondente. Use os indicadores trimestrais apenas na granularidade em que estão disponíveis. Entregue um resumo, um gráfico e hipóteses de retenção que a equipe possa investigar.
+```
+
+[Preparar este pedido no G4 OS](g4os://action/new-session?name=Investigar+cancelamentos+e+reten%C3%A7%C3%A3o&input=Analise+os+cancelamentos+na+planilha+anexada.+Confira+o+per%C3%ADodo+nas+c%C3%A9lulas+e+as+defini%C3%A7%C3%B5es+de+cada+aba.+Agrupe+quantidade+e+valor+por+produto+e+motivo%2C+sem+somar+novamente+os+registros+de+detalhe+aos+totais+mensais.+N%C3%A3o+calcule+taxa+mensal+de+churn+sem+a+base+de+clientes+correspondente.+Use+os+indicadores+trimestrais+apenas+na+granularidade+em+que+est%C3%A3o+dispon%C3%ADveis.+Entregue+um+resumo%2C+um+gr%C3%A1fico+e+hip%C3%B3teses+de+reten%C3%A7%C3%A3o+que+a+equipe+possa+investigar.&mode=ask)
+
+O link preenche uma sessão em **Perguntar**. Confira o texto e os anexos antes de enviar.
+</Tab>
+<Tab title="Resultado">
+Quantidade e valor por motivo ou produto, com hipóteses explícitas. Não calcule uma taxa sem o denominador correspondente.
+</Tab>
+</Tabs>
+
 ## Preparar o arquivo
 
 [Baixar planilha de exemplo](https://raw.githubusercontent.com/Gestao-Quatro-Ponto-Zero/g4os-docs/main/use-cases/datasets/nexus_churn_retencao.xlsx). Abra uma sessão e anexe o arquivo pelo clipe. Você pode fazer o exercício sem conectar contas da empresa.
@@ -18,15 +38,6 @@ O arquivo de exemplo contém estas abas:
 | **Health Score por Segmento** | Indicadores trimestrais de saúde por segmento. |
 
 <Note>Os subtítulos desses arquivos antigos podem indicar um período diferente das células. Peça ao agente para conferir o período nas linhas, separar totais e relatar inconsistências antes de calcular. Use o material como exercício, não como referência de desempenho real.</Note>
-
-## Pedido para copiar
-
-> Analise os cancelamentos na planilha anexada. Confira o período nas células e as definições de cada aba. Agrupe quantidade e valor por produto e motivo, sem somar novamente os registros de detalhe aos totais mensais. Não calcule taxa mensal de churn sem a base de clientes correspondente. Use os indicadores trimestrais apenas na granularidade em que estão disponíveis. Entregue um resumo, um gráfico e hipóteses de retenção que a equipe possa investigar.
-
-
-[Preparar este pedido no G4 OS](g4os://action/new-session?name=Investigar+cancelamentos+e+reten%C3%A7%C3%A3o&input=Analise+os+cancelamentos+na+planilha+anexada.+Confira+o+per%C3%ADodo+nas+c%C3%A9lulas+e+as+defini%C3%A7%C3%B5es+de+cada+aba.+Agrupe+quantidade+e+valor+por+produto+e+motivo%2C+sem+somar+novamente+os+registros+de+detalhe+aos+totais+mensais.+N%C3%A3o+calcule+taxa+mensal+de+churn+sem+a+base+de+clientes+correspondente.+Use+os+indicadores+trimestrais+apenas+na+granularidade+em+que+est%C3%A3o+dispon%C3%ADveis.+Entregue+um+resumo%2C+um+gr%C3%A1fico+e+hip%C3%B3teses+de+reten%C3%A7%C3%A3o+que+a+equipe+possa+investigar.&mode=ask)
-
-O link preenche uma nova sessão em **Perguntar**. Revise o texto, anexe os arquivos necessários e envie quando estiver pronto.
 
 ## Conferir o resultado
 

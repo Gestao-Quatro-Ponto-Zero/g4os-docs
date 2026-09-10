@@ -5,16 +5,32 @@ description: "Cruze referências, valores e datas para encontrar diferenças que
 
 Você recebeu uma lista de valores previstos e outra de lançamentos recebidos. O primeiro trabalho é identificar correspondências e exceções, sem inventar a causa das diferenças nem alterar os arquivos originais.
 
+<Frame caption="Resultados do exercício. Ausência de correspondência não prova falta de pagamento."><img src="/images/use-cases/financeiro-conferir-recebimentos.svg" alt="Uma diferença de R$ 20 para investigar. Duas bases do exercício • correspondência pela referência." /></Frame>
+
+<Tabs>
+<Tab title="Materiais">
+Os dois CSVs: recebimentos previstos e extrato de recebimentos. Defina a chave de correspondência.
+</Tab>
+<Tab title="Pedido">
+```text wrap
+Compare os dois CSVs fictícios anexados: recebimentos previstos e extrato de recebimentos. Use a referência como chave principal e preserve os identificadores. Separe correspondências com valores iguais, valores divergentes, previsões sem recebimento na base e recebimentos sem previsão. Não associe apenas pelo valor, não invente motivos para diferenças e não altere os arquivos de origem. Entregue uma tabela de exceções e explique os critérios usados.
+```
+
+[Preparar este pedido no G4 OS](g4os://action/new-session?name=Conferir+recebimentos+entre+duas+bases&input=Compare+os+dois+CSVs+fict%C3%ADcios+anexados%3A+recebimentos+previstos+e+extrato+de+recebimentos.+Use+a+refer%C3%AAncia+como+chave+principal+e+preserve+os+identificadores.+Separe+correspond%C3%AAncias+com+valores+iguais%2C+valores+divergentes%2C+previs%C3%B5es+sem+recebimento+na+base+e+recebimentos+sem+previs%C3%A3o.+N%C3%A3o+associe+apenas+pelo+valor%2C+n%C3%A3o+invente+motivos+para+diferen%C3%A7as+e+n%C3%A3o+altere+os+arquivos+de+origem.+Entregue+uma+tabela+de+exce%C3%A7%C3%B5es+e+explique+os+crit%C3%A9rios+usados.&mode=ask)
+
+O link preenche uma sessão em **Perguntar**. Confira o texto e os anexos antes de enviar.
+</Tab>
+<Tab title="Resultado">
+Correspondências, diferenças e registros sem par, preservando IDs. A diferença não deve ganhar uma causa inventada.
+</Tab>
+</Tabs>
+
 ## Baixe as duas bases fictícias
 
 - [Recebimentos previstos — exemplo](/use-cases/datasets/recebimentos-previstos-exemplo.csv).
 - [Extrato de recebimentos — exemplo](/use-cases/datasets/extrato-recebimentos-exemplo.csv).
 
 Os dois arquivos são sintéticos. Não representam uma conta bancária e usam reais como unidade. Anexe ambos na mesma sessão e informe qual é a previsão e qual é a base de recebimentos.
-
-> Compare os dois CSVs fictícios anexados: recebimentos previstos e extrato de recebimentos. Use a referência como chave principal e preserve os identificadores. Separe correspondências com valores iguais, valores divergentes, previsões sem recebimento na base e recebimentos sem previsão. Não associe apenas pelo valor, não invente motivos para diferenças e não altere os arquivos de origem. Entregue uma tabela de exceções e explique os critérios usados.
-
-[Preparar este pedido no G4 OS](g4os://action/new-session?name=Conferir+recebimentos+entre+duas+bases&input=Compare+os+dois+CSVs+fict%C3%ADcios+anexados%3A+recebimentos+previstos+e+extrato+de+recebimentos.+Use+a+refer%C3%AAncia+como+chave+principal+e+preserve+os+identificadores.+Separe+correspond%C3%AAncias+com+valores+iguais%2C+valores+divergentes%2C+previs%C3%B5es+sem+recebimento+na+base+e+recebimentos+sem+previs%C3%A3o.+N%C3%A3o+associe+apenas+pelo+valor%2C+n%C3%A3o+invente+motivos+para+diferen%C3%A7as+e+n%C3%A3o+altere+os+arquivos+de+origem.+Entregue+uma+tabela+de+exce%C3%A7%C3%B5es+e+explique+os+crit%C3%A9rios+usados.&mode=ask)
 
 ## Confira a regra de associação
 

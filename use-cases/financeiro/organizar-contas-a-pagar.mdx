@@ -7,6 +7,26 @@ Uma lista de contas a pagar pode misturar valores já pagos, títulos em aberto 
 
 Baixe [Contas a pagar — exemplo](/use-cases/datasets/contas-a-pagar-exemplo.csv). O arquivo contém seis linhas fictícias, usa valores em reais e tem uma possível duplicidade proposital. Considere **10/09/2026** como data de referência.
 
+<Frame caption="Valores calculados a partir do CSV desta página. Total em aberto: 2.400 + 800 + 2.850."><img src="/images/use-cases/financeiro-organizar-contas-a-pagar.svg" alt="R$ 6.050 em aberto, antes da conferência. CSV do exercício • referência em 10/09/2026." /></Frame>
+
+<Tabs>
+<Tab title="Materiais">
+O CSV fictício de contas a pagar e a data de referência. Revise as definições de pago, vencido e a vencer.
+</Tab>
+<Tab title="Pedido">
+```text wrap
+Analise o CSV fictício de contas a pagar anexado com referência em 10/09/2026. Separe pagos, em aberto vencidos, vencendo na referência e a vencer. Mostre os totais brutos e as linhas de cada grupo. Procure possíveis duplicidades por fornecedor, documento, valor e vencimento, sem excluir registros nem ajustar totais silenciosamente. Entregue uma fila de conferência. Não efetue pagamentos nem altere a base.
+```
+
+[Preparar este pedido no G4 OS](g4os://action/new-session?name=Organizar+contas+a+pagar+para+revis%C3%A3o&input=Analise+o+CSV+fict%C3%ADcio+de+contas+a+pagar+anexado+com+refer%C3%AAncia+em+10%2F09%2F2026.+Separe+pagos%2C+em+aberto+vencidos%2C+vencendo+na+refer%C3%AAncia+e+a+vencer.+Mostre+os+totais+brutos+e+as+linhas+de+cada+grupo.+Procure+poss%C3%ADveis+duplicidades+por+fornecedor%2C+documento%2C+valor+e+vencimento%2C+sem+excluir+registros+nem+ajustar+totais+silenciosamente.+Entregue+uma+fila+de+confer%C3%AAncia.+N%C3%A3o+efetue+pagamentos+nem+altere+a+base.&mode=ask)
+
+O link preenche uma sessão em **Perguntar**. Confira o texto e os anexos antes de enviar.
+</Tab>
+<Tab title="Resultado">
+Grupos com totais brutos, linhas de origem e uma fila de conferência. A possível duplicidade continua incluída.
+</Tab>
+</Tabs>
+
 ## Comece pelas definições
 
 Neste exercício:
@@ -15,10 +35,6 @@ Neste exercício:
 - **Vencido** é um item em aberto com vencimento anterior à referência.
 - **Vence hoje** é um item em aberto com vencimento igual à referência.
 - **A vencer** é um item em aberto com vencimento posterior à referência.
-
-> Analise o CSV fictício de contas a pagar anexado com referência em 10/09/2026. Separe pagos, em aberto vencidos, vencendo na referência e a vencer. Mostre os totais brutos e as linhas de cada grupo. Procure possíveis duplicidades por fornecedor, documento, valor e vencimento, sem excluir registros nem ajustar totais silenciosamente. Entregue uma fila de conferência. Não efetue pagamentos nem altere a base.
-
-[Preparar este pedido no G4 OS](g4os://action/new-session?name=Organizar+contas+a+pagar+para+revis%C3%A3o&input=Analise+o+CSV+fict%C3%ADcio+de+contas+a+pagar+anexado+com+refer%C3%AAncia+em+10%2F09%2F2026.+Separe+pagos%2C+em+aberto+vencidos%2C+vencendo+na+refer%C3%AAncia+e+a+vencer.+Mostre+os+totais+brutos+e+as+linhas+de+cada+grupo.+Procure+poss%C3%ADveis+duplicidades+por+fornecedor%2C+documento%2C+valor+e+vencimento%2C+sem+excluir+registros+nem+ajustar+totais+silenciosamente.+Entregue+uma+fila+de+confer%C3%AAncia.+N%C3%A3o+efetue+pagamentos+nem+altere+a+base.&mode=ask)
 
 ## Valide antes de usar os totais
 
