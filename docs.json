@@ -13,125 +13,6 @@
     "dark": "/logo/dark.png"
   },
   "navigation": {
-    "tabs": [
-      {
-        "tab": "Documentação",
-        "groups": [
-          {
-            "group": "Começando",
-            "pages": [
-              "index",
-              "getting-started/quickstart",
-              "getting-started/create-workspace"
-            ]
-          },
-          {
-            "group": "Plataforma",
-            "pages": [
-              "product/workspaces",
-              "product/projects",
-              "product/sessions",
-              "product/agents",
-              "product/voice-input"
-            ]
-          },
-          {
-            "group": "Conexões",
-            "pages": [
-              "product/connections/index",
-              "product/connections/managed-connections",
-              "product/connections/managed-agents"
-            ]
-          },
-          {
-            "group": "Operação",
-            "pages": [
-              "product/integrations",
-              "product/automation",
-              "product/security",
-              "product/privacy-and-data"
-            ]
-          },
-          {
-            "group": "Suporte no App",
-            "pages": [
-              "support/index",
-              "support/app-settings",
-              "support/ai",
-              "support/agents",
-              "support/tools",
-              "support/sources",
-              "support/skills",
-              "support/workflows",
-              "support/dashboards",
-              "support/projects",
-              "support/automation",
-              "support/meeting-recording",
-              "support/permissions",
-              "support/labels",
-              "support/appearance",
-              "support/workspace",
-              "support/context",
-              "support/company-context",
-              "support/user-management-api",
-              "support/cloud-sync",
-              "support/shared-brain",
-              "support/repair-mode",
-              "support/usage",
-              "support/billing-subscriptions",
-              "support/empresa",
-              "support/preferences",
-              "support/sharing",
-              "support/collaborative-session",
-              "support/remote-control",
-              "support/whatsapp-browser",
-              "support/telegram-messaging",
-              "support/marketplace",
-              "support/input",
-              "support/shortcuts"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Casos de Uso",
-        "groups": [
-          {
-            "group": "Casos de Uso",
-            "pages": [
-              "use-cases/index"
-            ]
-          },
-          {
-            "group": "Marketing e Vendas",
-            "pages": [
-              "use-cases/marketing-vendas/cohort-receita",
-              "use-cases/marketing-vendas/funil-marketing",
-              "use-cases/marketing-vendas/churn-retencao",
-              "use-cases/marketing-vendas/performance-comercial"
-            ]
-          },
-          {
-            "group": "Operações",
-            "pages": [
-              "use-cases/operacoes/apqc-otimizacao-processos"
-            ]
-          },
-          {
-            "group": "Design",
-            "pages": [
-              "use-cases/design/design-slides"
-            ]
-          },
-          {
-            "group": "Segurança",
-            "pages": [
-              "use-cases/seguranca/seguranca-lovable"
-            ]
-          }
-        ]
-      }
-    ],
     "global": {
       "anchors": [
         {
@@ -140,12 +21,12 @@
           "icon": "house"
         },
         {
-          "anchor": "Casos de Uso",
+          "anchor": "Casos de uso",
           "href": "/use-cases",
           "icon": "flask"
         },
         {
-          "anchor": "Quickstart",
+          "anchor": "Primeira tarefa",
           "href": "/getting-started/quickstart",
           "icon": "rocket"
         },
@@ -155,12 +36,166 @@
           "icon": "headset"
         }
       ]
-    }
+    },
+    "languages": [
+      {
+        "language": "pt-BR",
+        "default": true,
+        "tabs": [
+          {
+            "tab": "Guia do produto",
+            "groups": [
+              {
+                "group": "Comece aqui",
+                "pages": [
+                  "index",
+                  "getting-started/quickstart",
+                  "getting-started/create-workspace",
+                  "getting-started/interface"
+                ]
+              },
+              {
+                "group": "Organize seu trabalho",
+                "pages": [
+                  "product/workspaces",
+                  "product/projects",
+                  "support/projects",
+                  "product/sessions",
+                  "support/labels"
+                ]
+              },
+              {
+                "group": "Crie e revise entregas",
+                "pages": [
+                  "product/outputs",
+                  "product/workbooks",
+                  "product/slides",
+                  "product/sites",
+                  "support/apps",
+                  "support/dashboards"
+                ]
+              },
+              {
+                "group": "Conecte suas ferramentas",
+                "pages": [
+                  "product/connections/index",
+                  "support/sources",
+                  "product/connections/managed-connections",
+                  "product/connections/managed-agents",
+                  "product/integrations",
+                  "support/browser",
+                  "support/whatsapp-browser",
+                  "support/partners"
+                ]
+              },
+              {
+                "group": "Reutilize e automatize",
+                "pages": [
+                  "support/tools",
+                  "product/agents",
+                  "support/agents",
+                  "support/skills",
+                  "support/workflows",
+                  "support/marketplace",
+                  "product/automation",
+                  "support/automation"
+                ]
+              },
+              {
+                "group": "Voz e reuniões",
+                "pages": [
+                  "product/voice-input",
+                  "support/desk",
+                  "support/meeting-recording"
+                ]
+              },
+              {
+                "group": "Conhecimento e empresa",
+                "pages": [
+                  "support/shared-brain",
+                  "support/company-context",
+                  "support/context",
+                  "support/empresa",
+                  "support/user-management-api"
+                ]
+              },
+              {
+                "group": "Compartilhe e continue",
+                "pages": [
+                  "support/sharing",
+                  "support/collaborative-session",
+                  "support/remote-control",
+                  "support/telegram-messaging",
+                  "support/cloud-sync"
+                ]
+              },
+              {
+                "group": "Configurações e ajuda",
+                "pages": [
+                  "support/index",
+                  "support/app-settings",
+                  "support/ai",
+                  "support/appearance",
+                  "support/input",
+                  "support/workspace",
+                  "support/preferences",
+                  "support/permissions",
+                  "support/shortcuts",
+                  "support/usage",
+                  "support/billing-subscriptions",
+                  "support/repair-mode",
+                  "product/security",
+                  "product/privacy-and-data"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Casos de uso",
+            "groups": [
+              {
+                "group": "Escolha uma tarefa",
+                "pages": [
+                  "use-cases/index"
+                ]
+              },
+              {
+                "group": "Dia a dia",
+                "pages": [
+                  "use-cases/rotina/reunioes",
+                  "use-cases/rotina/email",
+                  "use-cases/rotina/acompanhamento",
+                  "use-cases/rotina/documentos",
+                  "use-cases/rotina/pesquisa"
+                ]
+              },
+              {
+                "group": "Marketing e vendas",
+                "pages": [
+                  "use-cases/marketing-vendas/cohort-receita",
+                  "use-cases/marketing-vendas/funil-marketing",
+                  "use-cases/marketing-vendas/churn-retencao",
+                  "use-cases/marketing-vendas/performance-comercial"
+                ]
+              },
+              {
+                "group": "Processos e entregas",
+                "pages": [
+                  "use-cases/operacoes/apqc-otimizacao-processos",
+                  "use-cases/design/design-slides",
+                  "use-cases/seguranca/seguranca-lovable"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "navbar": {
     "links": [
       {
-        "label": "Quickstart",
+        "label": "Primeira tarefa",
         "href": "/getting-started/quickstart"
       },
       {
@@ -216,5 +251,6 @@
     "socials": {
       "github": "https://github.com/Gestao-Quatro-Ponto-Zero"
     }
-  }
+  },
+  "description": "Guias práticos do G4 OS para pesquisar, escrever, analisar, organizar e automatizar o trabalho."
 }

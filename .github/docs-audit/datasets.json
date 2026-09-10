@@ -1,0 +1,296 @@
+[
+  {
+    "file": "nexus_churn_retencao.xlsx",
+    "bytes": 136024,
+    "sheets": [
+      {
+        "name": "Churn Mensal",
+        "data_rows": 144,
+        "headers": [
+          "Mês",
+          "Produto",
+          "Qtd Churns",
+          "Valor Total Churn",
+          "Ticket Médio Churn",
+          "Principal Motivo",
+          "% Dificuldade Financeira",
+          "% Engajamento",
+          "% Motivo Pessoal"
+        ],
+        "first_period": "2020-11",
+        "last_period": "2023-10"
+      },
+      {
+        "name": "Detalhamento Churns",
+        "data_rows": 2168,
+        "headers": [
+          "ID Churn",
+          "Mês Churn",
+          "Cliente",
+          "Segmento",
+          "Produto",
+          "Meses como Cliente",
+          "Valor do Contrato",
+          "Valor Devolvido",
+          "Motivo",
+          "Forma de Pagamento",
+          "Canal de Venda"
+        ],
+        "first_period": null,
+        "last_period": null
+      },
+      {
+        "name": "Health Score por Segmento",
+        "data_rows": 60,
+        "headers": [
+          "Trimestre",
+          "Segmento",
+          "Clientes Ativos",
+          "NPS Médio",
+          "Engajamento (%)",
+          "Churn Rate (%)",
+          "Receita em Risco",
+          "Score Saúde (0-100)"
+        ],
+        "first_period": "2020-Q4",
+        "last_period": "2023-Q3"
+      }
+    ]
+  },
+  {
+    "file": "nexus_cohort_receita.xlsx",
+    "bytes": 26540,
+    "sheets": [
+      {
+        "name": "Cohort de Receita",
+        "data_rows": 144,
+        "headers": [
+          "Cohort (mês de entrada)",
+          "Produto",
+          "Novos Clientes",
+          "Mês 0",
+          "Mês 1",
+          "Mês 2",
+          "Mês 3",
+          "Mês 4",
+          "Mês 5",
+          "Mês 6",
+          "Mês 7",
+          "Mês 8",
+          "Mês 9",
+          "Mês 10",
+          "Mês 11"
+        ],
+        "first_period": "2020-11",
+        "last_period": "2023-10"
+      },
+      {
+        "name": "LTV por Cohort",
+        "data_rows": 144,
+        "headers": [
+          "Cohort",
+          "Produto",
+          "Novos Clientes",
+          "LTV Mês 1",
+          "LTV Mês 3",
+          "LTV Mês 6",
+          "LTV Mês 12",
+          "LTV/Cliente M12"
+        ],
+        "first_period": "2020-11",
+        "last_period": "2023-10"
+      }
+    ]
+  },
+  {
+    "file": "nexus_funil_marketing.xlsx",
+    "bytes": 156154,
+    "sheets": [
+      {
+        "name": "Funil Semanal",
+        "data_rows": 105,
+        "headers": [
+          "Semana",
+          "Investimento Total",
+          "Impressões",
+          "Cliques",
+          "CTR",
+          "Leads Gerados",
+          "Oportunidades",
+          "Negócios Fechados",
+          "Receita Gerada",
+          "CPL Médio",
+          "CAC",
+          "ROAS",
+          "Taxa Lead→Oport.",
+          "Taxa Oport.→Fechamento"
+        ],
+        "first_period": "2020-W45",
+        "last_period": "2022-W43"
+      },
+      {
+        "name": "Por Canal",
+        "data_rows": 572,
+        "headers": [
+          "Semana",
+          "Canal",
+          "Investimento",
+          "Impressões",
+          "Cliques",
+          "CTR",
+          "Leads",
+          "Oportunidades",
+          "Fechamentos",
+          "Receita",
+          "CPL",
+          "CAC",
+          "ROAS"
+        ],
+        "first_period": "2020-W45",
+        "last_period": "2022-W43"
+      },
+      {
+        "name": "Campanhas",
+        "data_rows": 1314,
+        "headers": [
+          "Semana",
+          "ID Campanha",
+          "Nome Campanha",
+          "Canal",
+          "Objetivo",
+          "Status",
+          "Impressões",
+          "Cliques",
+          "CTR",
+          "Investimento",
+          "Leads",
+          "CPL",
+          "Oportunidades",
+          "Fechamentos",
+          "Receita",
+          "ROAS"
+        ],
+        "first_period": "2020-W45",
+        "last_period": "2022-W43"
+      },
+      {
+        "name": "Resumo por Canal",
+        "data_rows": 7,
+        "headers": [
+          "Canal",
+          "Total Investido",
+          "Total Impressões",
+          "Total Cliques",
+          "CTR Médio",
+          "Total Leads",
+          "Total Oportunidades",
+          "Total Fechamentos",
+          "Receita Total",
+          "CPL Médio",
+          "CAC Médio",
+          "ROAS",
+          "Taxa Conversão L→F"
+        ],
+        "first_period": null,
+        "last_period": null
+      }
+    ]
+  },
+  {
+    "file": "nexus_performance_comercial.xlsx",
+    "bytes": 3491349,
+    "sheets": [
+      {
+        "name": "Deals Individuais",
+        "data_rows": 38213,
+        "headers": [
+          "Deal ID",
+          "Semana",
+          "Data Fechamento",
+          "Vendedor",
+          "Equipe",
+          "Senioridade",
+          "Status",
+          "Produto",
+          "Canal de Origem",
+          "Fonte UTM",
+          "Perfil do Lead",
+          "Segmento",
+          "Faixa Faturamento",
+          "Faixa Funcionários",
+          "Cargo",
+          "Valor da Oportunidade",
+          "Ticket (Ganho)",
+          "Tempo no Funil (dias)",
+          "Motivo Perda"
+        ],
+        "first_period": null,
+        "last_period": null
+      },
+      {
+        "name": "Ranking Vendedores",
+        "data_rows": 360,
+        "headers": [
+          "Mês",
+          "Vendedor",
+          "Equipe",
+          "Senioridade",
+          "Leads Recebidos",
+          "Propostas Enviadas",
+          "Deals Ganhos",
+          "Deals Perdidos",
+          "Taxa de Conversão",
+          "Receita Total",
+          "Ticket Médio",
+          "Tempo Médio Funil (dias)",
+          "Deal Maior",
+          "Deal Menor",
+          "% Receita vs Equipe",
+          "Ranking Mês"
+        ],
+        "first_period": "2020-11",
+        "last_period": "2022-10"
+      },
+      {
+        "name": "Análise por Perfil",
+        "data_rows": 212,
+        "headers": [
+          "Perfil",
+          "Segmento",
+          "Faixa Faturamento",
+          "Canal de Origem",
+          "Produto",
+          "Leads",
+          "Ganhos",
+          "Taxa Conversão",
+          "Receita Total",
+          "Ticket Médio",
+          "Ticket Máximo",
+          "Tempo Médio Funil (dias)"
+        ],
+        "first_period": null,
+        "last_period": null
+      },
+      {
+        "name": "Resumo por Equipe",
+        "data_rows": 72,
+        "headers": [
+          "Mês",
+          "Equipe",
+          "Vendedores Ativos",
+          "Total Leads",
+          "Propostas Enviadas",
+          "Deals Ganhos",
+          "Taxa de Conversão",
+          "Receita Total",
+          "Ticket Médio",
+          "Receita por Vendedor",
+          "Melhor Vendedor",
+          "Receita Melhor Vendedor"
+        ],
+        "first_period": "2020-11",
+        "last_period": "2022-10"
+      }
+    ]
+  }
+]

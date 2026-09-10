@@ -1,74 +1,39 @@
 ---
-title: "Churn e Retenção"
-description: "Analise motivos de saída, taxa de churn mensal por produto e estratégias de retenção com um dataset de exemplo pronto para uso no G4 OS."
+title: "Investigar cancelamentos e retenção"
+description: "Organize motivos de saída e identifique quais perguntas ainda precisam de dados."
 ---
 
-## O que este caso de uso cobre
+Use o exercício para separar quantidade de cancelamentos, valor associado e possíveis causas. O agente deve deixar claro quando o arquivo não sustenta uma conclusão.
 
-Análise de **churn e retenção de clientes** — com foco em motivos de cancelamento, valor perdido por produto e oportunidades de reativação. O G4 OS calcula taxas, ranqueia motivos por impacto financeiro e gera gráficos Mermaid de evolução do churn.
+## Preparar o arquivo
 
-## Dataset de exemplo
+[Baixar planilha de exemplo](https://raw.githubusercontent.com/Gestao-Quatro-Ponto-Zero/g4os-docs/main/use-cases/datasets/nexus_churn_retencao.xlsx). Abra uma sessão e anexe o arquivo pelo clipe. Você pode fazer o exercício sem conectar contas da empresa.
 
-<Card
-  title="nexus_churn_retencao.xlsx"
-  icon="table"
-  href="https://raw.githubusercontent.com/Gestao-Quatro-Ponto-Zero/g4os-docs/main/use-cases/datasets/nexus_churn_retencao.xlsx"
->
-  Baixar dataset — churn mensal por produto e motivo (133 KB, 36 meses)
-</Card>
+O arquivo de exemplo contém estas abas:
 
-### O que tem dentro
+| Aba | Conteúdo |
+| --- | --- |
+| **Churn Mensal** | Quantidade, valor, ticket e principal motivo por mês e produto. |
+| **Detalhamento Churns** | Registros de cancelamento com aliases de clientes e motivos. |
+| **Health Score por Segmento** | Indicadores trimestrais de saúde por segmento. |
 
-| Coluna | Descrição |
-|--------|-----------|
-| `mes` | Mês de referência |
-| `produto` | Produto cancelado |
-| `motivo_churn` | Motivo declarado de cancelamento |
-| `churns` | Número de cancelamentos |
-| `valor_churn` | Receita perdida no mês |
-| `ticket_medio` | Ticket médio dos clientes que cancelaram |
-| `clientes_retidos` | Clientes que estavam em risco mas ficaram |
-| `taxa_churn_pct` | Taxa de churn mensal do produto |
-| `reativacoes` | Clientes reativados no mesmo mês |
+<Note>Os subtítulos desses arquivos antigos podem indicar um período diferente das células. Peça ao agente para conferir o período nas linhas, separar totais e relatar inconsistências antes de calcular. Use o material como exercício, não como referência de desempenho real.</Note>
 
-**Motivos de churn incluídos:** preço/custo-benefício, resultado não percebido, falta de tempo/engajamento, troca por concorrente, situação financeira, conclusão natural do programa.
+## Pedido para copiar
 
-## Abrir no G4 OS
+> Analise os cancelamentos na planilha anexada. Confira o período nas células e as definições de cada aba. Agrupe quantidade e valor por produto e motivo, sem somar novamente os registros de detalhe aos totais mensais. Não calcule taxa mensal de churn sem a base de clientes correspondente. Use os indicadores trimestrais apenas na granularidade em que estão disponíveis. Entregue um resumo, um gráfico e hipóteses de retenção que a equipe possa investigar.
 
-<Card
-  title="Analisar churn e retenção no G4 OS"
-  icon="sparkles"
-  href="g4os://action/new-session?input=Faca+o+download+do+dataset+nexus_churn_retencao.xlsx+em+https%3A%2F%2Fraw.githubusercontent.com%2FGestao-Quatro-Ponto-Zero%2Fg4os-docs%2Fmain%2Fuse-cases%2Fdatasets%2Fnexus_churn_retencao.xlsx+e+execute%3A+%281%29+carregue+e+inspecione+o+arquivo%2C+%282%29+calcule+taxa+de+churn+por+produto+ao+longo+do+tempo%2C+%283%29+ranqueie+os+principais+motivos+por+frequencia+e+receita+perdida%2C+%284%29+gere+um+grafico+Mermaid+de+pie+chart+com+distribuicao+dos+motivos+de+churn%2C+%285%29+gere+um+grafico+de+linha+com+evolucao+da+taxa+de+churn+mensal+por+produto%2C+%286%29+sugira+acoes+de+retencao+baseadas+nos+padroes+encontrados.&send=true&mode=execute&workdir=none"
->
-  Abrir sessão — executa automaticamente no modo Execute
-</Card>
 
-### O que o G4 OS faz ao abrir
+[Preparar este pedido no G4 OS](g4os://action/new-session?name=Investigar+cancelamentos+e+reten%C3%A7%C3%A3o&input=Analise+os+cancelamentos+na+planilha+anexada.+Confira+o+per%C3%ADodo+nas+c%C3%A9lulas+e+as+defini%C3%A7%C3%B5es+de+cada+aba.+Agrupe+quantidade+e+valor+por+produto+e+motivo%2C+sem+somar+novamente+os+registros+de+detalhe+aos+totais+mensais.+N%C3%A3o+calcule+taxa+mensal+de+churn+sem+a+base+de+clientes+correspondente.+Use+os+indicadores+trimestrais+apenas+na+granularidade+em+que+est%C3%A3o+dispon%C3%ADveis.+Entregue+um+resumo%2C+um+gr%C3%A1fico+e+hip%C3%B3teses+de+reten%C3%A7%C3%A3o+que+a+equipe+possa+investigar.&mode=ask)
 
-1. Baixa e processa o dataset
-2. Calcula taxa de churn mensal por produto
-3. Rankeia motivos por frequência e impacto financeiro
-4. Gera pie chart Mermaid com distribuição dos motivos
-5. Gera gráfico de linha com evolução da taxa mensal
-6. Sugere ações de retenção baseadas nos padrões encontrados
+O link preenche uma nova sessão em **Perguntar**. Revise o texto, anexe os arquivos necessários e envie quando estiver pronto.
 
-## Análises possíveis com este dataset
+## Conferir o resultado
 
-- **Evolução do churn** — curva mensal por produto nos 36 meses
-- **Custo do churn** — receita perdida acumulada por motivo
-- **Distribuição de motivos** — pie chart de causas de cancelamento
-- **Eficiência de retenção** — taxa de sucesso vs tentativas por mês
-- **Sazonalidade** — churn tem padrão em determinados meses?
-- **Reativações** — quais meses têm mais recuperação de clientes perdidos
+Verifique se cancelamentos e receita perdida usam definições compatíveis. Valor de contrato, valor devolvido e perda de receita recorrente não são medidas intercambiáveis.
 
-## Exemplo de output
+Uma taxa exige uma base de comparação. Se faltar o número de clientes no início do período, a entrega deve apontar a lacuna em vez de inventar a taxa.
 
-![Churns mensais por produto — Nexus Consultoria](/images/use-cases/churn-evolucao-mensal.png)
+## Continuar o trabalho
 
-*Evolução do churn mensal por produto ao longo de 36 meses, com sugestões de ações de retenção priorizadas por impacto financeiro, geradas pelo G4 OS.*
-
-## Veja também
-
-- [Cohort de Receita](/use-cases/marketing-vendas/cohort-receita) — visualize o impacto do churn na receita por cohort
-- [Performance Comercial](/use-cases/marketing-vendas/performance-comercial) — leads de baixa qualidade aumentam churn futuro?
-- [Funil de Marketing](/use-cases/marketing-vendas/funil-marketing) — origem do cliente e correlação com churn
+Peça uma pauta para discutir os motivos com atendimento e produto. Transforme somente as ações aprovadas em tarefas na conexão escolhida, revisando responsáveis e prazos.

@@ -1,68 +1,37 @@
 ---
-title: "Workflows"
-description: "Use workflows para padronizar processos recorrentes e acioná-los por comando dentro das sessões."
+title: "Workflows: roteiros de trabalho"
+description: "Use um processo salvo para repetir uma tarefa com o mesmo padrão."
 ---
 
-## O que são workflows
+Um workflow guarda um roteiro: o que perguntar, quais referências usar, quais etapas seguir e o que entregar. Ele ajuda quando você repete um processo, como preparar slides ou revisar um relatório.
 
-Workflows são processos reutilizáveis do workspace. Eles descrevem uma sequência de trabalho, contexto de apoio e critérios de execução para que o agente consiga repetir um fluxo com mais consistência.
+Abra **Ferramentas > Workflows** para ver o que está instalado. O catálogo pode variar entre workspaces.
 
-Diferente de uma skill, que tende a orientar comportamento para uma classe de tarefa, um workflow costuma representar um processo mais completo: diagnóstico, análise, criação de artefato, revisão, handoff ou rotina operacional.
+## Executar um workflow
 
-## Onde aparecem
+1. Abra uma sessão.
+2. Digite **@** no campo de mensagem e selecione o workflow.
+3. Se o app pedir informações iniciais, preencha o que o processo precisa.
+4. Acrescente objetivo, público, arquivos e restrições antes de enviar.
 
-Workflows aparecem em `Ferramentas > Workflows`.
+<Frame><img src="/images/guide/selecionar-workflow.png" alt="Seleção do workflow Slides no menu de menções da sessão" /></Frame>
 
-<Frame>
-  <img src="/images/support/ferramentas-workflows.png" alt="Lista de workflows dentro do hub Ferramentas do G4 OS" />
-</Frame>
+Por exemplo, selecione **Slides** e escreva:
 
-## Como acionar
+> “Prepare uma apresentação de cinco slides para alinhar as prioridades do trimestre. O público é a equipe de operações. Comece propondo o roteiro e use apenas os dados que eu anexar.”
 
-Em uma sessão, digite `/` no input para abrir sugestões de workflows disponíveis. Ao escolher um workflow, o G4 OS injeta as instruções versionadas daquele processo na execução.
+Invocações antigas como `/slides` continuam compatíveis quando o nome corresponde a um workflow instalado. A seleção pelo menu **@** ajuda a encontrar o recurso certo sem memorizar comandos.
 
-Exemplos:
+## Consultar e adaptar
 
-```text
-/daily-checkpoint
-/slides
-/web-app
-```
+No detalhe do workflow, você encontra descrição, instruções e arquivos de apoio. Antes de editar, confira se o processo é uma versão oficial ou uma adaptação sua. Quando houver opção de atualização, leia o que será substituído; uma cópia permite preservar uma variação própria.
 
-O nome exato depende dos workflows instalados no workspace.
+Peça ao G4 OS para criar ou ajustar um roteiro a partir de um processo real:
 
-## O que você encontra no detalhe
+> “Crie um workflow para revisar nossos relatórios semanais. Primeiro verifique período e fontes, depois procure inconsistências e entregue um resumo das correções sugeridas.”
 
-- nome e slug do workflow
-- descrição e comando de acionamento
-- instruções do processo
-- arquivos de conhecimento associados, quando existirem
-- ações para abrir no Finder, enviar para outro workspace ou abrir por deep link
+## O que muda em relação a outros recursos
 
-## Casos comuns
+Uma [skill](/support/skills) orienta como realizar um tipo de tarefa. Um workflow descreve um processo que você quer iniciar. Uma [automação](/support/automation) define quando executar trabalho; ela pode chamar um workflow.
 
-- padronizar uma análise recorrente
-- criar um processo de revisão ou qualidade
-- transformar um playbook interno em comando reutilizável
-- instalar workflows do marketplace e adaptar para o workspace
-- compartilhar um workflow entre workspaces sem copiar instruções manualmente
-
-## Caminho no app
-
-- Menu lateral > `Ferramentas` > `Workflows`
-
-## Deep links úteis
-
-- [Abrir Workflows](g4os://workflows)
-
-O detalhe de um workflow específico também pode ser aberto por deep link:
-
-```text
-g4os://workflows/workflow/<slug-do-workflow>
-```
-
-## Relação com automações
-
-Automações podem usar workflows quando uma rotina precisa rodar com o mesmo processo toda vez. Nesse caso, configure a automação para disparar uma nova sessão ou ação recorrente com o workflow certo.
-
-Veja também [Automação](/support/automation) e [Marketplace](/support/marketplace).
+Workflows não concedem acesso a sistemas. Se o roteiro precisa de agenda ou documentos, configure as [conexões](/support/sources) necessárias.

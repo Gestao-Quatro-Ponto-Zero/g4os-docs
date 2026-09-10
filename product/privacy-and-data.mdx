@@ -1,250 +1,39 @@
 ---
 title: "Privacidade e dados"
-description: "Entenda como os dados circulam no G4 OS, o que fica local e quando a infraestrutura da plataforma participa do fluxo."
+description: "Entenda onde o trabalho é guardado e quando o conteúdo sai do computador."
 ---
 
-## Resumo rápido
+O G4 OS mantém sessões e arquivos de trabalho no computador. Para responder com IA, consultar conexões ou usar recursos de nuvem, ele precisa transmitir os dados necessários a esses serviços.
 
-O G4 OS foi desenhado com uma arquitetura `local-first`.
+## O que acontece em cada recurso
 
-No fluxo padrão, ele funciona como um orquestrador local: credenciais, histórico de sessões, configuração de fontes e chamadas para APIs externas ficam na sua máquina. Quando você conecta ERP, Gmail, Slack ou outras ferramentas via APIs próprias ou MCPs locais, a chamada sai da sua máquina para o destino final, sem a G4 atuar como proxy intermediário desse tráfego.
-
-Isso não significa que nada nunca saia do seu ambiente. Significa que o fluxo principal do produto não depende de espelhar seus dados operacionais em servidores da G4 para funcionar.
-
-## Como funciona na prática
-
-### Visão geral: o que sai de onde
-
-O diagrama abaixo mostra o fluxo completo — o que roda na máquina do usuário, o que vai para os LLMs externos, o que chega aos servidores da G4 e como as APIs de terceiros são acessadas pelo sistema. 
-
-```mermaid
-graph TD
-    subgraph USER_MACHINE["Máquina do Usuário"]
-        UI[Renderer UI\nReact + Jotai]
-        IPC[IPC Bridge\nipc.ts / preload]
-        MAIN[Main Process\nsessions.ts]
-        SM[SessionManager]
-        BACKEND[Agent Backend\nClaudeAgent / PiAgent / CodexAgent]
-        INTERCEPT[Network Interceptor\npreload module]
-        MCP[MCP Server Local\nstdio subprocess]
-        CREDS[credentials.enc\nCriptografado local]
-        LOCAL_DB[session.jsonl\nHistórico local]
-    end
-
-    subgraph EXTERNAL_LLM["LLMs Externos"]
-        ANTHROPIC[api.anthropic.com]
-        OPENAI[OpenAI / Compat]
-        GEMINI[generativelanguage.google]
-        BEDROCK[AWS Bedrock]
-    end
-
-    subgraph G4_SERVERS["Servidores G4 — g4oscloud.com"]
-        TELEMETRY[api/telemetry/ingest\nMetadados hasheados]
-        ENTITLEMENT[api/entitlements/me\nLicença do usuário]
-        BUDGET[api/llm/budget/me\nCota de tokens gerenciados]
-        UPDATE[api/updates/token\nAuto-update]
-    end
-
-    subgraph EXTERNAL_APIS["APIs Externas — ERP, Gmail, Slack..."]
-        ERP[API do ERP]
-        GMAIL[Gmail API]
-        SLACK[Slack API]
-    end
-
-    UI -->|input do usuário| IPC
-    IPC -->|IPC channel| MAIN
-    MAIN --> SM
-    SM --> BACKEND
-    BACKEND -->|fetch global patchado| INTERCEPT
-    INTERCEPT -->|prompt + tools| ANTHROPIC
-    INTERCEPT -->|prompt + tools| GEMINI
-    INTERCEPT -->|prompt + tools| OPENAI
-    INTERCEPT -->|SigV4 signed| BEDROCK
-    ANTHROPIC -->|SSE stream| INTERCEPT
-    INTERCEPT -->|eventos processados| SM
-    SM -->|persiste| LOCAL_DB
-    SM -->|lê credenciais| CREDS
-    BACKEND -->|tool call| MCP
-    MCP -->|Bearer token via env| ERP
-    MCP -->|Bearer token via env| GMAIL
-    MCP -->|Bearer token via env| SLACK
-    MAIN -->|telemetria estruturada hasheada| TELEMETRY
-    MAIN -->|verificar licença| ENTITLEMENT
-    MAIN -->|verificar cota| BUDGET
-    MAIN -->|verificar update| UPDATE
-```
-
-**Ponto central:** chamadas para ERP, Gmail, Slack e similares saem diretamente da máquina do usuário via MCP subprocess — sem passar pelos servidores da G4.
-
-### Fluxo local padrão em texto
-
-```text
-Interface do G4 OS
-  -> execução local no seu computador
-    -> provedor de IA escolhido por você
-    -> APIs e sistemas externos conectados por você
-```
-
-### O que isso quer dizer
-
-- o G4 OS roda e orquestra a operação localmente
-- chamadas para APIs externas saem da máquina do usuário nos fluxos locais
-- o conteúdo enviado ao modelo vai para o provedor de IA selecionado, não para a G4
-- a G4 não precisa armazenar o histórico completo do seu workspace para a operação padrão funcionar
-
-## O que normalmente fica local
-
-No fluxo local padrão, estes itens permanecem no ambiente do usuário:
-
-| Tipo de dado | Onde fica |
+| Recurso | Como os dados são usados |
 | --- | --- |
-| Credenciais e tokens | armazenamento local criptografado |
-| Histórico de sessões | arquivos locais do workspace |
-| Configuração de fontes | arquivos locais do workspace |
-| Arquivos e contexto do projeto | diretórios e workspaces locais |
-| Transcrições e resumos de reunião | artefatos textuais locais da sessão |
-| Áudio bruto de gravações | armazenamento local da sessão; não é conteúdo padrão de Cloud Sync |
+| **Sessões e arquivos locais** | O histórico e os entregáveis são guardados no workspace. Um arquivo local não fica automaticamente disponível em outro computador. |
+| **IA da sessão** | Seu pedido e o contexto necessário são enviados ao serviço de IA da conexão selecionada. |
+| **IA gerenciada** | A infraestrutura da G4 participa do recebimento e encaminhamento das solicitações ao provedor, além de controlar acesso e consumo. |
+| **Conexões de trabalho** | O app consulta ou altera o serviço autorizado. Uma conexão gerenciada pode envolver a infraestrutura da plataforma e parceiros de integração. |
+| **Voz e gravação** | Áudio e contexto necessário são enviados aos serviços usados para transcrever ou conversar. |
+| **Compartilhamento, colaboração e sites** | O conteúdo escolhido é disponibilizado fora do computador conforme o fluxo e as autorizações configuradas. |
+| **Cloud Sync** | Uma seleção de arquivos do workspace é enviada para restauração em outro ambiente. |
+| **Brain com sync** | Memórias e contexto relacionado são sincronizados de forma criptografada entre participantes autorizados. |
 
-### Como as credenciais circulam em tempo de execução
+Usar uma conexão própria não significa que o conteúdo deixa de ser enviado ao provedor escolhido. Consulte também as políticas do serviço e da sua organização para o tipo de informação que pretende usar.
 
-As credenciais nunca aparecem em logs, nunca ficam em disco durante a execução e nunca são incluídas na telemetria. O fluxo abaixo mostra o ciclo completo desde o armazenamento criptografado até o uso nas requisições.
+## Credenciais e arquivos
 
-```mermaid
-graph TD
-    subgraph CRED_FLOW["Fluxo de Credenciais em Tempo de Execução"]
-        STORED[credentials.enc\nAES criptografado em disco]
-        MAIN_PROC[Main Process\ncarrega na memória]
-        ENV_VARS[Env Vars do subprocess\nANTHROPIC_API_KEY etc]
-        SDK_PROC[SDK subprocess\nherda env]
-        HTTP_HDR[Header HTTP\nAuthorization: Bearer token]
-        MCP_ENV[MCP Server subprocess\nenv vars]
-        EXT_API[API Externa\nERP / Gmail / Slack]
-    end
+O app usa armazenamento protegido para credenciais que gerencia. Isso não significa que todo arquivo, conversa ou exportação local esteja criptografado. Proteja o acesso ao computador e revise arquivos antes de compartilhá-los.
 
-    STORED -->|decrypt na memória| MAIN_PROC
-    MAIN_PROC -->|seta antes de spawn| ENV_VARS
-    ENV_VARS -->|subprocess herda| SDK_PROC
-    SDK_PROC -->|requisição HTTP| HTTP_HDR
-    HTTP_HDR -->|TLS| LLM[API do LLM]
+Não coloque senhas, tokens ou códigos de recuperação em prompts, documentos de contexto, exemplos de workflows ou capturas. Faça a autenticação pelo fluxo da conexão ou na página do serviço.
 
-    MAIN_PROC -->|seta antes de spawn MCP| MCP_ENV
-    MCP_ENV -->|subprocess herda| MCP_SRV[MCP Server]
-    MCP_SRV -->|requisição HTTP com Bearer| EXT_API
-```
+## Dados de operação e consumo
 
-## O que pode sair da sua máquina
+O produto usa dados operacionais para autenticação, atualizações, diagnóstico e medição de uso. A auditoria de uso da empresa apresenta créditos, tipo de IA, usuário, horário e referências de uso; ela não é um leitor do conteúdo das conversas.
 
-Alguns dados precisam sair do seu ambiente para que o produto funcione:
+Telemetria e processamento de IA têm finalidades distintas. A limitação de conteúdo nos registros de auditoria não significa que o serviço de IA nunca receba o pedido ou o material necessário para respondê-lo.
 
-- prompts e contexto enviados ao provedor de IA que você escolheu
-- chamadas para APIs externas conectadas por você
-- metadados técnicos limitados para autenticação, licenciamento, updates e telemetria operacional
+## Antes de enviar ou publicar
 
-## O que a G4 recebe no fluxo do produto
+Confira a conta e o workspace, remova dados desnecessários e escolha o acesso adequado. Revise a conversa inteira antes de publicar um link. Nos recursos de sync, confira o que será enviado ou substituído.
 
-A plataforma pode receber dados técnicos necessários para operar o serviço, como:
-
-- autenticação e entitlement da conta
-- verificação de orçamento quando você usa recursos gerenciados
-- checagem de updates
-- telemetria técnica e estruturada do produto
-
-No caso da telemetria, o produto usa identificadores hasheados para sessão e workspace em vez de IDs brutos, e o objetivo é medir uso técnico do sistema, não o conteúdo do que foi escrito.
-
-### O que a telemetria envia — e o que ela nunca envia
-
-```mermaid
-graph TD
-    subgraph TELEMETRY_SENT["O que vai para g4oscloud.com/api/telemetry"]
-        EV[Evento de Telemetria]
-        EV --> F1[name: session_start / turn_completed / tool_used]
-        EV --> F2[session_hash: SHA256 do sessionId]
-        EV --> F3[workspace_hash: SHA256 do workspaceId]
-        EV --> F4[provider_type: anthropic / openai / google]
-        EV --> F5[model_id: claude-opus-4-6 etc]
-        EV --> F6[app_version / platform / flavor]
-        EV --> F7[turn_outcome: success / error]
-        EV --> F8[error_family: auth / rate_limit / provider]
-    end
-
-    subgraph NOT_SENT["O que nunca é enviado"]
-        NS1[Conteúdo das mensagens]
-        NS2[Nomes de arquivos]
-        NS3[Caminhos locais]
-        NS4[IDs raw de sessão]
-        NS5[Credenciais ou tokens]
-        NS6[Dados do ERP / APIs externas]
-    end
-
-    subgraph SENTRY_DETAIL["Sentry — Relatório de Erros"]
-        SE[Stack trace de erro]
-        SE --> SR1[User ID: hash anônimo de hostname+homedir]
-        SE --> SR2[Headers sensíveis → REDACTED automaticamente]
-        SE --> SR3[Breadcrumbs com token/key/secret → REDACTED]
-        SE --> SR4[Source maps: desabilitados]
-    end
-```
-
-A telemetria é **comportamental e estruturada** — registra que uma sessão aconteceu, com qual modelo e com qual resultado. Nunca o conteúdo.
-
-## Resumo: o que a G4 monitora de fato
-
-| Canal | O que vai | O que não vai |
-| --- | --- | --- |
-| **Telemetria** | Tipo de evento (hasheado), modelo usado, resultado (success/error), versão do app | Conteúdo de mensagens, dados do ERP, credenciais |
-| **Sentry** | Stack trace de erros, versão, plataforma | Headers de auth (redactados), conteúdo de prompt |
-| **Entitlement** | Email de login, licença ativa | Dados de sessão |
-| **Budget** | Contagem de tokens consumidos | Conteúdo dos prompts |
-| **Updates** | Versão instalada | Qualquer dado de sessão |
-
-## O que a G4 não precisa receber no fluxo local padrão
-
-No fluxo local padrão, a G4 não precisa receber:
-
-- credenciais e chaves das suas integrações
-- histórico completo das suas sessões para operar o app
-- dados retornados por ERP, CRM ou APIs conectadas localmente
-- caminhos locais e estrutura completa dos seus arquivos como base de operação da plataforma
-
-## Quando essa arquitetura muda
-
-Existem situações em que a infraestrutura da plataforma participa mais do fluxo. É importante deixar isso explícito.
-
-### Conexões gerenciadas
-
-`Conexões Gerenciadas` podem usar infraestrutura da plataforma para autenticação, catálogo, status e partes do runtime da integração.
-
-Isso é diferente de uma API ou MCP puramente local. Se o objetivo for maximizar isolamento e previsibilidade do tráfego, prefira integrações locais ou MCPs que rodam no seu próprio ambiente.
-
-### Recursos cloud opcionais
-
-Recursos como `Cloud Sync`, colaboração e outras funções de nuvem mudam o fluxo porque, por definição, sincronizam parte dos dados com a infraestrutura da plataforma.
-
-Esses recursos existem para backup, colaboração e continuidade, não porque o produto precise centralizar todo o seu contexto por padrão.
-
-### Provedores e recursos gerenciados
-
-Quando você usa provedores gerenciados, créditos da plataforma ou agentes gerenciados, parte do controle operacional passa pelos serviços da G4 para autenticação, orçamento, catálogo e roteamento técnico da funcionalidade.
-
-Ainda assim, isso não transforma o G4 OS em um espelho permanente de todo o seu workspace.
-
-## Como pensar segurança na prática
-
-- use suas próprias chaves e integrações quando quiser o maior controle possível
-- prefira APIs próprias e MCPs locais para sistemas sensíveis
-- deixe recursos cloud opcionais desligados quando a política exigir operação mais local
-- revise permissões, fontes e workspaces antes de ampliar automações
-
-## Em uma frase
-
-O G4 OS foi pensado para operar com contexto e execução perto do usuário, não para depender de copiar todo o contexto da empresa para a nuvem da G4.
-
-<Columns cols={2}>
-  <Card title="Ver segurança e controle" icon="shield-check" href="/product/security">
-    Entenda como o network interceptor, permissões e governança entram na operação com IA.
-  </Card>
-
-  <Card title="Ver conexões" icon="plug" href="/product/connections">
-    Compare conexões gerenciadas, agentes gerenciados, MCPs e APIs.
-  </Card>
-</Columns>
+[Permissões](/support/permissions) · [Cloud Sync](/support/cloud-sync) · [Brain](/support/shared-brain) · [Compartilhamento](/support/sharing)

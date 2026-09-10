@@ -1,95 +1,44 @@
 ---
-title: "Automações"
-description: "Use agendamentos e vigias para transformar trabalho recorrente em operação assistida no G4 OS."
+title: "Criar uma automação"
+description: "Agende rotinas, acompanhe respostas com vigias e revise cada execução."
 ---
 
-## Como a automação está organizada
+Abra **Ferramentas > Automações**. Em **Minhas Automações** você encontra o que já configurou; em **Rotinas Recomendadas**, sugestões para começar.
 
-A automação no G4 OS aparece na seção **Automações** do menu lateral.
+<Frame><img src="/images/guide/automacoes.png" alt="Rotinas recomendadas no workspace de demonstração" /></Frame>
 
-<Frame>
-  <img src="/images/support/automacoes-visao-geral.png" alt="Tela de Automações com abas de minhas automações, rotinas recomendadas e filtros por tipo" />
-</Frame>
+## Escolher o tipo
 
-A tela reúne:
+| Você quer… | Use |
+| --- | --- |
+| Receber uma análise em um horário ou intervalo definido | **Agendamento**. |
+| Começar a partir de um modelo pronto de rotina | **Rotinas Recomendadas**. |
+| Acompanhar um alvo, como uma conversa em uma fonte conectada, por uma janela de tempo | **Vigia**. |
 
-- **Minhas Automações** — automações já criadas no workspace
-- **Rotinas Recomendadas** — sugestões de rotinas úteis para ativar com configuração guiada
-- **Rotina** — execuções recorrentes com agenda simples e propósito operacional
-- **Agendamento** — execuções programadas por horário, intervalo ou expressão cron
-- **Vigia** — monitoramentos que detectam eventos e disparam acompanhamento automaticamente
+## Criar um agendamento
 
-> **Acesso:** A seção Automações fica no menu lateral do app, fora das Configurações. Ela também possui deep links para abrir agendamentos, vigias e telas de criação.
+1. Abra a criação de agendamento ou use **Criar automação com agente**.
+2. Descreva o resultado esperado, as fontes e onde a resposta deve aparecer.
+3. Defina uma execução única ou recorrente, com frequência, horário e fuso. A opção avançada permite uma expressão de agenda; você pode pedir ao agente para configurá-la.
+4. Confira as fontes e skills habilitadas e, se necessário, a pasta de trabalho.
+5. Revise **Status**, **Agendamento** e **Sumário** antes de salvar.
 
-## O que você encontra na tela
+> Toda segunda às 9h, no meu fuso, abra uma nova sessão com as tarefas que vencem nesta semana no projeto escolhido. Agrupe por responsável e destaque bloqueios. Use somente a conexão que eu indicar. Não envie mensagens à equipe.
 
-- criação e edição de jobs
-- agenda visual por horário, intervalo ou expressão cron avançada
-- editor dividido em seções de **Status**, **Agendamento** e **Sumário**
-- histórico de execuções
-- seleção de fontes habilitadas
-- seleção de skills habilitadas
-- diretório de trabalho
-- escolha entre ação de **nova sessão** ou **ação em lote**
-- estado atual do monitoramento
-- abertura do detalhe de cada watcher
-- revisão do fluxo que dispara acompanhamentos
-- botão **Criar automação com agente** para configuração assistida
+Um agendamento pode abrir uma sessão ou executar uma ação em lote, conforme a configuração. Revise o destino: gerar um relatório e enviar uma mensagem a alguém são ações diferentes.
 
-## Editor de agendamento
+## Criar um vigia
 
-O redesign do editor organiza a configuração em três áreas principais:
+Informe a fonte, o alvo exato, o intervalo entre verificações e por quanto tempo acompanhar. Escolha se o acompanhamento continua na mesma sessão, abre outra ou não gera uma entrega para determinada condição, conforme as opções do editor.
 
-| Seção | O que revisar |
-|-------|---------------|
-| **Status** | Se a automação está ativa, pausada, com erro ou aguardando próxima execução. |
-| **Agendamento** | Frequência, horário, intervalo, timezone e expressão avançada quando aplicável. |
-| **Sumário** | Prompt, destino da execução, workspace, fontes, skills e diretório de trabalho. |
+> Acompanhe esta conversa por duas horas, verificando a cada 15 minutos. Avise nesta sessão quando chegar uma resposta que resolva a pendência. Não responda por mim.
 
-Antes de salvar, confira o sumário para garantir que a automação vai rodar no workspace e com o contexto corretos.
+A fonte precisa permitir consultar o alvo. Dizer apenas “avise quando acontecer” não garante que o monitor foi criado: confira o vigia salvo na lista.
 
-## Filtros e falhas recentes
+## Conferir se funcionou
 
-A lista de automações permite filtrar por tipo e estado. Use o filtro **Falha recente** quando precisar encontrar jobs que executaram com erro nas últimas rodadas.
+Abra a automação e consulte o histórico, o horário e a sessão de cada execução. O filtro **Falha recente** ajuda a localizar problemas. Corrija conexão, acesso, limites ou configuração antes de tentar de novo. Pause a automação quando ela deixar de ser necessária.
 
-Ao abrir uma automação com falha, revise o histórico, permissões, fontes habilitadas e credenciais necessárias antes de reativar ou salvar mudanças.
+As rotinas dependem do G4 OS em execução e das conexões disponíveis no computador. Não conte com uma execução pontual enquanto o computador estiver desligado ou em repouso. Revise [energia e notificações](/support/app-settings).
 
-## Casos comuns
-
-- criar uma rotina diária ou semanal de resumo
-- automatizar um prompt recorrente em nova sessão
-- monitorar uma thread no Slack e disparar follow-up automático
-- revisar histórico quando uma automação não executou como esperado
-
-## Como criar automações pelo assistente
-
-Você pode criar agendamentos e vigias diretamente numa sessão, pedindo ao assistente. Ele tem acesso às ferramentas `scheduler_create` e `vigia_create` e vai guiar a configuração com confirmação antes de salvar.
-
-Exemplo de prompt:
-
-> _"Cria um agendamento para todo dia útil às 8h que abre uma nova sessão com o resumo do dia."_
-
-## Caminho no app
-
-- Menu lateral > `Automações`
-- Menu lateral > `Automações` > `Minhas Automações`
-- Menu lateral > `Automações` > `Rotinas Recomendadas`
-
-## Deep links úteis
-
-- [Abrir Automações](g4os://scheduler)
-- [Abrir Agendamentos](g4os://scheduler/scheduled-jobs)
-- [Criar Agendamento](g4os://scheduler/scheduled-jobs/new)
-- [Abrir Vigia](g4os://scheduler/vigia)
-- [Criar Vigia](g4os://scheduler/vigia/new)
-- `g4os://scheduler/scheduled-jobs/job/{jobId}`
-- `g4os://scheduler/vigia/watcher/{watcherId}`
-- `g4os://scheduler/recommended/{templateId}`
-
-## Diferença entre Agendamento e Vigia
-
-Use **Agendamento** quando o gatilho é uma agenda: horário, intervalo ou expressão cron.
-
-Use **Vigia** quando o gatilho é acompanhamento: o G4 OS monitora uma thread ou fluxo de resposta e dispara follow-up quando as condições combinadas forem atendidas.
-
-Para criar um Vigia pelo assistente, confirme alvo, cadência, janela de monitoramento e modo de entrega antes de salvar.
+[Abrir Agendamentos](g4os://scheduler/scheduled-jobs) · [Abrir Vigias](g4os://scheduler/vigia) · [Exemplo de acompanhamento](/use-cases/rotina/acompanhamento)

@@ -1,84 +1,31 @@
 ---
 title: "Dashboards"
-description: "Use dashboards nativos para salvar painéis de workspace com fontes, layout, filtros e refresh reutilizáveis."
+description: "Salve um painel e atualize os dados sem refazer a análise."
 ---
 
-<Note>
-  Dashboards estão em beta. A disponibilidade pode variar por build, workspace e conjunto de fontes conectadas.
-</Note>
+Em **Ferramentas > Dashboards**, você encontra painéis salvos no workspace. Eles podem reunir indicadores, tabelas e gráficos de diferentes conexões.
 
-## O que são dashboards
+<Note>Dashboards estão em beta. As fontes e ações disponíveis dependem do seu workspace.</Note>
 
-Dashboards são painéis nativos salvos no workspace. Eles não são apenas respostas soltas em uma sessão: cada dashboard preserva uma definição durável com fontes, parâmetros, transformações, layout visual e histórico do último refresh.
+## Criar a partir de uma pergunta
 
-Use dashboards quando uma análise precisa ser reaberta, atualizada ou acompanhada de forma recorrente.
+1. Conecte a fonte que contém os dados e habilite-a na sessão.
+2. Diga quais indicadores precisa, como calcular cada um e qual período usar.
+3. Peça para salvar como dashboard reutilizável.
+4. Abra o painel na área de Dashboards e confira valores, filtros e data da última atualização.
 
-<Frame>
-  <img src="/images/support/ferramentas-dashboards.png" alt="Aba Dashboards no hub Ferramentas do G4 OS" />
-</Frame>
+> Crie um dashboard salvo de entregas do trimestre. Use a fonte de tarefas que selecionei. Mostre total, concluídas, atrasadas e uma tabela por responsável. Considere atrasada somente uma tarefa não concluída com vencimento anterior a hoje. Mostre o período e a última atualização.
 
-## Como funcionam
+## Reabrir e atualizar
 
-Um dashboard normalmente reúne:
+> Abra o dashboard de entregas do trimestre e atualize os dados mantendo o layout.
 
-- **fontes conectadas** que fornecem os dados
-- **parâmetros** como período, projeto, canal, status ou responsável
-- **transformações** para filtrar, agrupar, ordenar ou calcular métricas
-- **layout** em formato nativo, como KPIs, tabelas e gráficos
-- **last run** com status, horário, linhas processadas e erros ou bloqueios
+A atualização usa as fontes e os parâmetros salvos. Para mudar indicadores, filtros ou aparência, peça uma **edição do dashboard**. Uma resposta com gráfico no chat não é necessariamente um dashboard salvo.
 
-O objetivo é preservar o painel e atualizar os dados quando necessário, sem recriar o relatório do zero a cada sessão.
+## Ler o resultado com cuidado
 
-## O que o agente pode fazer
+Confira se a última execução foi concluída, falhou ou ficou bloqueada. Um painel aberto pode mostrar dados de uma execução anterior. Se uma conexão perdeu acesso, reconecte-a e atualize novamente.
 
-Quando as ferramentas de dashboard estão disponíveis, o agente pode:
+As tabelas podem oferecer ordenação, busca e ações de copiar ou baixar CSV. A exportação leva os dados apresentados naquele momento; atualize o painel antes de distribuir o arquivo.
 
-- criar um dashboard novo a partir de um objetivo claro
-- abrir um dashboard salvo na sessão
-- atualizar os dados de um dashboard existente
-- ajustar filtros, fontes, instruções ou layout quando você pedir uma edição
-
-Atualizar um dashboard não deve redesenhar o painel. O refresh usa a definição salva, executa as fontes configuradas e substitui os dados materializados.
-
-## Casos comuns
-
-- acompanhar KPIs comerciais, financeiros ou operacionais
-- transformar uma análise recorrente em painel reutilizável
-- revisar um dashboard antes de uma reunião
-- atualizar dados sem refazer a estrutura visual
-- manter um relatório com fontes e filtros padronizados
-
-## Ações em tabelas
-
-Tabelas geradas pelo G4 OS podem oferecer ações rápidas no próprio cabeçalho ou menu da tabela:
-
-- **copiar CSV** para levar as linhas visíveis para uma planilha, BI ou mensagem
-- **baixar CSV** para salvar uma extração local
-- ordenar colunas quando a tabela expõe ordenação
-- pesquisar ou filtrar linhas quando a visualização inclui busca
-
-Essas ações usam o conteúdo materializado da tabela naquele momento. Se a fonte foi atualizada depois da última execução, faça refresh do dashboard antes de copiar ou baixar o CSV.
-
-## Caminho no app
-
-- Menu lateral > `Ferramentas` > `Dashboards`
-
-## Deep links úteis
-
-- [Abrir Dashboards](g4os://dashboards)
-
-O detalhe de um dashboard específico também pode ser aberto por deep link:
-
-```text
-g4os://dashboards/dashboard/<slug-do-dashboard>
-```
-
-## Boas práticas
-
-- defina o objetivo do painel antes de pedir a criação
-- confirme quais fontes sustentam cada métrica
-- use parâmetros para filtros que mudam com frequência
-- prefira atualizar dashboards salvos em vez de pedir uma nova análise ad hoc
-- revise permissões e credenciais das fontes quando o refresh falhar
-
-Veja também [Ferramentas](/support/tools), [Conexões](/support/sources) e [Automação](/support/automation).
+Para atualização recorrente, combine o painel salvo com uma [automação](/support/automation). [Abrir Dashboards no app](g4os://dashboards).

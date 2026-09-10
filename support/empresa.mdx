@@ -1,211 +1,44 @@
 ---
-title: "Gerenciar Empresa"
-description: "Acompanhe contexto, pessoas, consumo, auditoria, políticas e solicitações da empresa no G4 OS."
+title: "Empresa: pessoas, créditos e políticas"
+description: "Encontre o conhecimento da organização e os controles disponíveis ao administrador."
 ---
 
-## O que é Gerenciar Empresa
+Abra **Empresa** na barra lateral. O conteúdo e as ações dependem da empresa vinculada e do papel da sua conta. Controles administrativos podem não aparecer para membros comuns.
 
-**Gerenciar Empresa** é o painel administrativo da empresa dentro do G4 OS.
+## Encontrar a área certa
 
-Ele consolida contexto organizacional, membros, consumo de créditos, auditoria de uso, políticas e solicitações em uma única área.
+| Área | O que consultar ou gerenciar |
+| --- | --- |
+| **Visão geral** | Situação da empresa, atividade e consumo. |
+| **Contexto** | Documentos, estrutura e solicitações de alteração. |
+| **Pessoas** | Membros, administradores, grupos e acessos por área. |
+| **Uso e créditos** | Consumo agregado, período e disponibilidade de créditos. |
+| **Uso extra** | Concessões temporárias a pessoas, saldo e expiração. |
+| **Auditoria de uso** | Registros de consumo por usuário e período, com exportação. |
+| **Políticas** | Limites, grupos, entrada por domínio e regras do saldo compartilhado. |
 
-O acesso depende do papel do usuário e das permissões concedidas pela empresa. Administradores veem as áreas de gestão; usuários com acesso somente leitura podem ver apenas partes permitidas.
+**Solicitações** é uma visão dentro de Contexto. Links antigos podem abri-la diretamente, mesmo sem uma entrada separada na coluna lateral.
 
-## Abas disponíveis
+## Pessoas e acesso
 
-O painel atual é dividido nestas abas:
+Administradores podem consultar membros, papéis e regras por área. Revise o e-mail e o escopo antes de conceder acesso. Estados como suspensão ou arquivamento afetam o acesso ativo e preservam informações de histórico conforme a ação apresentada.
 
-- **Visão geral** — resumo da empresa, status e atalhos principais
-- **Contexto** — documentos, estrutura, pessoas e PRs associados ao contexto compartilhado
-- **Pessoas** — membros e acesso da empresa
-- **Uso** — métricas de consumo, pacing e projeção do mês
-- **Auditoria de uso** — eventos privacy-safe de consumo de IA
-- **Políticas** — limites globais, grupos e regras de crédito
-- **Solicitações** — pedidos relacionados ao contexto ou acesso da empresa
+Um vínculo por domínio pode aparecer como entrada automática. Confira se ele representa a pessoa e a empresa corretas antes de atribuir permissões de administração.
 
-Administradores podem ver áreas de assinatura mesmo sem permissões globais do painel SaaS. A interface mostra apenas planos e assinaturas ligados à empresa atual.
+## Políticas e créditos
 
-## Visão geral
+O limite de uma pessoa pode vir da política geral, de um grupo ou de uma exceção. Quando a empresa usa saldo compartilhado, a política define se ele pode complementar o limite individual e até quanto.
 
-<Frame>
-  <img src="/images/empresa/gerenciar-empresa-visao-geral.png" alt="Painel Gerenciar Empresa com métricas de consumo, usuários ativos e gráfico diário" />
-</Frame>
-
-A aba **Visão geral** resume o estado da empresa e ajuda a navegar para as áreas operacionais.
-
-Dependendo das permissões e do módulo habilitado, ela pode exibir:
-
-- modo de cobrança
-- mês selecionado
-- consumo do mês
-- usuários ativos
-- grupos de política
-- resumo do período
-- gráfico de consumo diário
-
-O botão **Atualizar** força um refresh dos dados disponíveis para a empresa. Algumas áreas usam cache para evitar requisições duplicadas; quando o cache fica antigo, a próxima abertura ou atualização busca dados novos em segundo plano.
-
-## Contexto
-
-A aba **Contexto** reúne material compartilhado da empresa para que o agente consiga responder com base no conhecimento organizacional.
-
-Ela pode incluir:
-
-- documentos
-- estrutura organizacional
-- pessoas
-- PRs ou referências de trabalho
-
-Essa área substitui o uso separado de `Company Context` como navegação principal. Deep links antigos ainda podem abrir a aba correspondente, mas a rota canônica é `Empresa > Contexto`.
-
-## Pessoas
-
-A aba **Pessoas** lista membros associados explicitamente à empresa. Usuários que apenas compartilham o mesmo domínio, mas não possuem vínculo formal, podem não entrar no cálculo ou na listagem administrativa.
-
-Colunas e métricas podem variar por permissão, mas normalmente incluem:
-
-| Coluna | Descrição |
-|--------|-----------|
-| Usuário | Email do membro |
-| Créditos | Consumo total no período selecionado |
-| Turns | Número de interações com o assistente |
-| Sessions | Número de sessões abertas |
-| Limites | Indica se há override de limites aplicado ao usuário |
-
-### Badge de auto-join
-
-Membros que entraram automaticamente via domínio podem exibir o badge **auto-join**. Isso diferencia membros convidados diretamente de membros vinculados por matching de domínio permitido.
-
-## Ciclo de acesso de usuários
-
-Administradores podem controlar o estado de acesso de membros individuais da empresa.
-
-| Estado | O que significa |
-|--------|-----------------|
-| **Ativo** | Acesso normal dentro das políticas configuradas |
-| **Suspenso** | Acesso temporariamente bloqueado |
-| **Arquivado** | Conta desativada e mantida no histórico |
-| **Desprovisionado** | Remoção permanente do contexto gerenciado, com preservação de histórico |
-
-Para alterar o estado de acesso, acesse a aba **Pessoas**, localize o membro e use o menu de ações. A mudança entra em vigor imediatamente.
-
-Suspender um usuário não remove seus dados nem o histórico de consumo. O estado pode ser revertido enquanto a conta estiver suspensa ou arquivada.
-
-## Uso
-
-A aba **Uso** mostra consumo agregado da empresa, comparação por período, pacing e projeção.
-
-Ela é a fonte principal para administradores entenderem como créditos estão sendo consumidos em um contexto gerenciado.
-
-## Créditos concedidos e pool corporativo
-
-Além dos créditos mensais de plano ou assinatura, a empresa pode operar com créditos concedidos pela administração.
-
-Créditos concedidos servem para desbloquear usuários antes do próximo ciclo, cobrir exceções operacionais ou complementar uma política temporária. Eles aparecem separados do consumo base quando a interface tem dados suficientes para diferenciar a origem.
-
-Empresas também podem usar um **pool corporativo**. Nesse modelo, membros consomem créditos individuais primeiro e, quando permitido pela política, podem recorrer ao pool compartilhado da empresa.
-
-As políticas controlam:
-
-- se overflow para o pool está habilitado
-- quanto cada usuário pode consumir além do limite individual
-- quais grupos de política podem usar créditos compartilhados
-- quando o consumo deve ser bloqueado mesmo com pool disponível
+Em **Uso extra**, o administrador pode selecionar a pessoa, definir créditos e validade e registrar o motivo. Confira o histórico e a expiração. Conceder um extra temporário não equivale a mudar o limite permanente.
 
 ## Auditoria de uso
 
-A aba **Auditoria de uso** é um ledger privacy-safe para uso de IA conectado à empresa.
+Use filtros por período e usuário para conferir consumo e exportar os registros. A auditoria mostra créditos, tipo de IA (texto ou mídia), usuário, horário e referências de sessão, workspace e conexão quando disponíveis.
 
-Ela deve expor informações de governança e custo, não conteúdo sensível.
+Ela não mostra prompts, respostas, documentos ou credenciais, nem deve ser usada para ler conversas privadas. Resumos podem atualizar com atraso; para conferir um registro específico, consulte os eventos do período.
 
-Eventos de auditoria podem incluir:
+## Ciclo e bloqueios
 
-- créditos ou milicréditos consumidos
-- tipo de IA (`text` ou `media`)
-- email do usuário
-- timestamp
-- referências de sessão e workspace
-- source ou connection slug quando aplicável
+Confira o ciclo exibido pela conta: uma assinatura corporativa pode renovar na data de contratação, sem seguir o primeiro dia do mês. Se uma pessoa atingir o limite, o administrador deve verificar política, saldo e concessões disponíveis antes de ajustar o acesso.
 
-Ela **não** deve expor:
-
-- nomes de modelos
-- prompts
-- completions
-- outputs de ferramentas
-- documentos
-- credenciais
-
-Use essa aba para reconciliação, governança e análise de consumo sem inspecionar o conteúdo do trabalho.
-
-## Políticas
-
-<Frame>
-  <img src="/images/empresa/gerenciar-empresa-politicas.png" alt="Aba Políticas com configuração de limites globais, overflow de pool e domínios de auto-join" />
-</Frame>
-
-A aba **Políticas** controla regras padrão aplicadas aos membros da empresa.
-
-Ela pode incluir:
-
-- limite diário
-- limite mensal
-- overflow do pool
-- limites de overflow
-- domínios permitidos
-- auto-join por domínio
-- grupos de política com regras próprias
-
-Membros em um grupo de política específico seguem as regras desse grupo, não as da política global.
-
-## Solicitações
-
-A aba **Solicitações** concentra pedidos que precisam de revisão ou ação relacionada à empresa.
-
-Dependendo do módulo habilitado, ela pode ser usada para acompanhar solicitações de contexto, acesso ou mudanças que exigem aprovação.
-
-## Planos e assinaturas
-
-Administradores com acesso ao painel SaaS podem criar e gerenciar planos e assinaturas vinculadas à empresa. Planos definem condições de consumo, limites por usuário e disponibilidade de recursos.
-
-O painel da empresa lista assinaturas ativas e dados associados ao ciclo atual. A atribuição comercial de seats pode acontecer fora do app; dentro do G4 OS, a interface prioriza leitura do estado ativo, consumo, políticas e ações administrativas disponíveis para aquela empresa.
-
-O ciclo SaaS corporativo pode ser ancorado na data de compra ou renovação, em vez de sempre seguir o primeiro dia do mês. Isso afeta reset, pacing e projeção de uso.
-
-Quando um plano é alterado, permissões e limites dos usuários vinculados podem ser sincronizados automaticamente. Se o painel não aparecer, entre em contato com o suporte.
-
-## Limites mensais e enforcement em runtime
-
-Os limites mensais configurados em **Políticas** são aplicados em tempo de execução. O bloqueio acontece quando o usuário tenta fazer uma nova chamada ao modelo, não de forma retroativa.
-
-Quando um usuário atinge o limite:
-
-- novas chamadas ao modelo são bloqueadas
-- o usuário vê uma mensagem informando que o limite foi atingido
-- histórico de sessões e dados permanecem acessíveis quando permitido
-- o contador reseta automaticamente no ciclo seguinte
-
-Administradores podem conceder créditos adicionais ou ajustar limites para desbloquear o usuário antes do reset.
-
-## Caminho no app
-
-- `Menu lateral > Empresa`
-- `Menu lateral > Gerenciar Empresa`
-
-## Deep links úteis
-
-- [Abrir Empresa](g4os://company)
-- [Abrir Contexto da Empresa](g4os://company/context)
-- [Abrir Pessoas](g4os://company/people)
-- [Abrir Uso da Empresa](g4os://company/usage)
-- [Abrir Auditoria de Uso](g4os://company/use-audit)
-- [Abrir Políticas](g4os://company/policies)
-- [Abrir Solicitações](g4os://company/requests)
-
-Deep links legados como `g4os://business-management` e `g4os://company-context` ainda podem redirecionar para as abas equivalentes, mas os links canônicos usam `g4os://company/...`.
-
-## Veja também
-
-- [Uso](/support/usage) — visão individual de consumo de créditos
-- [Company Context](/support/company-context) — vínculo entre workspace e empresa
-- [Workspace](/support/workspace) — configuração de vínculo com Company Context
+[Abrir Empresa](g4os://company) · [Uso individual](/support/usage) · [Contexto](/support/context) · [Acesso de pessoas](/support/user-management-api)

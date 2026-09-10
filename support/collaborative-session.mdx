@@ -1,83 +1,31 @@
 ---
 title: "Sessão colaborativa"
-description: "Entenda como convidar outro workspace do G4 OS para participar da mesma sessão com URL de leitura e token de edição."
+description: "Convide outra pessoa a participar de uma sessão no próprio G4 OS."
 ---
 
-<Warning>
-  **Beta:** Sessão colaborativa é uma funcionalidade beta e ainda não foi disponibilizada para todos os usuários. Se não aparecer a funcionalidade, aguarde atualizações futuras.
-</Warning>
+Use **Sessão colaborativa**, no menu de compartilhamento, quando outra pessoa precisar participar da conversa pelo G4 OS.
 
-## O que é uma sessão colaborativa
+<Note>A colaboração está em beta. As opções disponíveis dependem da conta e da versão.</Note>
 
-Sessão colaborativa é o fluxo usado quando você quer que outro workspace do G4 OS entre na mesma conversa.
+## Convidar e entrar
 
-Ela é diferente de um link público. Em vez de só abrir uma página para leitura, o G4 OS cria um convite com duas partes:
+1. Na sessão de origem, abra a colaboração e escolha **Criar convite**.
+2. O convite reúne uma **URL de leitura** e um **token de edição**.
+3. Envie o texto completo somente a quem deve participar.
+4. A outra pessoa abre o menu de compartilhamento no G4 OS e escolhe **Importar sessão colaborativa**.
+5. Ela cola o convite, confere a prévia e importa no workspace desejado.
 
-- uma `URL de leitura`, que identifica a sessão compartilhada
-- um `token de edição`, que autoriza a participação colaborativa
+Uma URL sem o token não concede a participação de edição. Revise o estado da colaboração na tela antes de considerar a sessão pronta para trabalho conjunto.
 
-Quem recebe esse convite abre o G4 OS no próprio workspace, escolhe `Importar` e cola o texto completo. A partir daí, a sessão compartilhada passa a existir também naquele ambiente.
+## Gerenciar depois
 
-![Janela de sessão colaborativa no G4 OS](/images/support/sessao-colaborativa.png)
+| Ação | Efeito |
+| --- | --- |
+| **Copiar convite** | Recupera o texto completo para um participante autorizado. |
+| **Atualizar snapshot** | Atualiza a cópia compartilhada da sessão. |
+| **Girar token de edição** | Invalida o token anterior; o acesso precisa usar o novo convite. |
+| **Parar colaboração** | Encerra o acesso colaborativo da sessão. |
 
-*Fluxo de criação e importação de convite colaborativo dentro do G4 OS.*
+Se o token expirou ou não estiver disponível localmente, gere outro pela ação de girar token. Não exponha convites em capturas de tela ou páginas públicas.
 
-## Como funciona na prática
-
-1. Você abre a sessão e entra em `Sessão colaborativa`.
-2. O G4 OS gera a `URL de leitura` e o `token de edição`.
-3. Você envia o texto completo do convite para a outra pessoa.
-4. A outra pessoa abre o G4 OS, escolhe `Importar sessão colaborativa` e cola o convite.
-5. O workspace de destino passa a acessar a mesma sessão compartilhada.
-
-## O que cada parte do convite faz
-
-### URL de leitura
-
-A URL de leitura identifica a sessão compartilhada e serve como referência para o conteúdo que será aberto no outro workspace.
-
-### Token de edição
-
-O token de edição é o que libera a participação colaborativa. Sem ele, o convite fica incompleto.
-
-Se o token não estiver mais disponível localmente ou já tiver expirado, o caminho correto é girar o token e gerar um novo convite.
-
-## O que você pode gerenciar depois
-
-Depois que o convite já existe, a própria tela de `Sessão colaborativa` permite controlar o acesso:
-
-- `Copiar convite`: copia novamente o texto completo para convidar outra pessoa
-- `Atualizar snapshot`: publica o estado mais recente da sessão compartilhada
-- `Girar token`: invalida o token atual e força novos acessos a usarem um convite novo
-- `Parar colaboração`: encerra o acesso colaborativo dessa sessão
-
-> Girar o token desconecta quem já estava colaborando e exige reentrada com o novo token.
-
-## Quando usar
-
-- quando outra pessoa precisa continuar a conversa no próprio G4 OS
-- quando o contexto precisa circular entre workspaces sem virar só um link de leitura
-- quando você quer manter um canal controlado de colaboração sobre a mesma sessão
-
-## Quando não usar
-
-- se a outra pessoa só precisa ler a conversa, prefira [Compartilhamento](/support/sharing)
-- se quem vai acessar é você mesmo em outro dispositivo, prefira [Controle remoto](/support/remote-control)
-
-## Requisitos práticos
-
-- a outra ponta precisa estar usando o G4 OS
-- o convite deve ser enviado com `URL de leitura` e `token de edição`
-- o import acontece dentro de um workspace ativo no app
-
-## Caminho no app
-
-- `Sessões > abrir uma sessão > menu de compartilhamento > Sessão colaborativa`
-
-## Deep links úteis
-
-- [Abrir Sessões](g4os://allSessions)
-
-## Resumo rápido
-
-Sessão colaborativa é o fluxo certo quando duas pontas do G4 OS precisam trabalhar sobre a mesma conversa, com convite controlado, importação dentro do app e revogação explícita quando necessário.
+Para continuar sozinho pelo celular, use [Controle remoto](/support/remote-control). Para uma revisão somente de leitura, use [Compartilhamento online](/support/sharing).

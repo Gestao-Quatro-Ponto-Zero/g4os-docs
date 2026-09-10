@@ -1,81 +1,34 @@
 ---
-title: "Workspace"
-description: "Entenda os controles que definem o contexto operacional de cada workspace no G4 OS."
+title: "Configurações do workspace"
+description: "Ajuste nome, fontes padrão, permissões e vínculo com a empresa."
 ---
 
-## O que esta área controla
+Abra **Configurações > Workspace** e confira o nome do ambiente ativo antes de alterar algo.
 
-`Workspace` reúne configurações que pertencem ao contexto ativo, e não ao app inteiro.
+| Controle | Quando usar |
+| --- | --- |
+| Nome e ícone | Identificar um contexto pessoal, uma área ou uma operação. |
+| Modo de permissão padrão | Definir como novas sessões começam. |
+| Brain | Conferir e configurar a memória deste workspace. |
+| Company Context | Vincular o ambiente a uma empresa à qual você tem acesso. |
+| Telegram | Configurar o bot e conferir chats pareados. |
+| Fontes padrão | Escolher conexões habilitadas em novas sessões. |
+| Alternância de modos | Escolher quais modos entram no ciclo do atalho de permissões. |
+| Recomendações de parceiros | Ajustar as sugestões apresentadas durante o trabalho. |
+| Avançado | Definir pasta de trabalho e disponibilidade de servidores MCP locais. |
 
-## O que você encontra aqui
+## Escolher padrões úteis
 
-- nome e identificação do workspace
-- modo de permissão padrão
-- vínculo com Company Context, quando disponível
-- fontes padrão do workspace
-- cycling de modos
-- recomendações de parceiro
-- diretório de trabalho
-- pasta raiz de projetos
-- configuração de local MCP
+Habilite como padrão apenas fontes que usa com frequência. Antes de uma tarefa, confira quais estão conectadas naquela sessão. O padrão não concede acesso a uma conta que ainda não foi autenticada.
 
-## Modo de permissão padrão
+Para rotinas novas, comece com [Perguntar](/support/permissions) e avalie cada solicitação de ação. Confira o modo ativo em **Informações do chat > Detalhes**.
 
-O modo de permissão padrão define como novas sessões daquele workspace começam. Ele pode ser ajustado para contextos que precisam de mais confirmação humana ou para rotinas em que o agente pode executar com mais autonomia.
+## Pastas e arquivos
 
-O modo ativo continua visível no composer da sessão. Se você alterar o padrão do workspace, confira o indicador visual ao abrir novas sessões para confirmar qual política está em uso.
+A pasta de trabalho orienta onde o agente procura e cria arquivos. Escolha uma pasta relacionada à tarefa. Ela não é a mesma coisa que um [projeto](/support/projects), que organiza conversas, marcos e referências dentro do app.
 
-## Situações especiais
+## Conta e empresa
 
-Quando um workspace está quebrado ou incompleto, esta área também é usada para orientar reparo e restauração do caminho raiz. Nesses casos, vale consultar também [Modo reparo](/support/repair-mode).
+Conectar o workspace a uma empresa disponibiliza o contexto e os recursos permitidos para sua conta. Isso não transfere automaticamente todos os seus arquivos para a empresa nem libera todos os documentos para todos os membros.
 
-## Relação com o onboarding
-
-O onboarding inicial do G4 OS cria o primeiro estado do workspace. É ali que normalmente entram:
-
-- nome do workspace
-- idioma e região
-- empresa
-- perfil de trabalho
-- objetivos iniciais
-- primeiras conexões
-
-Depois que o workspace já existe, a área de `Workspace` vira o lugar certo para revisar e ajustar as decisões que pertencem a esse contexto específico.
-
-## Casos comuns
-
-- renomear um workspace
-- revisar qual diretório de trabalho está ativo
-- escolher fontes padrão para novas sessões
-- vincular ou desvincular um Company Context
-- ajustar a raiz de projetos gerenciados
-
-## Company Context
-
-O **Company Context** vincula este workspace a uma empresa cadastrada no G4 OS. Com o vínculo ativo, os agentes nas sessões passam a acessar o contexto organizacional dessa empresa automaticamente.
-
-Empresas verificadas exibem um **badge azul** ao lado do nome no seletor. Esse badge indica que o G4 validou que aquele cadastro corresponde à empresa real — garantindo que os colaboradores saibam que estão se conectando ao contexto correto.
-
-<Card
-  title="Saiba mais sobre Company Context e verificação"
-  icon="badge-check"
-  href="/support/company-context"
-  horizontal
->
-  Critérios de verificação, o que o badge representa e como o vínculo com a empresa afeta suas sessões.
-</Card>
-
-## Caminho no app
-
-- `Configurações > Workspace`
-
-## Deep links úteis
-
-- [Abrir Workspace](g4os://settings/workspace)
-- [Abrir Sessões](g4os://allSessions)
-
-## Dica prática
-
-Se a dúvida for “isso vale para todo o app ou só para este contexto?”, normalmente `Workspace` é a resposta quando o comportamento precisa ficar isolado por projeto, time ou operação.
-
-Veja também [Quickstart](/getting-started/quickstart) para o fluxo inicial de criação do workspace.
+[Conectar à empresa](/support/company-context) · [Telegram](/support/telegram-messaging) · [Abrir Workspace](g4os://settings/workspace)

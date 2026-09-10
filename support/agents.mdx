@@ -1,50 +1,44 @@
 ---
-title: "Agentes"
-description: "Catálogo, sincronização e detalhes dos agentes gerenciados disponíveis no G4 OS."
+title: "Agentes personalizados"
+description: "Crie especialistas e chame-os dentro das suas sessões."
 ---
 
-## O que esta área cobre
+Em **Ferramentas > Agentes**, você encontra agentes do workspace e capacidades gerenciadas disponíveis para sua conta. Um agente personalizado guarda uma função, instruções e configurações para ser chamado como especialista em uma conversa.
 
-A área de `Agentes` serve para revisar os agentes gerenciados disponíveis no ambiente e verificar se eles estão prontos para uso.
+## Criar um especialista
 
-> **Beta:** agentes gerenciados são uma função beta e podem não estar disponíveis para todos os usuários, contas, workspaces ou builds do G4 OS.
+1. Abra **Ferramentas > Agentes** e clique em **Novo agente**.
+2. Defina nome, descrição e **Slug de menção**: o identificador curto usado para encontrá-lo com **@**.
+3. Escolha o modelo e revise modo de permissão e acesso a fontes.
+4. Escreva instruções que deixem claro o trabalho do especialista.
+5. Clique em **Salvar agente**.
 
-## O que você encontra aqui
+<Frame caption="Exemplo fictício de um agente que revisa textos de trabalho.">
+  <img src="/images/guide/agente-personalizado.png" alt="Configuração de um agente Revisor de comunicação, com descrição e configurações de execução" />
+</Frame>
 
-- status de sincronização de agentes
-- último sync executado
-- versão do manifesto sincronizado
-- erros do último sync, quando existirem
-- catálogo de agentes disponíveis
-- detalhes do agente selecionado
+O identificador de menção fica fixo depois da criação. Escolha um nome curto e reconhecível.
 
-## Detalhes que costumam aparecer por agente
+## Chamar na sessão
 
-- descrição funcional
-- compatibilidade
-- capacidades expostas
-- escopo de filesystem permitido
-- limite de tamanho de arquivo
-- estado de consentimento, quando aplicável
+Digite **@**, selecione o agente e explique o que ele deve avaliar:
 
-## Casos comuns
+> “Revise este comunicado para a equipe. Preserve os fatos e a data de entrega; destaque qualquer trecho que deixe o próximo passo ambíguo.”
 
-- confirmar se um agente gerenciado já chegou ao workspace
-- forçar novo sync após mudanças administrativas
-- revisar limites antes de usar um agente em produção
-- entender por que um agente não está habilitado
+A solicitação continua na sessão principal, que recebe o resultado do especialista. Você pode pedir outro ajuste no mesmo histórico.
 
-## Caminho no app
+## Escolher fontes e autonomia
 
-- `Configurações > Agentes`
+O agente pode herdar as fontes da sessão, usar uma lista fixa ou trabalhar sem fontes. Um revisor de texto pode trabalhar apenas com o conteúdo enviado; um analista pode precisar de uma conexão específica.
 
-## Deep links úteis
+O modo de permissão também pode herdar a configuração da sessão. Essas escolhas não substituem a autenticação das conexões nem as regras de acesso da empresa.
 
-- [Abrir Agentes](g4os://settings/agents)
-- [Abrir IA](g4os://settings/ai)
+<Note>
+  Agentes personalizados usam o **G4 Managed AI Gateway**, mesmo quando a conversa principal usa outra conexão de IA. Disponibilidade de modelos e consumo seguem as regras da conta gerenciada. Veja [Uso e créditos](/support/usage).
+</Note>
 
-## Quando olhar o admin
+## Agentes gerenciados
 
-Se o problema está na definição central do agente, e não no uso local, pode ser necessário abrir a área administrativa associada ao catálogo.
+Recursos gerenciados podem oferecer capacidades como geração de imagens ou análise de documentos. Eles aparecem conforme o catálogo da conta e são diferentes dos especialistas que você cria.
 
-Veja também [Agentes Gerenciados](/product/connections/managed-agents).
+Abra o detalhe do recurso em **Ferramentas > Agentes** para conferir a descrição e a disponibilidade. Veja [Agentes gerenciados](/product/connections/managed-agents).

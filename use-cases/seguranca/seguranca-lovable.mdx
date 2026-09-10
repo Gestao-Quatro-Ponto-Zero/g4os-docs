@@ -1,103 +1,32 @@
 ---
-title: "Pentest de App Supabase"
-description: "Auditoria automatizada de segurança para apps com backend Supabase — RLS, autenticação, isolamento de tenant e exposição de dados."
+title: "Revisar um aplicativo antes de lançar"
+description: "Organize uma revisão de jornadas e encaminhe as verificações técnicas necessárias."
 ---
 
-## O que este caso de uso cobre
+Se sua equipe criou um aplicativo com Lovable, Bolt ou outra ferramenta, o G4 OS pode ajudar a preparar e executar uma revisão do que o usuário vê. O responsável pelo produto não precisa começar por comandos técnicos.
 
-O workflow **Segurança Lovable** conduz uma auditoria automatizada de segurança em aplicações web com backend Supabase. Foi criado especialmente para apps gerados no **Lovable** e **Bolt** — mas funciona em qualquer aplicação que use Supabase como backend, independente de como foi desenvolvida.
+## Definir o alcance
 
-O workflow verifica RLS, autenticação, isolamento de tenant, escrita anônima e exposição de dados, e classifica os findings com rigor para evitar falsos positivos.
+Use um ambiente que sua equipe autorizou para teste, com dados fictícios. Liste as jornadas essenciais: entrar, localizar uma informação, preencher um formulário e encerrar o acesso.
 
-<Warning>
-  Esta é uma análise automatizada por IA. Ela cobre os vetores mais comuns mas não substitui um pentest manual profissional. Para aplicações em produção com dados sensíveis, envolva um time de segurança.
-</Warning>
+> Quero revisar um aplicativo que minha equipe criou antes do lançamento. Comece perguntando objetivo, público, ambiente de teste autorizado e jornadas essenciais. Prepare um roteiro de revisão funcional e de privacidade, sem enviar formulários nem alterar dados. Separe observações visíveis, dúvidas e verificações que precisam de uma pessoa técnica. Não declare o aplicativo seguro apenas com essa revisão.
 
-## Antes de começar: instalar o workflow
 
-O workflow **Segurança Lovable** precisa estar instalado no seu workspace. Ele está disponível no Marketplace do G4 OS.
+[Preparar este pedido no G4 OS](g4os://action/new-session?name=Revis%C3%A3o+antes+do+lan%C3%A7amento&input=Quero+revisar+um+aplicativo+que+minha+equipe+criou+antes+do+lan%C3%A7amento.+Comece+perguntando+objetivo%2C+p%C3%BAblico%2C+ambiente+de+teste+autorizado+e+jornadas+essenciais.+Prepare+um+roteiro+de+revis%C3%A3o+funcional+e+de+privacidade%2C+sem+enviar+formul%C3%A1rios+nem+alterar+dados.+Separe+observa%C3%A7%C3%B5es+vis%C3%ADveis%2C+d%C3%BAvidas+e+verifica%C3%A7%C3%B5es+que+precisam+de+uma+pessoa+t%C3%A9cnica.+N%C3%A3o+declare+o+aplicativo+seguro+apenas+com+essa+revis%C3%A3o.&mode=ask)
 
-<Steps>
-  <Step title="Abrir o Marketplace">
-    Acesse o Marketplace pelo menu lateral do G4 OS ou pelo deep link abaixo.
+O link preenche uma nova sessão em **Perguntar**. Revise o texto, anexe os arquivos necessários e envie quando estiver pronto.
 
-    [Abrir Marketplace](g4os://marketplace)
-  </Step>
-  <Step title="Buscar e instalar">
-    Pesquise por **"Segurança Lovable"** e instale no seu workspace. Após a instalação, o workflow fica disponível como `/seguranca-lovable` em qualquer sessão.
-  </Step>
-  <Step title="Confirmar a instalação">
-    Abra uma sessão nova e digite `/seguranca-lovable` — o G4 OS vai reconhecer o workflow e iniciar o fluxo de perguntas.
-  </Step>
-</Steps>
+## O que pedir para conferir
 
-## Abrir no G4 OS
+- Clareza de textos, campos obrigatórios e mensagens de erro.
+- Comportamento em tela pequena e navegação entre páginas.
+- Se dados de exemplo aparecem onde deveriam e se há informações indevidas na tela.
+- Se a confirmação de uma ação explica o que realmente aconteceu.
 
-Com o workflow instalado, use o deep link abaixo para iniciar uma auditoria. O G4 OS abre uma sessão no modo Execute e aciona o workflow automaticamente.
+## Encaminhar para a equipe técnica
 
-<Card
-  title="Iniciar auditoria de segurança no G4 OS"
-  icon="shield-halved"
-  href="g4os://action/new-session?input=%2Fseguranca-lovable&send=true&mode=execute&workdir=none"
->
-  Abrir sessão com o workflow Segurança Lovable
-</Card>
+Revisão visual não comprova isolamento entre contas, regras de acesso ao banco ou segurança da autenticação. Peça um relatório que separe **problemas observados**, **hipóteses** e **itens ainda não testados**, com passos para reproduzir e capturas sem dados sensíveis.
 
-O G4 OS vai perguntar:
-1. **Qual a URL da sua aplicação?**
-2. **Que tipo de análise?** — Rápida (Nível 1) ou Completa (Nível 2)
+Se sua equipe disponibiliza o workflow **Segurança Lovable**, leia o escopo, selecione-o com `@` e combine as verificações com o responsável técnico. Não suponha que instalar o workflow autoriza testar sistemas de terceiros ou dados de outros usuários.
 
-## Níveis de análise
-
-| Nível | O que faz | Tempo | Créditos |
-|-------|-----------|-------|----------|
-| **Nível 1 — Rápida** | Verifica se dados estão expostos via API pública | Minutos | Baixo |
-| **Nível 2 — Completa** | Tudo do Nível 1 + cria conta real e testa como usuário malicioso | 15–30 min | Médio |
-
-Se não souber qual escolher: vá de Nível 1. O Nível 2 é recomendado para validar isolamento entre usuários.
-
-## O que o workflow verifica
-
-**Nível 1 — API:**
-- Supabase URL e anon key extraídos do JavaScript público
-- `service_role` key exposta no frontend (crítico imediato se encontrada)
-- Enumeração de tabelas via schema OpenAPI
-- Leitura anônima de dados sensíveis por tabela
-- Escrita anônima sem autenticação
-- Endpoints e mecanismo de login
-
-**Nível 2 — Usuário real (adicional ao Nível 1):**
-- Criação de conta real via browser
-- Acesso cruzado entre contas (tenant isolation)
-- Tentativa de leitura e escrita de dados de outros usuários
-- Escalada de privilégios via manipulação de JWT
-
-## Como os findings são classificados
-
-| Ícone | Classificação | Critério |
-|-------|--------------|----------|
-| 🔴 | **Confirmado** | Dados sensíveis reais vazaram ou escrita não autorizada funcionou |
-| 🟡 | **Precisa clarificação** | Pode ser problema ou comportamento esperado — o workflow pergunta antes de classificar |
-| ✅ | **Protegido** | Testado e funcionando como esperado |
-
-<Note>
-  Schema OpenAPI exposto e anon key pública são comportamento padrão do Supabase — não são findings. O workflow não os reporta como vulnerabilidades.
-</Note>
-
-## Exemplo de output
-
-![Relatório de pentest — Score de Segurança CRÍTICO](/images/use-cases/seguranca-pentest-output.png)
-
-*Exemplo real de relatório gerado pelo workflow: score de segurança, findings classificados (🔴 confirmado, 🟡 atenção, ✅ protegido) com evidências e recomendações de correção.*
-
-O workflow entrega um relatório estruturado com:
-
-- score de segurança geral por severidade
-- findings confirmados com evidência concreta
-- items que precisam de clarificação com contexto
-- lista do que está protegido e funcionando
-- recomendações de correção priorizadas
-
-## Veja também
-
-- [Casos de Uso — índice](/use-cases)
+[Usar o navegador](/support/browser) · [Permissões](/support/permissions) · [Organizar a revisão em um projeto](/support/projects)

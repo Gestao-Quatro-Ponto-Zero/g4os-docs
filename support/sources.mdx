@@ -1,59 +1,55 @@
 ---
-title: "Conexões"
-description: "Conecte e gerencie APIs, MCPs, pastas locais, conectores gerenciados e outras integrações reutilizáveis."
+title: "Conectar ferramentas"
+description: "Autentique seus serviços, escolha a conta certa e use os dados na sessão."
 ---
 
-## O que são conexões
+Uma conexão permite que o G4 OS consulte ou execute ações em um serviço, como e-mail, calendário, documentos ou CRM. Abra **Ferramentas > Conexões** para configurar o acesso no workspace atual.
 
-Conexões são integrações que dão acesso a dados, sistemas e contextos externos dentro do G4 OS.
+## Conectar um serviço do catálogo
 
-Em versões anteriores, essa área aparecia como `Fontes`. Na interface atual, ela fica dentro de `Ferramentas > Conexões`.
+<Steps>
+  <Step title="Encontre a integração">
+    Use a busca e o filtro **Gerenciadas**. Os itens do catálogo têm nomes como **G4 OS | Gmail** e **G4 OS | Notion**. Veja o [catálogo de conexões gerenciadas](/product/connections/managed-connections).
+  </Step>
+  <Step title="Abra o detalhe e autentique">
+    Se o item indicar **Autenticar**, abra o fluxo de conexão. No navegador, confira a conta, o serviço e as permissões solicitadas. Empresas podem exigir aprovação de um administrador.
+  </Step>
+  <Step title="Volte e confira o estado">
+    Depois de concluir no navegador, volte ao G4 OS. Verifique se a conexão aparece ativa. Se continuar pedindo autenticação, revise o aviso e tente reconectar.
+  </Step>
+  <Step title="Use na sessão">
+    Selecione a conexão com **@** ou pelo controle de ferramentas abaixo do campo de mensagem. Peça uma consulta simples para validar o acesso antes de montar um processo maior.
+  </Step>
+</Steps>
 
-## Tipos de conexão que a interface já expõe
+<Frame>
+  <img src="/images/guide/ferramentas.png" alt="Catálogo de conexões no G4 OS com filtros e estados de autenticação" />
+</Frame>
 
-- APIs
-- MCPs
-- pastas locais
-- conectores gerenciados
-- agentes G4, quando disponíveis no ambiente
+## Dizer qual conta e quais dados usar
 
-## O que você encontra na experiência de conexões
+Informe o serviço e o destino: “Use o calendário de trabalho para listar meus compromissos de amanhã” ou “Busque no Drive a pasta de planejamento e resuma o documento de prioridades”.
 
-- lista completa de integrações configuradas
-- filtros por tipo
-- status de conexão e autenticação
-- detalhe por fonte
-- ações de autenticação rápida, quando suportadas
-- atalho para abrir a pasta da fonte localmente
+Quando houver mais de uma conta, confirme qual delas está conectada. Entrar no Google para usar Gmail não significa que todas as outras integrações Google já estejam autorizadas.
 
-## Casos comuns
+## Entender os filtros
 
-- adicionar uma nova integração reutilizável
-- checar se uma conexão está conectada ou bloqueada
-- entender se o problema é de auth, runtime local ou configuração
-- separar rapidamente APIs, MCPs e pastas locais
+- **Todas:** o catálogo de conexões deste workspace.
+- **Ativas:** conexões prontas conforme o estado registrado pelo app.
+- **Gerenciadas:** integrações com configuração e autenticação guiadas.
+- **MCPs** e **APIs:** conexões adicionais, normalmente preparadas com ajuda técnica.
+- **Pastas locais:** diretórios do computador disponíveis como fonte de trabalho.
 
-## Caminhos no app
+Use **Adicionar conexão** quando precisar configurar algo fora do catálogo. Se a integração exige uma chave ou endereço técnico, peça os dados ao responsável pelo sistema e use os campos próprios de autenticação.
 
-- `Ferramentas > Conexões`
-- `Ferramentas > Conexões > APIs`
-- `Ferramentas > Conexões > MCPs`
-- `Ferramentas > Conexões > Pastas locais`
-- `Ferramentas > Conexões > Gerenciadas`
-- `Ferramentas > Conexões > Agentes`
+## Resolver problemas comuns
 
-## Deep links úteis
+| O que aconteceu | O que conferir |
+| --- | --- |
+| O serviço aparece, mas o agente não consegue usar | Autenticação e seleção da ferramenta na sessão |
+| A consulta trouxe outra conta ou calendário | Conta conectada e destino indicado no pedido |
+| Um arquivo não aparece | Permissões do usuário no serviço, pasta e referência do arquivo |
+| A conexão pede login novamente | Credencial expirada, conta desconectada ou nova permissão necessária |
+| Consultar funciona, alterar não | Capacidades daquela integração, permissões do serviço e modo da sessão |
 
-- [Abrir Conexões](g4os://sources)
-- [Abrir APIs](g4os://sources/api)
-- [Abrir MCPs](g4os://sources/mcp)
-- [Abrir Pastas Locais](g4os://sources/local)
-- [Abrir Agentes](g4os://sources/agent)
-- [Abrir Conectores Gerenciados](g4os://sources/g4-managed)
-- [Abrir Agentes G4](g4os://sources/g4-agents)
-
-## Dica prática
-
-Quando a dúvida é “essa integração existe no workspace?” ou “por que ela não está conectando?”, comece pela lista de conexões e só depois vá para a sessão específica.
-
-Veja também [Ferramentas](/support/tools), [Conexões](/product/connections) e [Conexões Gerenciadas](/product/connections/managed-connections).
+Uma conexão pode oferecer apenas parte das funções do serviço. Conectar o WhatsApp Business, por exemplo, não dá acesso ao histórico do WhatsApp pessoal. Para um fluxo pela interface de um site, consulte [Navegador e pesquisa](/support/browser).

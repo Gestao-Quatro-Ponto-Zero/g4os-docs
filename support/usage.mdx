@@ -1,123 +1,35 @@
 ---
-title: "Uso"
-description: "Acompanhe consumo de créditos e entenda como a política da empresa afeta seus limites no G4 OS."
+title: "Acompanhar o uso"
+description: "Confira créditos, período de consumo e limites da sua conta."
 ---
 
-## O que esta área mostra
+Abra **Configurações > Uso**. Antes de comparar valores, confira se a tela mostra **uso pessoal** ou o contexto de uma **empresa**.
 
-A página de `Uso` resume o consumo de créditos do workspace ativo dentro do G4 OS, exibindo limites, projeções e o detalhamento de como os créditos foram gastos no mês.
+## Ler os indicadores
 
-Em workspaces **vinculados a uma empresa**, a visão passa a refletir a política daquela empresa para o usuário logado: os limites exibidos são os definidos pela administração (política global ou grupo de política específico), e o consumo é calculado dentro desse contexto. Em workspaces **pessoais** sem vínculo empresarial, a página mostra consumo pessoal, plano ativo e opções de upgrade.
+A tela pode mostrar créditos consumidos, limite do período, evolução do uso e projeção. Limites diários aparecem quando a política da empresa os aplica. Créditos extras e sua validade podem aparecer separados do limite permanente.
 
-<img src="/images/support/uso.png" alt="Página de Uso — resumo do mês, ritmo vs. mês passado, projeção, breakdown por modelo e gráfico diário" />
+Confira as datas do ciclo exibido. Contas corporativas podem seguir a renovação da assinatura; não presuma que todo saldo será renovado no primeiro dia do mês.
 
-## Estrutura da página
+## O que consome créditos
 
-### Badge de escopo
+Recursos gerenciados usam créditos conforme o trabalho realizado. Modelo, raciocínio, quantidade de contexto e geração ou análise de mídia podem afetar o consumo. Pedidos auxiliares também podem fazer parte da tarefa.
 
-No topo, um badge indica se o consumo exibido é **pessoal** ou vinculado a uma **empresa gerenciada**. Quando vinculado a uma empresa, o nome da organização aparece ao lado do ícone.
+Conexões de IA próprias ou por assinatura externa seguem suas próprias condições e limites. A tela de créditos gerenciados não representa necessariamente toda a cobrança desses serviços.
 
-### Limites de uso
+## Quando chegar ao limite
 
-Os cartões mostram o consumo atual versus o limite configurado:
+Se uma nova execução for bloqueada, confira:
 
-| Campo | Descrição |
-|-------|-----------|
-| **Uso diário** | Créditos consumidos no dia corrente. Aparece quando há política diária de empresa. |
-| **Uso mensal** | Créditos consumidos no mês corrente. Reseta no início do próximo mês. |
+1. o contexto de uso e a conexão selecionada;
+2. o limite e o ciclo atual;
+3. eventuais créditos extras e expiração;
+4. a política da empresa, quando aplicável.
 
-Cada cartão exibe:
-- Créditos usados vs. limite (ex: `13,5 de 100 cr`)
-- Percentual restante
-- Barra de progresso com código de cor:
-  - **Normal** (< 80%): barra escura
-  - **Atenção** (80–99%): barra azul
-  - **Limite atingido** (≥ 100%): barra vermelha
+Para uso pessoal, consulte as opções de plano disponíveis. Em empresa, peça ao administrador para revisar limites ou conceder uso extra, quando permitido. O histórico não precisa ser apagado para resolver um bloqueio de consumo.
 
-Quando não há limite configurado, o campo mostra apenas o consumo sem indicador de percentual. Em contas pessoais, o limite diário fica oculto.
+## Usar com previsibilidade
 
-### Planos de assinatura
+Defina a saída esperada, consulte arquivos ou intervalos específicos e reutilize workflows e dashboards já revisados. Aumente o esforço de raciocínio quando o problema justificar, acompanhando o resultado e o consumo.
 
-Em contas pessoais, `Configurações > Uso` inclui a seção **Planos de assinatura**.
-
-| Plano | Créditos por mês | Preço |
-|-------|------------------|-------|
-| Gratuito | 10 cr | R$ 0/mês |
-| Pro | 250 cr | R$ 600/mês |
-| Max | 550 cr | R$ 1.200/mês |
-
-O Pro oferece 25 vezes os créditos do plano gratuito. O Max oferece 55 vezes os créditos do gratuito e 2,2 vezes os créditos do Pro.
-
-Ao selecionar um upgrade, o app exibe um checkout com o resumo do plano antes de seguir para pagamento.
-
-### Resumo do mês
-
-Dois cartões de análise são exibidos lado a lado:
-
-**Ritmo vs. mês passado**
-Compara o consumo atual com o mesmo período do mês anterior. Pode mostrar:
-- *Acima do ritmo* — consumo percentualmente maior que o mês anterior
-- *Abaixo do ritmo* — consumo percentualmente menor
-- *No ritmo* — consumo equivalente
-- *Sem histórico suficiente* — quando não há dados do mês anterior para comparar
-
-Inclui métricas de créditos, turnos e sessões do mês atual vs. mesmo dia do mês passado.
-
-**Projeção do mês**
-Estima o total de créditos que será consumido até o fim do mês com base no ritmo atual. Quando há limite configurado, exibe o percentual projetado em relação ao limite e alerta se a projeção ultrapassar o teto.
-
-### Onde seus créditos foram
-
-Exibe os modelos de IA mais utilizados no mês, com:
-- Nome do modelo
-- Créditos consumidos e percentual do total
-- Número de turnos
-
-Esta seção aparece apenas em contas pessoais ou quando há dados de uso por modelo disponíveis.
-
-### Consumo por dia
-
-Gráfico de barras com o consumo diário de créditos. Permite alternar entre o mês atual e o mês anterior para comparação visual. O totalizador de cada período é exibido acima do gráfico.
-
-> **Nota:** O gráfico considera apenas conexões gerenciadas.
-
-### Como isso se aplica
-
-Seção explicativa sobre o modelo de créditos:
-
-- Créditos são a única unidade exibida no app.
-- O uso pessoal continua disponível mesmo fora de um workspace vinculado a uma empresa.
-- Quando o workspace está vinculado a uma empresa e o usuário é gerenciado por ela, a tela **Gerenciar Empresa** passa a ser a fonte de verdade das sessões e limites.
-
-## Caminho no app
-
-- `Configurações > Uso`
-
-## Deep links úteis
-
-- [Abrir Uso](g4os://settings/usage)
-
-## Atualizar dados
-
-O botão de atualização (ícone de seta circular) no canto superior direito recarrega os dados de consumo sob demanda.
-
-## Quando os créditos acabam
-
-Se você ou sua empresa atingir o limite mensal configurado, o app bloqueia novas chamadas ao modelo em tempo de execução. A mensagem de erro aparece diretamente na sessão:
-
-> *Limite mensal de créditos atingido.*
-
-**O que acontece:**
-- Novas interações com o assistente ficam bloqueadas
-- Sessões e histórico permanecem acessíveis para leitura
-- O bloqueio é automaticamente removido no primeiro dia do mês seguinte
-
-**Em workspaces gerenciados**, o administrador da empresa pode conceder créditos adicionais, permitir overflow do pool corporativo ou ajustar o limite sem esperar o reset mensal. Entre em contato com o administrador da sua organização se precisar de acesso imediato.
-
-**Em contas pessoais**, você pode fazer upgrade de plano ou resgatar um cupom quando houver código disponível.
-
-## Veja também
-
-- [Planos e Créditos](/support/billing-subscriptions) — entenda os planos disponíveis, como resgatar cupons e o que são créditos extras
-- [Gerenciar Empresa](/support/empresa) — painel administrativo com visão consolidada do consumo da empresa, tabela de usuários e configuração de políticas
-- [Workspace](/support/workspace) — configuração de vínculo com Company Context
+[Abrir Uso](g4os://settings/usage) · [Planos e créditos](/support/billing-subscriptions) · [Políticas da empresa](/support/empresa)

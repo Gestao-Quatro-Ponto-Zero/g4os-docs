@@ -1,64 +1,28 @@
 ---
-title: "Agentes Gerenciados"
-description: "Catálogo atual de agentes gerenciados do G4 OS, com explicação curta do que cada agente faz melhor."
+title: "Agentes gerenciados"
+description: "Use capacidades de análise de mídia e geração disponíveis no catálogo."
 ---
 
-## O que são agentes gerenciados
+Agentes gerenciados são capacidades prontas oferecidas pelo G4 OS. Consulte o catálogo em **Ferramentas > Conexões**, no filtro de agentes, ou a área de **Agentes**.
 
-Agentes gerenciados são agentes prontos do catálogo do G4 OS.
+A disponibilidade depende da conta, da versão e do catálogo habilitado. A tela do app é a referência para saber quais capacidades você pode usar.
 
-Em vez de só conectar uma fonte, eles já entregam uma capacidade operacional específica, como entendimento multimodal, análise de documentos ou geração de imagens.
+| Agente | Exemplos de uso |
+| --- | --- |
+| **Google AI** | Analisar documentos e imagens, entender conteúdo de URLs e trabalhar com áudio ou vídeo nos formatos aceitos. |
+| **AWS Nova** | Analisar imagens e extrair informações de documentos, quando disponível. |
+| **GPT Image 2** | Gerar e editar imagens a partir de um pedido e referências, quando disponível. |
+| **Nano Banana** | Gerar imagens ou variações visuais, quando disponível. |
 
-<Warning>
-  **Beta:** Agentes gerenciados são uma funcionalidade beta e ainda não foram disponibilizados para todos os usuários. Se não aparecer a funcionalidade, aguarde atualizações futuras.
-</Warning>
+## Usar em uma tarefa
 
-## Onde aparecem no produto
+1. Confira o agente no catálogo e suas capacidades.
+2. Habilite o recurso na sessão quando necessário.
+3. Anexe o material ou indique a referência e descreva o resultado esperado.
+4. Revise o retorno, especialmente nomes, números e detalhes visuais.
 
-- `Ferramentas > Conexões > Agentes`
-- `Configurações > Agentes`
-- [Abrir Agentes G4](g4os://sources/g4-agents)
-- [Abrir Configurações de Agentes](g4os://settings/agents)
+> Analise este documento e extraia datas, responsáveis e entregas em uma tabela. Se uma informação não estiver legível, marque como não identificada.
 
-## Catálogo atual
+Para criar um especialista com seu próprio método de trabalho, use [agentes personalizados](/support/agents). Para escolher a IA principal da conversa, use [Configurações > IA](/support/ai).
 
-<Columns cols={2}>
-  <Card title="Google AI" icon="https://www.gstatic.com/images/branding/product/2x/gemini_48dp.png">
-    Entende texto, URLs, imagens, áudio, vídeo e documentos para análise multimodal e uso geral.
-  </Card>
-  <Card title="AWS Nova" icon="https://m.media-amazon.com/images/I/61-mzaOAb4L.png">
-    Analisa documentos e imagens com foco em tarefas estruturadas e apoio operacional. A disponibilidade pode variar por build e conta.
-  </Card>
-  <Card title="Nano Banana" icon="https://www.gstatic.com/images/branding/product/2x/gemini_48dp.png">
-    Gera imagens e variações criativas para ativos visuais. A disponibilidade pode variar por build e conta.
-  </Card>
-</Columns>
-
-## Quando faz sentido usar
-
-- quando você quer uma capacidade pronta de agente, e não só acesso a dados
-- quando o caso de uso pede multimodalidade, análise especializada ou geração
-- quando faz sentido usar um catálogo central administrado pelo produto
-
-## O que avaliar antes de usar em produção
-
-- se o agente está disponível no seu build e no seu workspace
-- quais arquivos e fontes ele pode acessar
-- se o fluxo precisa de revisão humana antes da execução final
-
-<Columns cols={2}>
-  <Card
-    title="Ver visão geral de conexões"
-    icon="plug"
-    href="/product/connections"
-  >
-    Volte para a visão comparativa entre gerenciadas, MCPs, APIs e agentes.
-  </Card>
-  <Card
-    title="Ver suporte de agentes"
-    icon="circle-help"
-    href="/support/agents"
-  >
-    Consulte a documentação da área de Agentes dentro do app.
-  </Card>
-</Columns>
+[Abrir agentes do catálogo](g4os://sources/g4-agents)

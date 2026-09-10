@@ -1,96 +1,36 @@
 ---
-title: "Gravação de Reunião"
-description: "Grave áudio do microfone em uma sessão, gere transcrição e resumo, e use o resultado como contexto para o agente."
+title: "Gravar uma reunião"
+description: "Transforme áudio do microfone em transcrição, resumo e próximos passos."
 ---
 
-<Warning>
-  **Beta:** Gravação de reunião pode depender de entitlement, build e disponibilidade do provedor gerenciado.
-</Warning>
+Abra uma sessão e use **Gravar reunião**, no **cabeçalho**. Ao encerrar, o G4 OS prepara a transcrição e o resumo para você continuar trabalhando na mesma conversa.
 
-## O que é
+<Note>O recurso está em beta e depende de disponibilidade na conta, acesso ao microfone e transcrição gerenciada.</Note>
 
-A gravação de reunião permite capturar áudio do microfone diretamente em uma sessão do G4 OS.
+## Antes de gravar
 
-Ao parar a gravação, o app salva os segmentos de áudio, transcreve o conteúdo, gera um resumo e adiciona os artefatos como contexto da sessão. Depois disso, você pode pedir ao agente para extrair decisões, tarefas, riscos, follow-ups ou materiais derivados.
+Avise os participantes e confirme que a gravação é apropriada. Verifique a permissão de microfone do G4 OS no sistema operacional.
 
-## O que a gravação captura
+A captura usa o **microfone**. Ela não inclui automaticamente o áudio do sistema ou todos os participantes de uma videoconferência. Teste a captação antes de depender dela para uma reunião importante.
 
-A implementação atual é **microfone-only**.
+## Gravar, encerrar e revisar
 
-Ela não captura áudio do sistema automaticamente. Se você precisa registrar todos os participantes de uma chamada, garanta que o microfone esteja capturando o áudio necessário ou use uma configuração externa adequada.
+1. Abra uma sessão dedicada à reunião e clique em **Gravar reunião**.
+2. Acompanhe o indicador de gravação.
+3. Encerre quando terminar e aguarde as etapas **Parando**, **Transcrevendo** e **Resumindo**.
+4. Abra a transcrição e o resumo disponíveis na sessão. Confira nomes, números, decisões e responsáveis.
+5. Peça o próximo resultado usando esse material.
 
-## Estados da gravação
+> Com base na transcrição, prepare uma ata com decisões, ações, responsáveis e prazos. Se o responsável ou o prazo não foi combinado, escreva “a definir”. Separe sugestões de decisões tomadas.
 
-| Estado | O que significa |
-|--------|-----------------|
-| Gravando | O app está capturando áudio do microfone |
-| Parando | A captura foi encerrada e o app está finalizando os arquivos |
-| Transcrevendo | O áudio salvo está sendo enviado para transcrição gerenciada |
-| Resumindo | A transcrição está sendo condensada em notas de reunião |
-| Gravação falhou | A captura, transcrição ou resumo encontrou erro |
+## Se já existe uma gravação
 
-Quando há falha, o app tenta preservar o que já foi salvo. Em alguns casos, é possível tentar transcrever novamente a gravação existente.
+Ao iniciar outra, o app pode oferecer transcrever novamente a existente, preservar os arquivos e gravar de novo, substituir a gravação ou cancelar. Escolha com cuidado: substituir envolve apagar a gravação anterior.
 
-## Artefatos gerados
+Se aparecer **Gravação falhou**, confira microfone, conexão e limites de uso. Verifique os arquivos já preservados antes de repetir a captura; quando disponível, tente transcrever novamente.
 
-Uma gravação concluída pode gerar:
+## Onde fica o resultado
 
-- segmentos de áudio gravados
-- `transcript.md` com a transcrição
-- `summary.md` com resumo, decisões, itens de ação e perguntas em aberto
-- `manifest.json` com estado da gravação
-- nota da sessão apontando para os arquivos
+A transcrição, o resumo e os arquivos de gravação ficam associados à sessão. Os textos podem entrar no [Cloud Sync](/support/cloud-sync), mas os segmentos brutos de áudio ficam fora dessa sincronização.
 
-O agente recebe uma referência interna para usar a transcrição completa quando o assunto da reunião for relevante.
-
-Quando a finalização termina, a sessão mostra uma mensagem de conclusão com os artefatos disponíveis. Use essa mensagem como ponto de partida para pedir resumo executivo, ata, próximos passos ou follow-up.
-
-## Ações nos arquivos
-
-Os arquivos gerados ficam associados à sessão. Quando disponíveis na interface, você pode abrir, copiar ou baixar os artefatos de texto para revisar fora do chat.
-
-Arquivos de áudio brutos devem ser tratados como material sensível. Compartilhe apenas quando necessário e prefira usar `transcript.md` ou `summary.md` para colaboração assíncrona.
-
-## Gravações existentes na mesma sessão
-
-Se a sessão já tem gravação salva, o G4 OS mostra um diálogo antes de iniciar outra.
-
-Você pode:
-
-- transcrever novamente a gravação existente
-- preservar os arquivos existentes e gravar de novo
-- apagar a gravação existente e substituir por uma nova
-- cancelar
-
-## Requisitos
-
-A gravação depende de:
-
-- permissão de microfone no sistema operacional
-- ambiente com `MediaRecorder` compatível
-- sessão autenticada no provedor gerenciado de transcrição
-- créditos ou política de uso suficiente quando a gravação consome recursos gerenciados
-
-Se o botão estiver bloqueado, confira permissão do microfone, disponibilidade do recurso e limites de uso.
-
-## Cloud Sync
-
-O Cloud Sync preserva a política text-only do workspace.
-
-Transcrição, resumo e manifest podem ser sincronizados como texto. Segmentos brutos de áudio não devem ser usados como mecanismo de sincronização entre dispositivos.
-
-## Caminho no app
-
-- Abra uma sessão
-- Use o botão `Gravar reunião` na área de input
-
-## Veja também
-
-<Columns cols={2}>
-  <Card title="Input por Voz" icon="mic" href="/product/voice-input">
-    Entenda a diferença entre ditado e gravação de reunião.
-  </Card>
-  <Card title="Uso" icon="chart-line" href="/support/usage">
-    Veja como limites e créditos podem afetar recursos gerenciados.
-  </Card>
-</Columns>
+[Ditado e Desk](/product/voice-input) · [Exemplo de preparação e ata](/use-cases/rotina/reunioes)

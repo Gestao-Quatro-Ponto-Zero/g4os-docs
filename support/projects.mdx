@@ -1,111 +1,36 @@
 ---
-title: "Projetos"
-description: "Crie, organize e acompanhe projetos com sessões, contexto, marcos e pessoas no workspace."
+title: "Organizar um projeto"
+description: "Reúna conversas, referências e marcos de uma iniciativa."
 ---
 
-## O que esta área cobre
+Abra **Projetos** na barra lateral. Um projeto reúne o trabalho de uma iniciativa dentro do workspace, como o planejamento do trimestre ou a revisão de um processo.
 
-`Projetos` é a área do G4 OS para organizar frentes de trabalho contínuas dentro do workspace.
+## Criar e começar
 
-Ela permite criar projetos pessoais ou de empresa, vincular sessões, registrar contexto, acompanhar marcos e manter pessoas associadas a uma iniciativa.
+1. Clique para criar um projeto e dê um nome que descreva a iniciativa.
+2. Escolha o escopo pessoal ou de empresa. O escopo de empresa exige vínculo e permissão.
+3. Inclua uma descrição com objetivo e limites do trabalho.
+4. Abra **Sessões** no projeto e crie a primeira conversa. Ela já fica vinculada à iniciativa.
 
-## Estrutura da tela
+Também é possível associar uma conversa existente pelo menu da sessão. Desvincular preserva a conversa; arquivar o projeto mantém seu histórico.
 
-A tela de Projetos tem uma visão de diretório e um detalhe para cada projeto.
+## O que guardar em cada aba
 
-No diretório, você encontra:
+| Aba | Como usar |
+| --- | --- |
+| **Sessões** | Separar as conversas de análise, planejamento e execução. |
+| **Contexto** | Registrar decisões e links de documentos que todas essas conversas precisam. |
+| **Marcos** | Acompanhar entregas, status e datas previstas. |
+| **Pessoas** | Gerenciar participantes e papéis nos projetos de empresa, conforme sua permissão. |
 
-- projetos ativos e arquivados
-- busca por nome e descrição
-- contadores de sessões, marcos, contexto e bloqueios
-- botão para criar novo projeto
+<Frame><img src="/images/guide/projeto-marcos.png" alt="Projeto fictício de planejamento do trimestre com um marco de alinhamento de prioridades" /></Frame>
 
-No detalhe de um projeto, as abas principais são:
+## Pedir ajuda ao agente
 
-| Aba | Para que serve |
-|-----|----------------|
-| Sessões | Abrir, criar, vincular e desvincular sessões do projeto |
-| Contexto | Guardar fatos, links e referências importantes |
-| Marcos | Criar e acompanhar milestones com status e data |
-| Pessoas | Registrar membros e papéis associados ao projeto |
+> Neste projeto, consulte as sessões vinculadas e as referências de contexto. Faça um resumo das decisões e indique quais marcos estão bloqueados. Cite de onde veio cada informação.
 
-## Criar um projeto
+A conversa precisa estar vinculada ao projeto correto. Para buscar em outro projeto, diga explicitamente qual é. Uma sessão nova não recebe automaticamente todo o histórico de todas as outras conversas.
 
-Ao criar um projeto, você define:
+Ao registrar contexto, prefira links de documentos e referências que os participantes consigam abrir. Um caminho de arquivo que só existe no seu computador não vira um documento compartilhado.
 
-- nome
-- escopo pessoal ou empresa
-- empresa vinculada, quando o workspace tem Company Context disponível
-- descrição opcional
-
-Projetos de empresa dependem das permissões do Company Context. Se a empresa não estiver disponível ou o usuário não tiver permissão, o app bloqueia a criação com uma mensagem específica.
-
-## Sessões do projeto
-
-Na aba **Sessões**, você pode:
-
-- criar uma nova sessão já vinculada ao projeto
-- abrir uma sessão vinculada existente
-- desvincular uma sessão sem apagar o histórico
-
-Desvincular uma sessão remove a associação com o projeto, mas preserva a sessão e o histórico.
-
-Agentes também podem usar ferramentas de projeto quando elas estão disponíveis na sessão. Eles podem listar projetos, ler detalhes do projeto atual, vincular a sessão aberta, atualizar marcos e criar links de contexto quando você pedir.
-
-Essas ferramentas são escopadas ao workspace e ao projeto selecionado. Buscar sessões de outro projeto exige seleção explícita para evitar misturar contexto.
-
-## Contexto do projeto
-
-Na aba **Contexto**, use links e fatos para registrar informações que precisam sobreviver a uma conversa específica.
-
-Exemplos:
-
-- decisão tomada
-- link de documento
-- referência de dashboard
-- resumo de uma restrição
-- fonte ou área responsável
-
-Evite salvar caminhos absolutos locais. Prefira URLs, nomes lógicos, referências de fonte ou caminhos portáteis dentro do workspace.
-
-## Marcos
-
-Marcos ajudam a transformar o projeto em acompanhamento operacional.
-
-Cada marco pode ter:
-
-- título
-- descrição
-- status
-- data prevista
-
-Use status para sinalizar progresso e bloqueios sem depender de uma sessão aberta.
-
-## Pessoas
-
-A aba **Pessoas** registra membros e papéis do projeto.
-
-Em projetos de empresa, a validação respeita o contexto empresarial. Emails que não pertencem à empresa ou membros sem permissão podem ser bloqueados pelo backend.
-
-## Caminho no app
-
-- Menu lateral > `Projetos`
-
-## Deep links úteis
-
-- [Abrir Projetos](g4os://projects)
-- `g4os://projects/project/{projectId}`
-- `g4os://projects/project/{projectId}/context`
-- `g4os://projects/project/{projectId}/milestones`
-- `g4os://projects/project/{projectId}/people`
-
-## Veja também
-
-<Columns cols={2}>
-  <Card title="Workspaces" icon="folder-tree" href="/product/workspaces">
-    Entenda como projetos vivem dentro de um workspace.
-  </Card>
-  <Card title="Company Context" icon="building-2" href="/support/company-context">
-    Veja como o vínculo com uma empresa afeta projetos de escopo empresarial.
-  </Card>
-</Columns>
+[Abrir Projetos no app](g4os://projects) · [Projetos e workspaces](/product/projects)

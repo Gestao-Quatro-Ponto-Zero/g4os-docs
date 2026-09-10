@@ -1,43 +1,30 @@
 ---
-title: "Skills"
-description: "Gerencie skills reutilizáveis que estendem o comportamento do G4 OS em fluxos recorrentes."
+title: "Skills: instruções reutilizáveis"
+description: "Ensine um padrão de trabalho que o G4 OS possa aplicar em tarefas semelhantes."
 ---
 
-## O que são skills
+Uma skill reúne orientações para um tipo de trabalho: revisar a escrita, preparar uma reunião, analisar dados ou seguir um padrão de apresentação. Assim você não precisa repetir as mesmas instruções em toda conversa.
 
-Skills são instruções reutilizáveis que podem ser aplicadas em tarefas específicas para orientar melhor o comportamento do agente.
+## Encontrar e usar
 
-Em versões anteriores, essa área podia aparecer como `Habilidades`. Na interface atual, ela fica dentro de `Ferramentas > Skills`.
+Abra **Ferramentas > Skills** e procure pelo nome ou descrição. No detalhe, leia quando usar e quais instruções serão aplicadas.
 
-## O que você encontra aqui
+O agente pode usar skills compatíveis com a tarefa. Para indicar uma explicitamente, selecione-a pelo menu **@** da sessão e complete o pedido com as referências necessárias.
 
-- lista de skills disponíveis no workspace
-- busca por nome, slug e descrição
-- abertura do detalhe da skill
-- envio de skill para outro workspace
-- ações de abrir no Finder ou por deep link, quando suportadas
+> “Use a skill de revisão de texto neste comunicado. Preserve os fatos e deixe claro o que o leitor precisa fazer.”
 
-## Casos comuns
+## Criar uma skill sua
 
-- revisar uma skill antes de usá-la em produção
-- organizar skills por área ou fluxo
-- reutilizar uma mesma skill em múltiplos workspaces
-- encontrar rapidamente uma skill específica pelo slug
+Peça em uma sessão:
 
-## Caminho no app
+> “Crie uma skill para revisar nossos comunicados internos. Use português simples, preserve datas e responsáveis e termine com a ação esperada do leitor. Mostre as instruções antes de salvar.”
 
-- `Ferramentas > Skills`
+Revise o texto no detalhe da skill e teste em um exemplo. Inclua instruções que continuam úteis em tarefas futuras; deixe dados de uma análise específica na própria sessão.
 
-## Deep links úteis
+Também é possível instalar recursos pelo [Marketplace](/support/marketplace). Confira o autor, a descrição e as referências exigidas antes de usar.
 
-- [Abrir Skills](g4os://skills)
+## Skill, agente ou workflow?
 
-## Observação
+Use uma skill para um padrão de execução. Use um [agente salvo](/support/agents) quando precisar de um especialista com função e configuração próprias. Use um [workflow](/support/workflows) para iniciar um roteiro completo.
 
-O detalhe de uma skill específica também pode ser aberto por deep link, no formato:
-
-```text
-g4os://skills/skill/<slug-da-skill>
-```
-
-Veja também [Ferramentas](/support/tools) e [Workflows](/support/workflows).
+Uma skill não autentica conexões nem altera permissões da sessão. Se faltar acesso, revise [Conexões](/support/sources) e [Permissões](/support/permissions).

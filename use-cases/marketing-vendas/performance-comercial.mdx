@@ -1,84 +1,40 @@
 ---
-title: "Performance Comercial"
-description: "Analise conversão por vendedor, perfil de lead, ciclo de venda e ranking de time comercial com um dataset de exemplo pronto para uso no G4 OS."
+title: "Revisar a operação comercial"
+description: "Compare resultados por equipe e contexto, com métricas rastreáveis."
 ---
 
-## O que este caso de uso cobre
+O G4 OS pode ajudar a encontrar gargalos no funil comercial. Use os resultados para investigar processos e oportunidades de apoio, considerando diferenças de carteira e volume.
 
-Análise de **performance do time comercial** com granularidade em nível de deal individual — conversão por vendedor, perfil do lead por origem, ciclo de venda e ramp de novos vendedores. O G4 OS processa mais de 38 mil registros, gera rankings e gráficos Mermaid comparativos.
+## Preparar o arquivo
 
-## Dataset de exemplo
+[Baixar planilha de exemplo](https://raw.githubusercontent.com/Gestao-Quatro-Ponto-Zero/g4os-docs/main/use-cases/datasets/nexus_performance_comercial.xlsx). Abra uma sessão e anexe o arquivo pelo clipe. Você pode fazer o exercício sem conectar contas da empresa.
 
-<Card
-  title="nexus_performance_comercial.xlsx"
-  icon="table"
-  href="https://raw.githubusercontent.com/Gestao-Quatro-Ponto-Zero/g4os-docs/main/use-cases/datasets/nexus_performance_comercial.xlsx"
->
-  Baixar dataset — 38.213 deals individuais + ranking de vendedores (3.3 MB, 4 abas)
-</Card>
+O arquivo de exemplo contém estas abas:
 
-### O que tem dentro
+| Aba | Conteúdo |
+| --- | --- |
+| **Deals Individuais** | 38.213 oportunidades com status, equipe, perfil e tempo no funil. |
+| **Ranking Vendedores** | 360 registros mensais agregados. |
+| **Análise por Perfil** | Comparações por perfil, canal e produto. |
+| **Resumo por Equipe** | Indicadores mensais das equipes. |
 
-**4 abas:**
+<Note>Os subtítulos desses arquivos antigos podem indicar um período diferente das células. Peça ao agente para conferir o período nas linhas, separar totais e relatar inconsistências antes de calcular. Use o material como exercício, não como referência de desempenho real.</Note>
 
-| Aba | Conteúdo | Linhas |
-|-----|----------|--------|
-| `Deals Individuais` | Um registro por deal com vendedor e resultado | 38.213 |
-| `Ranking Vendedores` | Vendedor × mês com métricas agregadas | 360 |
-| `Perfil de Lead` | Breakdown de perfil por origem de canal | série mensal |
-| `Ramp Vendedores` | Curva de ramp de novos vendedores | por contratação |
+## Pedido para copiar
 
-**Campos principais:**
+> Analise a planilha comercial anexada. Valide o período e use Deals Individuais como base, conferindo os resumos separadamente. Compare conversão, ticket dos ganhos e tempo no funil por equipe, produto e origem. Mostre volume e denominador de cada taxa, separe oportunidades em aberto e sinalize amostras pequenas. Entregue um resumo executivo com três perguntas para investigar. Não infira curva de ramp sem datas de entrada dos vendedores.
 
-| Campo | Descrição |
-|-------|-----------|
-| `vendedor` | Nome do vendedor (anonimizado) |
-| `equipe` | Time de vendas (Inside Sales, Selfcheckout, etc.) |
-| `origem_lead` | Canal que gerou o lead |
-| `perfil_lead` | Segmento do lead |
-| `produto` | Produto negociado |
-| `status` | Ganho / Perdido / Em andamento |
-| `motivo_perda` | Motivo de perda quando aplicável |
-| `ciclo_dias` | Dias do primeiro contato ao fechamento |
-| `ticket` | Valor do deal |
 
-## Abrir no G4 OS
+[Preparar este pedido no G4 OS](g4os://action/new-session?name=Revisar+a+opera%C3%A7%C3%A3o+comercial&input=Analise+a+planilha+comercial+anexada.+Valide+o+per%C3%ADodo+e+use+Deals+Individuais+como+base%2C+conferindo+os+resumos+separadamente.+Compare+convers%C3%A3o%2C+ticket+dos+ganhos+e+tempo+no+funil+por+equipe%2C+produto+e+origem.+Mostre+volume+e+denominador+de+cada+taxa%2C+separe+oportunidades+em+aberto+e+sinalize+amostras+pequenas.+Entregue+um+resumo+executivo+com+tr%C3%AAs+perguntas+para+investigar.+N%C3%A3o+infira+curva+de+ramp+sem+datas+de+entrada+dos+vendedores.&mode=ask)
 
-<Card
-  title="Analisar performance comercial no G4 OS"
-  icon="sparkles"
-  href="g4os://action/new-session?input=Faca+o+download+do+dataset+nexus_performance_comercial.xlsx+em+https%3A%2F%2Fraw.githubusercontent.com%2FGestao-Quatro-Ponto-Zero%2Fg4os-docs%2Fmain%2Fuse-cases%2Fdatasets%2Fnexus_performance_comercial.xlsx+e+execute%3A+%281%29+carregue+as+4+abas%2C+%282%29+calcule+taxa+de+conversao+e+ticket+medio+por+vendedor%2C+%283%29+compare+performance+por+perfil+de+lead+e+origem%2C+%284%29+gere+um+grafico+Mermaid+de+barras+com+ranking+dos+top+10+vendedores+por+receita%2C+%285%29+analise+ciclo+de+venda+por+produto+e+equipe%2C+%286%29+gere+grafico+de+linha+com+curva+de+ramp+media+dos+vendedores%2C+%287%29+entregue+ranking+executivo+com+insights+e+pontos+de+atencao+por+vendedor.&send=true&mode=execute&workdir=none"
->
-  Abrir sessão — executa automaticamente no modo Execute
-</Card>
+O link preenche uma nova sessão em **Perguntar**. Revise o texto, anexe os arquivos necessários e envie quando estiver pronto.
 
-### O que o G4 OS faz ao abrir
+## Conferir o resultado
 
-1. Baixa e processa as 4 abas do dataset
-2. Calcula taxa de conversão e ticket médio por vendedor
-3. Compara performance por perfil de lead e origem
-4. Gera ranking Mermaid dos top 10 vendedores por receita
-5. Analisa ciclo de venda por produto e equipe
-6. Gera curva de ramp média dos vendedores
-7. Entrega ranking executivo com insights e pontos de atenção
+Confira se a taxa de conversão usa oportunidades encerradas ou todas as oportunidades: a escolha muda a interpretação. Ticket de ganhos não deve incluir zeros de negócios perdidos.
 
-## Análises possíveis com este dataset
+O arquivo não tem uma aba de ramp nem datas de contratação suficientes para medir tempo até produtividade. Nomes como “Vendedor 01” são aliases do exercício; não trate o ranking como avaliação conclusiva de pessoas.
 
-- **Ranking de vendedores** — por volume, conversão e ticket médio simultaneamente
-- **Qualidade por origem** — quais canais geram leads com melhor taxa de fechamento
-- **Ciclo de venda** — produtos e perfis com ciclo mais curto e mais longo
-- **Motivos de perda** — o que impede o fechamento e como varia por equipe
-- **Curva de ramp** — quanto tempo leva para um novo vendedor atingir produtividade plena
-- **Sazonalidade comercial** — quais meses concentram mais deals ganhos e perdidos
+## Continuar o trabalho
 
-## Exemplo de output
-
-![Curva de ramp — Receita Mensal Média por mês de mandato](/images/use-cases/comercial-curva-ramp.png)
-
-*Curva de ramp gerada pelo G4 OS: receita mensal média por mês de mandato (barras) com média móvel de 4 meses (linha azul), mostrando o tempo até atingir produtividade plena.*
-
-## Veja também
-
-- [Funil de Marketing](/use-cases/marketing-vendas/funil-marketing) — de onde vêm os leads que entram no pipeline
-- [Cohort de Receita](/use-cases/marketing-vendas/cohort-receita) — retenção dos clientes fechados por cada equipe
-- [Churn e Retenção](/use-cases/marketing-vendas/churn-retencao) — correlação entre vendedor/origem e churn futuro
+Reúna a análise em um [projeto](/support/projects), registre as perguntas pendentes e prepare a [reunião de acompanhamento](/use-cases/rotina/reunioes).
