@@ -1,42 +1,36 @@
 ---
-title: "IA"
-description: "Modelos, thinking, conexões com provedores e comportamento padrão de IA no G4 OS."
+title: "Escolher a IA"
+description: "Defina conexão, modelo e esforço de raciocínio para suas tarefas."
 ---
 
-## O que esta área controla
+Abra **Configurações > IA** para definir os padrões de novas conversas. Você também pode configurar um padrão diferente para cada workspace.
 
-A tela de `IA` concentra os padrões globais de execução ligados a modelos e conexões com provedores.
+## Conexão, modelo e raciocínio
 
-## O que você encontra aqui
+| Escolha | O que muda |
+| --- | --- |
+| **Conexão** | A conta ou serviço que fornece a IA, com suas condições de acesso e consumo. |
+| **Modelo** | A IA que conduz a conversa. O catálogo depende da conexão e da conta. |
+| **Raciocínio** | Quanto esforço o modelo dedica antes de responder, entre as opções que ele suporta. |
 
-- conexão padrão usada pelo app
-- modelo padrão associado à conexão
-- nível de thinking padrão
-- overrides por workspace
-- lista de conexões configuradas
-- ações como renomear conexão e revisar credenciais
+Na conexão gerenciada, a seleção **automática** usa um perfil para escolher o modelo. Escolher um modelo específico mantém uma escolha explícita. Para começar, use o padrão disponível; aumente o raciocínio quando a tarefa exigir comparar alternativas ou resolver uma análise complexa.
 
-## Casos comuns
+## Durante uma sessão
 
-- trocar o provedor padrão usado nas sessões
-- mudar o modelo principal de trabalho
-- ajustar o thinking padrão para equilibrar velocidade e profundidade
-- revisar se uma conexão está pronta para uso
-- corrigir credenciais ou reconfigurar uma conexão existente
+Antes da primeira mensagem, confira a conexão. **Depois de iniciar a conversa, a conexão fica fixa**; abra outra sessão para usar outra conexão. O modelo e o raciocínio podem ser ajustados entre mensagens nas opções disponíveis no seletor.
 
-## Como pensar esta página
+Alterar o padrão em Configurações não troca retroativamente a IA de todas as sessões existentes.
 
-`IA` define a base operacional do produto. Se o problema é “qual modelo ou qual provedor o G4 OS está usando”, normalmente a resposta está aqui.
+## Contexto longo e opções avançadas
 
-## Caminho no app
+A opção de **contexto estendido** aparece quando disponível para a conexão gerenciada. Vale para novas sessões e escolhas explícitas de modelos compatíveis; pode elevar o consumo. Não é necessário ativá-la para uma primeira tarefa.
 
-- `Configurações > IA`
+O **uso otimizado de tokens** fica em [Configurações do App](/support/app-settings) e também depende da compatibilidade da sessão. **OS Mode**, quando oferecido na sessão, é uma opção experimental de trabalho com contexto e arquivos; não substitui [permissões](/support/permissions).
 
-## Deep links úteis
+Perfis premium, Pro e níveis mais altos de raciocínio dependem de acesso e podem consumir mais. Confira o que a interface oferece e o [uso da conta](/support/usage), em vez de assumir que o nome do modelo determina seu plano.
 
-- [Abrir IA](g4os://settings/ai)
-- [Abrir Configurações do App](g4os://settings)
+## Quando algo falhar
 
-## Dica prática
+Se a conexão exigir login ou credencial, reconfigure-a nesta tela. Se um modelo não aparecer, confira a conexão selecionada e o acesso da conta. Uma conexão com Gmail ou CRM fica em Ferramentas e não resolve o login do provedor de IA.
 
-Se um workspace precisa de comportamento diferente do padrão global, use os overrides por workspace em vez de alterar a base para toda a instalação.
+[Abrir IA](g4os://settings/ai) · [Conexões de trabalho](/support/sources)

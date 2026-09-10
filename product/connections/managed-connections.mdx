@@ -1,151 +1,89 @@
 ---
-title: "Conexões Gerenciadas"
-description: "Catálogo atual de conexões gerenciadas do G4 OS, com explicação curta do que cada integração permite fazer."
+title: "Catálogo de conexões gerenciadas"
+description: "Veja os serviços disponíveis e exemplos de trabalho que você pode pedir."
 ---
 
-## O que são conexões gerenciadas
+Abra **Ferramentas > Conexões > Gerenciadas**. O catálogo abaixo foi conferido na revisão de setembro de 2026 e reúne 38 conexões. A disponibilidade e as ações efetivas dependem da conta, das permissões do serviço e da versão instalada.
 
-Conexões gerenciadas são integrações prontas do catálogo do G4 OS.
+Os nomes aparecem no app com o prefixo **G4 OS |**. Para conectar, siga o [passo a passo](/support/sources). Os pedidos abaixo são exemplos; revise o resultado antes de usá-lo.
 
-Elas reduzem o trabalho manual de configuração, porque o produto já cuida de partes importantes como autenticação, reconexão, status e experiência de uso dentro da sessão.
+## Google: e-mail, agenda e documentos
 
-## Indicador de provedor na sessão
+| Conexão | Para que usar | Exemplo de pedido |
+| --- | --- | --- |
+| Gmail | Buscar e ler e-mails, preparar rascunhos, enviar e responder mensagens | “Resuma as mensagens de hoje deste cliente e prepare uma resposta sem enviar.” |
+| Google Calendar | Consultar agenda e disponibilidade; criar e ajustar eventos | “Encontre horários livres para uma reunião de 30 minutos amanhã.” |
+| Google Tasks | Trabalhar com listas e tarefas | “Liste minhas tarefas pendentes nesta lista.” |
+| Google Drive | Localizar arquivos e consultar informações e conteúdo suportado | “Encontre o documento de planejamento desta pasta.” |
+| Google Docs | Trabalhar com documentos e texto | “Revise o documento indicado e sugira uma introdução mais curta.” |
+| Google Chat | Consultar espaços e trabalhar com mensagens | “Resuma as decisões recentes deste espaço.” |
+| Google Sheets | Ler e alterar planilhas e intervalos | “Compare realizado e meta na aba Resumo.” |
+| Google Slides | Trabalhar com apresentações e seus elementos | “Leia esta apresentação e identifique slides com texto repetido.” |
+| Google Meet | Consultar reuniões, participantes, gravações e transcrições disponíveis | “Localize a transcrição da reunião indicada e separe as decisões.” |
+| Google Analytics | Consultar propriedades e relatórios | “Compare as visitas deste mês com o mês anterior.” |
+| Google Search Console | Consultar desempenho de pesquisa, sites, sitemaps e situação de URLs | “Mostre as páginas que mais perderam cliques no período.” |
 
-Quando o G4 OS está operando com o provedor gerenciado ativo, o seletor de modelo na área de input exibe o hint **"G4 Managed Provider by AWS"**.
+A conexão Google Meet acessa registros disponibilizados pela sua conta; ela não cria retroativamente uma gravação. Para registrar uma reunião pelo computador, veja [Gravação de reunião](/support/meeting-recording).
 
-Esse indicador aparece automaticamente em builds públicas do G4 OS sempre que uma conexão gerenciada está sendo usada — sem necessidade de configuração adicional. O objetivo é dar transparência ao usuário sobre qual provedor está processando as requisições da sessão atual.
+## Microsoft: trabalho no Microsoft 365
 
-## Onde aparecem no produto
+| Conexão | Para que usar | Exemplo de pedido |
+| --- | --- | --- |
+| Microsoft Outlook Email | Buscar e ler e-mails, preparar rascunhos, enviar e responder | “Prepare um resumo das mensagens desta pasta.” |
+| Microsoft Outlook Calendar | Consultar agenda e disponibilidade; criar e ajustar eventos | “Liste os compromissos da semana e identifique conflitos.” |
+| Microsoft 365 Planner | Trabalhar com planos, agrupamentos e tarefas | “Liste tarefas atrasadas deste plano.” |
+| Microsoft OneDrive | Localizar e trabalhar com arquivos e pastas | “Encontre o relatório na pasta de operações.” |
+| Microsoft SharePoint - Básico | Consultar sites, listas e arquivos, com acesso de leitura | “Leia esta lista e resuma os itens pendentes.” |
+| Microsoft SharePoint - Administrador | Operações ampliadas sobre estrutura, listas, arquivos e permissões | “Mostre como a biblioteca está organizada antes de propor alterações.” |
+| Microsoft Teams - Básico | Consultar times, canais, pessoas e chats, somente para leitura | “Resuma as mensagens desta conversa.” |
 
-- `Ferramentas > Conexões > Gerenciadas`
-- Indicador **"G4 Managed Provider by AWS"** no seletor de modelo da área de input (durante sessões ativas)
-- [Abrir Conexões Gerenciadas](g4os://sources/g4-managed)
+**Básico** e **Administrador** são opções distintas. Use o acesso que corresponde ao trabalho e à política da sua empresa. O Teams Básico não oferece envio de mensagens.
 
-## Quando vale começar por aqui
+## Gestão de trabalho e colaboração
 
-- quando você quer conectar ferramentas conhecidas com o menor atrito possível
-- quando o time precisa de uma integração estável sem montar infraestrutura própria
-- quando você quer velocidade para colocar a operação no ar
+| Conexão | Para que usar | Exemplo de pedido |
+| --- | --- | --- |
+| Asana | Projetos e tarefas | “Liste os bloqueios do projeto e seus responsáveis.” |
+| ClickUp | Espaços, listas, tarefas, documentos, comentários e registros de tempo | “Faça um resumo do andamento desta lista.” |
+| GitHub | Repositórios, tarefas registradas e propostas de alteração | “Explique em linguagem simples o andamento destas entregas.” |
+| Linear | Tarefas, iniciativas e projetos | “Resuma os itens do projeto previstos para esta semana.” |
+| Jira | Projetos, quadros, ciclos de trabalho e tarefas | “Mostre o que está bloqueado neste ciclo.” |
+| Notion | Páginas, bases de dados e busca | “Encontre o guia de onboarding e faça um resumo.” |
+| Slack | Canais, mensagens e conversas | “Reúna decisões e perguntas pendentes desta conversa.” |
+| Trello | Quadros e cartões | “Liste cartões sem responsável na lista indicada.” |
 
-Hoje, o catálogo padrão do G4 OS reúne `27 conexões gerenciadas`.
+## Clientes e atendimento
 
-## Catálogo atual
+| Conexão | Para que usar | Exemplo de pedido |
+| --- | --- | --- |
+| HubSpot - Básico | Operações essenciais de CRM e consultas de marketing, vendas e atendimento | “Liste os negócios desta etapa e suas próximas atividades.” |
+| HubSpot - Administrador | Operações ampliadas de CRM, conteúdo, marketing e workflows | “Revise a configuração deste fluxo e explique o que ele faz.” |
+| Pipedrive | Negócios e contatos | “Mostre negócios sem atividade recente neste funil.” |
+| Salesforce | Objetos, registros, buscas e ações comerciais | “Resuma as oportunidades abertas desta equipe.” |
+| Zendesk | Tickets, usuários, organizações, comentários e recursos de atendimento | “Agrupe os tickets do período por motivo de contato.” |
+| Supabase | Principalmente consulta a dados | “Consulte os indicadores desta tabela com os filtros informados.” |
 
-### Google
+O Salesforce pode exigir preparação da organização e aprovação administrativa. Abra o guia apresentado pelo app antes de repetir tentativas de login.
 
-<Columns cols={2}>
-  <Card title="Gmail" icon="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico">
-    Buscar, ler, responder e enviar e-mails do Gmail.
-  </Card>
-  <Card title="Google Calendar" icon="https://calendar.google.com/googlecalendar/images/favicons_2020q4/calendar_31.ico">
-    Consultar agenda, disponibilidade e criar ou atualizar eventos.
-  </Card>
-  <Card title="Google Tasks" icon="https://fonts.gstatic.com/s/i/productlogos/tasks/v1/192px.svg">
-    Listar, organizar e atualizar tarefas e listas do Google Tasks.
-  </Card>
-  <Card title="Google Drive" icon="https://drive.google.com/favicon.ico">
-    Buscar arquivos, navegar pastas e acessar conteúdo compatível no Drive.
-  </Card>
-  <Card title="Google Docs" icon="https://pipedream.com/s.v0/app_1pbh98/logo/orig">
-    Criar, ler e editar documentos do Google Docs.
-  </Card>
-  <Card title="Google Chat" icon="https://fonts.gstatic.com/s/i/productlogos/chat_2020q4/v2/192px.svg">
-    Consultar conversas e apoiar fluxos de comunicação dentro do Google Chat.
-  </Card>
-  <Card title="Google Sheets" icon="https://fonts.gstatic.com/s/i/productlogos/sheets_2020q4/v9/192px.svg">
-    Ler, atualizar e organizar dados em planilhas do Google Sheets.
-  </Card>
-  <Card title="Google Slides" icon="https://fonts.gstatic.com/s/i/productlogos/slides_2020q4/v6/192px.svg">
-    Acessar apresentações e trabalhar com conteúdo no Google Slides.
-  </Card>
-  <Card title="Google Analytics" icon="https://pipedream.com/s.v0/app_mJQh5A/logo/orig">
-    Consultar métricas e apoiar análises de tráfego e performance.
-  </Card>
-</Columns>
+## Conteúdo, pesquisa e formulários
 
-### Microsoft
+| Conexão | Para que usar | Exemplo de pedido |
+| --- | --- | --- |
+| Instagram | Contas Business ou Creator, publicações, comentários, métricas e mensagens suportadas | “Compare o desempenho das publicações desta semana.” |
+| YouTube | Canal, vídeos, playlists e comentários | “Liste os vídeos recentes do canal conectado.” |
+| YouTube (Composio) | Outra conexão de YouTube, com catálogo próprio de ações | “Compare as métricas destes vídeos pela conexão selecionada.” |
+| WhatsApp | WhatsApp Business: números, modelos aprovados, mídia e mensagens | “Liste os modelos de mensagem disponíveis nesta conta Business.” |
+| Typeform | Formulários e respostas | “Resuma as respostas deste formulário no período.” |
+| Figma | Arquivos de design, imagens, comentários, componentes e variáveis | “Leia os comentários deste arquivo e agrupe os ajustes pedidos.” |
 
-<Columns cols={2}>
-  <Card title="Microsoft Outlook Email" icon="https://res.cdn.office.net/files/fabric-cdn-prod_20230815.001/assets/brand-icons/product/svg/outlook_32x1.svg">
-    Buscar, ler, responder e enviar e-mails do Outlook.
-  </Card>
-  <Card title="Microsoft Outlook Calendar" icon="https://res.cdn.office.net/files/fabric-cdn-prod_20230815.001/assets/brand-icons/product/svg/outlook_32x1.svg">
-    Consultar agenda, disponibilidade e gerenciar eventos do Outlook Calendar.
-  </Card>
-  <Card title="Microsoft Teams" icon="https://res.cdn.office.net/files/fabric-cdn-prod_20230815.001/assets/brand-icons/product/svg/teams_32x1.svg">
-    Apoiar fluxos de comunicação e colaboração no Microsoft Teams.
-  </Card>
-  <Card title="Microsoft 365 Planner" icon="https://pipedream.com/s.v0/app_vNh2Q5/logo/orig">
-    Acompanhar, criar e atualizar planos, buckets e tarefas no Microsoft 365 Planner.
-  </Card>
-  <Card title="Microsoft OneDrive" icon="https://res.cdn.office.net/files/fabric-cdn-prod_20241209.001/assets/brand-icons/product/svg/onedrive_48x1.svg">
-    Buscar arquivos e acessar conteúdo armazenado no OneDrive.
-  </Card>
-  <Card title="Microsoft SharePoint" icon="https://res.cdn.office.net/files/fabric-cdn-prod_20241209.001/assets/brand-icons/product/svg/sharepoint_48x1.svg">
-    Consultar bibliotecas, documentos e contexto em ambientes SharePoint.
-  </Card>
-</Columns>
+As duas conexões YouTube são alternativas identificadas separadamente no app. Confira qual está autenticada. **WhatsApp** neste catálogo é a integração Business; para usar a interface do WhatsApp Web, veja [WhatsApp no navegador](/support/whatsapp-browser).
 
-### Operação e colaboração
+## Limites que afetam o uso
 
-<Columns cols={2}>
-  <Card title="Asana" icon="https://pipedream.com/s.v0/app_OVWhPX/logo/orig">
-    Acompanhar tarefas, projetos e fluxos operacionais no Asana.
-  </Card>
-  <Card title="GitHub" icon="https://github.githubassets.com/favicons/favicon.svg">
-    Consultar repositórios, PRs, issues e contexto de engenharia.
-  </Card>
-  <Card title="Linear" icon="https://linear.app/static/favicon.svg">
-    Trabalhar com issues, projetos e rotina operacional no Linear.
-  </Card>
-  <Card title="Jira" icon="https://wac-cdn.atlassian.com/assets/img/favicons/atlassian/favicon.png">
-    Acompanhar tickets, status e fluxo de trabalho no Jira.
-  </Card>
-  <Card title="Notion" icon="https://pipedream.com/s.v0/app_X7Lhxr/logo/orig">
-    Buscar páginas, bases e documentação operacional no Notion.
-  </Card>
-  <Card title="Pipedrive" icon="https://www.pipedrive.com/favicon.ico">
-    Consultar pipeline, negócios e contexto comercial no Pipedrive.
-  </Card>
-  <Card title="Slack" icon="https://a.slack-edge.com/80588/marketing/img/meta/slack_hash_128.png">
-    Apoiar comunicação operacional e consulta de contexto no Slack.
-  </Card>
-  <Card title="Supabase" icon="https://pipedream.com/s.v0/app_1dBhP3/logo/orig">
-    Trabalhar com dados e operações técnicas em projetos Supabase.
-  </Card>
-  <Card title="Trello" icon="https://trello.com/favicon.ico">
-    Acompanhar quadros, cards e organização de trabalho no Trello.
-  </Card>
-  <Card title="HubSpot" icon="https://pipedream.com/s.v0/app_OkrhlP/logo/orig">
-    Trabalhar com CRM, contatos, empresas e negócios no HubSpot.
-  </Card>
-  <Card title="Salesforce" icon="https://pipedream.com/s.v0/app_OrZhD7/logo/orig">
-    Consultar objetos, registros e apoiar ações comerciais no Salesforce.
-  </Card>
-  <Card title="YouTube" icon="https://pipedream.com/s.v0/app_XKvhQ3/logo/orig">
-    Acessar vídeos, playlists, comentários e dados do canal via YouTube.
-  </Card>
-</Columns>
+- Conectar um serviço não amplia as permissões do seu usuário naquele sistema.
+- Um login pode precisar ser renovado quando a conta é desconectada ou novas permissões são exigidas.
+- Algumas integrações devolvem apenas informações ou texto de anexos; um arquivo binário pode precisar ser anexado diretamente à sessão.
+- Envio de e-mail com arquivos preparados na sessão tem limite total de anexos: **3 MB no Gmail** e **2,8 MB no Outlook Email** nesta integração. Se não couber, prepare outra forma de entrega.
+- Senhas, códigos de autenticação e tokens devem ser tratados nos campos próprios do fluxo, sem incluí-los em exemplos ou compartilhamentos.
 
-## Como usar esse catálogo
-
-- escolha primeiro as integrações que concentram decisão e execução no seu dia a dia
-- conecte poucas fontes no início, mas com uso real
-- amplie o catálogo conforme os fluxos começarem a depender de contexto externo
-
-<Columns cols={2}>
-  <Card
-    title="Ver visão geral de conexões"
-    icon="plug"
-    href="/product/connections"
-  >
-    Volte para a visão comparativa entre gerenciadas, MCPs, APIs e agentes.
-  </Card>
-  <Card
-    title="Ver suporte de conexões"
-    icon="headset"
-    href="/support/sources"
-  >
-    Consulte os caminhos da interface e os deep links da aba Conexões.
-  </Card>
-</Columns>
+Para uma capacidade que não aparece aqui, consulte o detalhe da conexão e peça ao G4 OS que verifique o que está disponível. [Navegador e pesquisa](/support/browser) explica quando uma tarefa pede interação com o site.

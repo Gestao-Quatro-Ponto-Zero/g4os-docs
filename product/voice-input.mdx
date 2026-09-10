@@ -1,63 +1,34 @@
 ---
-title: "Input por Voz"
-description: "Dite mensagens e grave reuniões diretamente no G4 OS para transformar fala em contexto de trabalho."
+title: "Voz: ditado, Desk e reuniões"
+description: "Escolha entre ditar uma mensagem, conversar por voz e registrar uma reunião."
 ---
 
-<Warning>
-  **Beta:** Input por voz e gravação de reunião são funcionalidades beta e ainda não foram disponibilizadas para todos os usuários. Se não aparecer a funcionalidade, aguarde atualizações futuras.
-</Warning>
+O G4 OS oferece recursos de voz para situações diferentes.
 
-## Fale em vez de digitar
+| Quero… | Recurso | Onde abrir |
+| --- | --- | --- |
+| Falar uma mensagem e revisar antes de enviar | **Ditar** | Microfone junto ao campo de mensagem |
+| Conversar por voz e acompanhar trabalho | **Desk** | Botão de voz no canto inferior direito |
+| Registrar uma reunião para consultar depois | **Gravar reunião** | Cabeçalho de uma sessão |
 
-O G4 OS permite usar voz como entrada em sessões. Em vez de digitar uma instrução longa, você pode falar e transformar áudio em texto ou contexto de trabalho.
+## Ditar uma mensagem
 
-Existem dois usos diferentes:
+Clique em **Ditar**, fale e finalize a captura conforme os controles exibidos. Revise o texto transcrito no campo de mensagem antes de enviar. Isso é útil para pedidos longos quando você prefere falar a digitar.
 
-- **input por voz** para ditar uma mensagem no campo da sessão
-- **gravação de reunião** para salvar áudio do microfone, gerar transcrição e produzir um resumo como artefato da sessão
+## Conversar com o Desk
 
-## Onde o input por voz aparece
+O Desk mantém uma conversa por voz e pode ajudar a retomar sessões e encaminhar trabalho no workspace. Ele tem controles próprios de microfone, reprodução de voz e encerramento.
 
-### Freeform input
+[Veja o guia do Desk](/support/desk).
 
-No campo de texto padrão das sessões, o ícone de microfone ativa a escuta ao vivo. Enquanto você fala, o texto vai sendo preenchido. Ao terminar, é só enviar normalmente.
+## Gravar uma reunião
 
-Útil para:
+Abra a sessão em que deseja guardar o registro e use **Gravar reunião**. Depois da finalização, aproveite a transcrição para pedir uma ata, decisões ou próximos passos.
 
-- instruções longas que seriam trabalhosas de digitar
-- brainstorming rápido
-- ditar rascunhos e contextos extensos
+[Veja como gravar e revisar uma reunião](/support/meeting-recording).
 
-### Gravar reunião
+## Se o microfone não funcionar
 
-O G4 OS também permite iniciar a gravação de uma reunião diretamente pela sessão. O áudio é transcrito em tempo real e o resultado fica disponível como contexto para o agente trabalhar.
+Confira a permissão de microfone do G4 OS nas configurações do sistema, a entrada de áudio escolhida e a disponibilidade do recurso na sua conta. Captura de áudio do computador pode ter requisitos adicionais conforme o sistema operacional.
 
-Útil para:
-
-- capturar decisões e próximos passos sem precisar anotar
-- criar resumos automáticos após a reunião
-- alimentar o contexto de uma sessão com o que foi discutido
-
-Na implementação atual, a gravação de reunião captura o **microfone**. Ela salva segmentos de áudio, gera `transcript.md`, cria um resumo e disponibiliza esses arquivos para a sessão. Se já existir uma gravação na mesma sessão, o app pergunta se você quer transcrever novamente, preservar arquivos existentes, substituir ou cancelar.
-
-## Requisitos
-
-Input por voz e gravação de reunião podem exigir entitlement específico, permissão de microfone e disponibilidade do provedor gerenciado. Se a funcionalidade não aparecer ou estiver bloqueada, confira permissões do sistema, limites de uso e disponibilidade para sua conta.
-
-<Card
-  title="Ver sessões"
-  icon="messages"
-  href="/product/sessions"
-  horizontal
->
-  Entenda como o contexto capturado por voz se integra ao histórico de cada sessão.
-</Card>
-
-<Card
-  title="Ver gravação de reunião"
-  icon="mic"
-  href="/support/meeting-recording"
-  horizontal
->
-  Veja estados, artefatos, retry e cuidados de Cloud Sync para gravações.
-</Card>
+Recursos de voz podem enviar áudio para processamento e consumir créditos. Consulte os avisos do recurso e [Privacidade e dados](/product/privacy-and-data).

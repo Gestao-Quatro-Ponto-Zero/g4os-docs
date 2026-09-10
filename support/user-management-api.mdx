@@ -1,79 +1,27 @@
 ---
-title: "User Management API"
-description: "Referência operacional para endpoints de suporte a usuários e vínculos com empresas."
+title: "Acesso e gestão de pessoas"
+description: "Resolva dúvidas de login, vínculo com a empresa e permissões de um membro."
 ---
 
-<Note>
-  Esta página é voltada a fluxos operacionais de suporte. O acesso exige chave de API configurada e User-Agent permitido.
-</Note>
+Para gerenciar pessoas no app, use **Empresa > Pessoas**. Esta página substitui a antiga referência técnica de API por orientações para usuários e administradores.
 
-## Autenticação
+## Não consigo entrar
 
-Requisições para a User Management API exigem:
+Confira o e-mail informado e procure a mensagem de código de login, inclusive na pasta de spam. Use o fluxo de reenvio disponível na tela. Nunca compartilhe um código de login com outra pessoa ou em um chamado público.
 
-- header `X-API-Key` com a chave operacional configurada
-- header `User-Agent` com um identificador permitido
+Se o erro indicar bloqueio, conta não autorizada ou limite de tentativas, guarde a mensagem e procure o suporte. Repetir pedidos de código continuamente pode não resolver o problema.
 
-O valor `g4-engineering` é aceito como fallback quando configurado no ambiente operacional.
+## Minha empresa não aparece
 
-## Enviar código de login
+1. Confirme se entrou com o e-mail associado à organização.
+2. Abra **Configurações > Workspace > Company Context**.
+3. Peça ao administrador para conferir seu vínculo em **Empresa > Pessoas**.
+4. Depois de corrigido o acesso, atualize a tela e escolha a empresa correta.
 
-```http
-POST /api/users/:email/send-login-code
-```
+## Sou administrador
 
-Dispara o mesmo fluxo de OTP por email usado pela tela de login gerenciado do desktop.
+Confira membro, estado de acesso, papel e áreas permitidas. Acesso de membro, gestor de uma área e administrador da empresa têm alcances diferentes. Ao retirar acesso, leia o efeito da ação apresentada e preserve o histórico necessário.
 
-Comportamento esperado:
+Para provisionamento em grande volume ou integração com sistemas de identidade, envolva a equipe responsável pelo ambiente e o suporte. Não é necessário usar uma API para as ações normais da tela de Pessoas.
 
-- cria o usuário quando necessário, seguindo o onboarding gerenciado
-- retorna `sent: true` quando o provedor aceita a entrega
-- preserva erros estruturados para diferenciar rate limit, endereço não autorizado e signup desabilitado
-
-Exemplo de resposta:
-
-```json
-{
-  "ok": true,
-  "email": "ana@example.com",
-  "sent": true
-}
-```
-
-## Memberships de usuário
-
-```http
-GET /api/users/:identifier/memberships
-```
-
-Lista empresas de Company Context vinculadas a um usuário. `:identifier` pode ser email ou id de usuário Supabase.
-
-Quando a consulta usa id Supabase, a resolução depende do mapa de identidade persistido. Se ainda não houver registro de identidade, o endpoint pode retornar `404`.
-
-### Parâmetros de query
-
-| Parâmetro | Padrão | Descrição |
-|-----------|--------|-----------|
-| `includeDomainMatches` | `true` | Inclui empresas ativas cujo domínio permite auto-join para o email do usuário, mesmo sem materializar membro. |
-| `includeRemoved` | `true` | Inclui registros explícitos removidos para diferenciar acesso removido de ausência de vínculo. |
-
-### Resposta
-
-A resposta traz o usuário resolvido, lista de memberships, filtros aplicados e metadados da resolução.
-
-Campos importantes em cada membership:
-
-- `company`: id, slug, nome e status da empresa
-- `status`: estado do vínculo
-- `type`: tipo de associação
-- `membershipSource`: origem do vínculo, como explícita ou domínio
-- `materialized`: indica se há registro materializado de membro
-- `isCompanyAdmin`: indica se o usuário é admin da empresa
-- `grants`: permissões ou nós de contexto associados
-
-Use esse endpoint para suporte, auditoria operacional e diagnóstico de acesso ao Company Context.
-
-## Veja também
-
-- [Company Context](/support/company-context)
-- [Gerenciar Empresa](/support/empresa)
+[Área Empresa](/support/empresa) · [Company Context](/support/company-context) · [Resolver problemas](/support/repair-mode)

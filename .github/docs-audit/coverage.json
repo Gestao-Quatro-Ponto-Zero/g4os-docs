@@ -1,0 +1,1476 @@
+{
+  "reviewDate": "2026-09-10",
+  "productCommit": "ec67bc01c66cb290efe0d7f6fc6e4fa88caad664",
+  "docsBaseCommit": "33c8636f43ea7ea46abeacc1e37bb9f7e9edc041",
+  "scope": "Documentação pública em português para usuários não técnicos. Matriz interna de evidências, não promessa de teste E2E de integrações externas.",
+  "sourceOfTruth": {
+    "routes": "apps/electron/src/shared/routes.ts",
+    "settings": "apps/electron/src/shared/settings-registry.ts",
+    "navigationVariants": "apps/electron/src/shared/contracts/shell-navigation.ts",
+    "shortcuts": "apps/electron/src/renderer/actions/definitions.ts"
+  },
+  "viewBuilders": {
+    "allSessions": {
+      "pages": [
+        "product/sessions",
+        "support/labels"
+      ],
+      "coverage": "Lista, detalhe da sessão, busca, favoritas, arquivadas, estados e filtros; não inventa editor de visões ausente da navegação."
+    },
+    "flagged": {
+      "pages": [
+        "product/sessions",
+        "support/labels"
+      ],
+      "coverage": "Lista, detalhe da sessão, busca, favoritas, arquivadas, estados e filtros; não inventa editor de visões ausente da navegação."
+    },
+    "archived": {
+      "pages": [
+        "product/sessions",
+        "support/labels"
+      ],
+      "coverage": "Lista, detalhe da sessão, busca, favoritas, arquivadas, estados e filtros; não inventa editor de visões ausente da navegação."
+    },
+    "state": {
+      "pages": [
+        "product/sessions",
+        "support/labels"
+      ],
+      "coverage": "Lista, detalhe da sessão, busca, favoritas, arquivadas, estados e filtros; não inventa editor de visões ausente da navegação."
+    },
+    "view": {
+      "pages": [
+        "product/sessions",
+        "support/labels"
+      ],
+      "coverage": "Lista, detalhe da sessão, busca, favoritas, arquivadas, estados e filtros; não inventa editor de visões ausente da navegação."
+    },
+    "projectSessions": {
+      "pages": [
+        "product/sessions",
+        "support/projects"
+      ],
+      "coverage": "Conversas vinculadas a projetos, lista e detalhe."
+    },
+    "label": {
+      "pages": [
+        "support/labels",
+        "product/sessions"
+      ],
+      "coverage": "Tags hierárquicas, aplicação, regras e filtro; inclui seleção no compositor."
+    },
+    "sources": {
+      "pages": [
+        "support/sources",
+        "product/connections/managed-connections"
+      ],
+      "coverage": "Lista, filtros de tipo/status/provedor, detalhe, conectar/reconectar e remover."
+    },
+    "sourcesActive": {
+      "pages": [
+        "support/sources",
+        "product/connections/managed-connections"
+      ],
+      "coverage": "Lista, filtros de tipo/status/provedor, detalhe, conectar/reconectar e remover."
+    },
+    "sourcesApi": {
+      "pages": [
+        "support/sources",
+        "product/connections/managed-connections"
+      ],
+      "coverage": "Lista, filtros de tipo/status/provedor, detalhe, conectar/reconectar e remover."
+    },
+    "sourcesMcp": {
+      "pages": [
+        "support/sources",
+        "product/connections/managed-connections"
+      ],
+      "coverage": "Lista, filtros de tipo/status/provedor, detalhe, conectar/reconectar e remover."
+    },
+    "sourcesLocal": {
+      "pages": [
+        "support/sources",
+        "product/connections/managed-connections"
+      ],
+      "coverage": "Lista, filtros de tipo/status/provedor, detalhe, conectar/reconectar e remover."
+    },
+    "sourcesManaged": {
+      "pages": [
+        "support/sources",
+        "product/connections/managed-connections"
+      ],
+      "coverage": "Lista, filtros de tipo/status/provedor, detalhe, conectar/reconectar e remover."
+    },
+    "sourcesAgents": {
+      "pages": [
+        "product/connections/managed-agents",
+        "product/agents"
+      ],
+      "coverage": "Agentes gerenciados, seleção e distinção do agente principal."
+    },
+    "sourcesG4Agents": {
+      "pages": [
+        "product/connections/managed-agents",
+        "product/agents"
+      ],
+      "coverage": "Agentes gerenciados, seleção e distinção do agente principal."
+    },
+    "sourcesG4CustomAgent": {
+      "pages": [
+        "support/agents"
+      ],
+      "coverage": "Criar, editar e invocar agente personalizado via @."
+    },
+    "sourcesG4CustomAgentCreate": {
+      "pages": [
+        "support/agents"
+      ],
+      "coverage": "Criar, editar e invocar agente personalizado via @."
+    },
+    "companyContext": {
+      "pages": [
+        "support/empresa",
+        "support/context",
+        "support/company-context",
+        "support/user-management-api"
+      ],
+      "coverage": "Todas as abas COMPANY_TABS; aliases antigos redirecionam para contexto e uso."
+    },
+    "businessManagement": {
+      "pages": [
+        "support/empresa",
+        "support/context",
+        "support/company-context",
+        "support/user-management-api"
+      ],
+      "coverage": "Todas as abas COMPANY_TABS; aliases antigos redirecionam para contexto e uso."
+    },
+    "company": {
+      "pages": [
+        "support/empresa",
+        "support/context",
+        "support/company-context",
+        "support/user-management-api"
+      ],
+      "coverage": "Todas as abas COMPANY_TABS; aliases antigos redirecionam para contexto e uso."
+    },
+    "sharedBrain": {
+      "pages": [
+        "support/shared-brain"
+      ],
+      "coverage": "Visão geral, memórias e sincronização; raízes, nós, confirmação de escrita e recuperação."
+    },
+    "skills": {
+      "pages": [
+        "support/skills",
+        "support/marketplace"
+      ],
+      "coverage": "Lista/detalhe, criação, edição e instalação."
+    },
+    "workflows": {
+      "pages": [
+        "support/workflows",
+        "support/marketplace"
+      ],
+      "coverage": "Lista/detalhe, edição, entradas, fontes e invocação @ com compatibilidade /slug."
+    },
+    "dashboards": {
+      "pages": [
+        "support/dashboards"
+      ],
+      "coverage": "Lista/detalhe, criar, abrir, atualizar dados e preservar layout."
+    },
+    "apps": {
+      "pages": [
+        "support/apps",
+        "product/slides"
+      ],
+      "coverage": "Lista/detalhe, inicialização local, Studio e exportação PDF."
+    },
+    "projects": {
+      "pages": [
+        "support/projects",
+        "product/projects"
+      ],
+      "coverage": "Lista/detalhe, sessões, referências, marcos e pessoas de projetos de empresa."
+    },
+    "marketplace": {
+      "pages": [
+        "support/marketplace"
+      ],
+      "coverage": "Skills/workflows, detalhes, instalação, versões, vínculo, autoria e publicação."
+    },
+    "marketplaceOwned": {
+      "pages": [
+        "support/marketplace"
+      ],
+      "coverage": "Skills/workflows, detalhes, instalação, versões, vínculo, autoria e publicação."
+    },
+    "scheduler": {
+      "pages": [
+        "support/automation",
+        "product/automation"
+      ],
+      "coverage": "Agendamentos pontuais/recorrentes, vigias, criar/editar, modelos e histórico."
+    },
+    "schedulerJobs": {
+      "pages": [
+        "support/automation",
+        "product/automation"
+      ],
+      "coverage": "Agendamentos pontuais/recorrentes, vigias, criar/editar, modelos e histórico."
+    },
+    "schedulerJobsCreate": {
+      "pages": [
+        "support/automation",
+        "product/automation"
+      ],
+      "coverage": "Agendamentos pontuais/recorrentes, vigias, criar/editar, modelos e histórico."
+    },
+    "schedulerWatchers": {
+      "pages": [
+        "support/automation",
+        "product/automation"
+      ],
+      "coverage": "Agendamentos pontuais/recorrentes, vigias, criar/editar, modelos e histórico."
+    },
+    "schedulerWatchersCreate": {
+      "pages": [
+        "support/automation",
+        "product/automation"
+      ],
+      "coverage": "Agendamentos pontuais/recorrentes, vigias, criar/editar, modelos e histórico."
+    },
+    "schedulerRecommended": {
+      "pages": [
+        "support/automation",
+        "product/automation"
+      ],
+      "coverage": "Agendamentos pontuais/recorrentes, vigias, criar/editar, modelos e histórico."
+    },
+    "schedulerMode": {
+      "pages": [
+        "support/automation",
+        "product/automation"
+      ],
+      "coverage": "Agendamentos pontuais/recorrentes, vigias, criar/editar, modelos e histórico."
+    },
+    "settings": {
+      "pages": [
+        "support/index"
+      ],
+      "coverage": "Subpáginas enumeradas no campo settings; entradas de compatibilidade separadas da navegação visível."
+    }
+  },
+  "actionBuilders": {
+    "newSession": {
+      "pages": [
+        "getting-started/quickstart",
+        "support/permissions",
+        "use-cases/index"
+      ],
+      "coverage": "Ação explicada pelo controle da interface. Parâmetros internos não são um tutorial de API."
+    },
+    "renameSession": {
+      "pages": [
+        "product/sessions"
+      ],
+      "coverage": "Ação explicada pelo controle da interface. Parâmetros internos não são um tutorial de API."
+    },
+    "deleteSession": {
+      "pages": [
+        "product/sessions"
+      ],
+      "coverage": "Ação explicada pelo controle da interface. Parâmetros internos não são um tutorial de API."
+    },
+    "flagSession": {
+      "pages": [
+        "product/sessions"
+      ],
+      "coverage": "Ação explicada pelo controle da interface. Parâmetros internos não são um tutorial de API."
+    },
+    "unflagSession": {
+      "pages": [
+        "product/sessions"
+      ],
+      "coverage": "Ação explicada pelo controle da interface. Parâmetros internos não são um tutorial de API."
+    },
+    "oauth": {
+      "pages": [
+        "support/sources"
+      ],
+      "coverage": "Ação explicada pelo controle da interface. Parâmetros internos não são um tutorial de API."
+    },
+    "addSource": {
+      "pages": [
+        "support/sources"
+      ],
+      "coverage": "Ação explicada pelo controle da interface. Parâmetros internos não são um tutorial de API."
+    },
+    "deleteSource": {
+      "pages": [
+        "support/sources"
+      ],
+      "coverage": "Ação explicada pelo controle da interface. Parâmetros internos não são um tutorial de API."
+    },
+    "setPermissionMode": {
+      "pages": [
+        "support/permissions"
+      ],
+      "coverage": "Ação explicada pelo controle da interface. Parâmetros internos não são um tutorial de API."
+    },
+    "copyToClipboard": {
+      "pages": [
+        "product/sessions"
+      ],
+      "coverage": "Ação explicada pelo controle da interface. Parâmetros internos não são um tutorial de API."
+    }
+  },
+  "routeVariants": {
+    "company": [
+      "overview",
+      "context",
+      "context-structure",
+      "people",
+      "usage",
+      "extra-usage",
+      "use-audit",
+      "policies",
+      "requests"
+    ],
+    "projects": [
+      "sessions",
+      "context",
+      "milestones",
+      "people"
+    ],
+    "sharedBrain": [
+      "overview",
+      "memory",
+      "sync"
+    ],
+    "marketplace": [
+      "skill",
+      "workflow"
+    ],
+    "schedulerMode": [
+      "scheduled-jobs",
+      "vigia"
+    ],
+    "sources": [
+      "api",
+      "mcp",
+      "local",
+      "agent"
+    ],
+    "sourceProviders": [
+      "g4-agents",
+      "g4-managed"
+    ]
+  },
+  "settings": {
+    "app": {
+      "pages": [
+        "support/app-settings",
+        "support/input"
+      ]
+    },
+    "ai": {
+      "pages": [
+        "support/ai"
+      ]
+    },
+    "appearance": {
+      "pages": [
+        "support/appearance"
+      ]
+    },
+    "input": {
+      "pages": [
+        "support/input",
+        "support/app-settings"
+      ],
+      "visibility": "Compatibilidade; oculta da lista principal. Entrada foi incorporada ao App; atalhos abrem referência."
+    },
+    "workspace": {
+      "pages": [
+        "support/workspace"
+      ]
+    },
+    "usage": {
+      "pages": [
+        "support/usage",
+        "support/billing-subscriptions"
+      ]
+    },
+    "permissions": {
+      "pages": [
+        "support/permissions"
+      ]
+    },
+    "labels": {
+      "pages": [
+        "support/labels"
+      ]
+    },
+    "sync": {
+      "pages": [
+        "support/cloud-sync"
+      ]
+    },
+    "shared-brain": {
+      "pages": [
+        "support/shared-brain"
+      ],
+      "visibility": "Compatibilidade; oculta da lista principal. Entrada foi incorporada ao App; atalhos abrem referência."
+    },
+    "support": {
+      "pages": [
+        "support/index",
+        "support/repair-mode"
+      ]
+    },
+    "shortcuts": {
+      "pages": [
+        "support/shortcuts"
+      ],
+      "visibility": "Compatibilidade; oculta da lista principal. Entrada foi incorporada ao App; atalhos abrem referência."
+    },
+    "preferences": {
+      "pages": [
+        "support/preferences"
+      ]
+    }
+  },
+  "keyboardActions": [
+    {
+      "id": "app.newChat",
+      "hotkey": "mod+n",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "app.settings",
+      "hotkey": "mod+,",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "app.toggleTheme",
+      "hotkey": "mod+shift+a",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "app.search",
+      "hotkey": "mod+f",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "app.keyboardShortcuts",
+      "hotkey": "mod+/",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "app.newWindow",
+      "hotkey": "mod+shift+n",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "app.quit",
+      "hotkey": "mod+q",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "nav.focusSidebar",
+      "hotkey": "mod+1",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "nav.focusSessionList",
+      "hotkey": "mod+2",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "nav.focusChat",
+      "hotkey": "mod+3",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "nav.nextZone",
+      "hotkey": "tab",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "nav.goBack",
+      "hotkey": "mod+[",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "nav.goForward",
+      "hotkey": "mod+]",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "nav.goBackAlt",
+      "hotkey": "mod+left",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "nav.goForwardAlt",
+      "hotkey": "mod+right",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "view.toggleSidebar",
+      "hotkey": "mod+b",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "view.toggleFocusMode",
+      "hotkey": "mod+.",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "sessionList.selectAll",
+      "hotkey": "mod+a",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "sessionList.clearSelection",
+      "hotkey": "escape",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "chat.stopProcessing",
+      "hotkey": "escape",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "chat.cyclePermissionMode",
+      "hotkey": "shift+tab",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "chat.nextSearchMatch",
+      "hotkey": "mod+g",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "chat.prevSearchMatch",
+      "hotkey": "mod+shift+g",
+      "pages": [
+        "support/shortcuts"
+      ]
+    }
+  ],
+  "additionalCommands": {
+    "desk": "mod+shift+j",
+    "search": [
+      "Enter",
+      "Shift+Enter"
+    ],
+    "composer": [
+      "@",
+      "#",
+      ">",
+      "/safe",
+      "/ask",
+      "/allow-all",
+      "/workflow-slug (compatibility)"
+    ],
+    "telegram": [
+      "/start",
+      "/help",
+      "/pair",
+      "/sessions",
+      "/use",
+      "/new",
+      "/status",
+      "/stop",
+      "/unbind",
+      "/unbind all"
+    ]
+  },
+  "managedConnections": [
+    {
+      "slug": "g4os-gmail",
+      "name": "Gmail",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-google-calendar",
+      "name": "Google Calendar",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-google-tasks",
+      "name": "Google Tasks",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-outlook-email",
+      "name": "Microsoft Outlook Email",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-outlook-calendar",
+      "name": "Microsoft Outlook Calendar",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-google-drive",
+      "name": "Google Drive",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-google-docs",
+      "name": "Google Docs",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-google-chat",
+      "name": "Google Chat",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-google-sheets",
+      "name": "Google Sheets",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-google-slides",
+      "name": "Google Slides",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-microsoft-planner",
+      "name": "Microsoft 365 Planner",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-microsoft-onedrive",
+      "name": "Microsoft OneDrive",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-google-analytics",
+      "name": "Google Analytics",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-youtube",
+      "name": "YouTube",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-asana",
+      "name": "Asana",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-github",
+      "name": "GitHub",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-linear",
+      "name": "Linear",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-jira",
+      "name": "Jira",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-notion",
+      "name": "Notion",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-hubspot",
+      "name": "HubSpot - Básico",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-hubspot-admin",
+      "name": "HubSpot - Administrador",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-pipedrive",
+      "name": "Pipedrive",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-salesforce",
+      "name": "Salesforce",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-slack",
+      "name": "Slack",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-supabase",
+      "name": "Supabase",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-trello",
+      "name": "Trello",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-microsoft-teams",
+      "name": "Microsoft Teams - Básico",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-instagram",
+      "name": "Instagram",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-youtube-composio",
+      "name": "YouTube (Composio)",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-clickup",
+      "name": "ClickUp",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-google-meet",
+      "name": "Google Meet",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-whatsapp",
+      "name": "WhatsApp",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-google-search-console",
+      "name": "Google Search Console",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-microsoft-sharepoint",
+      "name": "Microsoft SharePoint - Básico",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-sharepoint-composio",
+      "name": "Microsoft SharePoint - Administrador",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-typeform",
+      "name": "Typeform",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-figma",
+      "name": "Figma",
+      "page": "product/connections/managed-connections"
+    },
+    {
+      "slug": "g4os-zendesk",
+      "name": "Zendesk",
+      "page": "product/connections/managed-connections"
+    }
+  ],
+  "features": [
+    {
+      "feature": "Onboarding e workspace",
+      "pages": [
+        "getting-started/create-workspace",
+        "getting-started/quickstart",
+        "product/workspaces"
+      ],
+      "source": "apps/electron/src/renderer",
+      "verification": "UI: criação completa em workspace fictício",
+      "note": "Sem conectar fontes ou importar o conteúdo de outro workspace."
+    },
+    {
+      "feature": "Ferramentas e Apps",
+      "pages": [
+        "support/tools",
+        "support/apps"
+      ],
+      "source": "apps/electron/src/renderer/features/tools-area/tools-area-model.ts",
+      "verification": "UI e código",
+      "note": "Oito áreas; Apps não é o Marketplace."
+    },
+    {
+      "feature": "Compositor, menções e permissões",
+      "pages": [
+        "support/shortcuts",
+        "support/workflows",
+        "support/agents",
+        "support/permissions"
+      ],
+      "source": "apps/electron/src/renderer/components/app-shell/input/hooks/useComposerInlineMenus.ts",
+      "verification": "UI e código",
+      "note": "@, #, > e /; seleção de Slides observada antes do pedido."
+    },
+    {
+      "feature": "Comandos operacionais",
+      "pages": [
+        "support/shortcuts"
+      ],
+      "source": "apps/electron/src/renderer/components/ui/slash-command-menu.tsx",
+      "verification": "Código e interface",
+      "note": "safe, ask, allow-all; Pro e diretório condicionais."
+    },
+    {
+      "feature": "Entregáveis nativos e prévias",
+      "pages": [
+        "product/outputs",
+        "product/workbooks",
+        "product/slides",
+        "product/sites"
+      ],
+      "source": "apps/electron/src/renderer/features/output-workspace",
+      "verification": "UI e código",
+      "note": "Criou, abriu, alterou célula, revisou diff e salvou planilha nativa. Criou e abriu apresentação no Studio. Menus de exportação conferidos; sem enviar/publicar."
+    },
+    {
+      "feature": "Desk",
+      "pages": [
+        "support/desk",
+        "product/voice-input"
+      ],
+      "source": "apps/electron/src/renderer/features/voice-input/desk/DeskVoicePanel.tsx",
+      "verification": "UI do painel sem microfone e código",
+      "note": "Não iniciou captura de voz. Ações de encerrar e minimizar conferidas no código."
+    },
+    {
+      "feature": "Gravação de reunião",
+      "pages": [
+        "support/meeting-recording"
+      ],
+      "source": "apps/electron/src/renderer/features/meeting-recording/useMeetingRecording.ts",
+      "verification": "Controle visível e código",
+      "note": "Microfone, estados, recuperação; sem gravar pessoas."
+    },
+    {
+      "feature": "Telegram",
+      "pages": [
+        "support/telegram-messaging"
+      ],
+      "source": "apps/electron/src/main/telegram-gateway/index.ts",
+      "verification": "Código",
+      "note": "/start /help /pair /sessions /use /new /status /stop /unbind e /unbind all. Sem parear bot nem enviar mensagens."
+    },
+    {
+      "feature": "Navegador, pesquisa e WhatsApp Web",
+      "pages": [
+        "support/browser",
+        "support/whatsapp-browser"
+      ],
+      "source": "apps/electron/resources/docs/browser-tools.md",
+      "verification": "Interface do navegador e referência do produto",
+      "note": "Sem ler conversas privadas do WhatsApp ou enviar mensagens."
+    },
+    {
+      "feature": "Arquivos Office e referências",
+      "pages": [
+        "product/outputs",
+        "product/workbooks",
+        "product/slides",
+        "use-cases/rotina/documentos"
+      ],
+      "source": "apps/electron/resources/docs/office-files.md",
+      "verification": "Referência do produto, código e exemplos nativos",
+      "note": "Diferencia arquivo exportado, prévia e entrega nativa; limitações de fórmulas e importação."
+    },
+    {
+      "feature": "Conexões gerenciadas",
+      "pages": [
+        "product/connections/managed-connections",
+        "product/integrations",
+        "support/sources"
+      ],
+      "source": "packages/shared/src/sources/managed-connectors.ts",
+      "verification": "Catálogo exportado do código e UI",
+      "note": "38 conectores; nenhuma autenticação, leitura privada ou escrita externa para validar exemplos."
+    },
+    {
+      "feature": "Compartilhamento, colaboração e controle remoto",
+      "pages": [
+        "support/sharing",
+        "support/collaborative-session",
+        "support/remote-control"
+      ],
+      "source": "apps/electron/resources/docs/capabilities.md",
+      "verification": "Menu da sessão, componentes e contratos",
+      "note": "Distingue link publicado, sala e computador executor. Sem gerar acesso público a sessões reais."
+    },
+    {
+      "feature": "IA, uso, créditos e privacidade",
+      "pages": [
+        "support/ai",
+        "support/usage",
+        "support/billing-subscriptions",
+        "product/privacy-and-data",
+        "product/security"
+      ],
+      "source": "apps/electron/src/renderer/pages/settings",
+      "verification": "Código, traduções e referência do produto",
+      "note": "Sem tabela fixa de preços/saldos. Distingue armazenamento local, envio ao provedor, serviços gerenciados e compartilhamento."
+    },
+    {
+      "feature": "Brain e memória",
+      "pages": [
+        "support/shared-brain"
+      ],
+      "source": "docs/shared-brain/README.md",
+      "verification": "Tela, documentação e contratos",
+      "note": "Aviso de compatibilidade observado em workspace novo; não usado em screenshot por conter caminho pessoal. Sincronização não exercitada entre computadores."
+    },
+    {
+      "feature": "Empresa, contexto e projetos",
+      "pages": [
+        "support/empresa",
+        "support/context",
+        "support/company-context",
+        "support/projects",
+        "support/user-management-api"
+      ],
+      "source": "apps/electron/src/shared/contracts/shell-navigation.ts",
+      "verification": "Contratos, código e UI de projeto pessoal",
+      "note": "Projeto fictício e marco criados. Não alterou membros, políticas, créditos ou documentos corporativos."
+    },
+    {
+      "feature": "Sites estáticos",
+      "pages": [
+        "product/sites"
+      ],
+      "source": "docs/architecture/static-site-publishing.md",
+      "verification": "Contrato e componentes",
+      "note": "Não publicou, despublicou nem alterou proteção de um site real."
+    },
+    {
+      "feature": "Parceiros",
+      "pages": [
+        "support/partners"
+      ],
+      "source": "apps/electron/resources/docs/capabilities.md",
+      "verification": "Referência do produto e catálogo",
+      "note": "Serviço de busca de parceiros distinto do Marketplace de skills/workflows; sem contato externo."
+    }
+  ],
+  "publicPages": [
+    {
+      "path": "getting-started/create-workspace.mdx",
+      "title": "Criar um workspace",
+      "change": "revised"
+    },
+    {
+      "path": "getting-started/interface.mdx",
+      "title": "Onde encontrar cada coisa",
+      "change": "new"
+    },
+    {
+      "path": "getting-started/quickstart.mdx",
+      "title": "Sua primeira tarefa",
+      "change": "revised"
+    },
+    {
+      "path": "index.mdx",
+      "title": "Guia do G4 OS",
+      "change": "revised"
+    },
+    {
+      "path": "product/agents.mdx",
+      "title": "Trabalhar com agentes",
+      "change": "revised"
+    },
+    {
+      "path": "product/automation.mdx",
+      "title": "Rotinas recorrentes",
+      "change": "revised"
+    },
+    {
+      "path": "product/connections/index.mdx",
+      "title": "Como escolher uma conexão",
+      "change": "revised"
+    },
+    {
+      "path": "product/connections/managed-agents.mdx",
+      "title": "Agentes gerenciados",
+      "change": "revised"
+    },
+    {
+      "path": "product/connections/managed-connections.mdx",
+      "title": "Catálogo de conexões gerenciadas",
+      "change": "revised"
+    },
+    {
+      "path": "product/integrations.mdx",
+      "title": "Trabalhar com suas integrações",
+      "change": "revised"
+    },
+    {
+      "path": "product/outputs.mdx",
+      "title": "Arquivos e entregáveis",
+      "change": "new"
+    },
+    {
+      "path": "product/privacy-and-data.mdx",
+      "title": "Privacidade e dados",
+      "change": "revised"
+    },
+    {
+      "path": "product/projects.mdx",
+      "title": "Projetos",
+      "change": "revised"
+    },
+    {
+      "path": "product/security.mdx",
+      "title": "Segurança e controle",
+      "change": "revised"
+    },
+    {
+      "path": "product/sessions.mdx",
+      "title": "Conversas e sessões",
+      "change": "revised"
+    },
+    {
+      "path": "product/sites.mdx",
+      "title": "Criar e publicar um site",
+      "change": "new"
+    },
+    {
+      "path": "product/slides.mdx",
+      "title": "Criar e revisar slides",
+      "change": "new"
+    },
+    {
+      "path": "product/voice-input.mdx",
+      "title": "Voz: ditado, Desk e reuniões",
+      "change": "revised"
+    },
+    {
+      "path": "product/workbooks.mdx",
+      "title": "Planilhas editáveis",
+      "change": "new"
+    },
+    {
+      "path": "product/workspaces.mdx",
+      "title": "Workspaces",
+      "change": "revised"
+    },
+    {
+      "path": "support/agents.mdx",
+      "title": "Agentes personalizados",
+      "change": "revised"
+    },
+    {
+      "path": "support/ai.mdx",
+      "title": "Escolher a IA",
+      "change": "revised"
+    },
+    {
+      "path": "support/app-settings.mdx",
+      "title": "Configurações do App",
+      "change": "revised"
+    },
+    {
+      "path": "support/appearance.mdx",
+      "title": "Aparência",
+      "change": "revised"
+    },
+    {
+      "path": "support/apps.mdx",
+      "title": "Apps locais",
+      "change": "new"
+    },
+    {
+      "path": "support/automation.mdx",
+      "title": "Criar uma automação",
+      "change": "revised"
+    },
+    {
+      "path": "support/billing-subscriptions.mdx",
+      "title": "Planos e créditos",
+      "change": "revised"
+    },
+    {
+      "path": "support/browser.mdx",
+      "title": "Pesquisar e usar o navegador",
+      "change": "new"
+    },
+    {
+      "path": "support/cloud-sync.mdx",
+      "title": "Cloud Sync",
+      "change": "revised"
+    },
+    {
+      "path": "support/collaborative-session.mdx",
+      "title": "Sessão colaborativa",
+      "change": "revised"
+    },
+    {
+      "path": "support/company-context.mdx",
+      "title": "Conectar o workspace à empresa",
+      "change": "revised"
+    },
+    {
+      "path": "support/context.mdx",
+      "title": "Contexto da empresa",
+      "change": "revised"
+    },
+    {
+      "path": "support/dashboards.mdx",
+      "title": "Dashboards",
+      "change": "revised"
+    },
+    {
+      "path": "support/desk.mdx",
+      "title": "Desk: converse por voz",
+      "change": "new"
+    },
+    {
+      "path": "support/empresa.mdx",
+      "title": "Empresa: pessoas, créditos e políticas",
+      "change": "revised"
+    },
+    {
+      "path": "support/index.mdx",
+      "title": "Ajuda e configurações",
+      "change": "revised"
+    },
+    {
+      "path": "support/input.mdx",
+      "title": "Digitação e envio",
+      "change": "revised"
+    },
+    {
+      "path": "support/labels.mdx",
+      "title": "Tags e filtros",
+      "change": "revised"
+    },
+    {
+      "path": "support/marketplace.mdx",
+      "title": "Marketplace",
+      "change": "revised"
+    },
+    {
+      "path": "support/meeting-recording.mdx",
+      "title": "Gravar uma reunião",
+      "change": "revised"
+    },
+    {
+      "path": "support/partners.mdx",
+      "title": "Encontrar um parceiro",
+      "change": "new"
+    },
+    {
+      "path": "support/permissions.mdx",
+      "title": "Permissões e autonomia",
+      "change": "revised"
+    },
+    {
+      "path": "support/preferences.mdx",
+      "title": "Preferências pessoais",
+      "change": "revised"
+    },
+    {
+      "path": "support/projects.mdx",
+      "title": "Organizar um projeto",
+      "change": "revised"
+    },
+    {
+      "path": "support/remote-control.mdx",
+      "title": "Continuar pelo celular ou navegador",
+      "change": "revised"
+    },
+    {
+      "path": "support/repair-mode.mdx",
+      "title": "Resolver problemas",
+      "change": "revised"
+    },
+    {
+      "path": "support/shared-brain.mdx",
+      "title": "Brain: memória do workspace",
+      "change": "revised"
+    },
+    {
+      "path": "support/sharing.mdx",
+      "title": "Compartilhar uma conversa",
+      "change": "revised"
+    },
+    {
+      "path": "support/shortcuts.mdx",
+      "title": "Comandos e atalhos",
+      "change": "revised"
+    },
+    {
+      "path": "support/skills.mdx",
+      "title": "Skills: instruções reutilizáveis",
+      "change": "revised"
+    },
+    {
+      "path": "support/sources.mdx",
+      "title": "Conectar ferramentas",
+      "change": "revised"
+    },
+    {
+      "path": "support/tags.mdx",
+      "title": "Tags",
+      "change": "revised"
+    },
+    {
+      "path": "support/telegram-messaging.mdx",
+      "title": "Conversar pelo Telegram",
+      "change": "revised"
+    },
+    {
+      "path": "support/tools.mdx",
+      "title": "Ferramentas",
+      "change": "revised"
+    },
+    {
+      "path": "support/usage.mdx",
+      "title": "Acompanhar o uso",
+      "change": "revised"
+    },
+    {
+      "path": "support/user-management-api.mdx",
+      "title": "Acesso e gestão de pessoas",
+      "change": "revised"
+    },
+    {
+      "path": "support/whatsapp-browser.mdx",
+      "title": "WhatsApp Web",
+      "change": "revised"
+    },
+    {
+      "path": "support/workflows.mdx",
+      "title": "Workflows: roteiros de trabalho",
+      "change": "revised"
+    },
+    {
+      "path": "support/workspace.mdx",
+      "title": "Configurações do workspace",
+      "change": "revised"
+    },
+    {
+      "path": "use-cases/design/design-slides.mdx",
+      "title": "Preparar uma apresentação executiva",
+      "change": "revised"
+    },
+    {
+      "path": "use-cases/index.mdx",
+      "title": "Casos de uso",
+      "change": "revised"
+    },
+    {
+      "path": "use-cases/marketing-vendas/churn-retencao.mdx",
+      "title": "Investigar cancelamentos e retenção",
+      "change": "revised"
+    },
+    {
+      "path": "use-cases/marketing-vendas/cohort-receita.mdx",
+      "title": "Receita e retenção por grupo de clientes",
+      "change": "revised"
+    },
+    {
+      "path": "use-cases/marketing-vendas/funil-marketing.mdx",
+      "title": "Analisar o funil de marketing",
+      "change": "revised"
+    },
+    {
+      "path": "use-cases/marketing-vendas/performance-comercial.mdx",
+      "title": "Revisar a operação comercial",
+      "change": "revised"
+    },
+    {
+      "path": "use-cases/operacoes/apqc-otimizacao-processos.mdx",
+      "title": "Mapear e melhorar um processo",
+      "change": "revised"
+    },
+    {
+      "path": "use-cases/rotina/acompanhamento.mdx",
+      "title": "Acompanhar pendências sem refazer a busca",
+      "change": "new"
+    },
+    {
+      "path": "use-cases/rotina/documentos.mdx",
+      "title": "Comparar documentos e preparar um resumo",
+      "change": "new"
+    },
+    {
+      "path": "use-cases/rotina/email.mdx",
+      "title": "Organizar e-mails e preparar respostas",
+      "change": "new"
+    },
+    {
+      "path": "use-cases/rotina/pesquisa.mdx",
+      "title": "Pesquisar um tema e comparar opções",
+      "change": "new"
+    },
+    {
+      "path": "use-cases/rotina/reunioes.mdx",
+      "title": "Preparar uma reunião e registrar decisões",
+      "change": "new"
+    },
+    {
+      "path": "use-cases/seguranca/seguranca-lovable.mdx",
+      "title": "Revisar um aplicativo antes de lançar",
+      "change": "revised"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "images/guide/agente-personalizado.png",
+      "pages": [
+        "support/agents.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/apps-slide-studio.png",
+      "pages": [
+        "support/apps.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/automacoes.png",
+      "pages": [
+        "support/automation.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/desk.png",
+      "pages": [
+        "support/desk.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/ferramentas.png",
+      "pages": [
+        "getting-started/interface.mdx",
+        "support/sources.mdx",
+        "support/tools.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/informacoes-sessao.png",
+      "pages": [
+        "getting-started/interface.mdx",
+        "support/permissions.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/planilha-nativa.png",
+      "pages": [
+        "product/workbooks.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/planilha-revisao.png",
+      "pages": [
+        "product/workbooks.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/primeira-sessao.png",
+      "pages": [
+        "getting-started/quickstart.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/projeto-marcos.png",
+      "pages": [
+        "support/projects.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/selecionar-workflow.png",
+      "pages": [
+        "support/workflows.mdx",
+        "use-cases/design/design-slides.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/sessao-resposta.png",
+      "pages": [
+        "index.mdx",
+        "product/sessions.mdx",
+        "use-cases/rotina/reunioes.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/slides-studio.png",
+      "pages": [
+        "product/slides.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    }
+  ],
+  "limits": [
+    "Integrações inventariadas e confrontadas com ações suportadas; não autenticadas nem exercitadas contra contas externas.",
+    "Voz, sincronização entre dispositivos, publicação de sites, pagamentos e mutações corporativas não executados.",
+    "Busca do Mintlify não testada localmente porque exige autenticação.",
+    "landing.html é página independente; apenas destinos dos três botões de download corrigidos. Não entra no inventário de guias Mintlify."
+  ]
+}

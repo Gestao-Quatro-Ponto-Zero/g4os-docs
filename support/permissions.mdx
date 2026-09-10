@@ -1,49 +1,34 @@
 ---
-title: "Permissões"
-description: "Controle o que o G4 OS pode fazer automaticamente no workspace e nas integrações."
+title: "Permissões e autonomia"
+description: "Entenda os modos Explorar, Perguntar e Executar e confira o modo antes de agir."
 ---
 
-## O que esta área controla
+O modo da sessão define como o G4 OS lida com ações que podem alterar arquivos ou sistemas. Abra a barra lateral direita, **Informações do chat > Detalhes > Modo da sessão**, para conferir a opção ativa.
 
-`Permissões` define o nível de autonomia do produto para leitura, edição e execução.
+| Modo | Como funciona | Quando usar |
+| --- | --- | --- |
+| **Explorar** | Trabalha em modo de leitura; bloqueia alterações sem pedir aprovação para executá-las | Conhecer um material ou investigar uma dúvida |
+| **Perguntar** | Solicita aprovação antes de fazer alterações | Revisar ações à medida que aparecem |
+| **Executar** | Executa automaticamente, sem as aprovações do modo Perguntar | Um trabalho cujo objetivo e alcance você já definiu |
 
-## O que você encontra aqui
+<Frame>
+  <img src="/images/guide/informacoes-sessao.png" alt="Modo da sessão no painel Informações do chat do G4 OS" />
+</Frame>
 
-- explicação do modelo de permissões
-- regras padrão do app
-- overrides específicos do workspace
-- edições assistidas para ajustar políticas
+## Se o agente pedir aprovação
 
-## Modos de permissão
+Leia a ação e o destino. Verifique se ela corresponde ao que você pediu. Se o objetivo era apenas preparar um texto, esclareça isso antes de autorizar um envio.
 
-O G4 OS trabalha com modos que definem quanta confirmação humana é necessária antes de ler, editar ou executar ações:
+Uma ação bloqueada em Explorar pode exigir mudar o modo. Trocar o modo não concede novas permissões na sua conta do Google, Microsoft ou de outro serviço.
 
-- **Seguro**: postura mais restritiva, adequada para contexto sensível ou exploração inicial.
-- **Perguntar**: o agente pede confirmação antes de ações com impacto maior.
-- **Permitir tudo**: reduz interrupções e permite execução mais autônoma dentro das políticas configuradas.
+## Padrões do workspace
 
-Em workspaces novos, sessões podem iniciar com o modo padrão do workspace configurado para execução mais fluida. Revise esse padrão em `Configurações > Workspace` quando o contexto exigir mais controle.
+O modo inicial de novas sessões pode ser definido em **Configurações > Workspace**. Em **Configurações > Permissões**, consulte as regras do app e do workspace.
 
-## Indicador visual
+Não presuma que uma nova sessão começa em Perguntar. Confira o modo indicado pela interface, principalmente ao usar um workspace criado por outra pessoa ou uma automação.
 
-O composer mostra o modo de permissão ativo para a sessão. Quando o modo muda, o indicador ajuda a confirmar rapidamente se a conversa está em uma postura mais restritiva ou mais autônoma antes de enviar a próxima instrução.
+## Especificar o alcance do pedido
 
-## Casos comuns
+Você pode dizer “prepare um rascunho”, “altere apenas este arquivo” ou “mostre o resultado antes de enviar”. Isso ajuda a orientar a tarefa em qualquer modo.
 
-- liberar uma ação que hoje está sendo bloqueada
-- restringir comportamentos sensíveis no workspace
-- diferenciar política global da política de um contexto específico
-- revisar se uma automação pode executar sem intervenção
-
-## Caminho no app
-
-- `Configurações > Permissões`
-
-## Deep links úteis
-
-- [Abrir Permissões](g4os://settings/permissions)
-- [Abrir Workspace](g4os://settings/workspace)
-
-## Boa prática
-
-Evite usar permissões muito amplas como primeiro passo. Comece com o necessário para o fluxo atual e expanda quando houver confiança operacional.
+Interromper uma execução para trabalhos futuros; não desfaz mensagens enviadas ou alterações já concluídas. Veja também [Segurança e controle](/product/security).

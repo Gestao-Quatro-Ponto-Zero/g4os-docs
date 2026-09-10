@@ -1,131 +1,27 @@
 ---
-title: "Company Context"
-description: "Entenda como vincular seu workspace a uma empresa verificada e o que o badge de verificação representa."
+title: "Conectar o workspace à empresa"
+description: "Use os documentos e recursos da organização aos quais sua conta tem acesso."
 ---
 
-## O que é o Company Context
+**Company Context** é o vínculo entre seu workspace e uma empresa cadastrada no G4 OS. Ele permite consultar o conhecimento organizacional disponível para sua conta sem copiar os mesmos documentos a cada conversa.
 
-O **Company Context** é o vínculo entre um workspace e uma empresa cadastrada no G4 OS.
+## Vincular
 
-Quando um workspace está conectado a uma empresa, os agentes passam a ter acesso a documentos, contexto organizacional e ferramentas compartilhadas daquela empresa — sem precisar repassar essas informações a cada nova sessão.
+1. Abra **Configurações > Workspace**.
+2. Localize **Company Context** e escolha a empresa disponível para sua conta.
+3. Confira o acesso apresentado.
+4. Abra **Empresa > Contexto** para consultar documentos e estrutura.
 
-No app atual, a gestão desse contexto aparece dentro da área **Empresa**, especialmente na aba **Contexto**. O termo Company Context continua sendo usado para o vínculo entre workspace e empresa.
+Se a empresa não aparecer, confirme o e-mail usado no login e peça ao administrador para revisar seu vínculo. Ter um endereço com o mesmo domínio nem sempre equivale a ter acesso a todos os recursos.
 
-## Gestão do contexto da empresa
+## Usar na conversa
 
-Admins e usuários autorizados podem gerenciar o contexto compartilhado em `Menu lateral > Empresa > Contexto`.
+> Consulte o contexto da empresa sobre nosso processo de atendimento. Resuma as etapas e cite os documentos usados. Se eu não tiver acesso a uma referência, indique essa limitação.
 
-Essa área pode reunir:
+O agente pode consultar o material quando for relevante. O vínculo não significa carregar todos os documentos em cada mensagem, e permissões de leitura e edição continuam valendo.
 
-- documentos oficiais e materiais de referência
-- hierarquia e estrutura organizacional
-- pessoas e responsáveis por áreas
-- PRs, decisões e referências de trabalho
+## Empresa verificada
 
-O objetivo é manter o contexto organizacional em um lugar confiável para que agentes respondam com base em informação atualizada.
+O badge de verificação identifica um cadastro validado pelo G4. Ele ajuda a reconhecer a empresa correta, mas não concede acesso adicional por si só. Para solicitar ou esclarecer a verificação, o administrador deve consultar o suporte sobre os critérios vigentes.
 
-## Ferramentas de escrita e revisão
-
-Quando as ferramentas de escrita estão disponíveis, agentes podem ajudar a criar, revisar ou propor mudanças no contexto da empresa.
-
-Mudanças sensíveis devem passar por fluxo explícito de aprovação. O agente pode preparar uma proposta, mas criação, atualização ou remoção de documentos depende de permissão do usuário e validação do backend.
-
-## Fluxo de PRs
-
-PRs ligados ao Company Context ajudam a conectar documentação, decisões e mudanças de produto ao contexto organizacional.
-
-Use essa área para:
-
-- registrar PRs relevantes para a empresa
-- acompanhar mudanças que alteram processos internos
-- relacionar decisões técnicas com documentos de contexto
-- revisar propostas antes de consolidar informação no contexto compartilhado
-
-## Como vincular um workspace a uma empresa
-
-1. Abra `Configurações > Workspace`
-2. Localize a seção **Company Context**
-3. Clique no seletor de empresa e escolha a empresa desejada
-4. Confirme o vínculo
-
-![Seletor de empresa no workspace com badge de verificação](/images/company-context/verified-company-selector.png)
-
-*Seletor de Company Context no workspace. Empresas verificadas aparecem com o badge azul ao lado do nome.*
-
-Depois de vincular, os agentes nas sessões desse workspace passam a usar o contexto daquela empresa automaticamente. Você pode desvincular a qualquer momento escolhendo **No company context**.
-
-## O que é uma empresa verificada
-
-Empresas verificadas exibem um **badge azul** ao lado do nome em:
-
-- Lista de workspaces no workspace selector
-- Sidebar da empresa
-- Header de admin da empresa
-- Viewer list
-
-Esse badge indica que a empresa foi validada pelo G4 como a organização real correspondente àquele cadastro.
-
-### Por que a verificação existe
-
-A verificação resolve um problema prático: garantir que os colaboradores saibam que estão se conectando à **empresa real**, e não a um cadastro duplicado, desatualizado ou criado por engano.
-
-Sem verificação, qualquer usuário com acesso ao admin poderia criar uma empresa com o mesmo nome. O badge azul é a confirmação de que o G4 validou aquela entidade.
-
-## Critérios para verificação
-
-Para que uma empresa seja elegível à verificação, ela deve atender a **todos** os seguintes critérios:
-
-1. **Assinatura ativa** — a empresa precisa ter um plano pago vigente no G4 OS
-2. **Mínimo de 10 usuários com seats pagantes ativos** — a conta deve ter ao menos 10 membros com licença paga ativa no momento da solicitação
-3. **Solicitação formal ao G4** — o admin da empresa deve abrir uma solicitação oficial, acompanhada de documentação que comprove tratar-se da empresa real (contrato social, CNPJ, ou documento equivalente)
-
-Após a análise e aprovação pelo G4, um admin do sistema marca a empresa como verificada no painel de administração.
-
-## Relação com a gestão de usuários
-
-A verificação está diretamente ligada à base de usuários da empresa:
-
-- **Seats pagantes** são contados a partir dos membros com licença ativa em `Configurações da Empresa > Membros`
-- Membros removidos ou inativos não contam para o critério de 10 seats
-- Se a empresa perder usuários abaixo do mínimo ou encerrar a assinatura, a verificação pode ser revisada
-
-Administradores podem acompanhar o status de membros e seats no painel da empresa.
-
-## Quem pode solicitar verificação
-
-Apenas **admins da empresa** no G4 OS podem iniciar o processo de verificação. O pedido deve ser feito diretamente ao suporte do G4 com a documentação necessária.
-
-## O que muda após a verificação
-
-- O badge azul aparece nos pontos descritos acima
-- Colaboradores que veem o badge sabem que aquele cadastro foi validado
-- O vínculo com um workspace verificado sinaliza para toda a equipe que o contexto compartilhado é o contexto oficial da empresa
-
-## Caminho no app
-
-- `Configurações > Workspace > Company Context`
-- `Menu lateral > Empresa > Contexto`
-
-## Deep links úteis
-
-- [Abrir configuração de Workspace](g4os://settings/workspace)
-- [Abrir Contexto da Empresa](g4os://company/context)
-
-## Veja também
-
-<Columns cols={2}>
-  <Card
-    title="Workspace"
-    icon="sliders"
-    href="/support/workspace"
-  >
-    Veja todos os controles disponíveis nas configurações de workspace, incluindo o vínculo com Company Context.
-  </Card>
-  <Card
-    title="Permissões"
-    icon="shield"
-    href="/support/permissions"
-  >
-    Entenda como permissões e escopos funcionam para membros e admins dentro do Company Context.
-  </Card>
-</Columns>
+[Gerenciar documentos de contexto](/support/context) · [Área Empresa](/support/empresa) · [Acesso de pessoas](/support/user-management-api)

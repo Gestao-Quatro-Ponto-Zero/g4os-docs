@@ -1,108 +1,49 @@
 ---
 title: "Marketplace"
-description: "Publique, edite e colabore em skills e workflows no marketplace do G4 OS."
+description: "Instale skills e workflows e publique materiais reutilizáveis."
 ---
 
-## O que é o Marketplace
+Abra **Marketplace** na barra lateral para descobrir **skills** e **workflows**. Instalar um item disponibiliza suas instruções no workspace; as contas necessárias ainda precisam estar conectadas.
 
-O Marketplace é onde skills e workflows criados no G4 OS podem ser publicados, descobertos e reutilizados por outros workspaces.
+## Instalar e usar
 
-Como publicador, você gerencia seus itens diretamente no app — sem precisar sair do G4 OS para editar metadados, conteúdo ou colaboradores.
+1. Escolha a categoria de skills ou workflows e procure pelo objetivo da tarefa.
+2. Abra um item e leia a descrição, o autor, os requisitos e os arquivos disponíveis.
+3. Use a ação de instalação no workspace desejado.
+4. Confira o item em **Ferramentas > Skills** ou **Ferramentas > Workflows**.
+5. Em uma sessão, use `@` para selecioná-lo e forneça o contexto pedido.
+
+Se uma rotina depende de um CRM, a instalação não conecta esse CRM por você. [Configure a conexão](/support/sources) e revise o que o item pede para ler ou alterar.
+
+## Atualizar um item instalado
+
+O detalhe distingue **Vinculado**, **Atualização disponível**, **Divergente** e **Desvinculado**. Um item vinculado pode receber atualizações; alterações locais podem pausar esse vínculo.
+
+Use **Atualizar** para buscar a nova versão ou **Revincular** para retomar o vínculo quando apropriado. Revise qualquer aviso de sobrescrita antes de confirmar. **Desvincular** mantém os arquivos locais e interrompe as atualizações automáticas. Se a origem foi removida ou bloqueada, confira o estado antes de depender daquela rotina.
 
 ## Meus Itens
 
-A aba **Meus Itens** lista tudo que você já criou ou co-edita no marketplace.
+Em **Meus Itens**, ficam os materiais que você criou ou pode coeditar. Os estados distinguem rascunho, ativo, despublicado, oculto e bloqueado. Um rascunho não deve ser tratado como uma versão publicada.
 
-É possível filtrar por status:
+O editor organiza o trabalho em quatro abas:
 
-- **Rascunho** — salvo localmente, ainda não publicado
-- **Ativo** — publicado e disponível no marketplace
-- **Despublicado** — retirado temporariamente da listagem
-- **Oculto** — visível apenas para você e colaboradores
-- **Bloqueado** — item suspenso por violação de política
+| Aba | Conteúdo |
+| --- | --- |
+| **Geral** | Nome, identificador, autor, categorias, visibilidade e colaboradores. |
+| **Conteúdo** | Descrição e instruções, com prévia. |
+| **Arquivos** | Arquivos que compõem o item. |
+| **Versões** | Histórico das versões publicadas. |
 
-<Frame>
-  <img src="/images/marketplace/marketplace-my-items.png" alt="Aba Meus Itens — listagem de items com filtro por status e painel de edição" />
-</Frame>
+## Revisar antes de publicar
 
-## Editor de item
+O editor pode recuperar um **rascunho local encontrado**. Escolha restaurar para continuar ou descartar para voltar ao conteúdo salvo. Salvar alterações e **Publicar nova versão** são etapas distintas: confira a versão publicada depois de concluir.
 
-Ao abrir um item em **Meus Itens**, você acessa o editor com quatro abas:
+Retire exemplos com dados reais, referências privadas e credenciais. Explique o que a pessoa precisa conectar e forneça um exemplo de entrada e de resultado esperado.
 
-### Geral
+## Visibilidade e colaboração
 
-Metadados do item:
+Você pode limitar o acesso ao mesmo domínio, a uma lista de domínios ou a convidados, ou publicar para o público do marketplace. Revise os destinatários antes de publicar.
 
-- **Slug** — identificador único em kebab-case
-- **Nome público do autor** — como seu nome aparece no marketplace
-- **Visibilidade** — controla quem pode ver o item (veja abaixo)
-- **Colaboradores** — emails de pessoas que podem co-editar
-- **Categorias** — até 3 categorias para facilitar a descoberta
+Colaboradores podem editar conteúdo e arquivos, ajustar visibilidade e publicar versões conforme sua permissão. Gerenciar colaboradores e despublicar são ações do proprietário. Use **Despublicar** para retirar um item da listagem; isso não é uma promessa de apagar cópias já instaladas.
 
-### Conteúdo
-
-Editor markdown com prévia ao vivo. Use para escrever a descrição completa do item: casos de uso, exemplos, instruções de uso e requisitos.
-
-### Arquivos
-
-Árvore de arquivos do item. Permite:
-
-- renomear arquivos
-- excluir arquivos
-- visualizar o conteúdo de cada arquivo
-
-### Versões
-
-Histórico de publicações do item. Mostra cada versão publicada com data e permite acompanhar a evolução do item ao longo do tempo.
-
-## Autosave e rascunhos
-
-O editor salva automaticamente as alterações como rascunho local. Se você fechar o app ou navegar para outra tela sem publicar, o rascunho é preservado.
-
-Na próxima vez que abrir o item, o app exibirá um aviso:
-
-> **Rascunho local encontrado** — Há alterações salvas localmente que ainda não foram enviadas à nuvem.
-
-Você pode **Restaurar** o rascunho para continuar de onde parou, ou **Descartar** para voltar à versão publicada.
-
-## Visibilidade
-
-| Opção | Quem pode ver |
-|---|---|
-| **Público** | Qualquer pessoa com acesso ao marketplace |
-| **Mesmo domínio** | Somente usuários do mesmo domínio do autor |
-| **Lista de domínios** | Somente pessoas em domínios explicitamente autorizados |
-| **Somente convite** | Somente emails na lista de convidados |
-
-> **Nota sobre "Somente convite":** o autor do item é automaticamente incluído na lista de visibilidade, mesmo que o próprio e-mail não esteja na lista de convidados. Isso garante que o criador sempre consiga acessar e editar o item, independente da configuração de visibilidade.
-
-## Colaboradores
-
-Você pode convidar outras pessoas para co-editar um item informando o email delas na seção **Colaboradores** (um email por linha).
-
-### O que colaboradores podem fazer
-
-- Editar o conteúdo, os arquivos, a visibilidade e publicar novas versões
-
-### O que colaboradores **não** podem fazer
-
-- Gerenciar a lista de colaboradores
-- Despublicar o item
-- Transferir a propriedade
-
-Itens co-editados exibem um badge **Compartilhado** na listagem de **Meus Itens**.
-
-## Publicar uma nova versão
-
-Após editar o item, clique em **Publicar nova versão** para enviar as alterações ao marketplace. O botão **Salvar** persiste o rascunho localmente sem publicar.
-
-Para retirar um item da listagem sem excluí-lo, use **Despublicar**.
-
-## Caminho no app
-
-- `Marketplace > Meus Itens`
-
-## Deep links úteis
-
-- [Abrir Marketplace](g4os://marketplace)
-- [Abrir Meus Itens](g4os://marketplace/my-items)
+[Abrir Marketplace](g4os://marketplace) · [Abrir Meus Itens](g4os://marketplace/owned)

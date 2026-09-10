@@ -1,82 +1,40 @@
 ---
-title: "Funil de Marketing e Campanhas"
-description: "Analise performance de campanhas, CAC, ROAS e funil semanal por canal com um dataset de exemplo pronto para uso no G4 OS."
+title: "Analisar o funil de marketing"
+description: "Compare investimento e conversão sem misturar tabelas de detalhe e resumo."
 ---
 
-## O que este caso de uso cobre
+Use o G4 OS para entender em que etapa o funil perde volume e quais canais precisam de investigação. A análise pode começar por um arquivo, sem acesso ao gerenciador de anúncios.
 
-Análise de **funil de marketing em granularidade semanal** — do investimento até a conversão, segmentado por canal, campanha e origem orgânica/paga. O G4 OS roda as análises, compara canais e gera gráficos Mermaid de funil e evolução temporal.
+## Preparar o arquivo
 
-## Dataset de exemplo
+[Baixar planilha de exemplo](https://raw.githubusercontent.com/Gestao-Quatro-Ponto-Zero/g4os-docs/main/use-cases/datasets/nexus_funil_marketing.xlsx). Abra uma sessão e anexe o arquivo pelo clipe. Você pode fazer o exercício sem conectar contas da empresa.
 
-<Card
-  title="nexus_funil_marketing.xlsx"
-  icon="table"
-  href="https://raw.githubusercontent.com/Gestao-Quatro-Ponto-Zero/g4os-docs/main/use-cases/datasets/nexus_funil_marketing.xlsx"
->
-  Baixar dataset — funil semanal, campanhas e canais (152 KB, 4 abas)
-</Card>
+O arquivo de exemplo contém estas abas:
 
-### O que tem dentro
+| Aba | Conteúdo |
+| --- | --- |
+| **Funil Semanal** | Visão consolidada, com investimento, leads, oportunidades e fechamentos. |
+| **Por Canal** | Métricas por canal de aquisição. |
+| **Campanhas** | Detalhe por campanha e semana. |
+| **Resumo por Canal** | Totais consolidados para comparação. |
 
-**4 abas:**
+<Note>Os subtítulos desses arquivos antigos podem indicar um período diferente das células. Peça ao agente para conferir o período nas linhas, separar totais e relatar inconsistências antes de calcular. Use o material como exercício, não como referência de desempenho real.</Note>
 
-| Aba | Conteúdo | Linhas |
-|-----|----------|--------|
-| `Funil Semanal` | Visão agregada semanal por canal | 104 semanas |
-| `Por Canal` | Breakdown por canal de aquisição | 572 linhas |
-| `Campanhas` | Campanhas individuais com tipo, status e métricas | 1.314 linhas |
-| `Orgânico` | Tráfego orgânico, SEO e referral | série semanal |
+## Pedido para copiar
 
-**Campos principais:**
+> Analise a planilha de funil anexada. Confira cabeçalhos e o período real das linhas; separe linhas de total. Use Por Canal como base da comparação e as outras abas para conferência, sem duplicar somas. Compare investimento, leads, oportunidades, fechamentos e receita. Calcule custo por fechamento e receita atribuída dividida pelo investimento, explicando limites desses indicadores. Trate divisões por zero como indisponíveis. Entregue tabela por canal, gráfico e três perguntas para revisar com a equipe. Não altere campanhas.
 
-| Campo | Descrição |
-|-------|-----------|
-| `semana` | Semana de referência |
-| `canal` | Canal de aquisição (Paid Social, Search, Email, Orgânico, etc.) |
-| `investimento` | Gasto em mídia naquela semana/campanha |
-| `leads` | Leads gerados |
-| `deals_criados` | Oportunidades abertas no CRM |
-| `deals_ganhos` | Deals fechados atribuídos ao canal |
-| `cac` | Custo de aquisição por cliente |
-| `roas` | Retorno sobre investimento em mídia |
 
-## Abrir no G4 OS
+[Preparar este pedido no G4 OS](g4os://action/new-session?name=Analisar+o+funil+de+marketing&input=Analise+a+planilha+de+funil+anexada.+Confira+cabe%C3%A7alhos+e+o+per%C3%ADodo+real+das+linhas%3B+separe+linhas+de+total.+Use+Por+Canal+como+base+da+compara%C3%A7%C3%A3o+e+as+outras+abas+para+confer%C3%AAncia%2C+sem+duplicar+somas.+Compare+investimento%2C+leads%2C+oportunidades%2C+fechamentos+e+receita.+Calcule+custo+por+fechamento+e+receita+atribu%C3%ADda+dividida+pelo+investimento%2C+explicando+limites+desses+indicadores.+Trate+divis%C3%B5es+por+zero+como+indispon%C3%ADveis.+Entregue+tabela+por+canal%2C+gr%C3%A1fico+e+tr%C3%AAs+perguntas+para+revisar+com+a+equipe.+N%C3%A3o+altere+campanhas.&mode=ask)
 
-<Card
-  title="Analisar funil de marketing no G4 OS"
-  icon="sparkles"
-  href="g4os://action/new-session?input=Faca+o+download+do+dataset+nexus_funil_marketing.xlsx+em+https%3A%2F%2Fraw.githubusercontent.com%2FGestao-Quatro-Ponto-Zero%2Fg4os-docs%2Fmain%2Fuse-cases%2Fdatasets%2Fnexus_funil_marketing.xlsx+e+execute%3A+%281%29+carregue+as+4+abas%2C+%282%29+compare+CAC+e+ROAS+por+canal%2C+%283%29+ranqueie+as+top+10+campanhas+por+eficiencia+de+conversao%2C+%284%29+gere+um+grafico+Mermaid+de+funil+mostrando+leads+%3E+deals+criados+%3E+deals+ganhos+pelo+canal+com+melhor+ROAS%2C+%285%29+analise+tendencia+semanal+e+sazonalidade%2C+%286%29+recomende+alocacao+de+investimento+com+base+nos+dados.&send=true&mode=execute&workdir=none"
->
-  Abrir sessão — executa automaticamente no modo Execute
-</Card>
+O link preenche uma nova sessão em **Perguntar**. Revise o texto, anexe os arquivos necessários e envie quando estiver pronto.
 
-### O que o G4 OS faz ao abrir
+## Conferir o resultado
 
-1. Baixa e processa as 4 abas do dataset
-2. Compara CAC e ROAS por canal ao longo do tempo
-3. Rankeia as top 10 campanhas por eficiência de conversão
-4. Gera gráfico Mermaid de funil pelo canal com melhor ROAS
-5. Identifica tendências e sazonalidade semanal
-6. Recomenda alocação de investimento com base nos dados
+Confira se a comparação usa o mesmo período e a mesma regra de atribuição. Razões do período devem ser calculadas a partir dos totais apropriados, não pela média simples de percentuais semanais.
 
-## Análises possíveis com este dataset
+Custo de mídia por fechamento não inclui necessariamente todos os custos de aquisição. Receita atribuída à mídia também não equivale a lucro.
 
-- **Comparação de canais** — CAC, ROAS e taxa de conversão lead→deal por canal
-- **Funil visual** — gráfico de funil do canal mais eficiente
-- **Evolução semanal** — linha de tempo de investimento vs leads vs deals
-- **Ranking de campanhas** — as mais e menos eficientes do período
-- **Mix orgânico vs pago** — proporção do funil por origem
-- **Sazonalidade** — quais semanas concentram mais conversões
+## Continuar o trabalho
 
-## Exemplo de output
-
-![Análise de CAC e ROAS por canal — Nexus Consultoria](/images/use-cases/funil-cac-roas-por-canal.png)
-
-*Resumo executivo gerado pelo G4 OS: CAC e ROAS por canal, top campanhas por conversão e insight sobre canais orgânicos vs pagos.*
-
-## Veja também
-
-- [Cohort de Receita](/use-cases/marketing-vendas/cohort-receita) — o que acontece depois da conversão
-- [Performance Comercial](/use-cases/marketing-vendas/performance-comercial) — conversão por vendedor após o lead entrar
-- [Churn e Retenção](/use-cases/marketing-vendas/churn-retencao) — qualidade dos leads por canal de aquisição
+Use uma [conexão gerenciada](/product/connections/managed-connections) para consultar as fontes permitidas da operação. Depois de validar a análise, crie uma [rotina de revisão](/support/automation).

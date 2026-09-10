@@ -1,78 +1,33 @@
 ---
-title: "Design & Slides"
-description: "Crie apresentações, protótipos interativos e animações diretamente no G4 OS — basta descrever o que você precisa."
+title: "Preparar uma apresentação executiva"
+description: "Saia de um objetivo claro para slides que ajudam a tomar uma decisão."
 ---
 
-## O que este caso de uso cobre
+Uma boa apresentação começa pela decisão que você espera da reunião. Informe quem vai assistir, quanto tempo existe e quais dados sustentam a proposta.
 
-O workflow **G4 OS Design** transforma descrições em texto em entregas de design de alta fidelidade — slides 1920×1080, mockups de app, infográficos e animações com export MP4/GIF. Tudo gerado como HTML no G4 OS, sem ferramentas externas.
+## Começar pelo roteiro
 
-## Antes de começar: instalar o workflow
+Abra uma sessão, digite `@` e selecione o workflow **Slides**, quando disponível. Acrescente o briefing abaixo. Você também pode pedir slides diretamente na conversa.
 
-O workflow **G4 OS Design** precisa estar instalado no seu workspace. Ele está disponível no Marketplace do G4 OS.
+<Frame><img src="/images/guide/selecionar-workflow.png" alt="Menu de menções mostrando o workflow Slides separado da conexão Google Slides" /></Frame>
 
-<Steps>
-  <Step title="Abrir o Marketplace">
-    Acesse o Marketplace pelo menu lateral do G4 OS ou pelo deep link abaixo.
+> Crie uma apresentação nativa editável do G4 OS para uma reunião de 10 minutos, com cinco slides: objetivo, situação atual, opções, recomendação e decisão necessária. Use apenas as informações que eu fornecer. Onde faltar um dado, marque como pendente. Primeiro proponha o roteiro; depois que eu revisar, produza os slides para abrir no G4 Slide Studio.
 
-    [Abrir Marketplace](g4os://marketplace)
-  </Step>
-  <Step title="Buscar e instalar">
-    Pesquise por **"G4 OS Design"** e instale no seu workspace. Após a instalação, o workflow fica disponível como `/g4os-design` em qualquer sessão.
-  </Step>
-  <Step title="Confirmar a instalação">
-    Abra uma sessão nova e digite `/g4os-design` — o G4 OS vai pedir seu briefing e começar a criar.
-  </Step>
-</Steps>
 
-## Abrir no G4 OS
+[Preparar este pedido no G4 OS](g4os://action/new-session?name=Apresenta%C3%A7%C3%A3o+executiva&input=Crie+uma+apresenta%C3%A7%C3%A3o+nativa+edit%C3%A1vel+do+G4+OS+para+uma+reuni%C3%A3o+de+10+minutos%2C+com+cinco+slides%3A+objetivo%2C+situa%C3%A7%C3%A3o+atual%2C+op%C3%A7%C3%B5es%2C+recomenda%C3%A7%C3%A3o+e+decis%C3%A3o+necess%C3%A1ria.+Use+apenas+as+informa%C3%A7%C3%B5es+que+eu+fornecer.+Onde+faltar+um+dado%2C+marque+como+pendente.+Primeiro+proponha+o+roteiro%3B+depois+que+eu+revisar%2C+produza+os+slides+para+abrir+no+G4+Slide+Studio.&mode=ask)
 
-<Card
-  title="Criar apresentação de slides no G4 OS"
-  icon="presentation-screen"
-  href="g4os://action/new-session?input=%2Fg4os-design+Quero+criar+uma+apresentacao+de+slides.+Me+ajude+com+o+briefing+e+depois+gere+os+slides.&send=true&mode=execute&workdir=none"
->
-  Abrir sessão com o workflow G4 OS Design
-</Card>
+O link preenche uma nova sessão em **Perguntar**. Revise o texto, anexe os arquivos necessários e envie quando estiver pronto.
 
-O G4 OS vai perguntar sobre tema, estilo visual, quantidade de slides e conteúdo — e depois entrega o deck completo como HTML pronto para visualizar, exportar em PDF ou converter para PPTX.
+## Revisar a entrega
 
-## O que o workflow entrega
+Confira uma ideia principal por slide, títulos legíveis e a origem dos números. Peça alterações específicas:
 
-| Tipo | Formato de entrega | Export |
-|------|--------------------|--------|
-| Slides / deck | HTML 1920×1080 por slide | PDF, PPTX |
-| Protótipo de app | HTML interativo com frames nativos | — |
-| Animação / motion | HTML com timeline CSS/JS | MP4, GIF |
-| Infográfico | HTML estático, tipografia premium | PNG, PDF |
-| Variações de design | 3 direções lado a lado com live tweaks | — |
+> No slide 3, compare as opções em uma tabela. No último, deixe explícita a decisão que a liderança precisa tomar.
 
-## Exemplo de output
+Abra a apresentação no Studio para revisar a sequência e a aparência. Exporte em PDF quando esse for o formato de distribuição. Se precisar de PPTX, peça esse arquivo explicitamente e confira-o no programa de destino.
 
-Abaixo um exemplo de slide gerado pelo G4 OS a partir de um briefing simples:
+## Outros materiais
 
-![Slide de exemplo — Design com G4 OS](/images/use-cases/design-slide-exemplo.png)
+Você pode pedir um documento de apoio, um resumo por e-mail ou uma [página publicada](/product/sites) com o conteúdo aprovado. Para imagens, descreva objetivo e estilo e confira a capacidade de geração disponível no catálogo.
 
-*Slide 1920×1080 gerado pelo G4 OS com o workflow G4 OS Design. Tema escuro, paleta dourada, layout dois painéis com features.*
-
-## O que você pode pedir
-
-Exemplos de briefings que funcionam bem:
-
-- `"Crie um deck de 8 slides para uma proposta comercial de software B2B, tom executivo, tema escuro"`
-- `"Faça um mockup do app de login e dashboard de um SaaS, estilo iOS"`
-- `"Crie um infográfico de funil de vendas com 5 etapas, paleta azul corporativo"`
-- `"Monte uma apresentação de onboarding para novos colaboradores, 10 slides, tema claro"`
-- `"Crie uma animação de intro de 5 segundos para uma apresentação"`
-
-## Análises e entregas possíveis
-
-- **Decks executivos** — propostas, pitches, relatórios mensais
-- **Onboarding e treinamento** — apresentações didáticas com progressão visual
-- **Protótipos de produto** — mockups clicáveis para validação de UX
-- **Materiais de marketing** — landing pages estáticas, banners, infográficos
-- **Motion design** — animações para abertura de vídeos ou apresentações
-
-## Veja também
-
-- [Casos de Uso — índice](/use-cases)
+[Guia de Slides](/product/slides) · [G4 Slide Studio](/support/apps)
