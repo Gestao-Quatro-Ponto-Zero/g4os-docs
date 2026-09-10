@@ -1,7 +1,7 @@
 {
   "reviewDate": "2026-09-10",
   "productCommit": "ec67bc01c66cb290efe0d7f6fc6e4fa88caad664",
-  "docsBaseCommit": "33c8636f43ea7ea46abeacc1e37bb9f7e9edc041",
+  "docsBaseCommit": "2fe07c664cae7c2cbdac2ac6acc6deae7b77e7f6",
   "scope": "Documentação pública em português para usuários não técnicos. Matriz interna de evidências, não promessa de teste E2E de integrações externas.",
   "sourceOfTruth": {
     "routes": "apps/electron/src/shared/routes.ts",
@@ -835,7 +835,7 @@
       ],
       "source": "apps/electron/src/renderer",
       "verification": "UI: criação completa em workspace fictício",
-      "note": "Sem conectar fontes ou importar o conteúdo de outro workspace."
+      "note": "Dois workspaces fictícios criados. Assistente completo de seis etapas documentado em oito passos; sem importar conteúdo privado."
     },
     {
       "feature": "Ferramentas e Apps",
@@ -939,7 +939,7 @@
       ],
       "source": "packages/shared/src/sources/managed-connectors.ts",
       "verification": "Catálogo exportado do código e UI",
-      "note": "38 conectores; nenhuma autenticação, leitura privada ou escrita externa para validar exemplos."
+      "note": "38 conectores e ações confrontados com catálogo. Detalhes podem reconhecer autorização prévia da conta; identidade real foi excluída de todas as capturas. Não foi realizada nova autenticação nem escrita externa."
     },
     {
       "feature": "Compartilhamento, colaboração e controle remoto",
@@ -959,11 +959,12 @@
         "support/usage",
         "support/billing-subscriptions",
         "product/privacy-and-data",
-        "product/security"
+        "product/security",
+        "product/connections/ai-gateway"
       ],
       "source": "apps/electron/src/renderer/pages/settings",
-      "verification": "Código, traduções e referência do produto",
-      "note": "Sem tabela fixa de preços/saldos. Distingue armazenamento local, envio ao provedor, serviços gerenciados e compartilhamento."
+      "verification": "Catálogo oficial do produto exportado, seletor Gateway/Codex exercitado e configurações inspecionadas",
+      "note": "42 opções selecionáveis de Gateway, incluindo perfis e roteador gratuito; cinco modelos de Codex Subscription. Sem preços fixos ou alteração de padrões globais."
     },
     {
       "feature": "Brain e memória",
@@ -1004,6 +1005,35 @@
       "source": "apps/electron/resources/docs/capabilities.md",
       "verification": "Referência do produto e catálogo",
       "note": "Serviço de busca de parceiros distinto do Marketplace de skills/workflows; sem contato externo."
+    },
+    {
+      "feature": "Exemplo de dashboard e documento",
+      "pages": [
+        "support/dashboards",
+        "product/outputs",
+        "use-cases/gestao/resumo-semanal"
+      ],
+      "verification": "Gerados e abertos no Electron com cinco tarefas fictícias. Dashboard corrigido para preservar datas como texto; documento aberto em leitura e fonte.",
+      "source": "apps/electron/src/renderer/features/output-workspace",
+      "note": "O dashboard de exercício é estático, sem fontes externas. Contagens 5/3/1 conferidas."
+    },
+    {
+      "feature": "Criação de workflow",
+      "pages": [
+        "support/workflows"
+      ],
+      "verification": "Pedido enviado por Adicionar workflow; item salvo encontrado e detalhe aberto com entradas Período e Entregas.",
+      "source": "apps/electron/src/renderer",
+      "note": "Workflow fictício de revisão semanal, sem envio ou edição de tarefas."
+    },
+    {
+      "feature": "Formulário de automação",
+      "pages": [
+        "support/automation"
+      ],
+      "verification": "Rascunho preenchido em Agenda > Dias úteis > 08:00, opções inspecionadas e formulário cancelado.",
+      "source": "apps/electron/src/renderer",
+      "note": "Nenhuma automação ativa criada. Recuperação ao reabrir documentada com janela de duas horas conforme UI."
     }
   ],
   "publicPages": [
@@ -1015,37 +1045,42 @@
     {
       "path": "getting-started/interface.mdx",
       "title": "Onde encontrar cada coisa",
-      "change": "new"
+      "change": "unchanged"
     },
     {
       "path": "getting-started/quickstart.mdx",
       "title": "Sua primeira tarefa",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "index.mdx",
       "title": "Guia do G4 OS",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "product/agents.mdx",
       "title": "Trabalhar com agentes",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "product/automation.mdx",
       "title": "Rotinas recorrentes",
-      "change": "revised"
+      "change": "unchanged"
+    },
+    {
+      "path": "product/connections/ai-gateway.mdx",
+      "title": "Modelos do G4 AI Gateway",
+      "change": "new"
     },
     {
       "path": "product/connections/index.mdx",
       "title": "Como escolher uma conexão",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "product/connections/managed-agents.mdx",
       "title": "Agentes gerenciados",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "product/connections/managed-connections.mdx",
@@ -1060,52 +1095,52 @@
     {
       "path": "product/outputs.mdx",
       "title": "Arquivos e entregáveis",
-      "change": "new"
+      "change": "revised"
     },
     {
       "path": "product/privacy-and-data.mdx",
       "title": "Privacidade e dados",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "product/projects.mdx",
       "title": "Projetos",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "product/security.mdx",
       "title": "Segurança e controle",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "product/sessions.mdx",
       "title": "Conversas e sessões",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "product/sites.mdx",
       "title": "Criar e publicar um site",
-      "change": "new"
+      "change": "unchanged"
     },
     {
       "path": "product/slides.mdx",
       "title": "Criar e revisar slides",
-      "change": "new"
+      "change": "unchanged"
     },
     {
       "path": "product/voice-input.mdx",
       "title": "Voz: ditado, Desk e reuniões",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "product/workbooks.mdx",
       "title": "Planilhas editáveis",
-      "change": "new"
+      "change": "unchanged"
     },
     {
       "path": "product/workspaces.mdx",
       "title": "Workspaces",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/agents.mdx",
@@ -1130,7 +1165,7 @@
     {
       "path": "support/apps.mdx",
       "title": "Apps locais",
-      "change": "new"
+      "change": "unchanged"
     },
     {
       "path": "support/automation.mdx",
@@ -1140,32 +1175,32 @@
     {
       "path": "support/billing-subscriptions.mdx",
       "title": "Planos e créditos",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/browser.mdx",
       "title": "Pesquisar e usar o navegador",
-      "change": "new"
+      "change": "unchanged"
     },
     {
       "path": "support/cloud-sync.mdx",
       "title": "Cloud Sync",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/collaborative-session.mdx",
       "title": "Sessão colaborativa",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/company-context.mdx",
       "title": "Conectar o workspace à empresa",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/context.mdx",
       "title": "Contexto da empresa",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/dashboards.mdx",
@@ -1175,17 +1210,17 @@
     {
       "path": "support/desk.mdx",
       "title": "Desk: converse por voz",
-      "change": "new"
+      "change": "unchanged"
     },
     {
       "path": "support/empresa.mdx",
       "title": "Empresa: pessoas, créditos e políticas",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/index.mdx",
       "title": "Ajuda e configurações",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/input.mdx",
@@ -1195,67 +1230,67 @@
     {
       "path": "support/labels.mdx",
       "title": "Tags e filtros",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/marketplace.mdx",
       "title": "Marketplace",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/meeting-recording.mdx",
       "title": "Gravar uma reunião",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/partners.mdx",
       "title": "Encontrar um parceiro",
-      "change": "new"
+      "change": "unchanged"
     },
     {
       "path": "support/permissions.mdx",
       "title": "Permissões e autonomia",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/preferences.mdx",
       "title": "Preferências pessoais",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/projects.mdx",
       "title": "Organizar um projeto",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/remote-control.mdx",
       "title": "Continuar pelo celular ou navegador",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/repair-mode.mdx",
       "title": "Resolver problemas",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/shared-brain.mdx",
       "title": "Brain: memória do workspace",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/sharing.mdx",
       "title": "Compartilhar uma conversa",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/shortcuts.mdx",
       "title": "Comandos e atalhos",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/skills.mdx",
       "title": "Skills: instruções reutilizáveis",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/sources.mdx",
@@ -1265,32 +1300,32 @@
     {
       "path": "support/tags.mdx",
       "title": "Tags",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/telegram-messaging.mdx",
       "title": "Conversar pelo Telegram",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/tools.mdx",
       "title": "Ferramentas",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/usage.mdx",
       "title": "Acompanhar o uso",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/user-management-api.mdx",
       "title": "Acesso e gestão de pessoas",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/whatsapp-browser.mdx",
       "title": "WhatsApp Web",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "support/workflows.mdx",
@@ -1300,12 +1335,47 @@
     {
       "path": "support/workspace.mdx",
       "title": "Configurações do workspace",
-      "change": "revised"
+      "change": "unchanged"
+    },
+    {
+      "path": "use-cases/clientes/preparar-reuniao-cliente.mdx",
+      "title": "Preparar uma reunião com cliente",
+      "change": "new"
+    },
+    {
+      "path": "use-cases/conteudo/planejar-campanha.mdx",
+      "title": "Transformar um briefing em plano de conteúdo",
+      "change": "new"
     },
     {
       "path": "use-cases/design/design-slides.mdx",
       "title": "Preparar uma apresentação executiva",
-      "change": "revised"
+      "change": "unchanged"
+    },
+    {
+      "path": "use-cases/financeiro/conferir-recebimentos.mdx",
+      "title": "Conferir recebimentos entre duas bases",
+      "change": "new"
+    },
+    {
+      "path": "use-cases/financeiro/organizar-contas-a-pagar.mdx",
+      "title": "Organizar contas a pagar para revisão",
+      "change": "new"
+    },
+    {
+      "path": "use-cases/gestao/comparar-fornecedores.mdx",
+      "title": "Comparar propostas de fornecedores",
+      "change": "new"
+    },
+    {
+      "path": "use-cases/gestao/preparar-1a1.mdx",
+      "title": "Preparar uma conversa de 1:1",
+      "change": "new"
+    },
+    {
+      "path": "use-cases/gestao/resumo-semanal.mdx",
+      "title": "Montar um resumo semanal de gestão",
+      "change": "new"
     },
     {
       "path": "use-cases/index.mdx",
@@ -1315,57 +1385,62 @@
     {
       "path": "use-cases/marketing-vendas/churn-retencao.mdx",
       "title": "Investigar cancelamentos e retenção",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "use-cases/marketing-vendas/cohort-receita.mdx",
       "title": "Receita e retenção por grupo de clientes",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "use-cases/marketing-vendas/funil-marketing.mdx",
       "title": "Analisar o funil de marketing",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "use-cases/marketing-vendas/performance-comercial.mdx",
       "title": "Revisar a operação comercial",
-      "change": "revised"
+      "change": "unchanged"
     },
     {
       "path": "use-cases/operacoes/apqc-otimizacao-processos.mdx",
       "title": "Mapear e melhorar um processo",
-      "change": "revised"
+      "change": "unchanged"
+    },
+    {
+      "path": "use-cases/operacoes/criar-treinamento.mdx",
+      "title": "Preparar um treinamento da equipe",
+      "change": "new"
     },
     {
       "path": "use-cases/rotina/acompanhamento.mdx",
       "title": "Acompanhar pendências sem refazer a busca",
-      "change": "new"
+      "change": "unchanged"
     },
     {
       "path": "use-cases/rotina/documentos.mdx",
       "title": "Comparar documentos e preparar um resumo",
-      "change": "new"
+      "change": "unchanged"
     },
     {
       "path": "use-cases/rotina/email.mdx",
       "title": "Organizar e-mails e preparar respostas",
-      "change": "new"
+      "change": "unchanged"
     },
     {
       "path": "use-cases/rotina/pesquisa.mdx",
       "title": "Pesquisar um tema e comparar opções",
-      "change": "new"
+      "change": "unchanged"
     },
     {
       "path": "use-cases/rotina/reunioes.mdx",
       "title": "Preparar uma reunião e registrar decisões",
-      "change": "new"
+      "change": "unchanged"
     },
     {
       "path": "use-cases/seguranca/seguranca-lovable.mdx",
       "title": "Revisar um aplicativo antes de lançar",
-      "change": "revised"
+      "change": "unchanged"
     }
   ],
   "screenshots": [
@@ -1384,9 +1459,74 @@
       "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
     },
     {
+      "path": "images/guide/automacao-nova-agenda.png",
+      "pages": [
+        "support/automation.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/automacao-opcoes.png",
+      "pages": [
+        "support/automation.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
       "path": "images/guide/automacoes.png",
       "pages": [
         "support/automation.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/conexao-acoes-disponiveis.png",
+      "pages": [
+        "support/sources.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/conexoes-gerenciadas-catalogo.png",
+      "pages": [
+        "product/connections/managed-connections.mdx",
+        "support/sources.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/conexoes-google-busca.png",
+      "pages": [
+        "support/sources.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/conexoes-microsoft-busca.png",
+      "pages": [
+        "support/sources.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/configuracoes-aparencia.png",
+      "pages": [
+        "support/appearance.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/configuracoes-app.png",
+      "pages": [
+        "support/app-settings.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/dashboard-semana-exemplo.png",
+      "pages": [
+        "support/dashboards.mdx",
+        "use-cases/gestao/resumo-semanal.mdx"
       ],
       "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
     },
@@ -1398,11 +1538,69 @@
       "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
     },
     {
+      "path": "images/guide/documento-editar-fonte.png",
+      "pages": [
+        "product/outputs.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/documento-nativo.png",
+      "pages": [
+        "product/outputs.mdx",
+        "use-cases/gestao/resumo-semanal.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/entrada-tecla-envio.png",
+      "pages": [
+        "support/input.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
       "path": "images/guide/ferramentas.png",
       "pages": [
         "getting-started/interface.mdx",
         "support/sources.mdx",
         "support/tools.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/ia-codex-modelos.png",
+      "pages": [
+        "support/ai.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/ia-gateway-busca-modelo.png",
+      "pages": [
+        "support/ai.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/ia-gateway-claude.png",
+      "pages": [
+        "product/connections/ai-gateway.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/ia-gateway-modelo-exato.png",
+      "pages": [
+        "support/ai.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/ia-gateway-perfis.png",
+      "pages": [
+        "product/connections/ai-gateway.mdx",
+        "support/ai.mdx"
       ],
       "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
     },
@@ -1465,12 +1663,84 @@
         "product/slides.mdx"
       ],
       "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/workflow-criar-pedido.png",
+      "pages": [
+        "support/workflows.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/workflow-detalhe.png",
+      "pages": [
+        "support/workflows.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/workspace-adicionar.png",
+      "pages": [
+        "getting-started/create-workspace.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/workspace-comecar.png",
+      "pages": [
+        "getting-started/create-workspace.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/workspace-conexoes.png",
+      "pages": [
+        "getting-started/create-workspace.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/workspace-importar-ou-zero.png",
+      "pages": [
+        "getting-started/create-workspace.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/workspace-informacoes.png",
+      "pages": [
+        "getting-started/create-workspace.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/workspace-objetivos.png",
+      "pages": [
+        "getting-started/create-workspace.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/workspace-perfil.png",
+      "pages": [
+        "getting-started/create-workspace.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+    },
+    {
+      "path": "images/guide/workspace-pronto.png",
+      "pages": [
+        "getting-started/create-workspace.mdx"
+      ],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
     }
   ],
   "limits": [
-    "Integrações inventariadas e confrontadas com ações suportadas; não autenticadas nem exercitadas contra contas externas.",
+    "Integrações inventariadas e confrontadas com ações suportadas; novas autenticações e operações em contas externas não foram executadas para o guia.",
     "Voz, sincronização entre dispositivos, publicação de sites, pagamentos e mutações corporativas não executados.",
     "Busca do Mintlify não testada localmente porque exige autenticação.",
     "landing.html é página independente; apenas destinos dos três botões de download corrigidos. Não entra no inventário de guias Mintlify."
-  ]
+  ],
+  "managedGatewayCatalog": "gateway-models.json",
+  "expansionValidation": "expansion-validation.json"
 }

@@ -16,6 +16,26 @@ Em **Ferramentas > Dashboards**, você encontra painéis salvos no workspace. El
 
 > Crie um dashboard salvo de entregas do trimestre. Use a fonte de tarefas que selecionei. Mostre total, concluídas, atrasadas e uma tabela por responsável. Considere atrasada somente uma tarefa não concluída com vencimento anterior a hoje. Mostre o período e a última atualização.
 
+## Praticar com cinco entregas fictícias
+
+Baixe a [lista de entregas da semana](/use-cases/datasets/entregas-semana-exemplo.csv), anexe em uma sessão e peça:
+
+> Crie um dashboard nativo salvo chamado Visão da semana — exemplo usando apenas o CSV anexado. Os dados são fictícios. Use 10/09/2026 como data de referência. Mostre total de entregas, concluídas, atrasadas e uma tabela com entrega, responsável, prazo e status. Considere atrasada apenas a entrega não concluída com prazo anterior à data de referência. Apresente os prazos como DD/MM/AAAA, preservando as datas do arquivo. Não consulte fontes externas.
+
+Abra **Ferramentas > Dashboards**, escolha o painel e amplie a visualização. Este é o resultado produzido no workspace de demonstração:
+
+<Frame><img src="/images/guide/dashboard-semana-exemplo.png" alt="Dashboard nativo de exemplo com cinco entregas, três concluídas, uma atrasada e tabela de prazos" /></Frame>
+
+| Verificação | Resultado esperado |
+| --- | --- |
+| Total | 5 entregas. |
+| Concluídas | 3 entregas. |
+| Atrasadas em 10/09/2026 | 1: Aprovar briefing, com prazo de 09/09/2026. |
+| Entrega planejada | Confirmar agenda, com prazo de 11/09/2026. |
+| Datas | Iguais às do arquivo, sem deslocamento de um dia. |
+
+Este painel usa dados fixos do exercício. Reabri-lo não busca tarefas novas em outro sistema. Para uma versão real atualizável, peça para vincular os indicadores à conexão escolhida, explicando período e regras de cálculo. Confirme as fontes salvas e o resultado da primeira atualização.
+
 ## Reabrir e atualizar
 
 > Abra o dashboard de entregas do trimestre e atualize os dados mantendo o layout.

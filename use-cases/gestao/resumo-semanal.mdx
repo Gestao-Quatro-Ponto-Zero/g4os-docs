@@ -1,0 +1,50 @@
+---
+title: "Montar um resumo semanal de gestão"
+description: "Transforme uma lista de entregas em indicadores, decisões e um painel que você pode consultar depois."
+---
+
+Uma atualização semanal funciona melhor quando mostra o que mudou, o que está bloqueado e qual decisão precisa ser tomada. Neste exercício, você vai usar cinco tarefas fictícias para produzir um resumo e um dashboard nativo.
+
+## Pratique com os arquivos de exemplo
+
+Baixe [Entregas da semana — exemplo](/use-cases/datasets/entregas-semana-exemplo.csv) e anexe a uma sessão. O arquivo usa datas no formato ano-mês-dia. Para este exercício, a referência é **10/09/2026**, independentemente do dia em que você o executar.
+
+Há três tarefas concluídas, uma em andamento com prazo vencido e uma planejada para o dia seguinte. Nenhuma fonte externa é necessária.
+
+> Use a planilha de entregas anexada e a data de referência 10/09/2026. Conte entregas, concluídas e atrasadas; atraso significa tarefa não concluída com prazo anterior à referência. Crie um dashboard nativo salvo com esses indicadores e a tabela de tarefas, mostrando os prazos como texto DD/MM/AAAA. Prepare também um resumo editável com fatos, decisão pendente e próximos passos. Identifique tudo como exemplo fictício, sem consultar fontes reais ou criar automações.
+
+[Preparar este pedido no G4 OS](g4os://action/new-session?name=Montar+um+resumo+semanal+de+gest%C3%A3o&input=Use+a+planilha+de+entregas+anexada+e+a+data+de+refer%C3%AAncia+10%2F09%2F2026.+Conte+entregas%2C+conclu%C3%ADdas+e+atrasadas%3B+atraso+significa+tarefa+n%C3%A3o+conclu%C3%ADda+com+prazo+anterior+%C3%A0+refer%C3%AAncia.+Crie+um+dashboard+nativo+salvo+com+esses+indicadores+e+a+tabela+de+tarefas%2C+mostrando+os+prazos+como+texto+DD%2FMM%2FAAAA.+Prepare+tamb%C3%A9m+um+resumo+edit%C3%A1vel+com+fatos%2C+decis%C3%A3o+pendente+e+pr%C3%B3ximos+passos.+Identifique+tudo+como+exemplo+fict%C3%ADcio%2C+sem+consultar+fontes+reais+ou+criar+automa%C3%A7%C3%B5es.&mode=ask)
+
+## Confira o resultado esperado
+
+<Frame><img src="/images/guide/dashboard-semana-exemplo.png" alt="Dashboard nativo fictício com cinco entregas, três concluídas, uma atrasada e uma tabela de tarefas" /></Frame>
+
+| Indicador | Resultado do exercício | Regra |
+| --- | --- | --- |
+| Entregas | 5 | Uma linha por tarefa. |
+| Concluídas | 3 | Status concluído. |
+| Atrasadas | 1 | Não concluída e prazo anterior a 10/09/2026. |
+
+Não conte uma tarefa concluída como atrasada só porque o prazo é anterior à data de referência. Para mostrar as datas, peça o formato **DD/MM/AAAA** e confira se a visualização preservou o dia informado.
+
+## Transforme o painel em conversa
+
+O indicador aponta onde olhar. O resumo deve explicar o que a equipe precisa fazer com essa informação:
+
+> Há uma aprovação de briefing atrasada. A decisão pendente é definir a prioridade e um novo compromisso para concluir a aprovação. A confirmação da agenda continua prevista para 11/09.
+
+Peça um documento editável de uma página com **fatos**, **decisões pendentes** e **próximos passos**. Um resumo curto com nomes de responsáveis e datas é mais útil do que repetir a tabela inteira em prosa.
+
+<Frame><img src="/images/guide/documento-nativo.png" alt="Documento editável de exemplo com fatos, decisão pendente e próximos passos" /></Frame>
+
+## Adaptar ao trabalho real
+
+Troque o CSV pela lista de um projeto no Asana, ClickUp, Planner, Jira ou outra [conexão compatível](/product/connections/managed-connections). Indique projeto, equipe, período e regra de atraso. Peça que itens sem data ou responsável apareçam separados.
+
+Antes de unir fontes, confira se elas contêm a mesma tarefa com nomes diferentes. A contagem deve refletir entregas únicas, e não a quantidade de registros encontrados.
+
+## Retomar na semana seguinte
+
+Abra o painel salvo em **Ferramentas > Dashboards**. Um painel com fontes configuradas pode atualizar os dados mantendo o formato. Este exemplo usa dados estáticos e fictícios: clicar em Atualizar não busca uma nova semana no mundo real.
+
+Quando a rotina funcionar, salve um [workflow](/support/workflows) e, se precisar de recorrência, configure uma [automação](/support/automation). Primeiro confira a execução manual e o critério dos indicadores.

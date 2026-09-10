@@ -1,0 +1,47 @@
+---
+title: "Organizar contas a pagar para revisão"
+description: "Separe pagos, vencidos, vencimentos do dia e registros que podem estar duplicados."
+---
+
+Uma lista de contas a pagar pode misturar valores já pagos, títulos em aberto e duplicidades. Antes de somar ou organizar o trabalho da equipe, confira essas diferenças.
+
+Baixe [Contas a pagar — exemplo](/use-cases/datasets/contas-a-pagar-exemplo.csv). O arquivo contém seis linhas fictícias, usa valores em reais e tem uma possível duplicidade proposital. Considere **10/09/2026** como data de referência.
+
+## Comece pelas definições
+
+Neste exercício:
+
+- **Pago** é o registro com esse status e data de pagamento informada.
+- **Vencido** é um item em aberto com vencimento anterior à referência.
+- **Vence hoje** é um item em aberto com vencimento igual à referência.
+- **A vencer** é um item em aberto com vencimento posterior à referência.
+
+> Analise o CSV fictício de contas a pagar anexado com referência em 10/09/2026. Separe pagos, em aberto vencidos, vencendo na referência e a vencer. Mostre os totais brutos e as linhas de cada grupo. Procure possíveis duplicidades por fornecedor, documento, valor e vencimento, sem excluir registros nem ajustar totais silenciosamente. Entregue uma fila de conferência. Não efetue pagamentos nem altere a base.
+
+[Preparar este pedido no G4 OS](g4os://action/new-session?name=Organizar+contas+a+pagar+para+revis%C3%A3o&input=Analise+o+CSV+fict%C3%ADcio+de+contas+a+pagar+anexado+com+refer%C3%AAncia+em+10%2F09%2F2026.+Separe+pagos%2C+em+aberto+vencidos%2C+vencendo+na+refer%C3%AAncia+e+a+vencer.+Mostre+os+totais+brutos+e+as+linhas+de+cada+grupo.+Procure+poss%C3%ADveis+duplicidades+por+fornecedor%2C+documento%2C+valor+e+vencimento%2C+sem+excluir+registros+nem+ajustar+totais+silenciosamente.+Entregue+uma+fila+de+confer%C3%AAncia.+N%C3%A3o+efetue+pagamentos+nem+altere+a+base.&mode=ask)
+
+## Valide antes de usar os totais
+
+| Grupo | Valor bruto do exemplo |
+| --- | --- |
+| Pago | R$ 3.500 |
+| Em aberto e vencido | R$ 2.400 |
+| Em aberto, vence em 10/09 | R$ 800 |
+| Em aberto, a vencer | R$ 2.850 |
+| Total em aberto, antes de revisar duplicidade | R$ 6.050 |
+
+AP002 e AP005 têm o mesmo fornecedor, documento, valor e vencimento. O resultado deve sinalizar a dupla como **possível duplicidade**. Não exclua automaticamente uma linha nem apresente o valor deduplicado como definitivo.
+
+Se o total entregue for diferente, peça a lista de linhas que entrou em cada grupo. Isso permite encontrar status, datas ou valores interpretados de outra forma.
+
+## Organize uma fila de conferência
+
+Peça uma tabela com identificador, fornecedor, documento, valor, situação e ponto a verificar. A equipe pode usar essa fila para confirmar documentos, registrar divergências e atualizar a base oficial depois da revisão.
+
+> Acrescente uma coluna Ação de conferência. Para a possível duplicidade, escreva “confirmar documento na origem”. Para um dado ausente, diga qual campo precisa ser completado. Não recomende efetuar pagamentos.
+
+## Quando usar uma planilha nativa ou um dashboard
+
+Use uma [planilha nativa](/product/workbooks) quando quiser revisar registros e preencher observações. Use um [dashboard](/support/dashboards) quando já tiver uma base confiável e precisar acompanhar os mesmos agrupamentos periodicamente.
+
+Antes de conectar uma fonte real, combine a regra de status, o período e o que cada valor representa. Acesso a uma base não autoriza o G4 OS a efetuar pagamentos, marcar títulos como pagos ou decidir exceções por conta própria.

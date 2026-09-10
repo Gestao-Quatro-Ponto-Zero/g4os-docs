@@ -1,57 +1,52 @@
 # Revisão da documentação pública — setembro de 2026
 
-Esta pasta registra evidências para manutenção e revisão do PR. Não faz parte da navegação pública do Mintlify.
+Esta pasta guarda evidências de manutenção, fora da navegação pública do Mintlify.
 
-## Escopo e base
+## Escopo atual
 
-A revisão partiu dos 58 arquivos MDX existentes, preservou suas URLs e acrescentou 14 guias. São 72 arquivos: 71 entradas de navegação e uma página de compatibilidade de tags, cujo redirecionamento foi mantido. O conteúdo foi organizado em português para usuários não técnicos.
+A primeira revisão, no PR #118, preservou as 58 URLs originais e levou o acervo a 72 páginas. Esta ampliação parte de `2fe07c6` e acrescenta nove páginas: catálogo de IA e oito casos de uso. O resultado tem **81 MDX, 80 entradas de navegação, 20 casos de uso e 40 capturas reais**. A página de tags continua como compatibilidade com redirecionamento.
 
-O comportamento foi confrontado com o Electron aberto e o código do produto no commit `ec67bc01c66cb290efe0d7f6fc6e4fa88caad664`. Nenhum arquivo do repositório do aplicativo foi alterado. A base dos docs é `33c8636`.
+O produto foi conferido no código `ec67bc01c66cb290efe0d7f6fc6e4fa88caad664` e no Electron aberto, cuja tela informa versão 0.99.411. O repositório do aplicativo permaneceu sem alterações.
 
-[`coverage.json`](coverage.json) relaciona cada construtor de rota, área de configurações, atalho e conexão gerenciada às páginas correspondentes. Inclui a referência de implementação, a forma de verificação e as limitações. O inventário de rotas contém todos os 36 construtores de visualização e 10 construtores de ação de `routes.ts`; os parâmetros finitos estão em `routeVariants`, e as 13 subpáginas de configurações estão enumeradas separadamente. IDs de sessões, projetos e itens são variáveis, não novas páginas de documentação.
+- [`coverage.json`](coverage.json): todos os 36 construtores de visualização, dez de ação, 13 subpáginas de configurações, 23 ações de teclado e 38 conexões gerenciadas relacionados aos guias. Inclui inventário das páginas e capturas.
+- [`gateway-models.json`](gateway-models.json): 42 opções selecionáveis exportadas do catálogo do produto, com nome, família, entrada, raciocínio e classificação de acesso. O número inclui perfis Pro, G4 OMM e seleção de modelo gratuito; não são 42 provedores distintos.
+- [`datasets.json`](datasets.json): estrutura dos cinco XLSX preservados.
+- [`expansion-validation.json`](expansion-validation.json): contagens e resultados esperados dos quatro CSVs fictícios.
 
-## Correções relevantes
+## Conteúdo ampliado
 
-- Entrada incorporada a App, Tags como nome apresentado ao usuário, Marketplace/Meus Itens na rota atual e aliases de Empresa tratados como compatibilidade.
-- Artigo antigo de Modo reparo preservado como resolução de problemas, sem indicar uma tela geral que não existe na navegação atual.
-- Menções `@`, `#`, `>` e menu `/`, 23 ações de teclado registradas, atalho do Desk e comandos atuais do Telegram.
-- Distinção entre conexão de IA, conexão de trabalho, agente gerenciado e agente personalizado; catálogo completo com 38 conexões.
-- Guias novos de entregáveis, planilhas nativas, slides, sites, Apps, Desk, navegador, parceiros e mapa da interface.
-- Distinção entre prévia, edição nativa e exportação; entre publicar uma conversa, colaborar e controlar uma sessão remotamente; entre Brain e Cloud Sync.
-- Remoção de preços fixos, ciclos universais de crédito e promessas amplas de criptografia que não descreviam corretamente todos os caminhos do produto.
-- Cinco casos cotidianos novos: reuniões, e-mails, acompanhamento, documentos e pesquisa. Os sete casos existentes foram revistos. Todos os 12 pedidos de exemplo são preparados para revisão, sem envio automático.
-- Três botões de download da página independente `landing.html` agora apontam para a página oficial. Essa página de marketing não compõe o inventário de guias.
+O assistente de workspace agora tem oito passos ilustrados, incluindo importação, perfil, objetivos, conexões e primeira experiência. IA ganhou capturas de Gateway e Codex, perfis automáticos, busca, escolha exata e ajuste de raciocínio. O catálogo lista todas as opções efetivas do produto, sem presumir catálogos externos ou fixar preços.
 
-## Capturas e experiência no aplicativo
+Conexões ganhou buscas Google/Microsoft, explicação de identidade detectada e ações disponíveis. Workflows mostra o pedido de criação e o item salvo com entradas obrigatórias. Documentos mostra leitura e edição de fonte. Dashboards mostra cinco tarefas e regras de contagem. Automações mostra agenda, prompt e opções. App, entrada e aparência receberam capturas próprias. Agentes e integrações ganharam instruções e testes de exemplo mais completos.
 
-Foram criados um workspace fictício, sessões de exemplo, um projeto com marco e um agente personalizado. A planilha nativa foi aberta, uma célula foi alterada, a diferença foi revisada e a alteração foi aplicada com confirmação de estado salvo. A apresentação nativa foi gerada e aberta no G4 Slide Studio. Os controles de exportação foram inspecionados, sem afirmar que os arquivos exportados foram testados.
+Os oito novos casos cobrem 1:1, resumo semanal, fornecedores, reunião com cliente, recebimentos, contas a pagar, conteúdo e treinamento. Todos incluem contexto, pedido preparado em Perguntar e critérios de revisão.
 
-As 13 capturas novas foram inspecionadas individualmente, incluindo nomes, cabeçalhos, caminhos e texto visível. Contêm somente cenários fictícios e controles do produto. As 30 imagens antigas, que deixaram de ser referenciadas, foram removidas; não foram produzidos GIFs.
+## Experiência e privacidade das capturas
 
-## Arquivos de exercício
+Foram acrescentadas **27 capturas**, totalizando 40, todas abertas e inspecionadas individualmente. Os cenários usam Pessoa Exemplo, Empresa Exemplo, tarefas e valores fictícios. A revisão abrangeu nomes, cabeçalhos, texto, caminhos e possíveis identidades. Não há GIFs ou imagens de interface geradas por IA.
 
-Os cinco XLSX foram preservados byte a byte. [`datasets.json`](datasets.json) registra abas, cabeçalhos e dimensões relevantes, sem copiar registros completos.
+Foi criado outro workspace de demonstração, um dashboard estático e um documento editável; ambos foram abertos. O detalhe do workflow criado foi verificado. O formulário de automação foi preenchido e cancelado: não foi deixada uma rotina ativa. A revisão anterior também exercitou uma edição de célula com comparação e salvamento e abriu uma apresentação nativa no Studio.
 
-Os exercícios comerciais contêm divergências entre subtítulos, períodos nas células e descrições antigas. Os novos guias orientam a conferir o período real, separar totais e evitar dupla contagem. Não se presume taxa de churn sem denominador, retenção de pessoas a partir de receita nem curva de ramp sem data de entrada. A referência APQC é identificada como versão 8.0, sem tratá-la como a versão mais recente.
+Com autorização do usuário, descrições de rotinas de seu workspace foram consultadas para inspirar temas. Nenhum texto privado, nome de cliente, valor real ou inventário desse workspace foi copiado para o repositório. Conexões podem reconhecer autorizações prévias; as telas com identidade de conta foram excluídas das capturas públicas.
 
-## Verificação concluída
+## Verificações concluídas
 
 | Verificação | Resultado |
 | --- | --- |
 | `npx mint validate --strict` | Passou. |
-| `npx mint broken-links --check-anchors --check-redirects` | Passou, sem links quebrados. |
+| `npx mint broken-links --check-anchors --check-redirects` | Passou sem links quebrados. |
 | `git diff --check` | Passou. |
-| Comparação dos construtores de `routes.ts` com a matriz | 36 de visualização e 10 de ação cobertos; nenhuma entrada ausente. |
-| Configurações e catálogo exportado do produto | 13 subpáginas e 38 conexões cobertas. |
-| Links `g4os://` pelo parser real do aplicativo | 34 links válidos em 22 caminhos; 12 pedidos em modo `ask`, sem `send=true`. |
-| Navegação e arquivos | 71 entradas únicas e uma compatibilidade; nenhuma página antiga removida. |
-| Capturas | 13 arquivos referenciados e revisados visualmente. |
-| Dados de exercício | Cinco arquivos idênticos à base. |
-| Prévia visual | Página inicial, planilhas com ampliação de imagem, catálogo, navegação por links, tema escuro e menu em largura de 390 px. Sem transbordamento horizontal da página; tabelas em região rolável. |
-| Busca por caminhos pessoais e links antigos inválidos nos guias | Nenhuma ocorrência dos padrões revisados. |
+| Navegação e compatibilidade | 80 entradas únicas, 81 MDX; nenhuma URL anterior removida. |
+| Parser real dos links `g4os://` | 42 links válidos, 22 caminhos; 20 pedidos em `ask`, sem envio automático. |
+| Capturas e referências | 40 imagens referenciadas e revisadas visualmente, 27 novas. |
+| CSVs de exercício | Contagens, totais, correspondências, exceções e duplicidade conferidos por cálculo. |
+| XLSX existentes | Cinco arquivos idênticos à base. |
+| Prévia de workspace | Oito imagens carregadas e leitura em desktop conferida. |
+| Prévia de IA e casos de uso | Conteúdo, tabelas e navegação conferidos; catálogo em 390 px sem transbordamento horizontal da página. |
+| Privacidade dos guias | Sem caminhos pessoais, tokens ou identificadores de contas nos padrões revisados. |
 
-## Limites da verificação
+## Limites
 
-A matriz documenta cobertura editorial e evidência de implementação; não equivale a teste de todas as operações de todos os serviços. Autenticação das 38 integrações, envio de mensagens, voz, sincronização entre computadores, publicação, pagamentos e alterações corporativas não foram executados. As instruções desses recursos foram conferidas em componentes, contratos e referências atuais do produto.
+A matriz comprova cobertura editorial e evidência de implementação; não representa teste de todas as operações de todos os serviços. Não foram exercitados novos logins dos 38 conectores, envios de mensagens, captura de voz, sincronização entre computadores, pagamentos, publicação de sites pelo produto ou alterações corporativas. O deploy da documentação é uma atividade separada da funcionalidade de publicar sites no G4 OS.
 
-A busca da prévia Mintlify exige autenticação e não foi exercitada. Recursos corporativos ou beta podem variar com permissões, conta e versão. As páginas explicam essas condições nos pontos relevantes.
+A busca local do Mintlify exige autenticação e não foi exercitada. Recursos de conta, empresa e beta podem variar conforme versão e permissões. A publicação deve ser confirmada pelo deployment do commit e pela leitura do domínio público após o merge.

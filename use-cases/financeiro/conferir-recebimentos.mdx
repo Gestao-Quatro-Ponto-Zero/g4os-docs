@@ -1,0 +1,47 @@
+---
+title: "Conferir recebimentos entre duas bases"
+description: "Cruze referências, valores e datas para encontrar diferenças que precisam de revisão."
+---
+
+Você recebeu uma lista de valores previstos e outra de lançamentos recebidos. O primeiro trabalho é identificar correspondências e exceções, sem inventar a causa das diferenças nem alterar os arquivos originais.
+
+## Baixe as duas bases fictícias
+
+- [Recebimentos previstos — exemplo](/use-cases/datasets/recebimentos-previstos-exemplo.csv).
+- [Extrato de recebimentos — exemplo](/use-cases/datasets/extrato-recebimentos-exemplo.csv).
+
+Os dois arquivos são sintéticos. Não representam uma conta bancária e usam reais como unidade. Anexe ambos na mesma sessão e informe qual é a previsão e qual é a base de recebimentos.
+
+> Compare os dois CSVs fictícios anexados: recebimentos previstos e extrato de recebimentos. Use a referência como chave principal e preserve os identificadores. Separe correspondências com valores iguais, valores divergentes, previsões sem recebimento na base e recebimentos sem previsão. Não associe apenas pelo valor, não invente motivos para diferenças e não altere os arquivos de origem. Entregue uma tabela de exceções e explique os critérios usados.
+
+[Preparar este pedido no G4 OS](g4os://action/new-session?name=Conferir+recebimentos+entre+duas+bases&input=Compare+os+dois+CSVs+fict%C3%ADcios+anexados%3A+recebimentos+previstos+e+extrato+de+recebimentos.+Use+a+refer%C3%AAncia+como+chave+principal+e+preserve+os+identificadores.+Separe+correspond%C3%AAncias+com+valores+iguais%2C+valores+divergentes%2C+previs%C3%B5es+sem+recebimento+na+base+e+recebimentos+sem+previs%C3%A3o.+N%C3%A3o+associe+apenas+pelo+valor%2C+n%C3%A3o+invente+motivos+para+diferen%C3%A7as+e+n%C3%A3o+altere+os+arquivos+de+origem.+Entregue+uma+tabela+de+exce%C3%A7%C3%B5es+e+explique+os+crit%C3%A9rios+usados.&mode=ask)
+
+## Confira a regra de associação
+
+A referência é a chave principal deste exercício. O valor serve para conferir o recebimento; ele não deve ser usado sozinho para decidir que dois registros são a mesma transação.
+
+O G4 OS deve preservar a identificação das linhas das duas bases. Se houver várias possibilidades de associação, peça que mostre a ambiguidade em vez de escolher silenciosamente uma delas.
+
+## O que deve aparecer
+
+| Referência | Situação no exercício | O que revisar |
+| --- | --- | --- |
+| REC001 | Valores iguais: R$ 1.000 | Correspondência encontrada. |
+| REC002 | Previsto R$ 750; recebido R$ 730 | Diferença de R$ 20 a explicar. |
+| REC003 | Valores iguais: R$ 1.200 | Correspondência encontrada. |
+| REC004 e REC005 | Sem lançamento correspondente na base anexada | Conferir período e origem. |
+| REC006 | Recebimento de R$ 300 sem previsão correspondente | Identificar a origem. |
+
+A diferença de R$ 20 pode ter várias causas. O exemplo não informa tarifa, desconto ou retenção; portanto, a análise deve marcar a causa como **não informada**.
+
+## Peça uma entrega revisável
+
+> Crie uma planilha nativa com abas Correspondências, Diferenças e Sem correspondência. Preserve os identificadores originais. Acrescente uma coluna Observação para eu registrar a investigação, sem modificar as bases anexadas.
+
+Abra a [planilha editável](/product/workbooks), confira os totais de cada base separadamente e valide as associações. “Sem correspondência” significa apenas que o lançamento não foi encontrado no conjunto analisado; não prova que um valor deixou de ser pago.
+
+## Levar o processo para uma rotina
+
+Defina período, unidade, referência, tratamento de duplicidades e regra de datas antes de repetir o trabalho. A validação pode virar um workflow com o mesmo formato de saída a cada execução.
+
+O resultado deste caso é uma lista de itens para conferência. Pagamentos, baixas e lançamentos nos sistemas de origem são ações separadas, que exigem um pedido específico e revisão dos dados corretos.

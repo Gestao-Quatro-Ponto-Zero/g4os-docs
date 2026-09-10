@@ -30,6 +30,31 @@ Peça ao G4 OS para criar ou ajustar um roteiro a partir de um processo real:
 
 > “Crie um workflow para revisar nossos relatórios semanais. Primeiro verifique período e fontes, depois procure inconsistências e entregue um resumo das correções sugeridas.”
 
+## Criar seu primeiro workflow
+
+1. Abra **Ferramentas > Workflows > Adicionar workflow**.
+2. No campo que aparece, descreva o processo em linguagem comum: entradas, verificações, entrega e limites.
+3. Envie o pedido e acompanhe a sessão de criação.
+4. Ao terminar, volte à lista e abra o workflow. Confirme nome, instruções e entradas obrigatórias.
+
+Este foi o pedido usado no exemplo:
+
+> Crie um workflow chamado Revisar resumo semanal — exemplo. Ele deve perguntar o período e receber a lista de entregas, conferir responsáveis e prazos, separar fatos de pendências e produzir um resumo editável com decisões e próximos passos. Use só os materiais fornecidos; não envie mensagens e não altere tarefas.
+
+<Frame><img src="/images/guide/workflow-criar-pedido.png" alt="Pedido de criação de um workflow de revisão semanal" /></Frame>
+
+O resultado salvo inclui **Período** e **Entregas** como entradas obrigatórias. Isso ajuda a iniciar a tarefa sem esquecer o intervalo ou a lista a revisar. Os exemplos de execução também ficam visíveis no detalhe.
+
+<Frame><img src="/images/guide/workflow-detalhe.png" alt="Workflow salvo com descrição, exemplos e entradas Período e Entregas" /></Frame>
+
+## Testar antes de reutilizar
+
+Abra uma nova sessão, selecione o workflow com **@** e use a [lista fictícia de entregas](/use-cases/datasets/entregas-semana-exemplo.csv). Informe 08 a 11 de setembro de 2026 como período e 10 de setembro como data de referência para atrasos.
+
+O resumo deve reconhecer cinco entregas, três concluídas, uma pendência atrasada e uma entrega planejada. Confira se a decisão pendente aparece como algo a decidir, sem atribuir uma aprovação que não ocorreu.
+
+Se faltou alguma etapa, peça uma alteração específica no workflow: “Inclua uma checagem de datas e marque como Não informado qualquer responsável ausente”. Reexecute com o mesmo exemplo para comparar. Veja o [caso completo de resumo semanal](/use-cases/gestao/resumo-semanal).
+
 ## O que muda em relação a outros recursos
 
 Uma [skill](/support/skills) orienta como realizar um tipo de tarefa. Um workflow descreve um processo que você quer iniciar. Uma [automação](/support/automation) define quando executar trabalho; ela pode chamar um workflow.

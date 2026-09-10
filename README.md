@@ -2,6 +2,8 @@
 
 Documentação pública em português para pessoas que usam o G4 OS no trabalho. Os guias explicam como pedir, revisar, organizar e compartilhar entregas sem exigir conhecimento de programação.
 
+O acervo atual tem 81 páginas, 20 casos de uso e 40 capturas reais. Os catálogos cobrem 38 conexões de trabalho e 42 opções selecionáveis do AI Gateway, conforme a revisão de setembro de 2026.
+
 ## Prévia e validação
 
 ```bash
@@ -31,7 +33,7 @@ A busca da prévia local pode exigir autenticação do Mintlify. Isso não imped
 2. Escreva pelo objetivo da pessoa: onde abrir, o que fazer, como conferir o resultado e como resolver os erros comuns. Detalhes de infraestrutura pertencem à documentação técnica do produto.
 3. Preserve URLs existentes. Quando precisar mover uma página, configure o redirecionamento e atualize os links internos.
 4. Use capturas do workspace de demonstração. Confira a imagem inteira antes de adicioná-la: sem contas reais, mensagens privadas, tokens, códigos de conexão, caminhos pessoais ou dados de clientes. Inclua texto alternativo que descreva a ação.
-5. Confira todas as integrações do catálogo vigente. Não transforme exemplos de uso em promessas de ações que a conexão não suporta.
+5. Confira todas as integrações e opções de IA do catálogo vigente. Não transforme exemplos de uso em promessas de ações que a conexão não suporta.
 6. Execute os dois comandos de validação e revise a prévia, incluindo páginas com imagens, tabelas e pedidos de exemplo.
 
 Os links de casos de uso preenchem um pedido em modo Perguntar. Não use `send=true`: a pessoa deve poder revisar referências e texto antes de enviar.

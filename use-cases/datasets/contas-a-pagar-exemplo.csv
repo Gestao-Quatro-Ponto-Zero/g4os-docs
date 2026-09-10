@@ -1,0 +1,7 @@
+﻿id,fornecedor,documento,valor_brl,vencimento,status,data_pagamento
+AP001,Fornecedor A,NF-101,3500,2026-09-05,Pago,2026-09-04
+AP002,Fornecedor B,NF-202,1200,2026-09-09,Aberto,
+AP003,Fornecedor C,NF-303,800,2026-09-10,Aberto,
+AP004,Fornecedor D,NF-404,2400,2026-09-15,Aberto,
+AP005,Fornecedor B,NF-202,1200,2026-09-09,Aberto,
+AP006,Fornecedor E,NF-505,450,2026-09-12,Aberto,

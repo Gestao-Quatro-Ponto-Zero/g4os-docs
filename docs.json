@@ -135,6 +135,7 @@
                   "support/index",
                   "support/app-settings",
                   "support/ai",
+                  "product/connections/ai-gateway",
                   "support/appearance",
                   "support/input",
                   "support/workspace",
@@ -170,8 +171,25 @@
                 ]
               },
               {
+                "group": "Gestão e clientes",
+                "pages": [
+                  "use-cases/gestao/preparar-1a1",
+                  "use-cases/gestao/resumo-semanal",
+                  "use-cases/gestao/comparar-fornecedores",
+                  "use-cases/clientes/preparar-reuniao-cliente"
+                ]
+              },
+              {
+                "group": "Financeiro",
+                "pages": [
+                  "use-cases/financeiro/conferir-recebimentos",
+                  "use-cases/financeiro/organizar-contas-a-pagar"
+                ]
+              },
+              {
                 "group": "Marketing e vendas",
                 "pages": [
+                  "use-cases/conteudo/planejar-campanha",
                   "use-cases/marketing-vendas/cohort-receita",
                   "use-cases/marketing-vendas/funil-marketing",
                   "use-cases/marketing-vendas/churn-retencao",
@@ -182,6 +200,7 @@
                 "group": "Processos e entregas",
                 "pages": [
                   "use-cases/operacoes/apqc-otimizacao-processos",
+                  "use-cases/operacoes/criar-treinamento",
                   "use-cases/design/design-slides",
                   "use-cases/seguranca/seguranca-lovable"
                 ]
