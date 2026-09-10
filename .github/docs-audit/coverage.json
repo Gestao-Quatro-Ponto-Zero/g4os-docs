@@ -1,7 +1,7 @@
 {
   "reviewDate": "2026-09-10",
   "productCommit": "ec67bc01c66cb290efe0d7f6fc6e4fa88caad664",
-  "docsBaseCommit": "2fe07c664cae7c2cbdac2ac6acc6deae7b77e7f6",
+  "docsBaseCommit": "a7f2752920342ff5833f2c2e33ad1e7f499585d4",
   "scope": "Documentação pública em português para usuários não técnicos. Matriz interna de evidências, não promessa de teste E2E de integrações externas.",
   "sourceOfTruth": {
     "routes": "apps/electron/src/shared/routes.ts",
@@ -373,16 +373,30 @@
       "pages": [
         "support/app-settings",
         "support/input"
+      ],
+      "screenshots": [
+        "images/guide/configuracoes-app.png",
+        "images/guide/entrada-tecla-envio.png"
       ]
     },
     "ai": {
       "pages": [
         "support/ai"
+      ],
+      "screenshots": [
+        "images/guide/ajustes-ia.png",
+        "images/guide/ia-codex-modelos.png",
+        "images/guide/ia-gateway-busca-modelo.png",
+        "images/guide/ia-gateway-modelo-exato.png",
+        "images/guide/ia-gateway-perfis.png"
       ]
     },
     "appearance": {
       "pages": [
         "support/appearance"
+      ],
+      "screenshots": [
+        "images/guide/configuracoes-aparencia.png"
       ]
     },
     "input": {
@@ -390,55 +404,89 @@
         "support/input",
         "support/app-settings"
       ],
-      "visibility": "Compatibilidade; oculta da lista principal. Entrada foi incorporada ao App; atalhos abrem referência."
+      "visibility": "Compatibilidade; oculta da lista principal. Entrada foi incorporada ao App; atalhos abrem referência.",
+      "screenshots": [
+        "images/guide/configuracoes-app.png",
+        "images/guide/entrada-tecla-envio.png"
+      ]
     },
     "workspace": {
       "pages": [
         "support/workspace"
+      ],
+      "screenshots": [
+        "images/guide/ajustes-workspace.png"
       ]
     },
     "usage": {
       "pages": [
         "support/usage",
         "support/billing-subscriptions"
+      ],
+      "screenshots": [
+        "images/guide/ajustes-cupom.png",
+        "images/guide/ajustes-uso-resumo.png",
+        "images/guide/ajustes-uso.png"
       ]
     },
     "permissions": {
       "pages": [
         "support/permissions"
+      ],
+      "screenshots": [
+        "images/guide/ajustes-permissoes.png",
+        "images/guide/informacoes-sessao.png"
       ]
     },
     "labels": {
       "pages": [
         "support/labels"
+      ],
+      "screenshots": [
+        "images/guide/ajustes-tags.png"
       ]
     },
     "sync": {
       "pages": [
         "support/cloud-sync"
+      ],
+      "screenshots": [
+        "images/guide/ajustes-cloud-sync.png"
       ]
     },
     "shared-brain": {
       "pages": [
         "support/shared-brain"
       ],
-      "visibility": "Compatibilidade; oculta da lista principal. Entrada foi incorporada ao App; atalhos abrem referência."
+      "visibility": "Abre a experiência Brain; acesso também por Ferramentas e Configurações > Workspace.",
+      "screenshots": [
+        "images/guide/ajustes-brain.png"
+      ]
     },
     "support": {
       "pages": [
         "support/index",
         "support/repair-mode"
+      ],
+      "screenshots": [
+        "images/guide/ajustes-suporte.png"
       ]
     },
     "shortcuts": {
       "pages": [
         "support/shortcuts"
       ],
-      "visibility": "Compatibilidade; oculta da lista principal. Entrada foi incorporada ao App; atalhos abrem referência."
+      "visibility": "Compatibilidade; oculta da lista principal. Entrada foi incorporada ao App; atalhos abrem referência.",
+      "screenshots": [
+        "images/guide/ajustes-atalhos.png"
+      ]
     },
     "preferences": {
       "pages": [
         "support/preferences"
+      ],
+      "screenshots": [
+        "images/guide/ajustes-preferencias.png"
       ]
     }
   },
@@ -1452,6 +1500,102 @@
       "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
     },
     {
+      "path": "images/guide/ajustes-atalhos.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/shortcuts.mdx"
+      ],
+      "redaction": "no_identifying_data_visible"
+    },
+    {
+      "path": "images/guide/ajustes-brain.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/shared-brain.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/ajustes-cloud-sync.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/cloud-sync.mdx"
+      ],
+      "redaction": "no_identifying_data_visible"
+    },
+    {
+      "path": "images/guide/ajustes-cupom.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/usage.mdx"
+      ],
+      "redaction": "no_identifying_data_visible"
+    },
+    {
+      "path": "images/guide/ajustes-ia.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/ai.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/ajustes-permissoes.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/permissions.mdx"
+      ],
+      "redaction": "no_identifying_data_visible"
+    },
+    {
+      "path": "images/guide/ajustes-preferencias.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/preferences.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/ajustes-suporte.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/index.mdx"
+      ],
+      "redaction": "no_identifying_data_visible"
+    },
+    {
+      "path": "images/guide/ajustes-tags.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/labels.mdx"
+      ],
+      "redaction": "no_identifying_data_visible"
+    },
+    {
+      "path": "images/guide/ajustes-uso-resumo.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/usage.mdx"
+      ],
+      "redaction": "no_identifying_data_visible"
+    },
+    {
+      "path": "images/guide/ajustes-uso.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/usage.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/ajustes-workspace.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/workspace.mdx"
+      ],
+      "redaction": "no_identifying_data_visible"
+    },
+    {
       "path": "images/guide/apps-slide-studio.png",
       "pages": [
         "support/apps.mdx"
@@ -1489,8 +1633,8 @@
     {
       "path": "images/guide/conexoes-gerenciadas-catalogo.png",
       "pages": [
-        "product/connections/managed-connections.mdx",
-        "support/sources.mdx"
+        "support/sources.mdx",
+        "product/connections/managed-connections.mdx"
       ],
       "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
     },
@@ -1553,6 +1697,118 @@
       "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
     },
     {
+      "path": "images/guide/empresa-adicionar-pessoa.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/empresa.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/empresa-auditoria.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/empresa.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/empresa-conceder-extra.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/empresa.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/empresa-contexto.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/context.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/empresa-estrutura.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/context.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/empresa-modelos.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/empresa.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/empresa-pessoas.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/empresa.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/empresa-politica-global.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/empresa.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/empresa-solicitacoes.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/context.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/empresa-uso-creditos.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/empresa.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/empresa-uso-extra.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/empresa.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/empresa-uso-por-pessoa.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/empresa.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/empresa-validade-extra.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/empresa.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
+      "path": "images/guide/empresa-visao-geral.png",
+      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "pages": [
+        "support/empresa.mdx"
+      ],
+      "redaction": "opaque_rectangles"
+    },
+    {
       "path": "images/guide/entrada-tecla-envio.png",
       "pages": [
         "support/input.mdx"
@@ -1563,8 +1819,8 @@
       "path": "images/guide/ferramentas.png",
       "pages": [
         "getting-started/interface.mdx",
-        "support/sources.mdx",
-        "support/tools.mdx"
+        "support/tools.mdx",
+        "support/sources.mdx"
       ],
       "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
     },
@@ -1599,8 +1855,8 @@
     {
       "path": "images/guide/ia-gateway-perfis.png",
       "pages": [
-        "product/connections/ai-gateway.mdx",
-        "support/ai.mdx"
+        "support/ai.mdx",
+        "product/connections/ai-gateway.mdx"
       ],
       "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
     },
@@ -1742,5 +1998,162 @@
     "landing.html é página independente; apenas destinos dos três botões de download corrigidos. Não entra no inventário de guias Mintlify."
   ],
   "managedGatewayCatalog": "gateway-models.json",
-  "expansionValidation": "expansion-validation.json"
+  "expansionValidation": "expansion-validation.json",
+  "useCaseVisuals": [
+    {
+      "path": "images/use-cases/clientes-preparar-reuniao-cliente.svg",
+      "pages": [
+        "use-cases/clientes/preparar-reuniao-cliente.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/conteudo-planejar-campanha.svg",
+      "pages": [
+        "use-cases/conteudo/planejar-campanha.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/design-design-slides.svg",
+      "pages": [
+        "use-cases/design/design-slides.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/financeiro-conferir-recebimentos.svg",
+      "pages": [
+        "use-cases/financeiro/conferir-recebimentos.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/financeiro-organizar-contas-a-pagar.svg",
+      "pages": [
+        "use-cases/financeiro/organizar-contas-a-pagar.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/gestao-comparar-fornecedores.svg",
+      "pages": [
+        "use-cases/gestao/comparar-fornecedores.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/gestao-preparar-1a1.svg",
+      "pages": [
+        "use-cases/gestao/preparar-1a1.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/gestao-resumo-semanal.svg",
+      "pages": [
+        "use-cases/gestao/resumo-semanal.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/marketing-vendas-churn-retencao.svg",
+      "pages": [
+        "use-cases/marketing-vendas/churn-retencao.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/marketing-vendas-cohort-receita.svg",
+      "pages": [
+        "use-cases/marketing-vendas/cohort-receita.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/marketing-vendas-funil-marketing.svg",
+      "pages": [
+        "use-cases/marketing-vendas/funil-marketing.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/marketing-vendas-performance-comercial.svg",
+      "pages": [
+        "use-cases/marketing-vendas/performance-comercial.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/operacoes-apqc-otimizacao-processos.svg",
+      "pages": [
+        "use-cases/operacoes/apqc-otimizacao-processos.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/operacoes-criar-treinamento.svg",
+      "pages": [
+        "use-cases/operacoes/criar-treinamento.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/rotina-acompanhamento.svg",
+      "pages": [
+        "use-cases/rotina/acompanhamento.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/rotina-documentos.svg",
+      "pages": [
+        "use-cases/rotina/documentos.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/rotina-email.svg",
+      "pages": [
+        "use-cases/rotina/email.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/rotina-pesquisa.svg",
+      "pages": [
+        "use-cases/rotina/pesquisa.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/rotina-reunioes.svg",
+      "pages": [
+        "use-cases/rotina/reunioes.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    },
+    {
+      "path": "images/use-cases/seguranca-seguranca-lovable.svg",
+      "pages": [
+        "use-cases/seguranca/seguranca-lovable.mdx"
+      ],
+      "review": "SVG original de exemplo, revisado visualmente. Legenda distingue ilustração de resultados dos CSVs."
+    }
+  ],
+  "visualExpansion": {
+    "newScreenshots": 26,
+    "totalScreenshots": 66,
+    "newIllustrations": 20,
+    "useCasesWithVisuals": 20,
+    "settingsRoutesWithVisualGuide": 13,
+    "adminMutationsPerformed": false,
+    "referenceDesigns": [
+      "https://learn.chatgpt.com/use-cases/manage-your-inbox",
+      "https://learn.chatgpt.com/use-cases/new-hire-onboarding",
+      "https://learn.chatgpt.com/use-cases/datasets-and-reports",
+      "https://learn.chatgpt.com/use-cases/analyze-data-export"
+    ],
+    "implementation": "Mintlify Frame/Tabs; copyable wrapped text blocks; original SVG visuals; no copied screenshots from references."
+  }
 }

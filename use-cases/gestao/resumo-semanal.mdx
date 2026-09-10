@@ -5,15 +5,31 @@ description: "Transforme uma lista de entregas em indicadores, decisões e um pa
 
 Uma atualização semanal funciona melhor quando mostra o que mudou, o que está bloqueado e qual decisão precisa ser tomada. Neste exercício, você vai usar cinco tarefas fictícias para produzir um resumo e um dashboard nativo.
 
+<Frame caption="Exemplo ilustrativo. Confira os fatos e as referências antes de usar."><img src="/images/use-cases/gestao-resumo-semanal.svg" alt="O que avançou e o que precisa de decisão. Modelo de resumo • preencher com a base da semana." /></Frame>
+
+<Tabs>
+<Tab title="Materiais">
+Planilha de entregas, período e data de referência. Há um CSV fictício para praticar nesta página.
+</Tab>
+<Tab title="Pedido">
+```text wrap
+Use a planilha de entregas anexada e a data de referência 10/09/2026. Conte entregas, concluídas e atrasadas; atraso significa tarefa não concluída com prazo anterior à referência. Crie um dashboard nativo salvo com esses indicadores e a tabela de tarefas, mostrando os prazos como texto DD/MM/AAAA. Prepare também um resumo editável com fatos, decisão pendente e próximos passos. Identifique tudo como exemplo fictício, sem consultar fontes reais ou criar automações.
+```
+
+[Preparar este pedido no G4 OS](g4os://action/new-session?name=Montar+um+resumo+semanal+de+gest%C3%A3o&input=Use+a+planilha+de+entregas+anexada+e+a+data+de+refer%C3%AAncia+10%2F09%2F2026.+Conte+entregas%2C+conclu%C3%ADdas+e+atrasadas%3B+atraso+significa+tarefa+n%C3%A3o+conclu%C3%ADda+com+prazo+anterior+%C3%A0+refer%C3%AAncia.+Crie+um+dashboard+nativo+salvo+com+esses+indicadores+e+a+tabela+de+tarefas%2C+mostrando+os+prazos+como+texto+DD%2FMM%2FAAAA.+Prepare+tamb%C3%A9m+um+resumo+edit%C3%A1vel+com+fatos%2C+decis%C3%A3o+pendente+e+pr%C3%B3ximos+passos.+Identifique+tudo+como+exemplo+fict%C3%ADcio%2C+sem+consultar+fontes+reais+ou+criar+automa%C3%A7%C3%B5es.&mode=ask)
+
+O link preenche uma sessão em **Perguntar**. Confira o texto e os anexos antes de enviar.
+</Tab>
+<Tab title="Resultado">
+Um resumo com entregas, pendências e decisões, preservando a origem dos dados. O visual mostra a estrutura, sem recalcular a planilha.
+</Tab>
+</Tabs>
+
 ## Pratique com os arquivos de exemplo
 
 Baixe [Entregas da semana — exemplo](/use-cases/datasets/entregas-semana-exemplo.csv) e anexe a uma sessão. O arquivo usa datas no formato ano-mês-dia. Para este exercício, a referência é **10/09/2026**, independentemente do dia em que você o executar.
 
 Há três tarefas concluídas, uma em andamento com prazo vencido e uma planejada para o dia seguinte. Nenhuma fonte externa é necessária.
-
-> Use a planilha de entregas anexada e a data de referência 10/09/2026. Conte entregas, concluídas e atrasadas; atraso significa tarefa não concluída com prazo anterior à referência. Crie um dashboard nativo salvo com esses indicadores e a tabela de tarefas, mostrando os prazos como texto DD/MM/AAAA. Prepare também um resumo editável com fatos, decisão pendente e próximos passos. Identifique tudo como exemplo fictício, sem consultar fontes reais ou criar automações.
-
-[Preparar este pedido no G4 OS](g4os://action/new-session?name=Montar+um+resumo+semanal+de+gest%C3%A3o&input=Use+a+planilha+de+entregas+anexada+e+a+data+de+refer%C3%AAncia+10%2F09%2F2026.+Conte+entregas%2C+conclu%C3%ADdas+e+atrasadas%3B+atraso+significa+tarefa+n%C3%A3o+conclu%C3%ADda+com+prazo+anterior+%C3%A0+refer%C3%AAncia.+Crie+um+dashboard+nativo+salvo+com+esses+indicadores+e+a+tabela+de+tarefas%2C+mostrando+os+prazos+como+texto+DD%2FMM%2FAAAA.+Prepare+tamb%C3%A9m+um+resumo+edit%C3%A1vel+com+fatos%2C+decis%C3%A3o+pendente+e+pr%C3%B3ximos+passos.+Identifique+tudo+como+exemplo+fict%C3%ADcio%2C+sem+consultar+fontes+reais+ou+criar+automa%C3%A7%C3%B5es.&mode=ask)
 
 ## Confira o resultado esperado
 

@@ -1,0 +1,647 @@
+{
+  "reviewDate": "2026-09-10",
+  "baseCommit": "a7f2752920342ff5833f2c2e33ad1e7f499585d4",
+  "counts": {
+    "newScreenshots": 26,
+    "totalScreenshots": 66,
+    "newIllustrations": 20,
+    "useCasesWithVisuals": 20,
+    "settingsRoutesWithVisualGuide": 13,
+    "adminMutationsPerformed": false,
+    "referenceDesigns": [
+      "https://learn.chatgpt.com/use-cases/manage-your-inbox",
+      "https://learn.chatgpt.com/use-cases/new-hire-onboarding",
+      "https://learn.chatgpt.com/use-cases/datasets-and-reports",
+      "https://learn.chatgpt.com/use-cases/analyze-data-export"
+    ],
+    "implementation": "Mintlify Frame/Tabs; copyable wrapped text blocks; original SVG visuals; no copied screenshots from references."
+  },
+  "screenshots": [
+    {
+      "path": "images/guide/empresa-visao-geral.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          696,
+          9,
+          740,
+          30
+        ],
+        [
+          272,
+          596,
+          595,
+          767
+        ]
+      ],
+      "sha256": "a718a383af4a7eaa35aeebbe34a84a73247644939d88ab5bee4ba3b1cfad3c5b",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/empresa-uso-creditos.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          696,
+          9,
+          740,
+          30
+        ]
+      ],
+      "sha256": "fe68f18879e5c6074d0f5ede9ce60524c1add7490b1d80385f6678fb400cbc45",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/empresa-uso-por-pessoa.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          696,
+          9,
+          740,
+          30
+        ],
+        [
+          279,
+          226,
+          680,
+          767
+        ]
+      ],
+      "sha256": "dad10483d5370b373195120efc5a292a202f584acd8f8d55e7e1fd4be52469ad",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/empresa-politica-global.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          696,
+          9,
+          740,
+          30
+        ],
+        [
+          274,
+          547,
+          488,
+          572
+        ],
+        [
+          274,
+          742,
+          862,
+          767
+        ]
+      ],
+      "sha256": "815a45f12dbf9d0748ba855868c19846361146f952df00da8176d5dbbe6daaf6",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/empresa-modelos.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          696,
+          9,
+          740,
+          30
+        ]
+      ],
+      "sha256": "50710377095879c5d9ea7bed099f8019d1da1d40835972aa7fb4ee10f45390df",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/empresa-auditoria.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          696,
+          9,
+          740,
+          30
+        ],
+        [
+          410,
+          260,
+          606,
+          711
+        ]
+      ],
+      "sha256": "72b56b8abf9dd628a7a27b67f13d0c6c22935d20881526358589912c657a566b",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/empresa-uso-extra.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          696,
+          9,
+          740,
+          30
+        ],
+        [
+          272,
+          302,
+          542,
+          767
+        ]
+      ],
+      "sha256": "7faeb1d02d9db42aa01cecb41984ad08258e5506d03334c0d38cc17de0160d6c",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/empresa-conceder-extra.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          696,
+          9,
+          740,
+          30
+        ],
+        [
+          532,
+          189,
+          690,
+          211
+        ],
+        [
+          272,
+          302,
+          369,
+          616
+        ],
+        [
+          272,
+          617,
+          544,
+          767
+        ]
+      ],
+      "sha256": "adbf0ed233fe1bd14e6babb89e8015102f15f9767c07fc75e33b03fcf67f9c9e",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/empresa-validade-extra.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          696,
+          9,
+          740,
+          30
+        ],
+        [
+          532,
+          189,
+          690,
+          211
+        ],
+        [
+          272,
+          302,
+          369,
+          616
+        ],
+        [
+          272,
+          617,
+          544,
+          767
+        ]
+      ],
+      "sha256": "cd984bc8fe7a14526bf72c4d8be950c973e94e2e311532c3d4e7cf90de973fc8",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/empresa-pessoas.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          696,
+          9,
+          740,
+          30
+        ],
+        [
+          272,
+          185,
+          640,
+          735
+        ]
+      ],
+      "sha256": "fd59d2ef1da8834177966247065dcab356a0d5c40bc5523618cafb6988ce1e5d",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/empresa-adicionar-pessoa.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          696,
+          9,
+          740,
+          30
+        ],
+        [
+          272,
+          185,
+          640,
+          735
+        ]
+      ],
+      "sha256": "69090f5684cd4df09c2389496ce87b1a42aab0b0e702a5396f72009f4e994638",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/empresa-contexto.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          781,
+          8,
+          822,
+          30
+        ],
+        [
+          270,
+          187,
+          647,
+          695
+        ],
+        [
+          660,
+          187,
+          822,
+          695
+        ]
+      ],
+      "sha256": "0a2d2ca88b9076d77d5ccea0ab0a7507d7ca3b9fd4fdaf17e4137a129641bbee",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/empresa-estrutura.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          781,
+          8,
+          822,
+          30
+        ]
+      ],
+      "sha256": "f5fc62b6a9855c979ba3659e7b8377f0f4979b0e7489c7c2601890043aa1ddbf",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/empresa-solicitacoes.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          781,
+          8,
+          822,
+          30
+        ],
+        [
+          272,
+          145,
+          651,
+          217
+        ],
+        [
+          681,
+          145,
+          892,
+          217
+        ]
+      ],
+      "sha256": "367d9e894061bc102d340c7023acfd09bdc030af1cd44a9bf11644d58829aa95",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/ajustes-ia.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          449,
+          374,
+          558,
+          409
+        ],
+        [
+          636,
+          374,
+          750,
+          409
+        ],
+        [
+          822,
+          374,
+          950,
+          409
+        ],
+        [
+          449,
+          741,
+          892,
+          767
+        ]
+      ],
+      "sha256": "a0e4cc93b5172a54048454e7322c2279180bddf249ebe6a40ad9955e0bd29d55",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/ajustes-uso.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          923,
+          65,
+          1034,
+          86
+        ],
+        [
+          400,
+          547,
+          485,
+          597
+        ]
+      ],
+      "sha256": "d23cc60b667a3f706932fffd749d2d7f016ca16d473510aec176967cae2ad10d",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/ajustes-uso-resumo.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [],
+      "sha256": "deb3d3a2324cea06c5533f55fd85f9d99f467cbce2184fc585a3308696dc956a",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/ajustes-cupom.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [],
+      "sha256": "e25ac1868747f6601ed841b90beb22897bf6b9d4c0c8085012624e868afbe53f",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/ajustes-workspace.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [],
+      "sha256": "060175742fd876829789e145c160468db2889646fe258f2479b0a618d4454cdd",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/ajustes-permissoes.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [],
+      "sha256": "bc24084327cb04aec2a901c82136aa2bf25d0cd2514b3cb9957c1287309b722c",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/ajustes-tags.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [],
+      "sha256": "e5251f4d3b720fb2e7a8945c0486e4c67f557559226b9f18befaae22b495b101",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/ajustes-cloud-sync.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [],
+      "sha256": "63c39a5e13c5afc383833d7704e539b1977a7f5f90c1945bbb9cf48346ec4593",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/ajustes-preferencias.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          837,
+          119,
+          982,
+          138
+        ],
+        [
+          453,
+          288,
+          977,
+          767
+        ]
+      ],
+      "sha256": "d786a6692f85727c65e2263472b17c96455a2dd1424e260606c7b079d7dd5ffc",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/ajustes-suporte.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [],
+      "sha256": "2d6c44afd29dede3c8e71bb573140ab6393a8ca1c7fcff3ab23a74bc7a522619",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/ajustes-atalhos.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [],
+      "sha256": "707a683fdfb3a1f97b1e1f39c5572719e26d762a0a194b1024fa39e7397c3673",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    },
+    {
+      "path": "images/guide/ajustes-brain.png",
+      "size": [
+        1178,
+        768
+      ],
+      "redactedRectangles": [
+        [
+          662,
+          734,
+          1158,
+          758
+        ]
+      ],
+      "sha256": "4142accfca27775d36cb5ff8b4bf0f0bc2056e0216972596eb58782be2325b80",
+      "metadata": "RGB PNG; no text or EXIF metadata"
+    }
+  ],
+  "useCases": [
+    {
+      "page": "use-cases/rotina/email.mdx",
+      "illustration": "images/use-cases/rotina-email.svg",
+      "caption": "Exemplo ilustrativo. Confira os fatos e as referências antes de usar."
+    },
+    {
+      "page": "use-cases/rotina/acompanhamento.mdx",
+      "illustration": "images/use-cases/rotina-acompanhamento.svg",
+      "caption": "Exemplo ilustrativo. Confira os fatos e as referências antes de usar."
+    },
+    {
+      "page": "use-cases/rotina/documentos.mdx",
+      "illustration": "images/use-cases/rotina-documentos.svg",
+      "caption": "Exemplo ilustrativo. Confira os fatos e as referências antes de usar."
+    },
+    {
+      "page": "use-cases/rotina/pesquisa.mdx",
+      "illustration": "images/use-cases/rotina-pesquisa.svg",
+      "caption": "Exemplo ilustrativo. Confira os fatos e as referências antes de usar."
+    },
+    {
+      "page": "use-cases/rotina/reunioes.mdx",
+      "illustration": "images/use-cases/rotina-reunioes.svg",
+      "caption": "Exemplo ilustrativo. Confira os fatos e as referências antes de usar."
+    },
+    {
+      "page": "use-cases/gestao/preparar-1a1.mdx",
+      "illustration": "images/use-cases/gestao-preparar-1a1.svg",
+      "caption": "Exemplo ilustrativo. Confira os fatos e as referências antes de usar."
+    },
+    {
+      "page": "use-cases/gestao/comparar-fornecedores.mdx",
+      "illustration": "images/use-cases/gestao-comparar-fornecedores.svg",
+      "caption": "A: 1.800 × 12 + 2.000. B: 2.050 × 12. C: mensalidades apenas."
+    },
+    {
+      "page": "use-cases/gestao/resumo-semanal.mdx",
+      "illustration": "images/use-cases/gestao-resumo-semanal.svg",
+      "caption": "Exemplo ilustrativo. Confira os fatos e as referências antes de usar."
+    },
+    {
+      "page": "use-cases/financeiro/organizar-contas-a-pagar.mdx",
+      "illustration": "images/use-cases/financeiro-organizar-contas-a-pagar.svg",
+      "caption": "Valores calculados a partir do CSV desta página. Total em aberto: 2.400 + 800 + 2.850."
+    },
+    {
+      "page": "use-cases/financeiro/conferir-recebimentos.mdx",
+      "illustration": "images/use-cases/financeiro-conferir-recebimentos.svg",
+      "caption": "Resultados do exercício. Ausência de correspondência não prova falta de pagamento."
+    },
+    {
+      "page": "use-cases/clientes/preparar-reuniao-cliente.mdx",
+      "illustration": "images/use-cases/clientes-preparar-reuniao-cliente.svg",
+      "caption": "Exemplo ilustrativo. Confira os fatos e as referências antes de usar."
+    },
+    {
+      "page": "use-cases/conteudo/planejar-campanha.mdx",
+      "illustration": "images/use-cases/conteudo-planejar-campanha.svg",
+      "caption": "Exemplo ilustrativo. Confira os fatos e as referências antes de usar."
+    },
+    {
+      "page": "use-cases/operacoes/criar-treinamento.mdx",
+      "illustration": "images/use-cases/operacoes-criar-treinamento.svg",
+      "caption": "Exemplo ilustrativo. Confira os fatos e as referências antes de usar."
+    },
+    {
+      "page": "use-cases/operacoes/apqc-otimizacao-processos.mdx",
+      "illustration": "images/use-cases/operacoes-apqc-otimizacao-processos.svg",
+      "caption": "Exemplo ilustrativo. Confira os fatos e as referências antes de usar."
+    },
+    {
+      "page": "use-cases/marketing-vendas/funil-marketing.mdx",
+      "illustration": "images/use-cases/marketing-vendas-funil-marketing.svg",
+      "caption": "Valores fictícios ilustrativos; não são resultados calculados da planilha anexável."
+    },
+    {
+      "page": "use-cases/marketing-vendas/churn-retencao.mdx",
+      "illustration": "images/use-cases/marketing-vendas-churn-retencao.svg",
+      "caption": "Valores fictícios ilustrativos; não são resultados calculados da planilha anexável."
+    },
+    {
+      "page": "use-cases/marketing-vendas/cohort-receita.mdx",
+      "illustration": "images/use-cases/marketing-vendas-cohort-receita.svg",
+      "caption": "Percentuais fictícios ilustrativos; não são resultados calculados da planilha anexável."
+    },
+    {
+      "page": "use-cases/marketing-vendas/performance-comercial.mdx",
+      "illustration": "images/use-cases/marketing-vendas-performance-comercial.svg",
+      "caption": "Valores fictícios ilustrativos. Ganhos ÷ encerrados; oportunidades abertas ficam fora dessa taxa."
+    },
+    {
+      "page": "use-cases/design/design-slides.mdx",
+      "illustration": "images/use-cases/design-design-slides.svg",
+      "caption": "Exemplo ilustrativo. Confira os fatos e as referências antes de usar."
+    },
+    {
+      "page": "use-cases/seguranca/seguranca-lovable.mdx",
+      "illustration": "images/use-cases/seguranca-seguranca-lovable.svg",
+      "caption": "Exemplo ilustrativo. Confira os fatos e as referências antes de usar."
+    }
+  ]
+}

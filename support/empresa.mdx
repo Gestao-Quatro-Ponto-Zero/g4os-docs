@@ -1,44 +1,136 @@
 ---
 title: "Empresa: pessoas, créditos e políticas"
-description: "Encontre o conhecimento da organização e os controles disponíveis ao administrador."
+description: "Um guia visual dos controles de acesso, consumo, uso extra e modelos para administradores."
 ---
 
-Abra **Empresa** na barra lateral. O conteúdo e as ações dependem da empresa vinculada e do papel da sua conta. Controles administrativos podem não aparecer para membros comuns.
+Abra **Empresa** na barra lateral e confira a empresa no topo. Os controles disponíveis dependem do papel da sua conta. As telas abaixo mostram a visão de um administrador.
+
+<Note>Capturas reais com dados identificáveis ocultados por tarjas sólidas. Saldos, planos, limites e regras retratam a conta fotografada; não representam valores padrão nem uma configuração recomendada.</Note>
 
 ## Encontrar a área certa
 
 | Área | O que consultar ou gerenciar |
 | --- | --- |
-| **Visão geral** | Situação da empresa, atividade e consumo. |
-| **Contexto** | Documentos, estrutura e solicitações de alteração. |
-| **Pessoas** | Membros, administradores, grupos e acessos por área. |
-| **Uso e créditos** | Consumo agregado, período e disponibilidade de créditos. |
-| **Uso extra** | Concessões temporárias a pessoas, saldo e expiração. |
-| **Auditoria de uso** | Registros de consumo por usuário e período, com exportação. |
-| **Políticas** | Limites, grupos, entrada por domínio e regras do saldo compartilhado. |
+| **Visão geral** | Créditos do ciclo, ritmo de consumo, atividade e evolução por dia. |
+| **Contexto** | Documentos, estrutura por área e solicitações de alteração. |
+| **Pessoas** | Membros, administradores e acesso ao contexto por escopo. |
+| **Uso e créditos** | Consumo por dia ou usuário, período e exportação CSV. |
+| **Uso extra** | Concessões temporárias, créditos restantes e expiração. |
+| **Auditoria de uso** | Eventos de uso, origem, tipo de IA e créditos. |
+| **Políticas** | Limites, grupos, exceções, domínio e regras de acesso a modelos. |
 
-**Solicitações** é uma visão dentro de Contexto. Links antigos podem abri-la diretamente, mesmo sem uma entrada separada na coluna lateral.
+## Ler a visão geral
+
+Confira primeiro as datas do **ciclo** e os créditos disponíveis. O gráfico mostra a evolução do consumo e a comparação com o mês anterior; os blocos inferiores ajudam a localizar onde se concentrou o uso. Indicadores com períodos diferentes não precisam apresentar o mesmo total.
+
+<Frame><img src="/images/guide/empresa-visao-geral.png" alt="Visão geral da empresa com créditos do ciclo, atividade e gráfico diário" /></Frame>
 
 ## Pessoas e acesso
 
-Administradores podem consultar membros, papéis e regras por área. Revise o e-mail e o escopo antes de conceder acesso. Estados como suspensão ou arquivamento afetam o acesso ativo e preservam informações de histórico conforme a ação apresentada.
+Em **Pessoas**, use a busca e os filtros **Todos**, **Admins**, **Ativos** e **Removidos**. A lista apresenta e-mail, papel, acesso e última atualização.
 
-Um vínculo por domínio pode aparecer como entrada automática. Confira se ele representa a pessoa e a empresa corretas antes de atribuir permissões de administração.
+<Tabs>
+<Tab title="Lista de pessoas">
+<Frame><img src="/images/guide/empresa-pessoas.png" alt="Lista de pessoas com identificações ocultadas, filtros e papéis" /></Frame>
 
-## Políticas e créditos
+</Tab>
+<Tab title="Adicionar pessoa">
+<Frame><img src="/images/guide/empresa-adicionar-pessoa.png" alt="Formulário Adicionar pessoa com e-mail, status e acesso com escopo" /></Frame>
 
-O limite de uma pessoa pode vir da política geral, de um grupo ou de uma exceção. Quando a empresa usa saldo compartilhado, a política define se ele pode complementar o limite individual e até quanto.
+</Tab>
+</Tabs>
 
-Em **Uso extra**, o administrador pode selecionar a pessoa, definir créditos e validade e registrar o motivo. Confira o histórico e a expiração. Conceder um extra temporário não equivale a mudar o limite permanente.
+Para adicionar alguém, clique em **Adicionar pessoa**, informe o e-mail e confira o status. **Acesso total à empresa** é uma permissão ampla sobre o contexto; use **Adicionar acesso** quando a pessoa deve atuar apenas em um escopo. Gestores podem editar e revisar dentro do escopo; membros podem ler e propor alterações conforme as permissões apresentadas.
 
-## Auditoria de uso
+Revise o e-mail e os acessos antes de concluir em **Adicionar pessoa**. Pessoas removidas mantêm histórico, mas perdem o acesso ativo. O acesso ao contexto e as regras de consumo são controles diferentes: revise também **Políticas** quando o objetivo for ajustar créditos.
 
-Use filtros por período e usuário para conferir consumo e exportar os registros. A auditoria mostra créditos, tipo de IA (texto ou mídia), usuário, horário e referências de sessão, workspace e conexão quando disponíveis.
+## Consultar uso e exportar
 
-Ela não mostra prompts, respostas, documentos ou credenciais, nem deve ser usada para ler conversas privadas. Resumos podem atualizar com atraso; para conferir um registro específico, consulte os eventos do período.
+1. Abra **Uso e créditos** e escolha o mês.
+2. Em **Detalhes de consumo**, alterne entre **Por dia** e **Por usuário**.
+3. Use a busca para localizar uma pessoa ou dia, conforme o agrupamento.
+4. Confira créditos e turnos. Use **Atualizar** para consultar novamente e **Exportar** para obter o CSV.
 
-## Ciclo e bloqueios
+<Tabs>
+<Tab title="Por dia">
+<Frame><img src="/images/guide/empresa-uso-creditos.png" alt="Detalhes de consumo por dia com seletor de mês e exportação" /></Frame>
 
-Confira o ciclo exibido pela conta: uma assinatura corporativa pode renovar na data de contratação, sem seguir o primeiro dia do mês. Se uma pessoa atingir o limite, o administrador deve verificar política, saldo e concessões disponíveis antes de ajustar o acesso.
+</Tab>
+<Tab title="Por usuário">
+<Frame><img src="/images/guide/empresa-uso-por-pessoa.png" alt="Detalhes de consumo por usuário com créditos e turnos" /></Frame>
+
+</Tab>
+</Tabs>
+
+A coluna de créditos G4 inclui uso gerenciado pelo G4 e eventos tratados como origem desconhecida. Atividade externa pode aparecer sem desconto de créditos G4. Confira o contexto e o período antes de comparar esta tela com o [uso pessoal](/support/usage).
+
+## Ajustar políticas de uso
+
+Em **Políticas**, a política global estabelece o ponto de partida. Grupos podem ter regras próprias acima dela; exceções individuais têm precedência. Para entender o limite de alguém, consulte os três níveis.
+
+<Frame><img src="/images/guide/empresa-politica-global.png" alt="Política global com limites diários e mensais, saldo compartilhado e modelos premium" /></Frame>
+
+| Controle | Efeito a conferir |
+| --- | --- |
+| **Créditos diários / mensais** | Limites permanentes no escopo da política. |
+| **Permitir overflow do pool** | Permite complementar o limite próprio com o saldo compartilhado da empresa. |
+| **Créditos extras por dia / mês** | Restringe essa complementação, quando habilitada. |
+| **Modelos premium** | Define Padrão, Liberado ou Bloqueado, sujeito às demais condições de acesso. |
+| **Adicionar usuários automaticamente por domínio** | Permite entrada automática para os domínios cadastrados, conforme as condições exibidas. |
+
+Depois de revisar os campos e o alcance, use **Salvar política global**. Não trate os números da captura como uma sugestão de limite para sua equipe.
+
+### Escolher quais modelos usam créditos da empresa
+
+Clique em **Gerenciar modelos**, procure o modelo e confira a regra:
+
+<Frame><img src="/images/guide/empresa-modelos.png" alt="Gerenciar modelos com regras Padrão, Empresa e Só pessoal por modelo" /></Frame>
+
+| Regra | O que significa |
+| --- | --- |
+| **Padrão** | Herda a política aplicável ao escopo. |
+| **Empresa** | Permite o uso de créditos da empresa para aquele modelo. |
+| **Só pessoal** | Impede o financiamento pela empresa e mantém o uso com créditos pessoais, quando disponível. |
+
+Permitir um modelo não cria saldo nem substitui as condições de acesso premium. Ao revisar um bloqueio, confira regra do modelo, política premium, limite individual e saldo disponível.
+
+## Conceder uso extra temporário
+
+Use **Uso extra** quando alguém precisa de uma margem temporária, preservando os limites permanentes. O consumo continua usando os créditos da empresa.
+
+<Frame><img src="/images/guide/empresa-uso-extra.png" alt="Uso extra temporário com saldo disponível, expiração e ações por pessoa" /></Frame>
+
+1. Selecione a pessoa ou clique em **Conceder** na linha correspondente.
+2. Informe a quantidade de **Créditos extras**.
+3. Escolha **24 horas**, **7 dias** ou **30 dias** em **Validade**.
+4. Registre um motivo, se necessário.
+5. Confira pessoa, quantidade e validade antes de clicar em **Conceder uso extra**.
+
+<Tabs>
+<Tab title="Créditos e motivo">
+<Frame><img src="/images/guide/empresa-conceder-extra.png" alt="Formulário de uso extra com quantidade, motivo e histórico de concessões" /></Frame>
+
+</Tab>
+<Tab title="Validade">
+<Frame><img src="/images/guide/empresa-validade-extra.png" alt="Opções de validade de uso extra: 24 horas, 7 dias e 30 dias" /></Frame>
+
+</Tab>
+</Tabs>
+
+Use **Gerenciar** para consultar as concessões de uma pessoa e confira a próxima expiração na lista. Um extra temporário não altera o limite permanente nem equivale a contratar um novo plano.
+
+## Conferir a auditoria de uso
+
+A auditoria apresenta uma linha por evento de uso no contexto da empresa. Selecione o mês, use a busca por usuário, sessão, conexão ou fonte e combine os filtros **Texto / Mídia** e **Humano / Automação**. Navegue pelas páginas do log ou use **Exportar**.
+
+<Frame><img src="/images/guide/empresa-auditoria.png" alt="Auditoria com créditos, conexão e fontes, tipo de IA, início e filtros" /></Frame>
+
+Os resumos no topo usam uma atualização a cada **cinco horas**. Para verificar uma ocorrência recente, consulte as linhas do log; não espere que todo resumo mude imediatamente.
+
+A auditoria mostra créditos, tipo de IA, usuário, horário e referências de uso quando disponíveis. Ela não expõe modelos, prompts, respostas, documentos ou credenciais e não permite ler conversas privadas.
+
+## Resolver um bloqueio
+
+Confira empresa e conexão selecionadas, ciclo, política global, grupo, exceção individual, regra do modelo e concessões temporárias. Ajuste o controle que corresponde ao motivo do bloqueio. O ciclo segue o período exibido pela conta; não presuma renovação no primeiro dia do mês.
 
 [Abrir Empresa](g4os://company) · [Uso individual](/support/usage) · [Contexto](/support/context) · [Acesso de pessoas](/support/user-management-api)
