@@ -1624,17 +1624,20 @@
     },
     {
       "path": "images/guide/ajustes-cupom.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/usage.mdx"
       ],
       "redaction": "no_identifying_data_visible",
-      "sha256": "e25ac1868747f6601ed841b90beb22897bf6b9d4c0c8085012624e868afbe53f",
+      "sha256": "727057ad04822f5df1a5bbde1619d8974582af29f066839ef4ac3ba3a75ead36",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/ajustes-ia.png",
@@ -1713,31 +1716,37 @@
     },
     {
       "path": "images/guide/ajustes-uso-resumo.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/usage.mdx"
       ],
       "redaction": "no_identifying_data_visible",
-      "sha256": "deb3d3a2324cea06c5533f55fd85f9d99f467cbce2184fc585a3308696dc956a",
+      "sha256": "788d795c821ab4d37f7cf203c16137ae84c7f3c315e9d28301a372d40078883d",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/ajustes-uso.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/usage.mdx"
       ],
       "redaction": "opaque_rectangles",
-      "sha256": "d23cc60b667a3f706932fffd749d2d7f016ca16d473510aec176967cae2ad10d",
+      "sha256": "143c018ba77c5c930a86128369b432d8ec61055a3e15b5465473d0555622cc6b",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/ajustes-workspace.png",
@@ -1951,30 +1960,32 @@
       "pages": [
         "support/desk.mdx"
       ],
-      "sha256": "26d68f01e6040b21c963d4de2ba5a73890a93531df9ca8985e603bbaf81bbcbf",
+      "sha256": "455e5a6c7f7071039c9bec5ab006fe071133033215849b8e4181b0c2eb952653",
       "dimensions": [
-        300,
-        499
+        1440,
+        949
       ],
       "reviewDate": "2026-10-12",
       "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
-      "provenance": "production_component_fixture",
-      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
+      "provenance": "authenticated_electron_public_main",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/desk.png",
       "pages": [
         "support/desk.mdx"
       ],
-      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
-      "sha256": "ce318571f4bc942b30e6db337ca90567d7533a04a6ae4925ac24a1f1c108596c",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
+      "sha256": "eafa034c320468bd5c40748c39d521ad6e0f513f67ebb5393aeb805fde803a85",
       "dimensions": [
-        360,
-        415
+        1440,
+        949
       ],
       "reviewDate": "2026-10-12",
       "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
-      "provenance": "production_component_fixture"
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/documento-editar-fonte.png",
@@ -2080,199 +2091,241 @@
     },
     {
       "path": "images/guide/empresa-adicionar-pessoa.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/empresa.mdx"
       ],
       "redaction": "opaque_rectangles",
-      "sha256": "69090f5684cd4df09c2389496ce87b1a42aab0b0e702a5396f72009f4e994638",
+      "sha256": "c772e1637a9b0cd5f2d5c22fdbbdc1bc73d3b607651ad965c8318801f8ff9539",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/empresa-auditoria.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/empresa.mdx"
       ],
       "redaction": "opaque_rectangles",
-      "sha256": "72b56b8abf9dd628a7a27b67f13d0c6c22935d20881526358589912c657a566b",
+      "sha256": "8f759a0ece9ec5ae62f7855dbd7e2aa4b31f85333031b752bb080a19bccb11b9",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/empresa-conceder-extra.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/empresa.mdx"
       ],
       "redaction": "opaque_rectangles",
-      "sha256": "adbf0ed233fe1bd14e6babb89e8015102f15f9767c07fc75e33b03fcf67f9c9e",
+      "sha256": "94562654362f2e60467d56069b740d8977578e1a621dcd8f063f10fd5eaa4ed8",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/empresa-contexto.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/context.mdx"
       ],
       "redaction": "opaque_rectangles",
-      "sha256": "0a2d2ca88b9076d77d5ccea0ab0a7507d7ca3b9fd4fdaf17e4137a129641bbee",
+      "sha256": "16c03cf0122b27bedab21c1dbcb4f767e2068ebf63d2519c3ff375ad271dac2b",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/empresa-estrutura.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/context.mdx"
       ],
       "redaction": "opaque_rectangles",
-      "sha256": "f5fc62b6a9855c979ba3659e7b8377f0f4979b0e7489c7c2601890043aa1ddbf",
+      "sha256": "5ea6ade2ba0684a5a34af5779eb37c58f79fbbb263ece9d8c0bfd74b2084d85f",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/empresa-modelos.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/empresa.mdx"
       ],
       "redaction": "opaque_rectangles",
-      "sha256": "50710377095879c5d9ea7bed099f8019d1da1d40835972aa7fb4ee10f45390df",
+      "sha256": "dc06aeed2953a4af27db2d1869e04bbd5732d0b6b13d7cf9e7c3cd9339f4600b",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/empresa-pessoas.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/empresa.mdx"
       ],
       "redaction": "opaque_rectangles",
-      "sha256": "fd59d2ef1da8834177966247065dcab356a0d5c40bc5523618cafb6988ce1e5d",
+      "sha256": "f1a5b7a82711c2de9bfbb6058a4adb556ee3edc7a957e12b3192339ce6d6e7d4",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/empresa-politica-global.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/empresa.mdx"
       ],
       "redaction": "opaque_rectangles",
-      "sha256": "815a45f12dbf9d0748ba855868c19846361146f952df00da8176d5dbbe6daaf6",
+      "sha256": "f85803c0a64ce4225e600106acab6e43d3be6ef0620aa4d42c1de2d2a6ed34f0",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/empresa-solicitacoes.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/context.mdx"
       ],
       "redaction": "opaque_rectangles",
-      "sha256": "367d9e894061bc102d340c7023acfd09bdc030af1cd44a9bf11644d58829aa95",
+      "sha256": "914b9070f5b14883f28f2425d2bd3e045372c8a35d5bacc0ff4cfe30a54d47a0",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/empresa-uso-creditos.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/empresa.mdx"
       ],
       "redaction": "opaque_rectangles",
-      "sha256": "fe68f18879e5c6074d0f5ede9ce60524c1add7490b1d80385f6678fb400cbc45",
+      "sha256": "99b1901e7d8b16509f4723404e88106221d4d2181d65e58056ec1639e33ae115",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/empresa-uso-extra.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/empresa.mdx"
       ],
       "redaction": "opaque_rectangles",
-      "sha256": "7faeb1d02d9db42aa01cecb41984ad08258e5506d03334c0d38cc17de0160d6c",
+      "sha256": "5e6ba0bc4bc8b820c6aa1db81df32e0b3b2aee706be418d5d7862ec599d51709",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/empresa-uso-por-pessoa.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/empresa.mdx"
       ],
       "redaction": "opaque_rectangles",
-      "sha256": "dad10483d5370b373195120efc5a292a202f584acd8f8d55e7e1fd4be52469ad",
+      "sha256": "5cb436cc2c6f2d7f7d814d8eb73a8957d502f89f442f5337e0b6073830338019",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/empresa-validade-extra.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/empresa.mdx"
       ],
       "redaction": "opaque_rectangles",
-      "sha256": "cd984bc8fe7a14526bf72c4d8be950c973e94e2e311532c3d4e7cf90de973fc8",
+      "sha256": "dc005b209f3abd3e2f6e977e82c4d0b73ae88362ad42e69b25ea5046c8aae247",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/empresa-visao-geral.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço.",
       "pages": [
         "support/empresa.mdx"
       ],
       "redaction": "opaque_rectangles",
-      "sha256": "a718a383af4a7eaa35aeebbe34a84a73247644939d88ab5bee4ba3b1cfad3c5b",
+      "sha256": "5bda8f43173b0bcf3d40d10ed0979e2146267c63fb5a5f404b7d2ae5a321c8f3",
       "dimensions": [
-        1178,
-        768
+        1440,
+        949
       ],
-      "reviewDate": "2026-09-10"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "authenticatedShellEvidence": "authenticated-shell-validation.json"
     },
     {
       "path": "images/guide/entrada-tecla-envio.png",
@@ -2759,8 +2812,8 @@
   ],
   "limits": [
     "Revisão de main público isolado, sem Galts. Testes de navegação local e parser não equivalem a E2E de serviços externos.",
-    "Empresa e Plano e uso: componentes/contratos conferidos; capturas anteriores protegidas preservadas porque o ambiente isolado não tem autorização de backend.",
-    "Desk e Marketplace: componentes de produção com fixtures oficiais identificados nas legendas; disponibilidade, voz, instalação e publicação não exercitadas.",
+    "Empresa e Plano e uso: 17 capturas renovadas na conta autenticada, no main público atual, com dados privados ocultados; navegação e abertura de formulários sem salvar alterações.",
+    "Desk: duas capturas reais autenticadas, sem chamada de voz. Marketplace: catálogo retornou indisponibilidade em duas tentativas; mantidas as imagens com fixtures oficiais e legendas de demonstração. Instalação e publicação não exercitadas.",
     "Sem novos logins dos conectores, envios, gravação de áudio, análise paga, pagamentos, sincronização entre dispositivos, publicação de sites pelo app ou alterações corporativas.",
     "Os 20 exemplos visuais e datasets anteriores foram preservados; não são resultados produzidos novamente nesta revisão.",
     "Busca local Mintlify exige autenticação; páginas e navegação foram verificadas sem ela."
@@ -2946,5 +2999,6 @@
     "reviewDate": "2026-09-10",
     "productCommit": "ec67bc01c66cb290efe0d7f6fc6e4fa88caad664",
     "note": "Capturas de administração, casos de uso e fluxos preservados da revisão anterior; não afirmar execução integral em outubro."
-  }
+  },
+  "authenticatedShellValidation": "authenticated-shell-validation.json"
 }
