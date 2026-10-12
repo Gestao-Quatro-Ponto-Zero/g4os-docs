@@ -1,0 +1,715 @@
+{
+  "reviewDate": "2026-10-12",
+  "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+  "productVersion": "0.99.431",
+  "docsBaseCommit": "db75c742b09e4ab33cb8804165a87041d86e2269",
+  "scope": "Renovar capturas autenticadas alteradas pelo shell, com autorização da pessoa, mantendo o foco em uso. Galts ausente do main fotografado.",
+  "captureCount": 19,
+  "captures": [
+    {
+      "path": "images/guide/ajustes-cupom.png",
+      "sha256": "727057ad04822f5df1a5bbde1619d8974582af29f066839ef4ac3ba3a75ead36",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "settings/usage",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 4,
+        "additionalSelectors": []
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/ajustes-uso-resumo.png",
+      "sha256": "788d795c821ab4d37f7cf203c16137ae84c7f3c315e9d28301a372d40078883d",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "settings/usage",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 4,
+        "additionalSelectors": []
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/ajustes-uso.png",
+      "sha256": "143c018ba77c5c930a86128369b432d8ec61055a3e15b5465473d0555622cc6b",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "settings/usage",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 6,
+        "additionalSelectors": [
+          "p:has-text(\"Créditos disponíveis\")"
+        ]
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/desk-voz.png",
+      "sha256": "455e5a6c7f7071039c9bec5ab006fe071133033215849b8e4181b0c2eb952653",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "settings/usage",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 11,
+        "additionalSelectors": [
+          "p:has-text(\"Créditos disponíveis\")"
+        ]
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/desk.png",
+      "sha256": "eafa034c320468bd5c40748c39d521ad6e0f513f67ebb5393aeb805fde803a85",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "settings/usage",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 6,
+        "additionalSelectors": [
+          "p:has-text(\"Créditos disponíveis\")"
+        ]
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/empresa-adicionar-pessoa.png",
+      "sha256": "c772e1637a9b0cd5f2d5c22fdbbdc1bc73d3b607651ad965c8318801f8ff9539",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "company/people",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 100,
+        "additionalSelectors": [
+          "button.grid.border-b > span:first-child"
+        ]
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/empresa-auditoria.png",
+      "sha256": "8f759a0ece9ec5ae62f7855dbd7e2aa4b31f85333031b752bb080a19bccb11b9",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "company/use-audit",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 51,
+        "additionalSelectors": [
+          "tbody tr td:nth-child(2)",
+          "tbody tr td:nth-child(3)"
+        ]
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/empresa-conceder-extra.png",
+      "sha256": "94562654362f2e60467d56069b740d8977578e1a621dcd8f063f10fd5eaa4ed8",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "company/extra-usage",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 1949,
+        "additionalSelectors": [
+          "tbody tr td:nth-child(1)",
+          "tbody tr td:nth-child(2)"
+        ]
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/empresa-contexto.png",
+      "sha256": "16c03cf0122b27bedab21c1dbcb4f767e2068ebf63d2519c3ff375ad271dac2b",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "company/context",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 24,
+        "additionalSelectors": [
+          "button.grid.border-b > span:nth-child(1)",
+          "button.grid.border-b > span:nth-child(2)"
+        ]
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/empresa-estrutura.png",
+      "sha256": "5ea6ade2ba0684a5a34af5779eb37c58f79fbbb263ece9d8c0bfd74b2084d85f",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "company/context-structure",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 19,
+        "additionalSelectors": [
+          "[data-context-mask]",
+          "input",
+          "textarea",
+          "button.relative p:first-of-type",
+          "p.truncate.text-sm.font-semibold.text-ink",
+          "p.text-xs.text-muted:has-text(\"Contém\")"
+        ]
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/empresa-modelos.png",
+      "sha256": "dc06aeed2953a4af27db2d1869e04bbd5732d0b6b13d7cf9e7c3cd9339f4600b",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "company/policies",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 5,
+        "additionalSelectors": []
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/empresa-pessoas.png",
+      "sha256": "f1a5b7a82711c2de9bfbb6058a4adb556ee3edc7a957e12b3192339ce6d6e7d4",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "company/people",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 100,
+        "additionalSelectors": [
+          "button.grid.border-b > span:first-child"
+        ]
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/empresa-politica-global.png",
+      "sha256": "f85803c0a64ce4225e600106acab6e43d3be6ef0620aa4d42c1de2d2a6ed34f0",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "company/policies",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 5,
+        "additionalSelectors": []
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/empresa-solicitacoes.png",
+      "sha256": "914b9070f5b14883f28f2425d2bd3e045372c8a35d5bacc0ff4cfe30a54d47a0",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "company/requests",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 8,
+        "additionalSelectors": [
+          "button.grid.border-b > span:nth-child(1)",
+          "button.grid.border-b > span:nth-child(2)"
+        ]
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/empresa-uso-creditos.png",
+      "sha256": "99b1901e7d8b16509f4723404e88106221d4d2181d65e58056ec1639e33ae115",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "company/usage",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 0,
+        "additionalSelectors": []
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/empresa-uso-extra.png",
+      "sha256": "5e6ba0bc4bc8b820c6aa1db81df32e0b3b2aee706be418d5d7862ec599d51709",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "company/extra-usage",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 1948,
+        "additionalSelectors": [
+          "tbody tr td:nth-child(1)",
+          "tbody tr td:nth-child(2)"
+        ]
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/empresa-uso-por-pessoa.png",
+      "sha256": "5cb436cc2c6f2d7f7d814d8eb73a8957d502f89f442f5337e0b6073830338019",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "company/usage",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 633,
+        "additionalSelectors": [
+          "tbody tr td:first-child"
+        ]
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/empresa-validade-extra.png",
+      "sha256": "dc005b209f3abd3e2f6e977e82c4d0b73ae88362ad42e69b25ea5046c8aae247",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "company/extra-usage",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 1949,
+        "additionalSelectors": [
+          "tbody tr td:nth-child(1)",
+          "tbody tr td:nth-child(2)"
+        ]
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    },
+    {
+      "path": "images/guide/empresa-visao-geral.png",
+      "sha256": "5bda8f43173b0bcf3d40d10ed0979e2146267c63fb5a5f404b7d2ae5a321c8f3",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "route": "company",
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "authenticated_electron_public_main",
+      "redaction": {
+        "method": "Solid CSS backgrounds with hidden text and descendants before native screenshot; no raw account screenshot in repository.",
+        "maskedElements": 7,
+        "additionalSelectors": [
+          "[data-balance-redact]",
+          "tbody tr td:first-child"
+        ]
+      },
+      "review": "Interface autenticada no shell atual; identificações, conteúdo interno, domínios, conexões particulares e saldo corporativo sensível ocultados conforme a tela. Valores restantes são específicos da conta autorizada; sem operações de escrita no serviço."
+    }
+  ],
+  "checks": {
+    "metadata": "All 19 PNGs have no EXIF or text metadata.",
+    "visualPrivacy": "Full images reviewed, including modal backgrounds and viewport edges.",
+    "readOnly": "No corporate saves, invitations, grants, coupon redemption, paid requests, voice calls, installations or publications in the product.",
+    "marketplace": "Authenticated route opened; backend unavailable after one retry. Existing fixture images remain explicitly identified."
+  },
+  "preview": [
+    {
+      "route": "support/empresa",
+      "viewport": 1440,
+      "status": 200,
+      "title": "Empresa: pessoas, créditos e políticas - G4 OS",
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/guide/empresa-visao-geral.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-pessoas.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-adicionar-pessoa.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-uso-creditos.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-uso-por-pessoa.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-politica-global.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-modelos.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-uso-extra.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-conceder-extra.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-validade-extra.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-auditoria.png",
+          "complete": true,
+          "width": 1440
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "route": "support/context",
+      "viewport": 1440,
+      "status": 200,
+      "title": "Contexto da empresa - G4 OS",
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/guide/empresa-contexto.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-estrutura.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-solicitacoes.png",
+          "complete": true,
+          "width": 1440
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "route": "support/usage",
+      "viewport": 1440,
+      "status": 200,
+      "title": "Acompanhar o uso - G4 OS",
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/guide/ajustes-uso.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/ajustes-uso-resumo.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/ajustes-cupom.png",
+          "complete": true,
+          "width": 1440
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "route": "support/desk",
+      "viewport": 1440,
+      "status": 200,
+      "title": "Desk: converse por voz - G4 OS",
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/guide/desk.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/desk-voz.png",
+          "complete": true,
+          "width": 1440
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "route": "support/marketplace",
+      "viewport": 1440,
+      "status": 200,
+      "title": "Marketplace - G4 OS",
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/guide/marketplace-catalogo.png",
+          "complete": true,
+          "width": 1088
+        },
+        {
+          "src": "/images/guide/marketplace-editor.png",
+          "complete": true,
+          "width": 1088
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "route": "support/empresa",
+      "viewport": 390,
+      "status": 200,
+      "title": "Empresa: pessoas, créditos e políticas - G4 OS",
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/guide/empresa-visao-geral.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-pessoas.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-adicionar-pessoa.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-uso-creditos.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-uso-por-pessoa.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-politica-global.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-modelos.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-uso-extra.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-conceder-extra.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-validade-extra.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-auditoria.png",
+          "complete": true,
+          "width": 1440
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "route": "support/context",
+      "viewport": 390,
+      "status": 200,
+      "title": "Contexto da empresa - G4 OS",
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/guide/empresa-contexto.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-estrutura.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/empresa-solicitacoes.png",
+          "complete": true,
+          "width": 1440
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "route": "support/usage",
+      "viewport": 390,
+      "status": 200,
+      "title": "Acompanhar o uso - G4 OS",
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/guide/ajustes-uso.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/ajustes-uso-resumo.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/ajustes-cupom.png",
+          "complete": true,
+          "width": 1440
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "route": "support/desk",
+      "viewport": 390,
+      "status": 200,
+      "title": "Desk: converse por voz - G4 OS",
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/guide/desk.png",
+          "complete": true,
+          "width": 1440
+        },
+        {
+          "src": "/images/guide/desk-voz.png",
+          "complete": true,
+          "width": 1440
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "route": "support/marketplace",
+      "viewport": 390,
+      "status": 200,
+      "title": "Marketplace - G4 OS",
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/guide/marketplace-catalogo.png",
+          "complete": true,
+          "width": 1088
+        },
+        {
+          "src": "/images/guide/marketplace-editor.png",
+          "complete": true,
+          "width": 1088
+        }
+      ],
+      "pageErrors": []
+    }
+  ],
+  "limits": [
+    "Authenticated screenshots demonstrate the interface and loaded account reads, not end-to-end service mutations.",
+    "Account figures do not represent default plans, quotas, rules or recommendations.",
+    "Original October and September validation files are historical snapshots and are preserved."
+  ]
+}

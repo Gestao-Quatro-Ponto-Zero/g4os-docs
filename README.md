@@ -4,7 +4,7 @@ Documentação pública em português para pessoas que usam o G4 OS no trabalho.
 
 O acervo atual tem 82 páginas, 20 casos de uso, 82 imagens de interface e 20 exemplos visuais originais. Os catálogos cobrem 38 conexões de trabalho e 50 opções selecionáveis do AI Gateway, conforme a revisão de outubro de 2026 no main público (0.99.431). Galts não integra esta revisão.
 
-Foram renovadas 25 capturas e adicionadas 16. As novas telas usam um ambiente isolado com conteúdo fictício; Desk e Marketplace usam componentes de produção com dados simulados, identificados nas legendas. Capturas anteriores de conta e Empresa continuam protegidas. Metadados de 24 imagens antigas foram removidos sem alterar os pixels.
+A revisão inicial renovou 25 capturas e adicionou 16. Uma complementação refez 19 capturas na conta autenticada, no main público: Empresa, Contexto, Plano e uso e Desk agora mostram o shell atual, com identificações e conteúdo privado ocultados. Marketplace mantém componentes de produção com dados simulados, identificados nas legendas, pois o catálogo autenticado retornou indisponibilidade. Metadados de 24 imagens antigas foram removidos sem alterar os pixels; as capturas novas também foram verificadas.
 
 ## Prévia e validação
 
