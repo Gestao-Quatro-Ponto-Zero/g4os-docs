@@ -23,7 +23,7 @@ Uma conexão com Gmail, agenda ou CRM fornece **informações e ações de traba
 4. Escolha um perfil automático ou procure um modelo.
 5. Confira o raciocínio e feche o menu para escrever seu pedido.
 
-A lista de conexões mostra apenas as opções configuradas no seu aplicativo. Se uma delas pedir autenticação, resolva isso em **Configurações > IA** antes de depender dela.
+A lista de conexões mostra apenas as opções configuradas no seu aplicativo. Se uma delas pedir autenticação, resolva isso em **Configurações > Modelos e conexões** antes de depender dela.
 
 <Note>Depois da primeira mensagem, a conexão da sessão fica fixa. Para mudar de conexão, abra outra sessão. Modelo e raciocínio podem ser ajustados entre mensagens dentro das opções daquela conexão.</Note>
 
@@ -49,9 +49,7 @@ Use **Buscar modelos** para procurar pelo nome ou família. A busca também pode
 
 <Frame><img src="/images/guide/ia-gateway-busca-modelo.png" alt="Busca por GPT no seletor de modelos do G4 Managed AI Gateway" /></Frame>
 
-Clique no modelo desejado e confira o indicador de seleção. Por exemplo, a captura abaixo mostra **GPT-6 Astra** selecionado na sessão de demonstração:
-
-<Frame><img src="/images/guide/ia-gateway-modelo-exato.png" alt="GPT-6 Astra selecionado no Gateway com controle de nível de raciocínio em Médio" /></Frame>
+Clique no modelo desejado e confira o indicador de seleção e os níveis de raciocínio. Confira o nome completo, principalmente quando versões da mesma família aparecem juntas.
 
 A escolha exata serve quando você quer repetir uma experiência ou comparar duas IAs com o mesmo material. Confira o [catálogo do G4 AI Gateway](/product/connections/ai-gateway) para ver famílias, opções premium e diferenças de entrada.
 
@@ -69,23 +67,29 @@ O controle de um modelo exato mostra somente os níveis que ele suporta. Você p
 
 Se quiser usar a configuração escolhida nas próximas sessões daquele ambiente, clique em **Usar como padrão do workspace** e confira a confirmação. Essa ação tem efeito mais amplo do que apenas testar um modelo na conversa atual.
 
-Para revisar os padrões gerais e as conexões, abra **Configurações > IA**. Um workspace pode usar um padrão próprio. Alterar o padrão não troca retroativamente a IA de todas as conversas existentes.
+Para revisar os padrões gerais e as conexões, abra **Configurações > Modelos e conexões**. Um workspace pode usar um padrão próprio. Alterar o padrão não troca retroativamente a IA de todas as conversas existentes.
 
-<Frame caption="Nomes de conexões particulares e workspaces ocultados."><img src="/images/guide/ajustes-ia.png" alt="Configurações de IA com conexões, modelo padrão e substituições por workspace" /></Frame>
+<Frame caption="Modelos e conexões em um workspace de demonstração."><img src="/images/guide/ajustes-ia.png" alt="Modelos e conexões com Gateway gerenciado, conexão personalizada e padrões para novos chats" /></Frame>
+
+## Quando você usa Claude Subscription
+
+Em **Configurações > Modelos e conexões**, escolha **Conexão personalizada** e a opção de assinatura Claude disponível. Conclua a autenticação oferecida pelo app antes de criar uma sessão nessa conexão.
+
+Ela usa o acesso e os limites da assinatura conectada e tem catálogo próprio, incluindo Sonnet 5.5 e Opus 5.5 na versão revisada. Não aplique automaticamente as regras de créditos ou premium do Gateway. Se precisar mudar a conexão de uma conversa iniciada, abra outra sessão.
 
 ## Quando você usa Codex Subscription
 
 Essa conexão tem um catálogo próprio e segue o acesso da assinatura conectada. Não presuma que os modelos e as regras de créditos são iguais aos do Gateway.
 
-<Frame><img src="/images/guide/ia-codex-modelos.png" alt="Catálogo da conexão Codex Subscription com modelos OpenAI e nível de raciocínio" /></Frame>
+<Frame caption="Catálogo da conexão configurada para demonstração, sem autenticar ou enviar pedidos à assinatura."><img src="/images/guide/ia-codex-modelos.png" alt="Catálogo da conexão Codex Subscription com modelos OpenAI e nível de raciocínio" /></Frame>
 
-O exemplo mostra Astra, Sol, Terra, Luna e GPT-5.5 disponíveis nessa conexão. A classificação premium do Gateway não deve ser aplicada automaticamente à assinatura Codex.
+Na versão revisada, o catálogo inclui GPT-6 Astra, GPT-6.1 Sol, GPT-6 Sol, GPT-6 Luna, GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.6 Luna e GPT-5.5. A classificação premium do Gateway não deve ser aplicada automaticamente à assinatura Codex.
 
 ## Contexto longo, Pro e opções experimentais
 
 **Contexto estendido** fica disponível para novas sessões e escolhas explícitas compatíveis no Gateway. Ele aumenta a quantidade de contexto que pode ser usada, mas pode elevar o consumo. Não ativa acesso a fontes desconectadas nem recupera automaticamente arquivos ausentes.
 
-**Uso otimizado de tokens** fica em [Configurações do App](/support/app-settings), depende da compatibilidade da sessão e não modifica todas as conversas antigas. **OS Mode** é uma opção experimental de contexto e arquivos; os modos Explorar, Perguntar e Executar continuam sendo os controles de [permissão](/support/permissions).
+**Uso otimizado de tokens** fica em [Configurações gerais](/support/app-settings), depende da compatibilidade da sessão e não modifica todas as conversas antigas. **OS Mode** é uma opção experimental de contexto e arquivos; os modos Explorar, Perguntar e Executar continuam sendo os controles de [permissão](/support/permissions).
 
 Perfis **Pro** e modelos premium dependem do acesso da conta. Se uma opção estiver indisponível, confira o aviso e o saldo antes de tentar novamente.
 
@@ -98,6 +102,6 @@ Perfis **Pro** e modelos premium dependem do acesso da conta. Se uma opção est
 | O nível de raciocínio mudou ao trocar o modelo | Confira as opções suportadas pelo novo modelo. |
 | O consumo ficou maior | Modelo, orçamento, tamanho do contexto e quantidade de trabalho solicitado. |
 | A IA não consegue ler uma imagem | Confira a capacidade da opção escolhida e use uma rota compatível. |
-| Autenticação falhou | Reconfigure a conexão em Configurações > IA; conectar Gmail não corrige login do provedor de IA. |
+| Autenticação falhou | Reconfigure a conexão em Configurações > Modelos e conexões; conectar Gmail não corrige login do provedor de IA. |
 
 [Abrir IA](g4os://settings/ai) · [Catálogo do Gateway](/product/connections/ai-gateway) · [Uso e créditos](/support/usage)
