@@ -3,25 +3,25 @@ title: "Criar uma automação"
 description: "Agende rotinas, acompanhe respostas com vigias e revise cada execução."
 ---
 
-Abra **Ferramentas > Automações**. Em **Minhas Automações** você encontra o que já configurou; em **Rotinas Recomendadas**, sugestões para começar.
+Abra **Ferramentas > Automações**. Em **Minhas automações** você encontra o que já configurou; em **Recomendadas**, sugestões para começar.
 
-<Frame><img src="/images/guide/automacoes.png" alt="Rotinas recomendadas no workspace de demonstração" /></Frame>
+<Frame><img src="/images/guide/automacoes.png" alt="Lista de automações vazia e sugestões no workspace de demonstração" /></Frame>
 
 ## Escolher o tipo
 
 | Você quer… | Use |
 | --- | --- |
 | Receber uma análise em um horário ou intervalo definido | **Agendamento**. |
-| Começar a partir de um modelo pronto de rotina | **Rotinas Recomendadas**. |
+| Começar a partir de um modelo pronto de rotina | **Recomendadas**. |
 | Acompanhar um alvo, como uma conversa em uma fonte conectada, por uma janela de tempo | **Vigia**. |
 
 ## Criar um agendamento
 
-1. Abra a criação de agendamento ou use **Criar automação com agente**.
+1. Clique em **Nova automação** ou **Nova rotina**, ou use **Criar com agente**.
 2. Descreva o resultado esperado, as fontes e onde a resposta deve aparecer.
-3. Defina uma execução única ou recorrente, com frequência, horário e fuso. A opção avançada permite uma expressão de agenda; você pode pedir ao agente para configurá-la.
+3. Defina uma execução única ou recorrente, com frequência, horário e fuso. A opção **Cron** permite uma expressão de agenda; você pode pedir ao agente para configurá-la.
 4. Confira as fontes e skills habilitadas e, se necessário, a pasta de trabalho.
-5. Revise **Status**, **Agendamento** e **Sumário** antes de salvar.
+5. Revise **Quando**, **O que fazer**, **Com o quê**, as opções e o resumo do horário antes de criar.
 
 > Toda segunda às 9h, no meu fuso, abra uma nova sessão com as tarefas que vencem nesta semana no projeto escolhido. Agrupe por responsável e destaque bloqueios. Use somente a conexão que eu indicar. Não envie mensagens à equipe.
 
@@ -29,18 +29,18 @@ Um agendamento pode abrir uma sessão ou executar uma ação em lote, conforme a
 
 ## Preencher a agenda passo a passo
 
-Em **Nova Automação**, dê um nome que descreva o resultado, como **Resumo diário — exemplo**. O formulário oferece quatro maneiras de definir o horário:
+Em **Nova rotina**, dê um nome que descreva o resultado, como **Resumo diário — exemplo**. O formulário oferece quatro maneiras de definir o horário:
 
 | Opção | Quando usar | O que conferir |
 | --- | --- | --- |
 | **Uma vez** | Uma tarefa em uma data específica | Data e horário antes de criar. |
-| **Agenda** | Dias e horário recorrentes | Dias selecionados e resumo da agenda. |
+| **Recorrente** | Dias e horário recorrentes | Dias selecionados e resumo da agenda. |
 | **Intervalo** | Repetir a cada período | Frequência compatível com o tempo da tarefa. |
-| **Avançado** | Uma recorrência que não cabe nas opções anteriores | Peça ajuda ao agente e valide a descrição resultante. |
+| **Cron** | Uma recorrência que não cabe nas opções anteriores | Peça ajuda ao agente e valide a descrição resultante. |
 
-No exemplo, **Agenda > Dias úteis > 08:00** produz o resumo “Dias úteis às 08:00”. Em **Ação**, selecione **Nova sessão** e preencha o pedido. O campo de skill é opcional: não copie um nome de exemplo se aquela skill não existe no seu workspace.
+Para um resumo de segunda a sexta, escolha **Recorrente > Dias úteis** e mantenha **08:00**. Confira o resumo “Dias úteis às 08:00”. Em **O que fazer > Tipo**, selecione **Nova sessão** e preencha **Instruções**. O campo de skill é opcional: não copie um nome de exemplo se aquela skill não existe no seu workspace.
 
-<Frame><img src="/images/guide/automacao-nova-agenda.png" alt="Rascunho de automação para dias úteis às 08:00, com pedido de resumo do dashboard" /></Frame>
+<Frame caption="Formulário inicial, antes de preencher o nome e as instruções. A tela começa com Todos os dias; selecione Dias úteis para seguir o exemplo."><img src="/images/guide/automacao-nova-agenda.png" alt="Nova rotina com repetição Recorrente, horário 08:00 e seleção de dias" /></Frame>
 
 > Abra o dashboard Visão da semana — exemplo e prepare um resumo de entregas, pendências e decisões necessárias. Identifique os dados como fictícios. Não envie mensagens nem altere tarefas.
 
@@ -59,7 +59,7 @@ Role para conferir modelo de IA, fontes, diretório de trabalho, skills e opçõ
 | **Executar ao abrir se perdeu o horário** | Quando habilitado, permite recuperar na próxima abertura um horário perdido nas últimas duas horas, conforme a tela. |
 | **Notificar ao concluir** | Mostra uma notificação ao término; depende também das permissões de notificações do sistema. |
 
-As imagens mostram um **rascunho didático**. Ele foi cancelado após a captura e não criou uma rotina ativa. No seu uso, clique em **Criar**, localize o item salvo e confira a próxima execução. Para experimentar apenas uma vez, use **Uma vez** e depois revise o resultado antes de transformar em recorrência.
+As imagens mostram um **rascunho didático**. Ele foi cancelado após a captura e não criou uma rotina ativa. No seu uso, clique em **Criar rotina**, localize o item salvo e confira a próxima execução. Para experimentar apenas uma vez, use **Uma vez** e depois revise o resultado antes de transformar em recorrência.
 
 ## Criar um vigia
 
@@ -68,6 +68,8 @@ Informe a fonte, o alvo exato, o intervalo entre verificações e por quanto tem
 > Acompanhe esta conversa por duas horas, verificando a cada 15 minutos. Avise nesta sessão quando chegar uma resposta que resolva a pendência. Não responda por mim.
 
 A fonte precisa permitir consultar o alvo. Dizer apenas “avise quando acontecer” não garante que o monitor foi criado: confira o vigia salvo na lista.
+
+<Frame caption="Formulário de demonstração; nenhum acompanhamento foi ativado."><img src="/images/guide/vigia-criar.png" alt="Nova vigia com conexão, resposta esperada, intervalo, duração e modo de entrega" /></Frame>
 
 ## Conferir se funcionou
 

@@ -2,7 +2,9 @@
 
 Documentação pública em português para pessoas que usam o G4 OS no trabalho. Os guias explicam como pedir, revisar, organizar e compartilhar entregas sem exigir conhecimento de programação.
 
-O acervo atual tem 81 páginas, 20 casos de uso, 66 capturas reais e 20 exemplos visuais originais. Os catálogos cobrem 38 conexões de trabalho e 42 opções selecionáveis do AI Gateway, conforme a revisão de setembro de 2026.
+O acervo atual tem 82 páginas, 20 casos de uso, 82 imagens de interface e 20 exemplos visuais originais. Os catálogos cobrem 38 conexões de trabalho e 50 opções selecionáveis do AI Gateway, conforme a revisão de outubro de 2026 no main público (0.99.431). Galts não integra esta revisão.
+
+Foram renovadas 25 capturas e adicionadas 16. As novas telas usam um ambiente isolado com conteúdo fictício; Desk e Marketplace usam componentes de produção com dados simulados, identificados nas legendas. Capturas anteriores de conta e Empresa continuam protegidas. Metadados de 24 imagens antigas foram removidos sem alterar os pixels.
 
 ## Prévia e validação
 
@@ -21,7 +23,7 @@ A busca da prévia local pode exigir autenticação do Mintlify. Isso não imped
 - `product/`: conceitos, conexões e entregáveis.
 - `support/`: instruções por recurso e ajuda para problemas comuns.
 - `use-cases/`: exemplos de trabalho com pedidos que podem ser preparados no app.
-- `images/guide/`: capturas reais de demonstração e de administração, com identificações ocultadas nas telas de contas autorizadas.
+- `images/guide/`: interfaces de demonstração e de administração, com identificações ocultadas nas telas de contas autorizadas; componentes com dados simulados são identificados.
 - `images/use-cases/`: exemplos visuais originais, identificados como ilustrativos ou calculados dos CSVs de exercício.
 - `use-cases/datasets/`: arquivos de exercício; confira as ressalvas nos respectivos casos de uso.
 - `.github/docs-audit/`: evidências e limites da revisão editorial, fora da navegação pública.

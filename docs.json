@@ -68,6 +68,7 @@
                 "group": "Crie e revise entregas",
                 "pages": [
                   "product/outputs",
+                  "support/documents",
                   "product/workbooks",
                   "product/slides",
                   "product/sites",

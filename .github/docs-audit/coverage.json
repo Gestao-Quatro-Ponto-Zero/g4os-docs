@@ -1,7 +1,7 @@
 {
-  "reviewDate": "2026-09-10",
-  "productCommit": "ec67bc01c66cb290efe0d7f6fc6e4fa88caad664",
-  "docsBaseCommit": "a7f2752920342ff5833f2c2e33ad1e7f499585d4",
+  "reviewDate": "2026-10-12",
+  "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+  "docsBaseCommit": "5c41ed9b9a5f7db5dde1fc5648b50c9701149b45",
   "scope": "Documentação pública em português para usuários não técnicos. Matriz interna de evidências, não promessa de teste E2E de integrações externas.",
   "sourceOfTruth": {
     "routes": "apps/electron/src/shared/routes.ts",
@@ -260,6 +260,14 @@
         "support/index"
       ],
       "coverage": "Subpáginas enumeradas no campo settings; entradas de compatibilidade separadas da navegação visível."
+    },
+    "documents": {
+      "pages": [
+        "support/documents",
+        "support/meeting-recording",
+        "product/outputs"
+      ],
+      "coverage": "Biblioteca, OS Docs, pastas, seleção $, transcrição e compartilhamento de cópia de leitura."
     }
   },
   "actionBuilders": {
@@ -404,7 +412,7 @@
         "support/input",
         "support/app-settings"
       ],
-      "visibility": "Compatibilidade; oculta da lista principal. Entrada foi incorporada ao App; atalhos abrem referência.",
+      "visibility": "Compatibilidade; oculta da lista principal. Entrada foi incorporada a Geral; atalhos abrem referência.",
       "screenshots": [
         "images/guide/configuracoes-app.png",
         "images/guide/entrada-tecla-envio.png"
@@ -461,7 +469,8 @@
       "visibility": "Abre a experiência Brain; acesso também por Ferramentas e Configurações > Workspace.",
       "screenshots": [
         "images/guide/ajustes-brain.png"
-      ]
+      ],
+      "note": "Abre a experiência Brain; acesso também por Ferramentas e Configurações > Workspace."
     },
     "support": {
       "pages": [
@@ -476,7 +485,7 @@
       "pages": [
         "support/shortcuts"
       ],
-      "visibility": "Compatibilidade; oculta da lista principal. Entrada foi incorporada ao App; atalhos abrem referência.",
+      "visibility": "Compatibilidade; oculta da lista principal. Entrada foi incorporada a Geral; atalhos abrem referência.",
       "screenshots": [
         "images/guide/ajustes-atalhos.png"
       ]
@@ -515,6 +524,13 @@
     {
       "id": "app.search",
       "hotkey": "mod+f",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
+      "id": "app.commandPalette",
+      "hotkey": "mod+k",
       "pages": [
         "support/shortcuts"
       ]
@@ -604,6 +620,13 @@
       ]
     },
     {
+      "id": "view.toggleSessionsColumn",
+      "hotkey": "mod+\\",
+      "pages": [
+        "support/shortcuts"
+      ]
+    },
+    {
       "id": "view.toggleFocusMode",
       "hotkey": "mod+.",
       "pages": [
@@ -661,6 +684,7 @@
     ],
     "composer": [
       "@",
+      "$",
       "#",
       ">",
       "/safe",
@@ -883,7 +907,8 @@
       ],
       "source": "apps/electron/src/renderer",
       "verification": "UI: criação completa em workspace fictício",
-      "note": "Dois workspaces fictícios criados. Assistente completo de seis etapas documentado em oito passos; sem importar conteúdo privado."
+      "note": "Dois workspaces fictícios criados. Assistente completo de seis etapas documentado em oito passos; sem importar conteúdo privado.",
+      "evidenceReviewDate": "2026-09-10"
     },
     {
       "feature": "Ferramentas e Apps",
@@ -892,8 +917,9 @@
         "support/apps"
       ],
       "source": "apps/electron/src/renderer/features/tools-area/tools-area-model.ts",
-      "verification": "UI e código",
-      "note": "Oito áreas; Apps não é o Marketplace."
+      "verification": "UI e código público de outubro",
+      "note": "Nove áreas em Ferramentas, incluindo Documentos e sites; Apps é separado do Marketplace.",
+      "evidenceReviewDate": "2026-10-12"
     },
     {
       "feature": "Compositor, menções e permissões",
@@ -904,8 +930,9 @@
         "support/permissions"
       ],
       "source": "apps/electron/src/renderer/components/app-shell/input/hooks/useComposerInlineMenus.ts",
-      "verification": "UI e código",
-      "note": "@, #, > e /; seleção de Slides observada antes do pedido."
+      "verification": "UI e código público de outubro",
+      "note": "@, $, #, > e /; cards de perguntas, aprovação e planos conferidos no código.",
+      "evidenceReviewDate": "2026-10-12"
     },
     {
       "feature": "Comandos operacionais",
@@ -914,7 +941,8 @@
       ],
       "source": "apps/electron/src/renderer/components/ui/slash-command-menu.tsx",
       "verification": "Código e interface",
-      "note": "safe, ask, allow-all; Pro e diretório condicionais."
+      "note": "safe, ask, allow-all; Pro e diretório condicionais.",
+      "evidenceReviewDate": "2026-09-10"
     },
     {
       "feature": "Entregáveis nativos e prévias",
@@ -925,8 +953,9 @@
         "product/sites"
       ],
       "source": "apps/electron/src/renderer/features/output-workspace",
-      "verification": "UI e código",
-      "note": "Criou, abriu, alterou célula, revisou diff e salvou planilha nativa. Criou e abriu apresentação no Studio. Menus de exportação conferidos; sem enviar/publicar."
+      "verification": "Editor de OS Doc na UI e código de outubro; planilha/Studio preservados",
+      "note": "Edição visual, seleção Melhorar e salvamento local; exportação e edição de planilha anteriores permanecem evidência de setembro.",
+      "evidenceReviewDate": "2026-10-12"
     },
     {
       "feature": "Desk",
@@ -935,8 +964,9 @@
         "product/voice-input"
       ],
       "source": "apps/electron/src/renderer/features/voice-input/desk/DeskVoicePanel.tsx",
-      "verification": "UI do painel sem microfone e código",
-      "note": "Não iniciou captura de voz. Ações de encerrar e minimizar conferidas no código."
+      "verification": "Componentes de produção em demonstração local e código",
+      "note": "Painel atual e configurações de voz capturados com fixture oficial; não iniciou voz e não validou disponibilidade da conta.",
+      "evidenceReviewDate": "2026-10-12"
     },
     {
       "feature": "Gravação de reunião",
@@ -944,8 +974,9 @@
         "support/meeting-recording"
       ],
       "source": "apps/electron/src/renderer/features/meeting-recording/useMeetingRecording.ts",
-      "verification": "Controle visível e código",
-      "note": "Microfone, estados, recuperação; sem gravar pessoas."
+      "verification": "OS Docs e transcrição fictícios na UI; código e arquitetura",
+      "note": "Nova página de reunião, notas, transcrição e versão antiga; nenhuma gravação real, transcrição remota ou análise paga executada.",
+      "evidenceReviewDate": "2026-10-12"
     },
     {
       "feature": "Telegram",
@@ -954,7 +985,8 @@
       ],
       "source": "apps/electron/src/main/telegram-gateway/index.ts",
       "verification": "Código",
-      "note": "/start /help /pair /sessions /use /new /status /stop /unbind e /unbind all. Sem parear bot nem enviar mensagens."
+      "note": "/start /help /pair /sessions /use /new /status /stop /unbind e /unbind all. Sem parear bot nem enviar mensagens.",
+      "evidenceReviewDate": "2026-09-10"
     },
     {
       "feature": "Navegador, pesquisa e WhatsApp Web",
@@ -964,7 +996,8 @@
       ],
       "source": "apps/electron/resources/docs/browser-tools.md",
       "verification": "Interface do navegador e referência do produto",
-      "note": "Sem ler conversas privadas do WhatsApp ou enviar mensagens."
+      "note": "Sem ler conversas privadas do WhatsApp ou enviar mensagens.",
+      "evidenceReviewDate": "2026-09-10"
     },
     {
       "feature": "Arquivos Office e referências",
@@ -976,7 +1009,8 @@
       ],
       "source": "apps/electron/resources/docs/office-files.md",
       "verification": "Referência do produto, código e exemplos nativos",
-      "note": "Diferencia arquivo exportado, prévia e entrega nativa; limitações de fórmulas e importação."
+      "note": "Diferencia arquivo exportado, prévia e entrega nativa; limitações de fórmulas e importação.",
+      "evidenceReviewDate": "2026-09-10"
     },
     {
       "feature": "Conexões gerenciadas",
@@ -986,8 +1020,9 @@
         "support/sources"
       ],
       "source": "packages/shared/src/sources/managed-connectors.ts",
-      "verification": "Catálogo exportado do código e UI",
-      "note": "38 conectores e ações confrontados com catálogo. Detalhes podem reconhecer autorização prévia da conta; identidade real foi excluída de todas as capturas. Não foi realizada nova autenticação nem escrita externa."
+      "verification": "Exportação do catálogo e UI de outubro",
+      "note": "38 conectores; sem autenticações novas ou operações externas.",
+      "evidenceReviewDate": "2026-10-12"
     },
     {
       "feature": "Compartilhamento, colaboração e controle remoto",
@@ -998,7 +1033,8 @@
       ],
       "source": "apps/electron/resources/docs/capabilities.md",
       "verification": "Menu da sessão, componentes e contratos",
-      "note": "Distingue link publicado, sala e computador executor. Sem gerar acesso público a sessões reais."
+      "note": "Distingue link publicado, sala e computador executor. Sem gerar acesso público a sessões reais.",
+      "evidenceReviewDate": "2026-09-10"
     },
     {
       "feature": "IA, uso, créditos e privacidade",
@@ -1011,8 +1047,9 @@
         "product/connections/ai-gateway"
       ],
       "source": "apps/electron/src/renderer/pages/settings",
-      "verification": "Catálogo oficial do produto exportado, seletor Gateway/Codex exercitado e configurações inspecionadas",
-      "note": "42 opções selecionáveis de Gateway, incluindo perfis e roteador gratuito; cinco modelos de Codex Subscription. Sem preços fixos ou alteração de padrões globais."
+      "verification": "Catálogos exportados e seletores; configurações locais",
+      "note": "50 seleções Gateway, oito Codex, Claude Subscription. Plano e uso exige conta real; captura anterior protegida preservada.",
+      "evidenceReviewDate": "2026-10-12"
     },
     {
       "feature": "Brain e memória",
@@ -1021,7 +1058,8 @@
       ],
       "source": "docs/shared-brain/README.md",
       "verification": "Tela, documentação e contratos",
-      "note": "Aviso de compatibilidade observado em workspace novo; não usado em screenshot por conter caminho pessoal. Sincronização não exercitada entre computadores."
+      "note": "Aviso de compatibilidade observado em workspace novo; não usado em screenshot por conter caminho pessoal. Sincronização não exercitada entre computadores.",
+      "evidenceReviewDate": "2026-09-10"
     },
     {
       "feature": "Empresa, contexto e projetos",
@@ -1034,7 +1072,8 @@
       ],
       "source": "apps/electron/src/shared/contracts/shell-navigation.ts",
       "verification": "Contratos, código e UI de projeto pessoal",
-      "note": "Projeto fictício e marco criados. Não alterou membros, políticas, créditos ou documentos corporativos."
+      "note": "Projeto fictício e marco criados. Não alterou membros, políticas, créditos ou documentos corporativos.",
+      "evidenceReviewDate": "2026-09-10"
     },
     {
       "feature": "Sites estáticos",
@@ -1043,7 +1082,8 @@
       ],
       "source": "docs/architecture/static-site-publishing.md",
       "verification": "Contrato e componentes",
-      "note": "Não publicou, despublicou nem alterou proteção de um site real."
+      "note": "Não publicou, despublicou nem alterou proteção de um site real.",
+      "evidenceReviewDate": "2026-09-10"
     },
     {
       "feature": "Parceiros",
@@ -1052,7 +1092,8 @@
       ],
       "source": "apps/electron/resources/docs/capabilities.md",
       "verification": "Referência do produto e catálogo",
-      "note": "Serviço de busca de parceiros distinto do Marketplace de skills/workflows; sem contato externo."
+      "note": "Serviço de busca de parceiros distinto do Marketplace de skills/workflows; sem contato externo.",
+      "evidenceReviewDate": "2026-09-10"
     },
     {
       "feature": "Exemplo de dashboard e documento",
@@ -1063,7 +1104,8 @@
       ],
       "verification": "Gerados e abertos no Electron com cinco tarefas fictícias. Dashboard corrigido para preservar datas como texto; documento aberto em leitura e fonte.",
       "source": "apps/electron/src/renderer/features/output-workspace",
-      "note": "O dashboard de exercício é estático, sem fontes externas. Contagens 5/3/1 conferidas."
+      "note": "O dashboard de exercício é estático, sem fontes externas. Contagens 5/3/1 conferidas.",
+      "evidenceReviewDate": "2026-09-10"
     },
     {
       "feature": "Criação de workflow",
@@ -1072,63 +1114,88 @@
       ],
       "verification": "Pedido enviado por Adicionar workflow; item salvo encontrado e detalhe aberto com entradas Período e Entregas.",
       "source": "apps/electron/src/renderer",
-      "note": "Workflow fictício de revisão semanal, sem envio ou edição de tarefas."
+      "note": "Workflow fictício de revisão semanal, sem envio ou edição de tarefas.",
+      "evidenceReviewDate": "2026-09-10"
     },
     {
       "feature": "Formulário de automação",
       "pages": [
         "support/automation"
       ],
-      "verification": "Rascunho preenchido em Agenda > Dias úteis > 08:00, opções inspecionadas e formulário cancelado.",
+      "verification": "Formulários iniciais abertos na UI de outubro",
       "source": "apps/electron/src/renderer",
-      "note": "Nenhuma automação ativa criada. Recuperação ao reabrir documentada com janela de duas horas conforme UI."
+      "note": "Nova rotina: Recorrente, Uma vez, Intervalo e Cron; vigia e opções conferidas. Nenhuma rotina ativa criada.",
+      "evidenceReviewDate": "2026-10-12"
+    },
+    {
+      "feature": "Documentos e sites",
+      "pages": [
+        "support/documents",
+        "product/outputs",
+        "support/meeting-recording",
+        "support/sharing"
+      ],
+      "source": "apps/electron/src/renderer/features/documents",
+      "verification": "UI de produção com documentos fictícios; código e arquitetura",
+      "evidenceReviewDate": "2026-10-12",
+      "note": "Biblioteca, pastas, editor, menu Melhorar, $, reuniões e diálogo de cópia publicados. Nenhum material foi publicado na web pelo app."
+    },
+    {
+      "feature": "Marketplace atual",
+      "pages": [
+        "support/marketplace"
+      ],
+      "source": "apps/electron/src/renderer/features/marketplace",
+      "verification": "Componentes de produção com fixtures oficiais e inspeção do código",
+      "evidenceReviewDate": "2026-10-12",
+      "note": "Catálogo e editor fotografados com dados simulados identificados nas legendas; sem backend autenticado, instalação ou publicação."
     }
   ],
   "publicPages": [
     {
       "path": "getting-started/create-workspace.mdx",
       "title": "Criar um workspace",
-      "change": "revised"
+      "change": "retained"
     },
     {
       "path": "getting-started/interface.mdx",
       "title": "Onde encontrar cada coisa",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "getting-started/quickstart.mdx",
       "title": "Sua primeira tarefa",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "index.mdx",
       "title": "Guia do G4 OS",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "product/agents.mdx",
       "title": "Trabalhar com agentes",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "product/automation.mdx",
       "title": "Rotinas recorrentes",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "product/connections/ai-gateway.mdx",
       "title": "Modelos do G4 AI Gateway",
-      "change": "new"
+      "change": "revised"
     },
     {
       "path": "product/connections/index.mdx",
       "title": "Como escolher uma conexão",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "product/connections/managed-agents.mdx",
       "title": "Agentes gerenciados",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "product/connections/managed-connections.mdx",
@@ -1138,7 +1205,7 @@
     {
       "path": "product/integrations.mdx",
       "title": "Trabalhar com suas integrações",
-      "change": "revised"
+      "change": "retained"
     },
     {
       "path": "product/outputs.mdx",
@@ -1148,47 +1215,47 @@
     {
       "path": "product/privacy-and-data.mdx",
       "title": "Privacidade e dados",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "product/projects.mdx",
       "title": "Projetos",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "product/security.mdx",
       "title": "Segurança e controle",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "product/sessions.mdx",
       "title": "Conversas e sessões",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "product/sites.mdx",
       "title": "Criar e publicar um site",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "product/slides.mdx",
       "title": "Criar e revisar slides",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "product/voice-input.mdx",
       "title": "Voz: ditado, Desk e reuniões",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "product/workbooks.mdx",
       "title": "Planilhas editáveis",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "product/workspaces.mdx",
       "title": "Workspaces",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "support/agents.mdx",
@@ -1202,18 +1269,18 @@
     },
     {
       "path": "support/app-settings.mdx",
-      "title": "Configurações do App",
+      "title": "Configurações gerais",
       "change": "revised"
     },
     {
       "path": "support/appearance.mdx",
       "title": "Aparência",
-      "change": "revised"
+      "change": "retained"
     },
     {
       "path": "support/apps.mdx",
       "title": "Apps locais",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "support/automation.mdx",
@@ -1223,52 +1290,57 @@
     {
       "path": "support/billing-subscriptions.mdx",
       "title": "Planos e créditos",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "support/browser.mdx",
       "title": "Pesquisar e usar o navegador",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "support/cloud-sync.mdx",
       "title": "Cloud Sync",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "support/collaborative-session.mdx",
       "title": "Sessão colaborativa",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "support/company-context.mdx",
       "title": "Conectar o workspace à empresa",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "support/context.mdx",
       "title": "Contexto da empresa",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "support/dashboards.mdx",
       "title": "Dashboards",
-      "change": "revised"
+      "change": "retained"
     },
     {
       "path": "support/desk.mdx",
       "title": "Desk: converse por voz",
-      "change": "unchanged"
+      "change": "revised"
+    },
+    {
+      "path": "support/documents.mdx",
+      "title": "Documentos e sites",
+      "change": "revised"
     },
     {
       "path": "support/empresa.mdx",
       "title": "Empresa: pessoas, créditos e políticas",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "support/index.mdx",
       "title": "Ajuda e configurações",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "support/input.mdx",
@@ -1278,67 +1350,67 @@
     {
       "path": "support/labels.mdx",
       "title": "Tags e filtros",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "support/marketplace.mdx",
       "title": "Marketplace",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "support/meeting-recording.mdx",
       "title": "Gravar uma reunião",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "support/partners.mdx",
       "title": "Encontrar um parceiro",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "support/permissions.mdx",
       "title": "Permissões e autonomia",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "support/preferences.mdx",
-      "title": "Preferências pessoais",
-      "change": "unchanged"
+      "title": "Perfil e preferências pessoais",
+      "change": "revised"
     },
     {
       "path": "support/projects.mdx",
       "title": "Organizar um projeto",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "support/remote-control.mdx",
       "title": "Continuar pelo celular ou navegador",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "support/repair-mode.mdx",
       "title": "Resolver problemas",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "support/shared-brain.mdx",
       "title": "Brain: memória do workspace",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "support/sharing.mdx",
       "title": "Compartilhar uma conversa",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "support/shortcuts.mdx",
       "title": "Comandos e atalhos",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "support/skills.mdx",
       "title": "Skills: instruções reutilizáveis",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "support/sources.mdx",
@@ -1348,32 +1420,32 @@
     {
       "path": "support/tags.mdx",
       "title": "Tags",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "support/telegram-messaging.mdx",
       "title": "Conversar pelo Telegram",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "support/tools.mdx",
       "title": "Ferramentas",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "support/usage.mdx",
       "title": "Acompanhar o uso",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "support/user-management-api.mdx",
       "title": "Acesso e gestão de pessoas",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "support/whatsapp-browser.mdx",
       "title": "WhatsApp Web",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "support/workflows.mdx",
@@ -1383,112 +1455,112 @@
     {
       "path": "support/workspace.mdx",
       "title": "Configurações do workspace",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "use-cases/clientes/preparar-reuniao-cliente.mdx",
       "title": "Preparar uma reunião com cliente",
-      "change": "new"
+      "change": "retained"
     },
     {
       "path": "use-cases/conteudo/planejar-campanha.mdx",
       "title": "Transformar um briefing em plano de conteúdo",
-      "change": "new"
+      "change": "retained"
     },
     {
       "path": "use-cases/design/design-slides.mdx",
       "title": "Preparar uma apresentação executiva",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "use-cases/financeiro/conferir-recebimentos.mdx",
       "title": "Conferir recebimentos entre duas bases",
-      "change": "new"
+      "change": "retained"
     },
     {
       "path": "use-cases/financeiro/organizar-contas-a-pagar.mdx",
       "title": "Organizar contas a pagar para revisão",
-      "change": "new"
+      "change": "retained"
     },
     {
       "path": "use-cases/gestao/comparar-fornecedores.mdx",
       "title": "Comparar propostas de fornecedores",
-      "change": "new"
+      "change": "retained"
     },
     {
       "path": "use-cases/gestao/preparar-1a1.mdx",
       "title": "Preparar uma conversa de 1:1",
-      "change": "new"
+      "change": "retained"
     },
     {
       "path": "use-cases/gestao/resumo-semanal.mdx",
       "title": "Montar um resumo semanal de gestão",
-      "change": "new"
+      "change": "revised"
     },
     {
       "path": "use-cases/index.mdx",
       "title": "Casos de uso",
-      "change": "revised"
+      "change": "retained"
     },
     {
       "path": "use-cases/marketing-vendas/churn-retencao.mdx",
       "title": "Investigar cancelamentos e retenção",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "use-cases/marketing-vendas/cohort-receita.mdx",
       "title": "Receita e retenção por grupo de clientes",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "use-cases/marketing-vendas/funil-marketing.mdx",
       "title": "Analisar o funil de marketing",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "use-cases/marketing-vendas/performance-comercial.mdx",
       "title": "Revisar a operação comercial",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "use-cases/operacoes/apqc-otimizacao-processos.mdx",
       "title": "Mapear e melhorar um processo",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "use-cases/operacoes/criar-treinamento.mdx",
       "title": "Preparar um treinamento da equipe",
-      "change": "new"
+      "change": "retained"
     },
     {
       "path": "use-cases/rotina/acompanhamento.mdx",
       "title": "Acompanhar pendências sem refazer a busca",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "use-cases/rotina/documentos.mdx",
       "title": "Comparar documentos e preparar um resumo",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "use-cases/rotina/email.mdx",
       "title": "Organizar e-mails e preparar respostas",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "use-cases/rotina/pesquisa.mdx",
       "title": "Pesquisar um tema e comparar opções",
-      "change": "unchanged"
+      "change": "retained"
     },
     {
       "path": "use-cases/rotina/reunioes.mdx",
       "title": "Preparar uma reunião e registrar decisões",
-      "change": "unchanged"
+      "change": "revised"
     },
     {
       "path": "use-cases/seguranca/seguranca-lovable.mdx",
       "title": "Revisar um aplicativo antes de lançar",
-      "change": "unchanged"
+      "change": "retained"
     }
   ],
   "screenshots": [
@@ -1497,31 +1569,58 @@
       "pages": [
         "support/agents.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "sha256": "7e1b154bff3c119821c8415cc46021ec1107907e1624bf84dc0188bf79956c3f",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/ajustes-atalhos.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
       "pages": [
         "support/shortcuts.mdx"
       ],
-      "redaction": "no_identifying_data_visible"
+      "sha256": "fcf5da6af6f99fa99f7c8a72f0d0a2bc0b6152ccac8d694466d1182903d21bc2",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/ajustes-brain.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
-      "pages": [
-        "support/shared-brain.mdx"
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "pages": [],
+      "sha256": "c47e92443723e94e9037a3bc82ce56665e5e2b6ef00274edf04f14477c4b6b5e",
+      "dimensions": [
+        1440,
+        949
       ],
-      "redaction": "opaque_rectangles"
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/ajustes-cloud-sync.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
       "pages": [
         "support/cloud-sync.mdx"
       ],
-      "redaction": "no_identifying_data_visible"
+      "sha256": "913e19da5261aa347ee5fd5eae912ec5e725b67a95d48bf23251672b3a8b2704",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/ajustes-cupom.png",
@@ -1529,47 +1628,88 @@
       "pages": [
         "support/usage.mdx"
       ],
-      "redaction": "no_identifying_data_visible"
+      "redaction": "no_identifying_data_visible",
+      "sha256": "e25ac1868747f6601ed841b90beb22897bf6b9d4c0c8085012624e868afbe53f",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/ajustes-ia.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
       "pages": [
         "support/ai.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "sha256": "c146227ab2b53961fa9f3b683dbdbcde954cf623eaae62677457c9e2d5efcdf0",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/ajustes-permissoes.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
       "pages": [
         "support/permissions.mdx"
       ],
-      "redaction": "no_identifying_data_visible"
+      "sha256": "649f88c27c844f57542bf582fda97bd4e47e6701d6e040d33bd57178d2a63783",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/ajustes-preferencias.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
       "pages": [
         "support/preferences.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "sha256": "6ef530368c8cac648dccefb2b57041ad113f95f2c500085a6c498eddd80d5a5e",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/ajustes-suporte.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
       "pages": [
         "support/index.mdx"
       ],
-      "redaction": "no_identifying_data_visible"
+      "sha256": "e9bfbeaa5ead4007c101d8def77609508f90f1dff0325965dd770243e15ca419",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/ajustes-tags.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
       "pages": [
         "support/labels.mdx"
       ],
-      "redaction": "no_identifying_data_visible"
+      "sha256": "5d576bc7c71ef8a6847d00d953f9d89c8bb026f5762bc85bee72c862f1329d12",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/ajustes-uso-resumo.png",
@@ -1577,7 +1717,13 @@
       "pages": [
         "support/usage.mdx"
       ],
-      "redaction": "no_identifying_data_visible"
+      "redaction": "no_identifying_data_visible",
+      "sha256": "deb3d3a2324cea06c5533f55fd85f9d99f467cbce2184fc585a3308696dc956a",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/ajustes-uso.png",
@@ -1585,86 +1731,205 @@
       "pages": [
         "support/usage.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "redaction": "opaque_rectangles",
+      "sha256": "d23cc60b667a3f706932fffd749d2d7f016ca16d473510aec176967cae2ad10d",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/ajustes-workspace.png",
-      "review": "Captura real revisada visualmente; dados identificáveis ocultados quando presentes. Valores de uso e regras refletem a conta autorizada, não um cenário fictício.",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
       "pages": [
         "support/workspace.mdx"
       ],
-      "redaction": "no_identifying_data_visible"
+      "sha256": "0579c35fc3c102fe521b1f5c6aa0fa35d718bb82a467cb44f7b732c81769b451",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/apps-slide-studio.png",
       "pages": [
         "support/apps.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "sha256": "a33d17abb0c0e4a67d43459c4ed4de875aa9d1407333fcb320fecd700391b6cd",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/automacao-nova-agenda.png",
       "pages": [
         "support/automation.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "sha256": "fd9ccbaeee517f5d1a16f755fffe1f4e5d5fb13b72c0a24f26869c13cab1725c",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/automacao-opcoes.png",
       "pages": [
         "support/automation.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "37dbf43efe44178eb194dabc9ca116b6fdb4492ee7c2790a08e78974ceecf33a",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/automacoes.png",
       "pages": [
         "support/automation.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "sha256": "ef4ee9d9eaf5a0f331271df2995a9a382e5932b1243d59f51836dfb9273537b1",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
+    },
+    {
+      "path": "images/guide/brain-outubro.png",
+      "pages": [
+        "support/shared-brain.mdx"
+      ],
+      "sha256": "5a7d5e97f9992e27d25437649df2eb4e89ee51d9bbe8c93b7158198e33718bdb",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
     },
     {
       "path": "images/guide/conexao-acoes-disponiveis.png",
       "pages": [
         "support/sources.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "ad2ccd6b6adf61ed3a9ca8880c215c751991b10668c9da395015fd75b39b4876",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/conexoes-gerenciadas-catalogo.png",
       "pages": [
-        "support/sources.mdx",
-        "product/connections/managed-connections.mdx"
+        "product/connections/managed-connections.mdx",
+        "support/sources.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "sha256": "f4edf56002f8f5d81bd113ef0fa28f418abfc379f660eaa06ad52aa6c9294585",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/conexoes-google-busca.png",
       "pages": [
         "support/sources.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "91d81fe5f8b202b5b45a7732f9a38186110fe1d12bed2040c6841a49da067637",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/conexoes-microsoft-busca.png",
       "pages": [
         "support/sources.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "2a810cbb408b710c2fdc381d31d3d790f81c533baa99de6c91d2f93318b1353c",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
+    },
+    {
+      "path": "images/guide/conexoes-outubro.png",
+      "pages": [
+        "support/sources.mdx"
+      ],
+      "sha256": "5d5f204cd3b67a08c012487b547a864d78734449544819e70296b27f8713506a",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
     },
     {
       "path": "images/guide/configuracoes-aparencia.png",
       "pages": [
         "support/appearance.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "sha256": "57360ccf6cc6da4143bd5d221a761a07b7ab11fc70a8819364be5568ee44f0a7",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/configuracoes-app.png",
       "pages": [
         "support/app-settings.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "sha256": "2094fa99650df02d328da634caddaf0995cb1ad71fea6e8a534a78d614a87340",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/dashboard-semana-exemplo.png",
@@ -1672,29 +1937,146 @@
         "support/dashboards.mdx",
         "use-cases/gestao/resumo-semanal.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "cf9739d1f0890c6ccea36d613804b2912fd852ea187e80a2b47528fa439c8e59",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
+    },
+    {
+      "path": "images/guide/desk-voz.png",
+      "pages": [
+        "support/desk.mdx"
+      ],
+      "sha256": "26d68f01e6040b21c963d4de2ba5a73890a93531df9ca8985e603bbaf81bbcbf",
+      "dimensions": [
+        300,
+        499
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "production_component_fixture",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
     },
     {
       "path": "images/guide/desk.png",
       "pages": [
         "support/desk.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "sha256": "ce318571f4bc942b30e6db337ca90567d7533a04a6ae4925ac24a1f1c108596c",
+      "dimensions": [
+        360,
+        415
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "production_component_fixture"
     },
     {
       "path": "images/guide/documento-editar-fonte.png",
-      "pages": [
-        "product/outputs.mdx"
+      "pages": [],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "0213b680265aa458c695b9b420fa713a605fe262082f1b342bc53669817b9f77",
+      "dimensions": [
+        1178,
+        768
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/documento-nativo.png",
       "pages": [
-        "product/outputs.mdx",
         "use-cases/gestao/resumo-semanal.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "1c8befd17cc06661f814f620ab82fe34dd70aae527fbf1955f670c88fa7d4c50",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
+    },
+    {
+      "path": "images/guide/documentos-biblioteca.png",
+      "pages": [
+        "support/documents.mdx"
+      ],
+      "sha256": "d7cef40e82069f11fffd4b63db2fa5dd2f89567820774b8afc90ac54677bedff",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
+    },
+    {
+      "path": "images/guide/documentos-compartilhar.png",
+      "pages": [
+        "support/sharing.mdx"
+      ],
+      "sha256": "995312acf88c3e42de9785c1bcdeb05f5c8bde95ebdd2085d9f50693639b4cbd",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
+    },
+    {
+      "path": "images/guide/documentos-editor.png",
+      "pages": [
+        "product/outputs.mdx",
+        "support/documents.mdx"
+      ],
+      "sha256": "589d1277b12745981dd8f30244d299b60b21d7431e2daa2ac52118a970b9fa73",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
+    },
+    {
+      "path": "images/guide/documentos-melhorar.png",
+      "pages": [
+        "support/documents.mdx"
+      ],
+      "sha256": "1e5f5fa1df667f23ad159e4c2bb0acd79d61ad4ae4a585e1ea872ea8afd69b25",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
+    },
+    {
+      "path": "images/guide/documentos-referencia.png",
+      "pages": [
+        "support/documents.mdx"
+      ],
+      "sha256": "d94212c074051f4442cc359473cae700b85b15a30a27c50d4768a3da30aed8d1",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
     },
     {
       "path": "images/guide/empresa-adicionar-pessoa.png",
@@ -1702,7 +2084,13 @@
       "pages": [
         "support/empresa.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "redaction": "opaque_rectangles",
+      "sha256": "69090f5684cd4df09c2389496ce87b1a42aab0b0e702a5396f72009f4e994638",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/empresa-auditoria.png",
@@ -1710,7 +2098,13 @@
       "pages": [
         "support/empresa.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "redaction": "opaque_rectangles",
+      "sha256": "72b56b8abf9dd628a7a27b67f13d0c6c22935d20881526358589912c657a566b",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/empresa-conceder-extra.png",
@@ -1718,7 +2112,13 @@
       "pages": [
         "support/empresa.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "redaction": "opaque_rectangles",
+      "sha256": "adbf0ed233fe1bd14e6babb89e8015102f15f9767c07fc75e33b03fcf67f9c9e",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/empresa-contexto.png",
@@ -1726,7 +2126,13 @@
       "pages": [
         "support/context.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "redaction": "opaque_rectangles",
+      "sha256": "0a2d2ca88b9076d77d5ccea0ab0a7507d7ca3b9fd4fdaf17e4137a129641bbee",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/empresa-estrutura.png",
@@ -1734,7 +2140,13 @@
       "pages": [
         "support/context.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "redaction": "opaque_rectangles",
+      "sha256": "f5fc62b6a9855c979ba3659e7b8377f0f4979b0e7489c7c2601890043aa1ddbf",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/empresa-modelos.png",
@@ -1742,7 +2154,13 @@
       "pages": [
         "support/empresa.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "redaction": "opaque_rectangles",
+      "sha256": "50710377095879c5d9ea7bed099f8019d1da1d40835972aa7fb4ee10f45390df",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/empresa-pessoas.png",
@@ -1750,7 +2168,13 @@
       "pages": [
         "support/empresa.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "redaction": "opaque_rectangles",
+      "sha256": "fd59d2ef1da8834177966247065dcab356a0d5c40bc5523618cafb6988ce1e5d",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/empresa-politica-global.png",
@@ -1758,7 +2182,13 @@
       "pages": [
         "support/empresa.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "redaction": "opaque_rectangles",
+      "sha256": "815a45f12dbf9d0748ba855868c19846361146f952df00da8176d5dbbe6daaf6",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/empresa-solicitacoes.png",
@@ -1766,7 +2196,13 @@
       "pages": [
         "support/context.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "redaction": "opaque_rectangles",
+      "sha256": "367d9e894061bc102d340c7023acfd09bdc030af1cd44a9bf11644d58829aa95",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/empresa-uso-creditos.png",
@@ -1774,7 +2210,13 @@
       "pages": [
         "support/empresa.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "redaction": "opaque_rectangles",
+      "sha256": "fe68f18879e5c6074d0f5ede9ce60524c1add7490b1d80385f6678fb400cbc45",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/empresa-uso-extra.png",
@@ -1782,7 +2224,13 @@
       "pages": [
         "support/empresa.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "redaction": "opaque_rectangles",
+      "sha256": "7faeb1d02d9db42aa01cecb41984ad08258e5506d03334c0d38cc17de0160d6c",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/empresa-uso-por-pessoa.png",
@@ -1790,7 +2238,13 @@
       "pages": [
         "support/empresa.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "redaction": "opaque_rectangles",
+      "sha256": "dad10483d5370b373195120efc5a292a202f584acd8f8d55e7e1fd4be52469ad",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/empresa-validade-extra.png",
@@ -1798,7 +2252,13 @@
       "pages": [
         "support/empresa.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "redaction": "opaque_rectangles",
+      "sha256": "cd984bc8fe7a14526bf72c4d8be950c973e94e2e311532c3d4e7cf90de973fc8",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/empresa-visao-geral.png",
@@ -1806,59 +2266,116 @@
       "pages": [
         "support/empresa.mdx"
       ],
-      "redaction": "opaque_rectangles"
+      "redaction": "opaque_rectangles",
+      "sha256": "a718a383af4a7eaa35aeebbe34a84a73247644939d88ab5bee4ba3b1cfad3c5b",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10"
     },
     {
       "path": "images/guide/entrada-tecla-envio.png",
       "pages": [
         "support/input.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "e4b27cfe0105ba7302a0f1513e3c1b28c9225a8850b7d39128265714850e6f86",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/ferramentas.png",
       "pages": [
         "getting-started/interface.mdx",
-        "support/tools.mdx",
-        "support/sources.mdx"
+        "support/tools.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "sha256": "d7cef40e82069f11fffd4b63db2fa5dd2f89567820774b8afc90ac54677bedff",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/ia-codex-modelos.png",
       "pages": [
         "support/ai.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "sha256": "4371093802390736179e63c15eb2094336b42fa0a7a6b208a7925ac34ff4a6c5",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/ia-gateway-busca-modelo.png",
       "pages": [
         "support/ai.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "sha256": "797fcf075fec0f3b03b378f07c23385b40f388cf877b8cfc20f959daf837273d",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/ia-gateway-claude.png",
       "pages": [
         "product/connections/ai-gateway.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "sha256": "d10834d4618964e83b2d07ca7fb63efed2572188dbf664a1d983e18cf8fb400b",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/ia-gateway-modelo-exato.png",
-      "pages": [
-        "support/ai.mdx"
+      "pages": [],
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "f4610cac270816e6f3ec179e24b176e664e62f0d3eccc0b905555889703f7df1",
+      "dimensions": [
+        1178,
+        768
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/ia-gateway-perfis.png",
       "pages": [
-        "support/ai.mdx",
-        "product/connections/ai-gateway.mdx"
+        "product/connections/ai-gateway.mdx",
+        "support/ai.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "sha256": "284d5a6b3a75e80a2d17ec20a33fd51bed3f5bc72eab0b0a5455219d610f3874",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/informacoes-sessao.png",
@@ -1866,35 +2383,147 @@
         "getting-started/interface.mdx",
         "support/permissions.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "sha256": "d82d2d4ee65fde55525fb02511ddfd92430beed5a1ae5d56a743201127e394b0",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
+    },
+    {
+      "path": "images/guide/marketplace-catalogo.png",
+      "pages": [
+        "support/marketplace.mdx"
+      ],
+      "sha256": "d3f791fba80518b3cdc152409fe25f429005af92afb6f4217e93fea7c68dde01",
+      "dimensions": [
+        1088,
+        819
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "production_component_fixture",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
+    },
+    {
+      "path": "images/guide/marketplace-editor.png",
+      "pages": [
+        "support/marketplace.mdx"
+      ],
+      "sha256": "539ae5a8d5d0896400bc5e0c8f36c01a3d5eff737b56c84880d5b5409e154f0f",
+      "dimensions": [
+        1088,
+        819
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "production_component_fixture",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
     },
     {
       "path": "images/guide/planilha-nativa.png",
       "pages": [
         "product/workbooks.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "0f72e2a97b5a7453a40da77eb1baea19320bb1f2203dafc166e87a4fa4f578f9",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/planilha-revisao.png",
       "pages": [
         "product/workbooks.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "4ac15aa304482a35db3fcea4bc5ea69a20b4cc559b9e04dfff875a454dcf99af",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/primeira-sessao.png",
       "pages": [
         "getting-started/quickstart.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "sha256": "60ff498b16786b17f057ceb4086f01a6e13cadfeff1ca292bf3716f51172bbc1",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
     },
     {
       "path": "images/guide/projeto-marcos.png",
       "pages": [
         "support/projects.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "01342663456385e6c37ac652467fea4a0e5cf1bb7a3f197fcac44d3f18342f5e",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
+    },
+    {
+      "path": "images/guide/reuniao-pagina.png",
+      "pages": [
+        "support/meeting-recording.mdx"
+      ],
+      "sha256": "b3b13c533460193da388edc9a1d10129b6cd15a5cf5febec2bee5c50ba8058c2",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
+    },
+    {
+      "path": "images/guide/reuniao-transcricao.png",
+      "pages": [
+        "support/meeting-recording.mdx"
+      ],
+      "sha256": "7e3cf2243112457c1d8715c59bde26c773e2f8f6c56f7ff4b51539bec4de6c98",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
+    },
+    {
+      "path": "images/guide/reunioes-lista.png",
+      "pages": [
+        "support/meeting-recording.mdx"
+      ],
+      "sha256": "c0893aba3c36bb93ee07a010d6db3300cc3abe3bb1ebbecaf415922bf1376505",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
     },
     {
       "path": "images/guide/selecionar-workflow.png",
@@ -1902,7 +2531,14 @@
         "support/workflows.mdx",
         "use-cases/design/design-slides.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "8de914dbcca177f41b1f26e22da684d72e3985b6dbc186cb98e7ea871eeab46e",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/sessao-resposta.png",
@@ -1911,91 +2547,223 @@
         "product/sessions.mdx",
         "use-cases/rotina/reunioes.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo.",
+      "sha256": "db56eafb33ef4735270d5f2ab9d4473187b2e4bdf2d776ffe5ce3311dbf8f94f",
+      "dimensions": [
+        2880,
+        1898
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo"
+    },
+    {
+      "path": "images/guide/skills.png",
+      "pages": [
+        "support/skills.mdx"
+      ],
+      "sha256": "d3d1cd1f4afdba3f3c315bf1e07ee25fd8bba8a5af4491b21822f9da3d3ccc75",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
     },
     {
       "path": "images/guide/slides-studio.png",
       "pages": [
         "product/slides.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "0fd334837fe354983d2af0d28d6db2e66b3ef23c2539c59f93b5fcf055096540",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
+    },
+    {
+      "path": "images/guide/vigia-criar.png",
+      "pages": [
+        "support/automation.mdx"
+      ],
+      "sha256": "c8a637b21ec572e030fa7410dcda7aac399df11448c32e2517d32ad85fc169b5",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
     },
     {
       "path": "images/guide/workflow-criar-pedido.png",
       "pages": [
         "support/workflows.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "44af2c239628a2f9d44a17973e10c708d1cd0017eb77fec7524fe96552858fbe",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/workflow-detalhe.png",
       "pages": [
         "support/workflows.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "75f7c6ac45cc060384dd756328143daf3d5c75d600f7b4adf312cc90466961d8",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
+    },
+    {
+      "path": "images/guide/workflows.png",
+      "pages": [
+        "support/workflows.mdx"
+      ],
+      "sha256": "e1b453acb6af941946eb150c11facea31f3e1b239dba6952a429367e84a73601",
+      "dimensions": [
+        1440,
+        949
+      ],
+      "reviewDate": "2026-10-12",
+      "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+      "provenance": "isolated_electron_demo",
+      "review": "Interface real do main público com conteúdo simulado e sem credenciais; imagem inteira revisada. Não representa execução do serviço externo."
     },
     {
       "path": "images/guide/workspace-adicionar.png",
       "pages": [
         "getting-started/create-workspace.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "772da7ba4a0c44ee47f6db4ad82c7ab6a1c152aeb4f4233f763e5216eda24c83",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/workspace-comecar.png",
       "pages": [
         "getting-started/create-workspace.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "e0f98da0d15020dbbcce59ac1d7b5cbaf02f05b6a087d8b07798429d50f33411",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/workspace-conexoes.png",
       "pages": [
         "getting-started/create-workspace.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "0e85760c749647bd353072066e49d0c3002e8909fe59d8944a78629e45f6d791",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/workspace-importar-ou-zero.png",
       "pages": [
         "getting-started/create-workspace.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "e4b794f9738b1016ad7406c7f5bb6f64dbf48ada95d34dabc2232eafb81357e4",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/workspace-informacoes.png",
       "pages": [
         "getting-started/create-workspace.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "78cf614bb3f5e3281574adaa1236c894012fb135820ea8a1558d4e8f4698dae8",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/workspace-objetivos.png",
       "pages": [
         "getting-started/create-workspace.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "3f541a9e728fcb97c9f7dd4f611a1efc27427e88421e3a6de073e996e39af338",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/workspace-perfil.png",
       "pages": [
         "getting-started/create-workspace.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "d33e7eef120a2ae491ce8310d5b4d83336aec8a86861bb55cb3d7be50bad985f",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     },
     {
       "path": "images/guide/workspace-pronto.png",
       "pages": [
         "getting-started/create-workspace.mdx"
       ],
-      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado."
+      "review": "Captura real revisada visualmente; apenas cenário fictício, sem credenciais nem conteúdo privado.",
+      "sha256": "d39aee151796e5bd396432568d8c58a8aefafa6cc326bc04b442b124b6d57655",
+      "dimensions": [
+        1178,
+        768
+      ],
+      "reviewDate": "2026-09-10",
+      "metadataSanitized": "2026-10-12; encoded pixel bytes preserved"
     }
   ],
   "limits": [
-    "Integrações inventariadas e confrontadas com ações suportadas; novas autenticações e operações em contas externas não foram executadas para o guia.",
-    "Voz, sincronização entre dispositivos, publicação de sites, pagamentos e mutações corporativas não executados.",
-    "Busca do Mintlify não testada localmente porque exige autenticação.",
-    "landing.html é página independente; apenas destinos dos três botões de download corrigidos. Não entra no inventário de guias Mintlify."
+    "Revisão de main público isolado, sem Galts. Testes de navegação local e parser não equivalem a E2E de serviços externos.",
+    "Empresa e Plano e uso: componentes/contratos conferidos; capturas anteriores protegidas preservadas porque o ambiente isolado não tem autorização de backend.",
+    "Desk e Marketplace: componentes de produção com fixtures oficiais identificados nas legendas; disponibilidade, voz, instalação e publicação não exercitadas.",
+    "Sem novos logins dos conectores, envios, gravação de áudio, análise paga, pagamentos, sincronização entre dispositivos, publicação de sites pelo app ou alterações corporativas.",
+    "Os 20 exemplos visuais e datasets anteriores foram preservados; não são resultados produzidos novamente nesta revisão.",
+    "Busca local Mintlify exige autenticação; páginas e navegação foram verificadas sem ela."
   ],
   "managedGatewayCatalog": "gateway-models.json",
   "expansionValidation": "expansion-validation.json",
@@ -2142,9 +2910,9 @@
     }
   ],
   "visualExpansion": {
-    "newScreenshots": 26,
-    "totalScreenshots": 66,
-    "newIllustrations": 20,
+    "newScreenshots": 16,
+    "totalScreenshots": 82,
+    "newIllustrations": 0,
     "useCasesWithVisuals": 20,
     "settingsRoutesWithVisualGuide": 13,
     "adminMutationsPerformed": false,
@@ -2154,6 +2922,29 @@
       "https://learn.chatgpt.com/use-cases/datasets-and-reports",
       "https://learn.chatgpt.com/use-cases/analyze-data-export"
     ],
-    "implementation": "Mintlify Frame/Tabs; copyable wrapped text blocks; original SVG visuals; no copied screenshots from references."
+    "implementation": "Mintlify Frame/Tabs; copyable wrapped text blocks; original SVG visuals; no copied screenshots from references.",
+    "updatedScreenshots": 25
+  },
+  "productVersion": "0.99.431",
+  "counts": {
+    "mdxPages": 82,
+    "navigationPages": 81,
+    "useCases": 20,
+    "screenshots": 82,
+    "updatedScreenshots": 25,
+    "metadataOnlyScreenshots": 24,
+    "newScreenshots": 16,
+    "illustrations": 20,
+    "managedConnections": 38,
+    "gatewaySelections": 50,
+    "codexSelections": 8,
+    "viewBuilders": 37,
+    "settingsRoutes": 13,
+    "keyboardActions": 25
+  },
+  "historicalEvidence": {
+    "reviewDate": "2026-09-10",
+    "productCommit": "ec67bc01c66cb290efe0d7f6fc6e4fa88caad664",
+    "note": "Capturas de administração, casos de uso e fluxos preservados da revisão anterior; não afirmar execução integral em outubro."
   }
 }

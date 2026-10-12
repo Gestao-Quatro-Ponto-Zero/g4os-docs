@@ -1,5 +1,5 @@
 {
-  "reviewDate": "2026-09-10",
+  "reviewDate": "2026-10-12",
   "source": "packages/shared/src/config/managed-ai-gateway.ts#getManagedAiGatewaySelectableModels",
   "models": [
     {
@@ -10,6 +10,33 @@
       "reasoning": "Sempre ativo, com níveis",
       "premium": true,
       "free": false
+    },
+    {
+      "id": "gpt-6.1-sol",
+      "name": "GPT-6.1 Sol",
+      "family": "OpenAI",
+      "premium": false,
+      "free": false,
+      "inputs": "Texto e imagens",
+      "reasoning": "Sempre ativo, com níveis"
+    },
+    {
+      "id": "gpt-6-sol",
+      "name": "GPT-6 Sol",
+      "family": "OpenAI",
+      "premium": false,
+      "free": false,
+      "inputs": "Texto e imagens",
+      "reasoning": "Níveis, incluindo desligado"
+    },
+    {
+      "id": "gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "family": "OpenAI",
+      "premium": false,
+      "free": false,
+      "inputs": "Texto e imagens",
+      "reasoning": "Níveis, incluindo desligado"
     },
     {
       "id": "gpt-5.6-sol",
@@ -156,6 +183,24 @@
       "free": false
     },
     {
+      "id": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "family": "Claude",
+      "premium": false,
+      "free": false,
+      "inputs": "Texto e imagens",
+      "reasoning": "Sempre ativo, com níveis"
+    },
+    {
+      "id": "claude-opus-5-5",
+      "name": "Claude Opus 5.5",
+      "family": "Claude",
+      "premium": false,
+      "free": false,
+      "inputs": "Texto e imagens",
+      "reasoning": "Sempre ativo, com níveis"
+    },
+    {
       "id": "anthropic.claude-opus-5",
       "name": "Claude Opus 5",
       "family": "Claude",
@@ -223,7 +268,7 @@
       "name": "G4 OMM",
       "family": "G4 OMM",
       "inputs": "Texto e apoio de agentes de mídia",
-      "reasoning": "Adaptativo",
+      "reasoning": "Sempre ativo, com níveis",
       "premium": false,
       "free": false
     },
@@ -291,6 +336,15 @@
       "free": false
     },
     {
+      "id": "zai/glm-5.3-flash",
+      "name": "GLM 5.3 Flash",
+      "family": "GLM",
+      "premium": false,
+      "free": false,
+      "inputs": "Texto e imagens",
+      "reasoning": "Sempre ativo, com níveis"
+    },
+    {
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro",
       "family": "DeepSeek",
@@ -307,6 +361,15 @@
       "reasoning": "Níveis, incluindo desligado",
       "premium": false,
       "free": false
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek",
+      "premium": false,
+      "free": false,
+      "inputs": "Texto e imagens",
+      "reasoning": "Níveis, incluindo desligado"
     },
     {
       "id": "x-ai/grok-4.5",
@@ -334,6 +397,16 @@
       "reasoning": "Sempre ativo, com níveis",
       "premium": false,
       "free": false
+    },
+    {
+      "id": "meta/muse-spark-1.3-contributor",
+      "name": "Meta: Muse Spark 1.3 (Contributor)",
+      "family": "Meta",
+      "premium": false,
+      "free": false,
+      "inputs": "Texto e imagens",
+      "reasoning": "Sempre ativo, com níveis",
+      "dataUseConsent": "Meta pode usar entradas e respostas para treinamento; consentimento na seleção."
     },
     {
       "id": "meta/muse-glimmer-30b",
@@ -380,5 +453,7 @@
       "premium": false,
       "free": true
     }
-  ]
+  ],
+  "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+  "selectableCount": 50
 }

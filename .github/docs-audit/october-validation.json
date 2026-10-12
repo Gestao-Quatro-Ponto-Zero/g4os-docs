@@ -1,0 +1,1140 @@
+{
+  "reviewDate": "2026-10-12",
+  "productCommit": "e642a043079215c886d3702e8163cd1b62c4a8e9",
+  "productVersion": "0.99.431",
+  "routeNavigation": {
+    "count": 71,
+    "pageErrors": 0,
+    "routes": [
+      {
+        "route": "documents",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "skills",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "workflows",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "sources",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "sources/g4-managed",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "sources/g4-agents",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "sources/g4-agents/new-agent",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "apps",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "dashboards",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "projects",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "marketplace/skill",
+        "pageErrors": [],
+        "verification": "shell_and_access_gate"
+      },
+      {
+        "route": "marketplace/owned",
+        "pageErrors": [],
+        "verification": "shell_and_access_gate"
+      },
+      {
+        "route": "scheduler/scheduled-jobs",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "scheduler/scheduled-jobs/new",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "scheduler/vigia",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "scheduler/vigia/new",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "shared-brain",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "settings/app",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "settings/ai",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "settings/appearance",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "settings/input",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "settings/workspace",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "settings/usage",
+        "pageErrors": [],
+        "verification": "shell_and_access_gate"
+      },
+      {
+        "route": "settings/permissions",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "settings/labels",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "settings/sync",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "settings/shared-brain",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "settings/support",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "settings/shortcuts",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "settings/preferences",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "allSessions",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "flagged",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "archived",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "projectSessions",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "sources/active",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "sources/api",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "sources/mcp",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "sources/local",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "sources/agent",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "company-context",
+        "pageErrors": [],
+        "verification": "shell_and_access_gate"
+      },
+      {
+        "route": "business-management",
+        "pageErrors": [],
+        "verification": "shell_and_access_gate"
+      },
+      {
+        "route": "company",
+        "pageErrors": [],
+        "verification": "shell_and_access_gate"
+      },
+      {
+        "route": "company/context",
+        "pageErrors": [],
+        "verification": "shell_and_access_gate"
+      },
+      {
+        "route": "company/context-structure",
+        "pageErrors": [],
+        "verification": "shell_and_access_gate"
+      },
+      {
+        "route": "company/people",
+        "pageErrors": [],
+        "verification": "shell_and_access_gate"
+      },
+      {
+        "route": "company/usage",
+        "pageErrors": [],
+        "verification": "shell_and_access_gate"
+      },
+      {
+        "route": "company/extra-usage",
+        "pageErrors": [],
+        "verification": "shell_and_access_gate"
+      },
+      {
+        "route": "company/use-audit",
+        "pageErrors": [],
+        "verification": "shell_and_access_gate"
+      },
+      {
+        "route": "company/policies",
+        "pageErrors": [],
+        "verification": "shell_and_access_gate"
+      },
+      {
+        "route": "company/requests",
+        "pageErrors": [],
+        "verification": "shell_and_access_gate"
+      },
+      {
+        "route": "shared-brain/memory",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "shared-brain/sync",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "marketplace/workflow",
+        "pageErrors": [],
+        "verification": "shell_and_access_gate"
+      },
+      {
+        "route": "allSessions/session/261012-demo-meeting",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "flagged/session/261012-demo-meeting",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "state/todo",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "label/important",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "view/demo",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "sources/source/g4os-google-drive",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "sources/active/source/g4os-gmail",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "sources/g4-agents/source/google-ai",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "sources/g4-managed/source/g4os-google-calendar",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "skills/skill/daily-checkpoint",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "workflows/workflow/slides",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "apps/app/g4-slide-studio",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "scheduler/recommended/daily-checkpoint",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "settings",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "projects/project/planejamento-exemplo",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "projects/project/planejamento-exemplo/context",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "projects/project/planejamento-exemplo/milestones",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      },
+      {
+        "route": "projects/project/planejamento-exemplo/people",
+        "pageErrors": [],
+        "verification": "local_demo_navigation"
+      }
+    ],
+    "note": "Abertura local das rotas, incluindo estados vazios e gates. Pessoas de projeto pessoal voltam para Sessões. Não testa serviços ou permissões reais."
+  },
+  "deepLinks": {
+    "count": 43,
+    "allValid": true,
+    "parser": "apps/electron/src/shared/route-parser.ts#parseRoute",
+    "noAutomaticSend": true,
+    "paths": [
+      "g4os://action/new-session",
+      "g4os://company",
+      "g4os://company/context",
+      "g4os://dashboards",
+      "g4os://documents",
+      "g4os://marketplace",
+      "g4os://marketplace/owned",
+      "g4os://projects",
+      "g4os://scheduler/scheduled-jobs",
+      "g4os://scheduler/vigia",
+      "g4os://settings",
+      "g4os://settings/ai",
+      "g4os://settings/appearance",
+      "g4os://settings/input",
+      "g4os://settings/labels",
+      "g4os://settings/preferences",
+      "g4os://settings/shortcuts",
+      "g4os://settings/support",
+      "g4os://settings/sync",
+      "g4os://settings/usage",
+      "g4os://settings/workspace",
+      "g4os://shared-brain",
+      "g4os://sources/g4-agents"
+    ]
+  },
+  "preview": [
+    {
+      "route": "/support/documents",
+      "title": "Documentos e sites",
+      "brokenImages": []
+    },
+    {
+      "route": "/support/meeting-recording",
+      "title": "Gravar uma reunião",
+      "brokenImages": []
+    },
+    {
+      "route": "/support/sharing",
+      "title": "Compartilhar uma conversa",
+      "brokenImages": []
+    },
+    {
+      "route": "/product/connections/ai-gateway",
+      "title": "Modelos do G4 AI Gateway",
+      "brokenImages": []
+    },
+    {
+      "route": "/support/app-settings",
+      "title": "Configurações gerais",
+      "brokenImages": []
+    },
+    {
+      "route": "/support/marketplace",
+      "title": "Marketplace",
+      "brokenImages": []
+    },
+    {
+      "route": "/use-cases/rotina/documentos",
+      "title": "Comparar documentos e preparar um resumo",
+      "brokenImages": []
+    },
+    {
+      "route": "/support/documents",
+      "viewport": 390,
+      "overflow": false
+    },
+    {
+      "route": "/support/meeting-recording",
+      "viewport": 390,
+      "overflow": false
+    },
+    {
+      "route": "/product/connections/ai-gateway",
+      "viewport": 390,
+      "overflow": false
+    },
+    {
+      "route": "/use-cases/rotina/documentos",
+      "viewport": 390,
+      "overflow": false
+    }
+  ],
+  "checks": {
+    "mintValidateStrict": "passed",
+    "mintBrokenLinksAnchorsRedirects": "passed",
+    "gitDiffCheck": "passed"
+  },
+  "screenshots": {
+    "new": 16,
+    "updated": 25,
+    "fixtureImages": [
+      "desk-voz.png",
+      "desk.png",
+      "marketplace-catalogo.png",
+      "marketplace-editor.png"
+    ],
+    "metadataChecked": true,
+    "visualPrivacyReview": true,
+    "metadataOnly": 24,
+    "metadataPixelEqualityChecked": true
+  },
+  "limits": [
+    "Revisão de main público isolado, sem Galts. Testes de navegação local e parser não equivalem a E2E de serviços externos.",
+    "Empresa e Plano e uso: componentes/contratos conferidos; capturas anteriores protegidas preservadas porque o ambiente isolado não tem autorização de backend.",
+    "Desk e Marketplace: componentes de produção com fixtures oficiais identificados nas legendas; disponibilidade, voz, instalação e publicação não exercitadas.",
+    "Sem novos logins dos conectores, envios, gravação de áudio, análise paga, pagamentos, sincronização entre dispositivos, publicação de sites pelo app ou alterações corporativas.",
+    "Os 20 exemplos visuais e datasets anteriores foram preservados; não são resultados produzidos novamente nesta revisão.",
+    "Busca local Mintlify exige autenticação; páginas e navegação foram verificadas sem ela."
+  ],
+  "allPagesPreview": [
+    {
+      "route": "/getting-started/create-workspace",
+      "status": 200,
+      "title": "Criar um workspace",
+      "imageCount": 8,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/getting-started/interface",
+      "status": 200,
+      "title": "Onde encontrar cada coisa",
+      "imageCount": 2,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/getting-started/quickstart",
+      "status": 200,
+      "title": "Sua primeira tarefa",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "title": "Guia do G4 OS",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/agents",
+      "status": 200,
+      "title": "Trabalhar com agentes",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/automation",
+      "status": 200,
+      "title": "Rotinas recorrentes",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/connections/ai-gateway",
+      "status": 200,
+      "title": "Modelos do G4 AI Gateway",
+      "imageCount": 2,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/connections/index",
+      "status": 200,
+      "title": "Como escolher uma conexão",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/connections/managed-agents",
+      "status": 200,
+      "title": "Agentes gerenciados",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/connections/managed-connections",
+      "status": 200,
+      "title": "Catálogo de conexões gerenciadas",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/integrations",
+      "status": 200,
+      "title": "Trabalhar com suas integrações",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/outputs",
+      "status": 200,
+      "title": "Arquivos e entregáveis",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/privacy-and-data",
+      "status": 200,
+      "title": "Privacidade e dados",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/projects",
+      "status": 200,
+      "title": "Projetos",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/security",
+      "status": 200,
+      "title": "Segurança e controle",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/sessions",
+      "status": 200,
+      "title": "Conversas e sessões",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/sites",
+      "status": 200,
+      "title": "Criar e publicar um site",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/slides",
+      "status": 200,
+      "title": "Criar e revisar slides",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/voice-input",
+      "status": 200,
+      "title": "Voz: ditado, Desk e reuniões",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/workbooks",
+      "status": 200,
+      "title": "Planilhas editáveis",
+      "imageCount": 2,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/product/workspaces",
+      "status": 200,
+      "title": "Workspaces",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/agents",
+      "status": 200,
+      "title": "Agentes personalizados",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/ai",
+      "status": 200,
+      "title": "Escolher a IA",
+      "imageCount": 4,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/app-settings",
+      "status": 200,
+      "title": "Configurações gerais",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/appearance",
+      "status": 200,
+      "title": "Aparência",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/apps",
+      "status": 200,
+      "title": "Apps locais",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/automation",
+      "status": 200,
+      "title": "Criar uma automação",
+      "imageCount": 4,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/billing-subscriptions",
+      "status": 200,
+      "title": "Planos e créditos",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/browser",
+      "status": 200,
+      "title": "Pesquisar e usar o navegador",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/cloud-sync",
+      "status": 200,
+      "title": "Cloud Sync",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/collaborative-session",
+      "status": 200,
+      "title": "Sessão colaborativa",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/company-context",
+      "status": 200,
+      "title": "Conectar o workspace à empresa",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/context",
+      "status": 200,
+      "title": "Contexto da empresa",
+      "imageCount": 3,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/dashboards",
+      "status": 200,
+      "title": "Dashboards",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/desk",
+      "status": 200,
+      "title": "Desk: converse por voz",
+      "imageCount": 2,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/documents",
+      "status": 200,
+      "title": "Documentos e sites",
+      "imageCount": 4,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/empresa",
+      "status": 200,
+      "title": "Empresa: pessoas, créditos e políticas",
+      "imageCount": 11,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/index",
+      "status": 200,
+      "title": "Ajuda e configurações",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/input",
+      "status": 200,
+      "title": "Digitação e envio",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/labels",
+      "status": 200,
+      "title": "Tags e filtros",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/marketplace",
+      "status": 200,
+      "title": "Marketplace",
+      "imageCount": 2,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/meeting-recording",
+      "status": 200,
+      "title": "Gravar uma reunião",
+      "imageCount": 3,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/partners",
+      "status": 200,
+      "title": "Encontrar um parceiro",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/permissions",
+      "status": 200,
+      "title": "Permissões e autonomia",
+      "imageCount": 2,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/preferences",
+      "status": 200,
+      "title": "Perfil e preferências pessoais",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/projects",
+      "status": 200,
+      "title": "Organizar um projeto",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/remote-control",
+      "status": 200,
+      "title": "Continuar pelo celular ou navegador",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/repair-mode",
+      "status": 200,
+      "title": "Resolver problemas",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/shared-brain",
+      "status": 200,
+      "title": "Brain: memória do workspace",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/sharing",
+      "status": 200,
+      "title": "Compartilhar uma conversa",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/shortcuts",
+      "status": 200,
+      "title": "Comandos e atalhos",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/skills",
+      "status": 200,
+      "title": "Skills: instruções reutilizáveis",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/sources",
+      "status": 200,
+      "title": "Conectar ferramentas",
+      "imageCount": 5,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/tags",
+      "status": 200,
+      "title": "Tags",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/telegram-messaging",
+      "status": 200,
+      "title": "Conversar pelo Telegram",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/tools",
+      "status": 200,
+      "title": "Ferramentas",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/usage",
+      "status": 200,
+      "title": "Acompanhar o uso",
+      "imageCount": 3,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/user-management-api",
+      "status": 200,
+      "title": "Acesso e gestão de pessoas",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/whatsapp-browser",
+      "status": 200,
+      "title": "WhatsApp Web",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/workflows",
+      "status": 200,
+      "title": "Workflows: roteiros de trabalho",
+      "imageCount": 4,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/support/workspace",
+      "status": 200,
+      "title": "Configurações do workspace",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/clientes/preparar-reuniao-cliente",
+      "status": 200,
+      "title": "Preparar uma reunião com cliente",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/conteudo/planejar-campanha",
+      "status": 200,
+      "title": "Transformar um briefing em plano de conteúdo",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/design/design-slides",
+      "status": 200,
+      "title": "Preparar uma apresentação executiva",
+      "imageCount": 2,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/financeiro/conferir-recebimentos",
+      "status": 200,
+      "title": "Conferir recebimentos entre duas bases",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/financeiro/organizar-contas-a-pagar",
+      "status": 200,
+      "title": "Organizar contas a pagar para revisão",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/gestao/comparar-fornecedores",
+      "status": 200,
+      "title": "Comparar propostas de fornecedores",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/gestao/preparar-1a1",
+      "status": 200,
+      "title": "Preparar uma conversa de 1:1",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/gestao/resumo-semanal",
+      "status": 200,
+      "title": "Montar um resumo semanal de gestão",
+      "imageCount": 3,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/index",
+      "status": 200,
+      "title": "Casos de uso",
+      "imageCount": 0,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/marketing-vendas/churn-retencao",
+      "status": 200,
+      "title": "Investigar cancelamentos e retenção",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/marketing-vendas/cohort-receita",
+      "status": 200,
+      "title": "Receita e retenção por grupo de clientes",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/marketing-vendas/funil-marketing",
+      "status": 200,
+      "title": "Analisar o funil de marketing",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/marketing-vendas/performance-comercial",
+      "status": 200,
+      "title": "Revisar a operação comercial",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/operacoes/apqc-otimizacao-processos",
+      "status": 200,
+      "title": "Mapear e melhorar um processo",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/operacoes/criar-treinamento",
+      "status": 200,
+      "title": "Preparar um treinamento da equipe",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/rotina/acompanhamento",
+      "status": 200,
+      "title": "Acompanhar pendências sem refazer a busca",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/rotina/documentos",
+      "status": 200,
+      "title": "Comparar documentos e preparar um resumo",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/rotina/email",
+      "status": 200,
+      "title": "Organizar e-mails e preparar respostas",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/rotina/pesquisa",
+      "status": 200,
+      "title": "Pesquisar um tema e comparar opções",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/rotina/reunioes",
+      "status": 200,
+      "title": "Preparar uma reunião e registrar decisões",
+      "imageCount": 2,
+      "brokenImages": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/use-cases/seguranca/seguranca-lovable",
+      "status": 200,
+      "title": "Revisar um aplicativo antes de lançar",
+      "imageCount": 1,
+      "brokenImages": [],
+      "pageErrors": []
+    }
+  ]
+}
